@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Chuchu Scoreboard</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+  <h1>🏅 Chuchu Scoreboard</h1>
+  <p class="sub" id="hello">Loading…</p>
+  <nav><a class="on" href="index.html">🏆 Scoreboard</a><a href="tips.html">🎮 Game Tips</a></nav>
+
+  <div class="card big">
+    <div class="pts" id="total">0</div>
+    <div>total points</div>
+    <div class="lvl" id="level"></div>
+    <div class="bar"><div class="fill" id="fill"></div></div>
+    <div class="next" id="next"></div>
+  </div>
+
+  <div class="card"><h2>🎖️ Badges</h2><div class="badges" id="badges"></div></div>
+
+  <div class="card"><h2>🔥 Wins</h2><div id="wins"></div></div>
+
+  <div class="card">
+    <h2>💡 How to earn points</h2>
+    <div class="cats" id="cats"></div>
+    <ul>
+      <li>📚 Read a chapter of a book</li>
+      <li>🏀 Shoot some hoops or practise dribbling</li>
+      <li>🍽️ Clear your plate or help with the dishes</li>
+      <li>🧹 Tidy your room</li>
+      <li>🎨 Share something cool you made or learned with Dad</li>
+      <li>💬 Have a chat, or do something kind for someone</li>
+    </ul>
+  </div>
+
+  <p class="sign" id="sign">Keep it up, champ! — Buzz 🤖</p>
+</div>
+<script>
+const fmt = d => new Date(d + "T00:00:00").toLocaleDateString("en-AU", {day:"numeric", month:"short", year:"numeric"});
+fetch("data.json?v=" + Date.now()).then(r => r.json()).then(data => {
+  const wins = [...data.wins].sort((a, b) => b.date.localeCompare(a.date));
+  const total = wins.reduce((s, w) => s + (w.points || 0), 0);
+  const levels = [...data.levels].sort((a, b) => a.min - b.min);
+  let cur = levels[0], nxt = null;
+  levels.forEach((l, i) => { if (total >= l.min) { cur = l; nxt = levels[i + 1] || null; } });
+  document.getElementById("hello").textContent = "Go " + data.name + "! Every win counts 🚀";
+  // count-up animation
+  const el = document.getElementById("total"); let n = 0;
+  const step = Math.max(1, Math.ceil(total / 40));
+  const t = setInterval(() => { n = Math.min(total, n + step); el.textContent = n; if (n >= total) clearInterval(t); }, 25);
+  document.getElementById("level").textContent = cur.emoji + " Level: " + cur.name;
+  const pct = nxt ? ((total - cur.min) / (nxt.min - cur.min)) * 100 : 100;
+  setTimeout(() => document.getElementById("fill").style.width = pct + "%", 100);
+  document.getElementById("next").textContent = nxt
+    ? (nxt.min - total) + " more points to " + nxt.emoji + " " + nxt.name + "!"
+    : "You reached the top level — LEGEND! 👑";
+  // badges
+  const cats = data.categories, count = {};
+  wins.forEach(w => count[w.category] = (count[w.category] || 0) + 1);
+  const badges = [
+    { e: "🎉", n: "First Win", ok: wins.length >= 1 },
+    ...Object.entries(cats).map(([k, c]) => ({ e: c.emoji, n: c.label, ok: !!count[k] })),
+    { e: "🖐️", n: "5 Wins", ok: wins.length >= 5 },
+    { e: "🔟", n: "10 Wins", ok: wins.length >= 10 },
+    { e: "💯", n: "100 Points", ok: total >= 100 },
+    ...levels.slice(1).map(l => ({ e: l.emoji, n: l.name, ok: total >= l.min }))
+  ];
+  document.getElementById("badges").innerHTML = badges.map(b =>
+    `<div class="badge ${b.ok ? "" : "off"}"><span class="e">${b.e}</span>${b.n}</div>`).join("");
+  document.getElementById("wins").innerHTML = wins.map(w => {
+    const c = cats[w.category] || { label: "", emoji: "" };
+    return `<div class="win"><div class="e">${w.emoji}</div><div class="t">${w.text}<div class="d">${fmt(w.date)} · ${c.emoji} ${c.label}</div></div><div class="p">+${w.points}</div></div>`;
+  }).join("") || "<p>No wins yet — go get one! 💪</p>";
+  document.getElementById("cats").innerHTML = Object.values(cats).map(c => `<span class="chip">${c.emoji} ${c.label}</span>`).join("");
+  document.getElementById("sign").textContent = "Keep it up, champ! — " + (data.bot || "Buzz 🤖");
+}).catch(() => { document.getElementById("hello").textContent = "Oops, Buzz couldn't load the scores. Try again soon!"; });
+</script>
+</body>
+</html>

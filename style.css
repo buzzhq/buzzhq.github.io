@@ -1,0 +1,32 @@
+*{box-sizing:border-box}
+body{margin:0;font-family:"Trebuchet MS",system-ui,-apple-system,sans-serif;background:linear-gradient(160deg,#2b1055 0%,#4b2a9a 45%,#0f6fb8 100%);color:#fff;min-height:100vh}
+.wrap{max-width:560px;margin:0 auto;padding:16px 14px 40px}
+h1{font-size:2rem;text-align:center;margin:10px 0 2px;text-shadow:0 3px 0 #ff3d7f}
+.sub{text-align:center;opacity:.85;margin:0 0 14px}
+nav{display:flex;justify-content:center;gap:8px;margin-bottom:14px}
+nav a{background:#ffd23f;color:#2b1055;text-decoration:none;font-weight:bold;padding:8px 14px;border-radius:999px;box-shadow:0 3px 0 #c99a00}
+nav a.on{background:#fff}
+.card{background:rgba(255,255,255,.12);border:2px solid rgba(255,255,255,.25);border-radius:18px;padding:14px;margin-bottom:14px;backdrop-filter:blur(4px)}
+.card h2{margin:0 0 10px;font-size:1.25rem}
+.big{text-align:center}
+.pts{font-size:4rem;font-weight:900;line-height:1;color:#ffd23f;text-shadow:0 4px 0 #ff3d7f}
+.lvl{font-size:1.4rem;margin:8px 0}
+.bar{height:22px;background:rgba(0,0,0,.35);border-radius:999px;overflow:hidden;border:2px solid #fff}
+.fill{height:100%;background:linear-gradient(90deg,#3dff9e,#ffd23f,#ff3d7f);width:0;transition:width 1.2s ease}
+.next{font-size:.95rem;margin-top:6px;opacity:.9}
+.badges{display:grid;grid-template-columns:repeat(auto-fill,minmax(96px,1fr));gap:8px}
+.badge{background:rgba(0,0,0,.25);border-radius:14px;padding:8px;text-align:center;font-size:.8rem}
+.badge .e{font-size:2rem;display:block}
+.badge.off{opacity:.35;filter:grayscale(1)}
+.win{display:flex;gap:10px;align-items:center;background:rgba(0,0,0,.22);border-radius:14px;padding:10px;margin-bottom:8px}
+.win .e{font-size:2rem}
+.win .t{flex:1}
+.win .d{font-size:.78rem;opacity:.8}
+.win .p{font-weight:900;color:#3dff9e;font-size:1.2rem;white-space:nowrap}
+ul{padding-left:20px;margin:0}
+li{margin:5px 0}
+.cats{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px}
+.chip{background:rgba(0,0,0,.25);border-radius:999px;padding:4px 10px;font-size:.85rem}
+.sign{text-align:center;font-size:1.05rem;opacity:.95}
+.tip h3{margin:12px 0 4px;font-size:1.05rem}
+.balance{background:linear-gradient(135deg,rgba(61,255,158,.25),rgba(255,210,63,.25))}
