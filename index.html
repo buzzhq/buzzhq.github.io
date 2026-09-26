@@ -41,6 +41,7 @@
   <p class="sign" id="sign">Keep it up, champ! — Buzz 🤖</p>
 </div>
 <script>
+const today = new Intl.DateTimeFormat("en-CA",{timeZone:"Australia/Sydney"}).format(new Date());
 const fmt = d => new Date(d + "T00:00:00").toLocaleDateString("en-AU", {day:"numeric", month:"short", year:"numeric"});
 fetch("data.json?v=" + Date.now()).then(r => r.json()).then(data => {
   const wins = [...data.wins].sort((a, b) => b.date.localeCompare(a.date));
@@ -74,7 +75,7 @@ fetch("data.json?v=" + Date.now()).then(r => r.json()).then(data => {
     `<div class="badge ${b.ok ? "" : "off"}"><span class="e">${b.e}</span>${b.n}</div>`).join("");
   document.getElementById("wins").innerHTML = wins.map(w => {
     const c = cats[w.category] || { label: "", emoji: "" };
-    return `<div class="win"><div class="e">${w.emoji}</div><div class="t">${w.text}<div class="d">${fmt(w.date)} · ${c.emoji} ${c.label}</div></div><div class="p">+${w.points}</div></div>`;
+    return `<div class="win"><div class="e">${w.emoji}</div><div class="t">${w.text}${w.date === today ? '<span class="new">NEW</span>' : ""}<div class="d">${fmt(w.date)} · ${c.emoji} ${c.label}</div></div><div class="p">+${w.points}</div></div>`;
   }).join("") || "<p>No wins yet — go get one! 💪</p>";
   document.getElementById("cats").innerHTML = Object.values(cats).map(c => `<span class="chip">${c.emoji} ${c.label}</span>`).join("");
   document.getElementById("sign").textContent = "Keep it up, champ! — " + (data.bot || "Buzz 🤖");

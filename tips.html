@@ -10,91 +10,47 @@
 <body>
 <div class="wrap">
   <h1>🎮 Game Tips &amp; Tricks</h1>
-  <p class="sub">Handpicked by Buzz 🤖 for Alon</p>
+  <p class="sub" id="sub">Handpicked by Buzz 🤖 for Alon</p>
   <nav><a href="index.html">🏆 Scoreboard</a><a class="on" href="tips.html">🎮 Game Tips</a></nav>
 
-  <div class="card tip">
-    <h2>🚗 GTA: Driving &amp; Exploring</h2>
-    <h3>Driving like a pro</h3>
-    <ul>
-      <li>Ease off the gas <em>before</em> a corner, then speed up on the way out. You'll be quicker than if you slam the brakes halfway through.</li>
-      <li>Every car handles differently. Sports cars grip well, while big trucks and vans are slow to turn. Try a few and find a favourite.</li>
-      <li>Motorbikes are fast, but if you hit something you can fall off. Take it easy until you get the hang of them.</li>
-      <li>Try different camera views (including first-person) and use whichever one helps you steer best.</li>
-    </ul>
-    <h3>Racing</h3>
-    <ul>
-      <li>Watch the checkpoints and the map. Knowing where the next turn is matters more than top speed.</li>
-      <li>Take the smooth "racing line": go wide into a corner, cut to the inside, then drift wide again on the way out.</li>
-      <li>Crashed? Don't panic. Get straight back on track. Staying calm wins races.</li>
-    </ul>
-    <h3>Customising cars</h3>
-    <ul>
-      <li>At the mod shop you can change paint, wheels and more. Upgrades like engine, brakes and tyres make a car faster and grippier.</li>
-      <li>Upgrade the car you drive most. That's the best use of your in-game money.</li>
-    </ul>
-    <h3>Exploring &amp; missions</h3>
-    <ul>
-      <li>The map is huge. Try a road trip to the mountains, the beach or the countryside just to see the views.</li>
-      <li>Stuck on a mission? Read the on-screen instructions carefully and check the map markers, then try a different approach.</li>
-      <li>Save your game often so you don't lose progress.</li>
-    </ul>
-  </div>
+  <div class="filters" id="filters"></div>
+  <div id="groups"><p class="sub">Loading tips…</p></div>
 
-  <div class="card tip">
-    <h2>🧱 Roblox</h2>
-    <h3>Stay safe online 🛡️</h3>
-    <ul>
-      <li>Never share your password, full name, school, address or phone number, even with "friends" in a game.</li>
-      <li>Nobody legit will ever ask for your password. Anyone offering "free Robux" is trying to scam you.</li>
-      <li>If someone is mean or makes you feel weird, block and report them, then tell Dad.</li>
-      <li>Only buy things with Robux from the official Roblox store or inside the game itself.</li>
-    </ul>
-    <h3>Obby tips</h3>
-    <ul>
-      <li>Line up your jump first. Moving the camera to look down at your feet helps a lot.</li>
-      <li>On tricky jumps, run and jump right at the edge of the platform.</li>
-      <li>Slow and steady beats rushing. Every checkpoint you reach is progress!</li>
-    </ul>
-    <h3>Building in Roblox Studio 🛠️</h3>
-    <ul>
-      <li>Roblox Studio is free and lets you make your own games.</li>
-      <li>Start simple, with parts like blocks, wedges and spheres. Use the Move, Scale and Rotate tools to shape them.</li>
-      <li>"Anchor" parts that shouldn't fall down, otherwise they'll drop or tumble when you press Play.</li>
-      <li>Press Play to test often. Building a small obby first is a great starter project.</li>
-      <li>Want to go further? Roblox games are coded in a language called Lua (Luau). Try a script that changes a part's colour.</li>
-    </ul>
-  </div>
-
-  <div class="card tip">
-    <h2>🏗️ Fortnite</h2>
-    <h3>Building &amp; editing</h3>
-    <ul>
-      <li>The four basic builds are wall, floor, stairs (ramp) and roof (cone). Practise switching between them fast.</li>
-      <li>Wood builds fastest but is weakest. Brick is in the middle. Metal is slowest to build but toughest once finished.</li>
-      <li>Editing lets you add windows, doors and arches to your builds. Practise edits until they feel quick.</li>
-      <li>Creative mode is perfect for practising building and editing with no pressure.</li>
-    </ul>
-    <h3>Smart strategy</h3>
-    <ul>
-      <li>Watch the storm timer on your map and start moving toward the safe zone early. Rushing at the last second is risky.</li>
-      <li>Collect materials (wood, brick, metal) along the way so you're ready to build.</li>
-      <li>High ground gives you a great view of what's around you.</li>
-      <li>Playing with friends? Talk to your squad and share supplies. Teamwork wins!</li>
-    </ul>
-    <h3>Creative mode fun 🎨</h3>
-    <ul>
-      <li>Build your own island: a race track, a parkour course or a basketball court!</li>
-      <li>Try other players' parkour and deathrun maps to get better at movement.</li>
-    </ul>
-  </div>
-
-  <div class="card tip balance">
+  <div class="card balance">
     <h2>⚡ Buzz's Power-Up Tip</h2>
     <p>Even pro gamers take breaks! After a good session, rest your eyes, grab some water, and maybe shoot a few hoops 🏀 or read a chapter 📚. Your brain comes back sharper <em>and</em> you earn scoreboard points. Double win! 🙌</p>
   </div>
 
   <p class="sign">Game on! — Buzz 🤖</p>
 </div>
+<script>
+const today = new Intl.DateTimeFormat("en-CA", {timeZone: "Australia/Sydney"}).format(new Date());
+const fmt = d => new Date(d + "T00:00:00").toLocaleDateString("en-AU", {day:"numeric", month:"short", year:"numeric"});
+const icons = { "GTA": "🚗", "Roblox": "🧱", "Fortnite": "🏗️" };
+const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+let tips = [], filter = "All";
+function render() {
+  const games = [...new Set(tips.map(t => t.game))];
+  const newCount = tips.filter(t => t.date === today).length;
+  document.getElementById("sub").textContent = newCount
+    ? `🆕 ${newCount} new tip${newCount > 1 ? "s" : ""} today! — from Buzz 🤖`
+    : "Handpicked by Buzz 🤖 for Alon";
+  document.getElementById("filters").innerHTML = ["All", ...games].map(g =>
+    `<button class="${g === filter ? "on" : ""}" data-g="${esc(g)}">${g === "All" ? "⭐" : (icons[g] || "🎮")} ${esc(g)}</button>`).join("");
+  document.querySelectorAll("#filters button").forEach(b => b.onclick = () => { filter = b.dataset.g; render(); });
+  document.getElementById("groups").innerHTML = games.filter(g => filter === "All" || g === filter).map(g => {
+    const list = tips.filter(t => t.game === g);
+    const hasNew = list.some(t => t.date === today);
+    return `<div class="card"><h2>${icons[g] || "🎮"} ${esc(g)}${hasNew ? '<span class="new">NEW TODAY</span>' : ""}</h2>` +
+      list.map(t => `<div class="tipitem"><b>${esc(t.title)}${t.date === today ? '<span class="new">NEW TODAY</span>' : ""}</b>${esc(t.tip)}<div class="d">${fmt(t.date)}</div></div>`).join("") +
+      `</div>`;
+  }).join("");
+}
+fetch("tips.json?v=" + Date.now()).then(r => r.json()).then(d => {
+  // newest first; games ordered by their most recent tip
+  tips = d.tips.map((t, i) => ({...t, i})).sort((a, b) => b.date.localeCompare(a.date) || a.i - b.i);
+  render();
+}).catch(() => { document.getElementById("groups").innerHTML = '<p class="sub">Oops, Buzz couldn\'t load the tips. Try again soon!</p>'; });
+</script>
 </body>
 </html>

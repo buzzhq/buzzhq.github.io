@@ -30,3 +30,11 @@ li{margin:5px 0}
 .sign{text-align:center;font-size:1.05rem;opacity:.95}
 .tip h3{margin:12px 0 4px;font-size:1.05rem}
 .balance{background:linear-gradient(135deg,rgba(61,255,158,.25),rgba(255,210,63,.25))}
+.new{display:inline-block;background:#ff3d7f;color:#fff;font-size:.7rem;font-weight:900;padding:2px 7px;border-radius:999px;margin-left:6px;vertical-align:middle;animation:pop 1.2s ease-in-out infinite}
+@keyframes pop{50%{transform:scale(1.12)}}
+.filters{display:flex;flex-wrap:wrap;gap:6px;justify-content:center;margin-bottom:14px}
+.filters button{font:inherit;font-weight:bold;border:0;border-radius:999px;padding:7px 12px;background:rgba(255,255,255,.18);color:#fff;cursor:pointer}
+.filters button.on{background:#ffd23f;color:#2b1055}
+.tipitem{background:rgba(0,0,0,.22);border-radius:14px;padding:10px;margin-bottom:8px}
+.tipitem b{display:block;margin-bottom:3px}
+.tipitem .d{font-size:.75rem;opacity:.75;margin-top:4px}
