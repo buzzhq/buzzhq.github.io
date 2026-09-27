@@ -1,23 +1,77 @@
 {
   "name": "Alon",
-  "bot": "Buzz 🤖",
-  "updated": "2026-09-26",
+  "bot": "Buzz \ud83e\udd16",
+  "updated": "2026-09-27",
   "levels": [
-    { "name": "Rookie",   "min": 0,   "emoji": "🌱" },
-    { "name": "Pro",      "min": 50,  "emoji": "⭐" },
-    { "name": "All-Star", "min": 150, "emoji": "🌟" },
-    { "name": "MVP",      "min": 300, "emoji": "🏆" },
-    { "name": "Legend",   "min": 500, "emoji": "👑" }
+    {
+      "name": "Rookie",
+      "min": 0,
+      "emoji": "\ud83c\udf31"
+    },
+    {
+      "name": "Pro",
+      "min": 50,
+      "emoji": "\u2b50"
+    },
+    {
+      "name": "All-Star",
+      "min": 150,
+      "emoji": "\ud83c\udf1f"
+    },
+    {
+      "name": "MVP",
+      "min": 300,
+      "emoji": "\ud83c\udfc6"
+    },
+    {
+      "name": "Legend",
+      "min": 500,
+      "emoji": "\ud83d\udc51"
+    }
   ],
   "categories": {
-    "home":     { "label": "Helping at home",     "emoji": "🏠" },
-    "reading":  { "label": "Reading",             "emoji": "📚" },
-    "hoops":    { "label": "Basketball",          "emoji": "🏀" },
-    "school":   { "label": "School & creativity", "emoji": "🎨" },
-    "kindness": { "label": "Chat & kindness",     "emoji": "💬" }
+    "home": {
+      "label": "Helping at home",
+      "emoji": "\ud83c\udfe0"
+    },
+    "reading": {
+      "label": "Reading",
+      "emoji": "\ud83d\udcda"
+    },
+    "hoops": {
+      "label": "Basketball",
+      "emoji": "\ud83c\udfc0"
+    },
+    "school": {
+      "label": "School & creativity",
+      "emoji": "\ud83c\udfa8"
+    },
+    "kindness": {
+      "label": "Chat & kindness",
+      "emoji": "\ud83d\udcac"
+    }
   },
   "wins": [
-    { "date": "2026-09-26", "emoji": "🍽️", "category": "home",   "points": 20, "text": "Did the dishes before heading off on the trip" },
-    { "date": "2026-09-26", "emoji": "📖", "category": "school", "points": 20, "text": "Shared stories and awesome work from school" }
+    {
+      "date": "2026-09-26",
+      "emoji": "\ud83c\udf7d\ufe0f",
+      "category": "home",
+      "points": 20,
+      "text": "Did the dishes before heading off on the trip"
+    },
+    {
+      "date": "2026-09-26",
+      "emoji": "\ud83d\udcd6",
+      "category": "school",
+      "points": 20,
+      "text": "Shared stories and awesome work from school"
+    },
+    {
+      "date": "2026-09-26",
+      "emoji": "\ud83c\udfce\ufe0f",
+      "category": "kindness",
+      "points": 10,
+      "text": "Answered the Melbourne dream-car question: GT or Tesla"
+    }
   ]
 }
