@@ -33,7 +33,7 @@
     {
       "date": "2026-09-26",
       "game": "Roblox",
-      "title": "Stay safe online 🛡️",
+      "title": "Stay safe online \ud83d\udee1\ufe0f",
       "tip": "Never share your password, full name, school, address or phone number, even with game 'friends'. If someone is mean or weird, block and report them, then tell Dad."
     },
     {
@@ -89,6 +89,24 @@
       "game": "Fortnite",
       "title": "Make your own island",
       "tip": "In Creative you can build a race track, a parkour course or even a basketball court. Try other players' parkour maps to improve your movement."
+    },
+    {
+      "date": "2026-09-28",
+      "game": "GTA",
+      "title": "Look ahead, not at your bumper",
+      "tip": "When you're racing or cruising, keep your eyes a few corners ahead on the mini-map. Spotting the next turn early means you can brake smooth and keep more speed."
+    },
+    {
+      "date": "2026-09-28",
+      "game": "Roblox",
+      "title": "Camera is your friend",
+      "tip": "In most Roblox games, hold right-click (or use the right stick) to look around while you move. Seeing what's coming helps a lot in parkour and adventures."
+    },
+    {
+      "date": "2026-09-28",
+      "game": "Fortnite",
+      "title": "Land with a plan",
+      "tip": "Before you jump from the Battle Bus, pick a spot on the map. Quiet edges often mean easier loot and time to gear up before you meet other players."
     }
   ]
 }
