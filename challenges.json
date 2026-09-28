@@ -91,5 +91,28 @@
       "text": "The rocket roared off the launch pad and zoomed into the dark blue sky. Up in space, the astronauts floated around like balloons and tried to catch wobbly drops of orange juice. One astronaut even brought a tiny basketball and made a perfect shot into a cup on the wall. Back on Earth, everyone cheered, because it was the highest basket in history!",
       "points": 10
     }
+  ],
+  "notes": [
+    {
+      "date": "2026-09-28",
+      "id": "dc1",
+      "text": "Tricky one! Grab pen and paper, or skip — tomorrow's maths is quicker."
+    },
+    {
+      "date": "2026-09-28",
+      "id": "dc2",
+      "text": "Tricky one! Grab pen and paper, or skip — tomorrow's maths is quicker."
+    }
+  ],
+  "games": [
+    {
+      "date": "2026-09-28",
+      "game": {
+        "name": "Meteor Multiplication (Coolmath4Kids)",
+        "url": "https://www.coolmath4kids.com/math-games/meteor-multiplication",
+        "why": "Space mission! 🚀 Blast the meteors by picking the right times-table answer before they hit the space station. Tap PLAY.",
+        "ads": true
+      }
+    }
   ]
 }

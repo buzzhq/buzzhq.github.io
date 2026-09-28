@@ -91,5 +91,13 @@ code{background:rgba(0,0,0,.35);color:#ffd23f;border-radius:8px;padding:2px 7px;
 .ans{font-size:1rem;margin:6px 0 0;opacity:.95}
 details.past summary{cursor:pointer;font-weight:bold;font-size:1.1rem}
 details.past[open] summary{margin-bottom:10px}
+.note{background:#ffd23f;color:#2b1055;border-radius:12px;padding:8px 10px;font-weight:700;margin:0 0 10px}
+.from{font-size:.95rem;opacity:.9;margin:0 0 6px}
+.tip{font-size:.9rem;opacity:.85}
+.optional{background:rgba(61,255,158,.18);border:2px dashed #3dff9e;border-radius:12px;padding:8px 10px;font-weight:700}
+.bigsum{font-size:2.4rem;font-weight:900;text-align:center;letter-spacing:2px;margin:8px 0}
+.gamebox{background:linear-gradient(135deg,rgba(61,255,158,.25),rgba(0,180,255,.25));border-color:#3dff9e}
+.gname{font-size:1.4rem;font-weight:900;margin:4px 0}
+.play{display:inline-block;background:#3dff9e;color:#2b1055;font-weight:900;font-size:1.3rem;padding:10px 22px;border-radius:14px;text-decoration:none;margin:6px 0}
 details.past .card{background:rgba(0,0,0,.15)}
 @media (max-width:420px){.sum,.bus{font-size:2rem}.heb{font-size:6rem}.read{font-size:1.3rem}}

@@ -16,11 +16,13 @@
   <div class="card howto">
     <h2>✍️ How to answer</h2>
     <p>Write your answer in <b>Chuchu HQ</b> with the challenge code:</p>
-    <div class="codes"><code>dc1 A=4 B=8</code><code>dc3 c</code><code>dc 4b</code></div>
+    <div class="codes"><code>dc1 b</code><code>dc3 c</code><code>dc 4b</code></div>
     <p>📖 Reading: record a <b>voice note</b> reading the passage aloud, and write <code>dc5</code>.</p>
-    <p class="rule">✅ Each correct answer = <b>+5 pts</b> · 🎤 A good reading = <b>+10 pts</b><br>🤖 Buzz checks answers every evening. Not quite right? You get a hint and one more try!</p>
+    <p>📝 Paper bonus (optional!): write the full answer, e.g. <code>dc6 7632</code></p>
+    <p class="rule">✅ Each correct answer = <b>+5 pts</b> · 🎤 A good reading = <b>+10 pts</b> · 📝 Paper bonus = <b>+10 pts</b><br>🤖 Buzz checks answers every evening. Not quite right? You get a hint and one more try!</p>
   </div>
 
+  <div id="game"></div>
   <div id="today"></div>
   <div id="past"></div>
 
@@ -30,7 +32,7 @@
 const today = new Intl.DateTimeFormat("en-CA", {timeZone: "Australia/Sydney"}).format(new Date());
 const fmt = d => new Date(d + "T00:00:00").toLocaleDateString("en-AU", {weekday:"short", day:"numeric", month:"short", year:"numeric"});
 const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
-const icon = { mult: "✖️", div: "➗", hebrew: "🔤", reading: "📖" };
+const icon = { mult: "✖️", div: "➗", mcq: "🔢", paper: "📝", hebrew: "🔤", reading: "📖" };
 // one grid cell per character; A/B = blanks to fill in
 const cell = ch => /[A-Z]/.test(ch) ? `<span class="c blank">${ch}</span>` : `<span class="c">${ch === " " ? "&nbsp;" : esc(ch)}</span>`;
 const row = (s, w, cls = "") => `<div class="mrow ${cls}">${s.padStart(w, " ").split("").map(cell).join("")}</div>`;
@@ -49,26 +51,39 @@ function div(w) {
 }
 const steps = w => `<ol class="steps">${w.lines.map(l => `<li>${esc(l).replace(/(?<![A-Za-z])([A-Z])(?![A-Za-z])/g, '<b class="bl">$1</b>')}</li>`).join("")}</ol>`;
 
+const choices = c => `<div class="choices">` + Object.entries(c.choices).map(([k, v]) => `<div class="choice"><b>${k}</b> ${esc(v)}</div>`).join("") + `</div>`;
+let NOTES = [];
 function card(c, isToday) {
   let body = "";
+  const note = NOTES.filter(n => n.date === c.date && n.id === c.id).map(n => `<p class="note">💡 ${esc(n.text)}</p>`).join("");
   if (c.type === "mult") body = mult(c.worked) + steps(c.worked) + `<p class="ans">Answer like: <code>${c.id} A=? B=?</code></p>`;
   else if (c.type === "div") body = div(c.worked) + steps(c.worked) + `<p class="ans">Answer like: <code>${c.id} A=? B=?</code></p>`;
-  else if (c.type === "hebrew") body = `<div class="heb" lang="he" dir="rtl">${esc(c.letter)}</div><div class="choices">` +
-    Object.entries(c.choices).map(([k, v]) => `<div class="choice"><b>${k}</b> ${esc(v)}</div>`).join("") + `</div><p class="ans">Answer like: <code>${c.id} a</code></p>`;
+  else if (c.type === "mcq") body = (c.from ? `<p class="from">🧩 Part of the big sum <b>${esc(c.from)}</b>${c.step ? ` · ${esc(c.step)}` : ""}</p>` : "") +
+    choices(c) + (c.tip ? `<p class="tip">🤔 ${esc(c.tip)}</p>` : "") + `<p class="ans">Answer like: <code>${c.id} a</code></p>`;
+  else if (c.type === "paper") body = `<p class="optional">⭐ OPTIONAL — only if you feel like grabbing pen and paper!</p>` +
+    (c.sum ? `<div class="bigsum">${esc(c.sum)}</div>` : "") + `<p class="ans">Answer like: <code>${c.id} 1234</code> (the full answer) = <b>+${c.points} bonus</b></p>`;
+  else if (c.type === "hebrew") body = `<div class="heb" lang="he" dir="rtl">${esc(c.letter)}</div>` + choices(c) + `<p class="ans">Answer like: <code>${c.id} a</code></p>`;
   else if (c.type === "reading") body = `<p class="read">${esc(c.text)}</p><p class="ans">🎤 Record a voice note in <b>Chuchu HQ</b> reading this aloud, and write <code>${c.id}</code> = <b>+${c.points} pts</b></p>`;
-  return `<div class="card chal ${c.type}"><h2>${icon[c.type] || "🧠"} <span class="id">${esc(c.id)}</span> ${esc(c.title || "")}<span class="ptag">+${c.points}</span></h2>` +
-    `<p class="prompt">${esc(c.prompt)}</p>${body}</div>`;
+  return `<div class="card chal ${c.type}"><h2>${icon[c.type] || "🧠"} <span class="id">${esc(c.id)}</span> ${esc(c.title || "")}<span class="ptag">+${c.points}${c.optional ? " bonus" : ""}</span></h2>` +
+    note + `<p class="prompt">${esc(c.prompt)}</p>${body}</div>`;
 }
 
 fetch("challenges.json?v=" + Date.now()).then(r => r.json()).then(d => {
   const all = d.challenges || [];
+  NOTES = d.notes || [];
   const dates = [...new Set(all.map(c => c.date))].filter(x => x <= today).sort().reverse();
   const showDate = dates.includes(today) ? today : dates[0];
   const todays = all.filter(c => c.date === showDate);
-  const total = todays.reduce((s, c) => s + (c.points || 0), 0);
+  const total = todays.filter(c => !c.optional).reduce((s, c) => s + (c.points || 0), 0);
+  const bonus = todays.filter(c => c.optional).reduce((s, c) => s + (c.points || 0), 0);
   document.getElementById("sub").innerHTML = showDate === today
-    ? `🆕 ${fmt(today)} · ${todays.length} challenges · up to <b>+${total} pts</b>!`
+    ? `🆕 ${fmt(today)} · ${todays.length} challenges · up to <b>+${total} pts</b>${bonus ? ` (+${bonus} paper bonus)` : ""}!`
     : (showDate ? `Latest set: ${fmt(showDate)} · a fresh set lands this afternoon! ⏰` : "No challenges yet — check back soon!");
+  const g = (d.games || []).filter(x => x.date <= today && x.game && /^https:\/\//.test(x.game.url)).sort((a, b) => a.date < b.date ? -1 : 1).pop();
+  if (g) document.getElementById("game").innerHTML = `<div class="card gamebox"><h2>🎮 Maths game of the day${g.date === today ? "" : ` <small>(${fmt(g.date)})</small>`}</h2>` +
+    `<p class="gname">${esc(g.game.name)}</p>${g.game.why ? `<p>${esc(g.game.why)}</p>` : ""}` +
+    `<a class="play" href="${esc(g.game.url)}" target="_blank" rel="noopener noreferrer">▶ Play now</a>` +
+    `<p class="rule">Free, no sign-up needed.${g.game.ads ? " This site shows ads: don't tap them, just play the game! 🙂" : ""} Tell Buzz your best score in Chuchu HQ!</p></div>`;
   document.getElementById("today").innerHTML = todays.map(c => card(c, true)).join("");
   document.getElementById("past").innerHTML = dates.filter(x => x !== showDate).map(x =>
     `<details class="card past"><summary>📅 ${fmt(x)} · ${all.filter(c => c.date === x).length} challenges</summary>` +
