@@ -101,3 +101,30 @@ details.past[open] summary{margin-bottom:10px}
 .play{display:inline-block;background:#3dff9e;color:#2b1055;font-weight:900;font-size:1.3rem;padding:10px 22px;border-radius:14px;text-decoration:none;margin:6px 0}
 details.past .card{background:rgba(0,0,0,.15)}
 @media (max-width:420px){.sum,.bus{font-size:2rem}.heb{font-size:6rem}.read{font-size:1.3rem}}
+/* Interactive challenges (29 Sep 2026) */
+button.choice{font:inherit;font-size:1.2rem;color:#fff;border:3px solid rgba(255,255,255,.35);text-align:left;min-height:64px;cursor:pointer;touch-action:manipulation;-webkit-tap-highlight-color:transparent;transition:transform .1s}
+button.choice:active{transform:scale(.96)}
+button.choice.wrong{border-color:#ff6b7d;background:rgba(255,60,90,.25);opacity:.75}
+button.choice.right{border-color:#3dff9e;background:rgba(61,255,158,.35);opacity:1}
+button.choice:disabled:not(.right){opacity:.4}
+.blanks{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:8px 0}
+.blankin{display:flex;align-items:center;gap:6px;font-size:1.4rem;font-weight:900}
+.blanks input{font:inherit;font-size:1.6rem;font-weight:900;width:4.2em;min-height:56px;text-align:center;border-radius:12px;border:3px solid #fff;background:rgba(0,0,0,.3);color:#ffd23f}
+.paper .blanks input{width:6em}
+.blanks input:disabled{border-color:#3dff9e;color:#3dff9e}
+.checkbtn,.sendbtn{font:inherit;font-weight:900;font-size:1.3rem;border:0;border-radius:14px;padding:12px 22px;min-height:56px;background:#ffd23f;color:#2b1055;box-shadow:0 4px 0 #c99a00;cursor:pointer;touch-action:manipulation}
+.chal.done .checkbtn{display:none}
+.fb{min-height:1.6em;font-size:1.25rem;font-weight:900;margin-top:6px}
+.fb .yes{color:#3dff9e}.fb .no{color:#ffd23f}.fb .saved{color:#fff}
+.pop{display:inline-block;animation:popin .5s ease}
+@keyframes popin{0%{transform:scale(.4)}70%{transform:scale(1.2)}100%{transform:scale(1)}}
+.shake{animation:shake .4s}
+@keyframes shake{20%,60%{transform:translateX(-6px)}40%,80%{transform:translateX(6px)}}
+.chal.done{border-color:#3dff9e}
+.boom{position:fixed;z-index:99;pointer-events:none;font-size:1.8rem;transform:translate(-50%,-50%);animation:boom 1s ease-out forwards}
+@keyframes boom{to{transform:translate(calc(-50% + var(--dx)),calc(-50% + var(--dy))) scale(1.3);opacity:0}}
+.readnote{background:rgba(61,255,158,.18);border-radius:12px;padding:8px 10px;font-weight:700}
+.sendcard{text-align:center;background:linear-gradient(135deg,rgba(37,211,102,.3),rgba(15,111,184,.25));border-color:#25d366}
+.sendbtn{display:block;background:#25d366;color:#fff;box-shadow:0 5px 0 #128c7e;text-decoration:none;font-size:1.5rem;margin:10px 0}
+.preview code{white-space:normal;word-break:break-word}
+.pick{font-size:1.15rem;font-weight:900;margin:4px 0}

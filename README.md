@@ -86,7 +86,7 @@ Daily set (appended by the afternoon routine). **Maths format changed 28 Sep 202
 
 **Answers live OUTSIDE the repo** in `/workspace/alon/challenge-answers.json` (`answers[date][id]` = `{choice}` (mcq/hebrew), `{answer}` (paper) or old-style `{parts:{A,B}}`, + `hint`), together with the Hebrew letter tracker (`hebrew_tracker.done`) and difficulty notes. Never commit answers. Verify all arithmetic with python before publishing.
 
-Schema `challenges[]`:
+Schema `challenges[]` (plus `check` on every answerable entry, see above):
 ```json
 { "date": "2026-09-28", "id": "dc1", "type": "mult", "title": "Long multiplication", "prompt": "247 × 36 — fill in the missing digits A and B!",
   "worked": { "top": "247", "bottom": "36", "partials": ["1482", "7A10"], "result": "88B2", "lines": ["247 × 6 = 1482", "247 × 30 = 7A10", "1482 + 7A10 = 88B2"] }, "points": 5 }
@@ -104,5 +104,33 @@ Top-level extras (optional, append-only, next to `challenges`):
 `notes` puts a friendly yellow note on a challenge card without editing the challenge. `games[].game.url` must be https. `ads: true` adds a "don't tap the ads" line.
 (Old `mult`/`div` types:) In `worked`, any capital letter A/B/C… is rendered as a pink blank box. `carries[i]` is the small carry digit shown before dividend digit i.
 
-Answer codes in Chuchu HQ (parse leniently: spacing/case): `dc1 b`, `dc3 c`, `dc 4b`, paper bonus `dc6 7632` (old 28 Sep style `dc1 A=4 B=8`); reading = voice note + `dc5`.
+### Interactive page + `check` hashes (added 2026-09-29)
+The current set is interactive on the phone: big tap buttons for `mcq`/`hebrew`, number boxes + **Check** for `paper` and old `mult`/`div` blanks (one box per capital-letter blank). Instant ✅ (emoji confetti) or "Not quite, try again!" (unlimited retries; the FIRST try is recorded). Progress is saved in the browser (`localStorage` key `buzz-dc-<date>`). The `reading` card says "Read this in the WhatsApp message and send a voice note" and shows the text. A **Send to Buzz 🤖** button opens `https://wa.me/?text=...` (WhatsApp share picker; he picks Chuchu HQ) with e.g. `dc1 b, dc2 b, dc3 b, dc4 c (first try: 3/4)` (old blanks: `dc1 A=4 B=9`). Past days stay read-only.
+
+Every challenge that has a right answer (`mcq`, `hebrew`, `paper`, old `mult`/`div`) MUST carry a `check` field = SHA-256 hex of `<date>|<id>|<normalised answer>`, normalised as: choice letter lowercase (`b`); number digits only, no spaces/commas (`7632`); blanks `A=4 B=9` (sorted, uppercase keys, single spaces). `reading` has no `check`. Without `check` the page just saves the answer ("Buzz will check this one tonight"). **After appending the day's challenges AND writing their answers to challenge-answers.json, run this (idempotent, only fills missing `check`s):**
+```bash
+cd /workspace/alon/scoreboard && python3 - <<'PY'
+import json, hashlib, re
+def norm(a):
+    if isinstance(a, dict):  # old blanks {"A":"4","B":"9"} -> "A=4 B=9"
+        return " ".join(f"{k.upper()}={re.sub(r'\s+','',str(v))}" for k, v in sorted(a.items()))
+    a = str(a).strip()       # choice "B" -> "b"; number "7,632" -> "7632"
+    return a.lower() if re.fullmatch(r"[A-Za-z]", a) else re.sub(r"[\s,]", "", a)
+A = json.load(open("../challenge-answers.json"))["answers"]
+d = json.load(open("challenges.json"))
+for c in d["challenges"]:
+    a = A.get(c["date"], {}).get(c["id"], {})
+    ans = a.get("choice") or a.get("answer") or a.get("parts")
+    if ans and "check" not in c:
+        c["check"] = hashlib.sha256(f'{c["date"]}|{c["id"]}|{norm(ans)}'.encode()).hexdigest()
+        print("check added:", c["date"], c["id"])
+with open("challenges.json", "w") as f:
+    json.dump(d, f, ensure_ascii=False, indent=2); f.write("\n")
+PY
+python3 -m json.tool challenges.json >/dev/null && echo JSON OK
+```
+
+The hash hides the answer from casual reading only (a determined person could brute-force a/b/c/d); the real scoring is still done by Buzz in the evening against challenge-answers.json.
+
+Answer codes in Chuchu HQ (parse leniently: spacing/case): `dc1 b`, `dc3 c`, `dc 4b`, paper bonus `dc6 7632` (old 28 Sep style `dc1 A=4 B=8`), or the page's Send-to-Buzz line `dc1 b, dc2 b, dc3 b, dc4 c (first try: 3/4)` (comma-separated; IGNORE the `(first try: …)` claim for scoring: verify every code against challenge-answers.json, +5 each correct, nothing extra for first try); reading = voice note + `dc5`. The afternoon WhatsApp message must contain the FULL reading passage (see journey.md).
 Reading check (offline): `/workspace/alon/check_reading.py <audio.ogg> "<expected text>"` (faster-whisper base.en, CPU int8; pass >= 85% word match). Voice notes go to `/workspace/alon/voice/`.

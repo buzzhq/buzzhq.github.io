@@ -15,15 +15,15 @@
 
   <div class="card howto">
     <h2>✍️ How to answer</h2>
-    <p>Write your answer in <b>Chuchu HQ</b> with the challenge code:</p>
-    <div class="codes"><code>dc1 b</code><code>dc3 c</code><code>dc 4b</code></div>
-    <p>📖 Reading: record a <b>voice note</b> reading the passage aloud, and write <code>dc5</code>.</p>
-    <p>📝 Paper bonus (optional!): write the full answer, e.g. <code>dc6 7632</code></p>
-    <p class="rule">✅ Each correct answer = <b>+5 pts</b> · 🎤 A good reading = <b>+10 pts</b> · 📝 Paper bonus = <b>+10 pts</b><br>🤖 Buzz checks answers every evening. Not quite right? You get a hint and one more try!</p>
+    <p>👆 <b>Tap your answer</b> (or type the number and tap <b>Check</b>). You'll know straight away if it's right, and you can try again!</p>
+    <p>🤖 When you're done, tap <b>Send to Buzz</b> at the bottom, then <b>pick Chuchu HQ and hit send!</b></p>
+    <p>📖 Reading: record a <b>voice note</b> in Chuchu HQ reading the passage aloud.</p>
+    <p class="rule">✅ Each correct answer = <b>+5 pts</b> · 🎤 A good reading = <b>+10 pts</b> · 📝 Paper bonus = <b>+10 pts</b><br>🤖 Buzz adds your points every evening. You can still type codes like <code>dc1 b</code> in Chuchu HQ if you like.</p>
   </div>
 
   <div id="game"></div>
   <div id="today"></div>
+  <div id="sendbox"></div>
   <div id="past"></div>
 
   <p class="sign">You've got this, brainiac! — Buzz 🤖</p>
@@ -51,22 +51,136 @@ function div(w) {
 }
 const steps = w => `<ol class="steps">${w.lines.map(l => `<li>${esc(l).replace(/(?<![A-Za-z])([A-Z])(?![A-Za-z])/g, '<b class="bl">$1</b>')}</li>`).join("")}</ol>`;
 
-const choices = c => `<div class="choices">` + Object.entries(c.choices).map(([k, v]) => `<div class="choice"><b>${k}</b> ${esc(v)}</div>`).join("") + `</div>`;
+// ---- answer checking (same normalisation as the python snippet in README.md) ----
+// letter choice -> lowercase "b"; number -> digits only (no spaces/commas) "7632"; blanks -> "A=4 B=9" (sorted, uppercase, single spaces)
+const norm = a => typeof a === "object"
+  ? Object.keys(a).sort().map(k => `${k.toUpperCase()}=${String(a[k]).replace(/\s+/g, "")}`).join(" ")
+  : (/^\s*[A-Za-z]\s*$/.test(a) ? a.trim().toLowerCase() : String(a).replace(/[\s,]/g, ""));
+async function sha256(t) {
+  const buf = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(t));
+  return [...new Uint8Array(buf)].map(b => b.toString(16).padStart(2, "0")).join("");
+}
+const isRight = async (c, a) => (await sha256(`${c.date}|${c.id}|${norm(a)}`)) === c.check;
+const blanksOf = c => { // capital letters used as blanks in old mult/div sums
+  const w = c.worked || {};
+  const txt = [...(w.partials || []), w.result || "", ...(w.quotient || []), ...(w.carries || [])].join("");
+  return [...new Set(txt.match(/[A-Z]/g) || [])].sort();
+};
+
+// ---- progress saved per day ----
+const KEY = d => "buzz-dc-" + d;
+const load = d => { try { return JSON.parse(localStorage.getItem(KEY(d))) || {}; } catch (e) { return {}; } };
+let SHOW = null, SET = [], ST = {};
+const save = () => { try { localStorage.setItem(KEY(SHOW), JSON.stringify(ST)); } catch (e) {} };
+
+const choices = (c, live) => `<div class="choices">` + Object.entries(c.choices).map(([k, v]) => live
+  ? `<button type="button" class="choice tap" data-id="${esc(c.id)}" data-k="${esc(k)}"><b>${esc(k)}</b> ${esc(v)}</button>`
+  : `<div class="choice"><b>${esc(k)}</b> ${esc(v)}</div>`).join("") + `</div>`;
+const inputs = (c, names) => `<div class="blanks" data-id="${esc(c.id)}">` + names.map(n =>
+  `<label class="blankin">${n ? `<span class="bl">${esc(n)}</span> =` : ""}<input type="text" inputmode="numeric" pattern="[0-9]*" autocomplete="off" data-n="${esc(n)}" aria-label="${n ? "Blank " + esc(n) : "Your answer"}"></label>`).join("") +
+  `<button type="button" class="checkbtn" data-id="${esc(c.id)}">Check ✔</button></div>`;
+const fb = c => `<div class="fb" id="fb-${esc(c.id)}" aria-live="polite"></div>`;
+
 let NOTES = [];
-function card(c, isToday) {
+function card(c, live) {
   let body = "";
   const note = NOTES.filter(n => n.date === c.date && n.id === c.id).map(n => `<p class="note">💡 ${esc(n.text)}</p>`).join("");
-  if (c.type === "mult") body = mult(c.worked) + steps(c.worked) + `<p class="ans">Answer like: <code>${c.id} A=? B=?</code></p>`;
-  else if (c.type === "div") body = div(c.worked) + steps(c.worked) + `<p class="ans">Answer like: <code>${c.id} A=? B=?</code></p>`;
+  const code = s => live ? "" : `<p class="ans">Answer like: <code>${esc(c.id)} ${s}</code></p>`;
+  if (c.type === "mult" || c.type === "div") body = (c.type === "mult" ? mult(c.worked) : div(c.worked)) + steps(c.worked) +
+    (live ? `<p class="ans">Type the missing numbers:</p>` + inputs(c, blanksOf(c)) + fb(c) : code("A=? B=?"));
   else if (c.type === "mcq") body = (c.from ? `<p class="from">🧩 Part of the big sum <b>${esc(c.from)}</b>${c.step ? ` · ${esc(c.step)}` : ""}</p>` : "") +
-    choices(c) + (c.tip ? `<p class="tip">🤔 ${esc(c.tip)}</p>` : "") + `<p class="ans">Answer like: <code>${c.id} a</code></p>`;
+    choices(c, live) + (c.tip ? `<p class="tip">🤔 ${esc(c.tip)}</p>` : "") + (live ? fb(c) : code("a"));
   else if (c.type === "paper") body = `<p class="optional">⭐ OPTIONAL — only if you feel like grabbing pen and paper!</p>` +
-    (c.sum ? `<div class="bigsum">${esc(c.sum)}</div>` : "") + `<p class="ans">Answer like: <code>${c.id} 1234</code> (the full answer) = <b>+${c.points} bonus</b></p>`;
-  else if (c.type === "hebrew") body = `<div class="heb" lang="he" dir="rtl">${esc(c.letter)}</div>` + choices(c) + `<p class="ans">Answer like: <code>${c.id} a</code></p>`;
-  else if (c.type === "reading") body = `<p class="read">${esc(c.text)}</p><p class="ans">🎤 Record a voice note in <b>Chuchu HQ</b> reading this aloud, and write <code>${c.id}</code> = <b>+${c.points} pts</b></p>`;
-  return `<div class="card chal ${c.type}"><h2>${icon[c.type] || "🧠"} <span class="id">${esc(c.id)}</span> ${esc(c.title || "")}<span class="ptag">+${c.points}${c.optional ? " bonus" : ""}</span></h2>` +
+    (c.sum ? `<div class="bigsum">${esc(c.sum)}</div>` : "") +
+    (live ? `<p class="ans">Type the full answer = <b>+${c.points} bonus</b></p>` + inputs(c, [""]) + fb(c) : code("1234"));
+  else if (c.type === "hebrew") body = `<div class="heb" lang="he" dir="rtl">${esc(c.letter)}</div>` + choices(c, live) + (live ? fb(c) : code("a"));
+  else if (c.type === "reading") body = `<p class="readnote">🎤 Read this in the WhatsApp message and send a <b>voice note</b> in Chuchu HQ = <b>+${c.points} pts</b></p><p class="read">${esc(c.text)}</p>`;
+  return `<div class="card chal ${c.type}" id="card-${esc(c.id)}"><h2>${icon[c.type] || "🧠"} <span class="id">${esc(c.id)}</span> ${esc(c.title || "")}<span class="ptag">+${c.points}${c.optional ? " bonus" : ""}</span></h2>` +
     note + `<p class="prompt">${esc(c.prompt)}</p>${body}</div>`;
 }
+
+// ---- celebration ----
+function confetti(el) {
+  const r = el.getBoundingClientRect(), E = ["🎉", "⭐", "🏀", "✨", "🚀", "💥", "🔥"];
+  for (let i = 0; i < 16; i++) {
+    const s = document.createElement("span");
+    s.className = "boom"; s.textContent = E[i % E.length];
+    s.style.left = (r.left + r.width / 2) + "px"; s.style.top = (r.top + r.height / 2) + "px";
+    const a = Math.random() * Math.PI * 2, d = 60 + Math.random() * 90;
+    s.style.setProperty("--dx", Math.cos(a) * d + "px"); s.style.setProperty("--dy", (Math.sin(a) * d - 40) + "px");
+    document.body.appendChild(s); setTimeout(() => s.remove(), 1100);
+  }
+}
+const CHEERS = ["✅ Yes! Nailed it!", "✅ Correct! Brainiac!", "✅ Swish! That's right!", "✅ Boom! Spot on!"];
+function showState(c) {
+  const s = ST[c.id], box = document.getElementById("fb-" + c.id), el = document.getElementById("card-" + c.id);
+  if (!box || !s) return;
+  el.classList.toggle("done", !!s.ok);
+  if (c.type === "mcq" || c.type === "hebrew") el.querySelectorAll(".tap").forEach(b => {
+    b.classList.toggle("right", !!s.ok && b.dataset.k === s.ans);
+    b.disabled = !!s.ok;
+  });
+  else if (s.ok) el.querySelectorAll(".blanks input").forEach(i => { i.value = s.vals ? s.vals[i.dataset.n] : s.ans; i.disabled = true; });
+  if (s.ok === true) box.innerHTML = `<span class="yes">${s.first ? "✅ Got it first try! 🌟" : "✅ Got it!"}</span>`;
+  else if (s.ok === null) box.innerHTML = `<span class="saved">📝 Saved! Buzz will check this one tonight.</span>`;
+  renderSend();
+}
+async function answer(c, ans, el, vals) {
+  const s = ST[c.id] || (ST[c.id] = { tries: 0 });
+  if (s.ok) return;
+  s.tries++; s.ans = ans; if (vals) s.vals = vals;
+  const box = document.getElementById("fb-" + c.id);
+  if (!c.check) { s.ok = null; save(); showState(c); return; }
+  const ok = await isRight(c, vals || ans);
+  if (s.first === undefined) s.first = ok;
+  if (ok) {
+    s.ok = true; save(); confetti(el);
+    box.innerHTML = `<span class="yes pop">${CHEERS[Math.floor(Math.random() * CHEERS.length)]}</span>`;
+    setTimeout(() => showState(c), 1400); renderSend();
+  } else {
+    s.ok = false; save();
+    el.classList.remove("shake"); void el.offsetWidth; el.classList.add("shake");
+    if (el.classList.contains("tap")) el.classList.add("wrong");
+    box.innerHTML = `<span class="no">🤔 Not quite, try again!</span>`;
+    renderSend();
+  }
+}
+
+// ---- Send to Buzz ----
+function message() {
+  const parts = [], checked = SET.filter(c => c.check && ST[c.id] && ST[c.id].first !== undefined);
+  SET.forEach(c => { const s = ST[c.id]; if (s && s.ans !== undefined) parts.push(`${c.id} ${s.vals ? norm(s.vals) : s.ans}`); });
+  if (!parts.length) return "";
+  return parts.join(", ") + (checked.length ? ` (first try: ${checked.filter(c => ST[c.id].first).length}/${checked.length})` : "");
+}
+function renderSend() {
+  const box = document.getElementById("sendbox");
+  const answerable = SET.filter(c => c.type !== "reading");
+  if (!answerable.length) { box.innerHTML = ""; return; }
+  const m = message(), done = answerable.filter(c => ST[c.id] && ST[c.id].ok).length;
+  const reading = SET.find(c => c.type === "reading");
+  box.innerHTML = `<div class="card sendcard"><h2>🤖 Send your answers to Buzz</h2>` +
+    `<p class="rule">${done} of ${answerable.length} solved${answerable.some(c => c.optional) ? " (📝 bonus is optional)" : ""}</p>` +
+    (m ? `<p class="preview"><code id="msg">${esc(m)}</code></p>` +
+      `<a class="sendbtn" id="send" href="https://wa.me/?text=${encodeURIComponent(m)}" target="_blank" rel="noopener">Send to Buzz 🤖</a>` +
+      `<p class="pick">👉 Pick <b>Chuchu HQ</b> and hit send!</p>`
+      : `<p>Tap some answers above first! 👆</p>`) +
+    (reading ? `<p class="rule">🎤 Don't forget your ${esc(reading.id)} voice note (+${reading.points})!</p>` : "") + `</div>`;
+}
+
+document.addEventListener("click", e => {
+  const b = e.target.closest(".tap");
+  if (b) { const c = SET.find(x => x.id === b.dataset.id); if (c) answer(c, b.dataset.k, b); return; }
+  const k = e.target.closest(".checkbtn");
+  if (k) {
+    const c = SET.find(x => x.id === k.dataset.id); if (!c) return;
+    const ins = [...k.parentNode.querySelectorAll("input")];
+    if (ins.some(i => !i.value.trim())) { document.getElementById("fb-" + c.id).innerHTML = `<span class="no">✏️ Fill in ${ins.length > 1 ? "every box" : "the box"} first!</span>`; return; }
+    if (ins.length === 1 && !ins[0].dataset.n) answer(c, ins[0].value.replace(/[\s,]/g, ""), k);
+    else { const v = {}; ins.forEach(i => v[i.dataset.n] = i.value.replace(/\s+/g, "")); answer(c, norm(v), k, v); }
+  }
+});
+document.addEventListener("keydown", e => { if (e.key === "Enter" && e.target.matches(".blanks input")) e.target.closest(".blanks").querySelector(".checkbtn").click(); });
 
 fetch("challenges.json?v=" + Date.now()).then(r => r.json()).then(d => {
   const all = d.challenges || [];
@@ -74,6 +188,7 @@ fetch("challenges.json?v=" + Date.now()).then(r => r.json()).then(d => {
   const dates = [...new Set(all.map(c => c.date))].filter(x => x <= today).sort().reverse();
   const showDate = dates.includes(today) ? today : dates[0];
   const todays = all.filter(c => c.date === showDate);
+  SHOW = showDate; SET = todays; ST = showDate ? load(showDate) : {};
   const total = todays.filter(c => !c.optional).reduce((s, c) => s + (c.points || 0), 0);
   const bonus = todays.filter(c => c.optional).reduce((s, c) => s + (c.points || 0), 0);
   document.getElementById("sub").innerHTML = showDate === today
@@ -85,10 +200,12 @@ fetch("challenges.json?v=" + Date.now()).then(r => r.json()).then(d => {
     `<a class="play" href="${esc(g.game.url)}" target="_blank" rel="noopener noreferrer">▶ Play now</a>` +
     `<p class="rule">Free, no sign-up needed.${g.game.ads ? " This site shows ads: don't tap them, just play the game! 🙂" : ""} Tell Buzz your best score in Chuchu HQ!</p></div>`;
   document.getElementById("today").innerHTML = todays.map(c => card(c, true)).join("");
+  todays.forEach(showState); renderSend();
   document.getElementById("past").innerHTML = dates.filter(x => x !== showDate).map(x =>
     `<details class="card past"><summary>📅 ${fmt(x)} · ${all.filter(c => c.date === x).length} challenges</summary>` +
     all.filter(c => c.date === x).map(c => card(c, false)).join("") + `</details>`).join("");
 }).catch(e => { console.error(e); document.getElementById("sub").textContent = "Oops, Buzz couldn't load the challenges. Try again soon!"; });
 </script>
+
 </body>
 </html>

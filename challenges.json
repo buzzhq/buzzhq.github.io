@@ -20,7 +20,8 @@
           "1482 + 7A10 = 88B2"
         ]
       },
-      "points": 5
+      "points": 5,
+      "check": "670868a765e5fdb69d6602484a7eaf5890728db50fe0cd2402b1962c59af26a4"
     },
     {
       "date": "2026-09-28",
@@ -50,7 +51,8 @@
           "B8 ÷ 6 = 3 ✔"
         ]
       },
-      "points": 5
+      "points": 5,
+      "check": "adca5c9ac407ad91cb52da73c0cd78fc58ffc78176c4c93d27fed56c17410194"
     },
     {
       "date": "2026-09-28",
@@ -65,7 +67,8 @@
         "c": "l (like lion)",
         "d": "r (like race)"
       },
-      "points": 5
+      "points": 5,
+      "check": "1d7aa9bc453893566d7eae677f74f8625e10cead3ad69fec1dfced7ae1bcebaa"
     },
     {
       "date": "2026-09-28",
@@ -80,7 +83,8 @@
         "c": "m (like moon)",
         "d": "g (like goal)"
       },
-      "points": 5
+      "points": 5,
+      "check": "779f004e325839e80905ccb5e1d0575644e1c38bda15a23be1418e1418565f44"
     },
     {
       "date": "2026-09-28",
