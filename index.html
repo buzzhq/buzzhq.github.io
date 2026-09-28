@@ -11,7 +11,7 @@
 <div class="wrap">
   <h1>🏅 Chuchu Scoreboard</h1>
   <p class="sub" id="hello">Loading…</p>
-  <nav><a class="on" href="index.html">🏆 Scoreboard</a><a href="tips.html">🎮 Game Tips</a></nav>
+  <nav><a class="on" href="index.html">🏆 Scoreboard</a><a href="tips.html">🎮 Game Tips</a><a href="challenges.html">🧠 Challenges</a></nav>
 
   <div class="card big">
     <div class="pts" id="total">0</div>
@@ -55,6 +55,7 @@
       <li>🎨 Share something cool you made or learned with Dad</li>
       <li>💬 Have a chat, or do something kind for someone</li>
       <li>🥾 Go on a hike, bike ride or active adventure</li>
+      <li>🧠 Daily challenge: +5 per correct answer, +10 for a great read-aloud (<a href="challenges.html" style="color:#ffd23f">see today's</a>)</li>
       <li>🔥 Log a win every day: every 7-day streak = +100 bonus</li>
     </ul>
     <p class="rule">🙊 Respect slips (like rude words) can cost a few points, but you can always bounce back! 💪</p>
@@ -71,7 +72,7 @@ const money = n => "$" + n.toFixed(2);
 fetch("data.json?v=" + Date.now()).then(r => r.json()).then(data => {
   const S = Scoreboard.compute(data, today);
   const { total, level: cur, next: nxt, streak, cash } = S;
-  const cats = data.categories;
+  const cats = Scoreboard.categories(data);
   $("hello").textContent = "Go " + data.name + "! Every win counts 🚀";
   // count-up animation (works for negative totals too)
   const el = $("total"); let n = 0;

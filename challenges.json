@@ -1,0 +1,95 @@
+{
+  "challenges": [
+    {
+      "date": "2026-09-28",
+      "id": "dc1",
+      "type": "mult",
+      "title": "Long multiplication",
+      "prompt": "247 × 36 — fill in the missing digits A and B!",
+      "worked": {
+        "top": "247",
+        "bottom": "36",
+        "partials": [
+          "1482",
+          "7A10"
+        ],
+        "result": "88B2",
+        "lines": [
+          "247 × 6 = 1482",
+          "247 × 30 = 7A10",
+          "1482 + 7A10 = 88B2"
+        ]
+      },
+      "points": 5
+    },
+    {
+      "date": "2026-09-28",
+      "id": "dc2",
+      "type": "div",
+      "title": "Long division (bus stop)",
+      "prompt": "5838 ÷ 6 — fill in the missing numbers A and B!",
+      "worked": {
+        "divisor": "6",
+        "dividend": "5838",
+        "quotient": [
+          "",
+          "9",
+          "A",
+          "3"
+        ],
+        "carries": [
+          "",
+          "5",
+          "4",
+          "B"
+        ],
+        "lines": [
+          "5 ÷ 6 = 0, carry 5 → 58",
+          "58 ÷ 6 = 9 remainder 4, carry 4 → 43",
+          "43 ÷ 6 = A remainder B, carry B → B8",
+          "B8 ÷ 6 = 3 ✔"
+        ]
+      },
+      "points": 5
+    },
+    {
+      "date": "2026-09-28",
+      "id": "dc3",
+      "type": "hebrew",
+      "title": "Hebrew letter",
+      "prompt": "What sound does this letter make?",
+      "letter": "ש",
+      "choices": {
+        "a": "m (like moon)",
+        "b": "sh (like ship)",
+        "c": "l (like lion)",
+        "d": "r (like race)"
+      },
+      "points": 5
+    },
+    {
+      "date": "2026-09-28",
+      "id": "dc4",
+      "type": "hebrew",
+      "title": "Hebrew letter",
+      "prompt": "What sound does this letter make?",
+      "letter": "מ",
+      "choices": {
+        "a": "n (like net)",
+        "b": "t (like team)",
+        "c": "m (like moon)",
+        "d": "g (like goal)"
+      },
+      "points": 5
+    },
+    {
+      "date": "2026-09-28",
+      "id": "dc5",
+      "type": "reading",
+      "title": "Read aloud (English)",
+      "prompt": "Read this out loud, nice and clear!",
+      "text": "The rocket roared off the launch pad and zoomed into the dark blue sky. Up in space, the astronauts floated around like balloons and tried to catch wobbly drops of orange juice. One astronaut even brought a tiny basketball and made a perfect shot into a cup on the wall. Back on Earth, everyone cheered, because it was the highest basket in history!",
+      "points": 10
+    }
+  ]
+}

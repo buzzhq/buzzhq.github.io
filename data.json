@@ -60,6 +60,11 @@
       "emoji": "🥾",
       "color": "#7dff5a"
     },
+    "challenge": {
+      "label": "Daily challenge",
+      "emoji": "🧠",
+      "color": "#ff5fd2"
+    },
     "respect": {
       "label": "Respect",
       "emoji": "🙊",

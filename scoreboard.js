@@ -2,6 +2,9 @@
 //   node -e 'const s=require("./scoreboard.js");console.log(s.compute(require("./data.json"),"2026-09-28"))'
 (function (root) {
   const DAY = 86400000;
+  // Categories always available even if data.json doesn't list them yet (data.json wins on conflicts).
+  const DEFAULT_CATEGORIES = { challenge: { label: "Daily challenge", emoji: "🧠", color: "#ff5fd2" } };
+  const categories = data => { const c = Object.assign({}, (data && data.categories) || {}); for (const k in DEFAULT_CATEGORIES) if (!c[k]) c[k] = DEFAULT_CATEGORIES[k]; return c; };
   const addDays = (iso, n) => new Date(Date.parse(iso + "T00:00:00Z") + n * DAY).toISOString().slice(0, 10);
 
   function compute(data, today) {
@@ -52,6 +55,6 @@
     return { total, base, bonusTotal, bonuses, entries, level, next, levelPct, streak: { current, best, toNextBonus, every: cfgS.bonusEvery, bonus: cfgS.bonusPoints, activeToday: pos.has(today) }, cash, byDay };
   }
 
-  if (typeof module !== "undefined" && module.exports) module.exports = { compute, addDays };
-  else root.Scoreboard = { compute, addDays };
+  if (typeof module !== "undefined" && module.exports) module.exports = { compute, addDays, categories };
+  else root.Scoreboard = { compute, addDays, categories };
 })(this);
