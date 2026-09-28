@@ -21,9 +21,28 @@
     <div class="next" id="next"></div>
   </div>
 
+  <div class="card cash">
+    <h2>💵 Cash-Out Goal</h2>
+    <div class="cashline"><b id="cashpts">0 / 1000 pts</b> toward <b id="cashreward">$50</b></div>
+    <div class="bar money"><div class="fill" id="cashfill"></div></div>
+    <div class="cashbig">💰 <span id="cashdollars">$0.00</span> earned so far</div>
+    <div class="next" id="cashnote"></div>
+  </div>
+
+  <div class="card streak">
+    <h2>🔥 Streak</h2>
+    <div class="streakrow">
+      <div class="sbox"><div class="snum" id="streaknow">0</div><div>day streak 🔥</div></div>
+      <div class="sbox"><div class="snum" id="streakbest">0</div><div>best streak 🏅</div></div>
+    </div>
+    <div class="dots" id="dots"></div>
+    <div class="next" id="streaknext"></div>
+    <div class="rule" id="streakrule"></div>
+  </div>
+
   <div class="card"><h2>🎖️ Badges</h2><div class="badges" id="badges"></div></div>
 
-  <div class="card"><h2>🔥 Wins</h2><div id="wins"></div></div>
+  <div class="card"><h2>📜 Wins &amp; points</h2><div id="wins"></div></div>
 
   <div class="card">
     <h2>💡 How to earn points</h2>
@@ -35,51 +54,84 @@
       <li>🧹 Tidy your room</li>
       <li>🎨 Share something cool you made or learned with Dad</li>
       <li>💬 Have a chat, or do something kind for someone</li>
+      <li>🥾 Go on a hike, bike ride or active adventure</li>
+      <li>🔥 Log a win every day: every 7-day streak = +100 bonus</li>
     </ul>
+    <p class="rule">🙊 Respect slips (like rude words) can cost a few points, but you can always bounce back! 💪</p>
   </div>
 
   <p class="sign" id="sign">Keep it up, champ! — Buzz 🤖</p>
 </div>
+<script src="scoreboard.js"></script>
 <script>
 const today = new Intl.DateTimeFormat("en-CA",{timeZone:"Australia/Sydney"}).format(new Date());
 const fmt = d => new Date(d + "T00:00:00").toLocaleDateString("en-AU", {day:"numeric", month:"short", year:"numeric"});
+const $ = id => document.getElementById(id);
+const money = n => "$" + n.toFixed(2);
 fetch("data.json?v=" + Date.now()).then(r => r.json()).then(data => {
-  const wins = [...data.wins].sort((a, b) => b.date.localeCompare(a.date));
-  const total = wins.reduce((s, w) => s + (w.points || 0), 0);
-  const levels = [...data.levels].sort((a, b) => a.min - b.min);
-  let cur = levels[0], nxt = null;
-  levels.forEach((l, i) => { if (total >= l.min) { cur = l; nxt = levels[i + 1] || null; } });
-  document.getElementById("hello").textContent = "Go " + data.name + "! Every win counts 🚀";
-  // count-up animation
-  const el = document.getElementById("total"); let n = 0;
-  const step = Math.max(1, Math.ceil(total / 40));
-  const t = setInterval(() => { n = Math.min(total, n + step); el.textContent = n; if (n >= total) clearInterval(t); }, 25);
-  document.getElementById("level").textContent = cur.emoji + " Level: " + cur.name;
-  const pct = nxt ? ((total - cur.min) / (nxt.min - cur.min)) * 100 : 100;
-  setTimeout(() => document.getElementById("fill").style.width = pct + "%", 100);
-  document.getElementById("next").textContent = nxt
+  const S = Scoreboard.compute(data, today);
+  const { total, level: cur, next: nxt, streak, cash } = S;
+  const cats = data.categories;
+  $("hello").textContent = "Go " + data.name + "! Every win counts 🚀";
+  // count-up animation (works for negative totals too)
+  const el = $("total"); let n = 0;
+  const step = Math.max(1, Math.ceil(Math.abs(total) / 40)) * Math.sign(total || 1);
+  const t = setInterval(() => { n = step > 0 ? Math.min(total, n + step) : Math.max(total, n + step); el.textContent = n; if (n === total) clearInterval(t); }, 25);
+  $("level").textContent = cur.emoji + " Level: " + cur.name;
+  setTimeout(() => $("fill").style.width = S.levelPct + "%", 100);
+  $("next").textContent = nxt
     ? (nxt.min - total) + " more points to " + nxt.emoji + " " + nxt.name + "!"
     : "You reached the top level — LEGEND! 👑";
-  // badges
-  const cats = data.categories, count = {};
-  wins.forEach(w => count[w.category] = (count[w.category] || 0) + 1);
+
+  // cash-out
+  $("cashpts").textContent = cash.inGoal + " / " + cash.goal + " pts";
+  $("cashreward").textContent = "$" + cash.reward;
+  setTimeout(() => $("cashfill").style.width = Math.max(cash.pct, 1.5) + "%", 100);
+  $("cashdollars").textContent = money(cash.dollars);
+  $("cashnote").innerHTML = (cash.cashouts ? `🎉 You've unlocked <b>${cash.cashouts} × $${cash.reward}</b> cash-out${cash.cashouts > 1 ? "s" : ""}! Ask Dad! ` : "")
+    + `${cash.goal - cash.inGoal} pts to go. Every ${cash.goal} points = <b>$${cash.reward} ${cash.currency}</b> from Dad 🤑`;
+
+  // streak
+  $("streaknow").textContent = streak.current;
+  $("streakbest").textContent = streak.best;
+  let dots = "";
+  for (let i = 1; i <= streak.every; i++) dots += `<span class="dot ${i <= streak.current % streak.every || (streak.current && streak.current % streak.every === 0) ? "on" : ""}">${i === streak.every ? "🎁" : "🔥"}</span>`;
+  $("dots").innerHTML = dots;
+  $("streaknext").textContent = streak.current === 0
+    ? "Log a win today to start a streak! 🔥"
+    : streak.toNextBonus + " more day" + (streak.toNextBonus > 1 ? "s" : "") + " to your next +" + streak.bonus + " bonus!"
+      + (streak.activeToday ? "" : " Get a win today to keep it going! ⏰");
+  $("streakrule").textContent = "Rule: a streak day = a day with more points won than lost. Every " + streak.every + "-day streak earns a +" + streak.bonus + " streak bonus!";
+
+  // badges (deduction categories don't give badges)
+  const plus = S.entries.filter(w => w.points > 0 && !w.bonus), count = {};
+  plus.forEach(w => count[w.category] = (count[w.category] || 0) + 1);
+  const levels = [...data.levels].sort((a, b) => a.min - b.min);
   const badges = [
-    { e: "🎉", n: "First Win", ok: wins.length >= 1 },
-    ...Object.entries(cats).map(([k, c]) => ({ e: c.emoji, n: c.label, ok: !!count[k] })),
-    { e: "🖐️", n: "5 Wins", ok: wins.length >= 5 },
-    { e: "🔟", n: "10 Wins", ok: wins.length >= 10 },
+    { e: "🎉", n: "First Win", ok: plus.length >= 1 },
+    ...Object.entries(cats).filter(([k, c]) => !c.deduction).map(([k, c]) => ({ e: c.emoji, n: c.label, ok: !!count[k] })),
+    { e: "🖐️", n: "5 Wins", ok: plus.length >= 5 },
+    { e: "🔟", n: "10 Wins", ok: plus.length >= 10 },
+    { e: "🔥", n: "3-Day Streak", ok: streak.best >= 3 },
+    { e: "🎁", n: "7-Day Streak", ok: streak.best >= 7 },
     { e: "💯", n: "100 Points", ok: total >= 100 },
-    ...levels.slice(1).map(l => ({ e: l.emoji, n: l.name, ok: total >= l.min }))
+    ...levels.slice(1).map(l => ({ e: l.emoji, n: l.name, ok: total >= l.min })),
+    { e: "💵", n: "First $50", ok: cash.cashouts >= 1 }
   ];
-  document.getElementById("badges").innerHTML = badges.map(b =>
+  $("badges").innerHTML = badges.map(b =>
     `<div class="badge ${b.ok ? "" : "off"}"><span class="e">${b.e}</span>${b.n}</div>`).join("");
-  document.getElementById("wins").innerHTML = wins.map(w => {
-    const c = cats[w.category] || { label: "", emoji: "" };
-    return `<div class="win"><div class="e">${w.emoji}</div><div class="t">${w.text}${w.date === today ? '<span class="new">NEW</span>' : ""}<div class="d">${fmt(w.date)} · ${c.emoji} ${c.label}</div></div><div class="p">+${w.points}</div></div>`;
+
+  // entries: wins, gentle deductions, computed streak bonuses
+  $("wins").innerHTML = S.entries.map(w => {
+    const c = w.bonus ? { label: "Streak bonus", emoji: "🔥", color: "#ffd23f" } : (cats[w.category] || { label: "", emoji: "" });
+    const neg = w.points < 0;
+    const tag = w.date === today ? (neg ? '<span class="tagtoday">TODAY</span>' : '<span class="new">NEW</span>') : "";
+    const cls = "win" + (neg ? " minus" : "") + (w.bonus ? " bonus" : "");
+    return `<div class="${cls}" style="border-left-color:${c.color || "transparent"}"><div class="e">${w.emoji}</div><div class="t">${w.text}${tag}<div class="d">${fmt(w.date)} · ${c.emoji} ${c.label}</div></div><div class="p">${neg ? "−" + Math.abs(w.points) : "+" + w.points}</div></div>`;
   }).join("") || "<p>No wins yet — go get one! 💪</p>";
-  document.getElementById("cats").innerHTML = Object.values(cats).map(c => `<span class="chip">${c.emoji} ${c.label}</span>`).join("");
-  document.getElementById("sign").textContent = "Keep it up, champ! — " + (data.bot || "Buzz 🤖");
-}).catch(() => { document.getElementById("hello").textContent = "Oops, Buzz couldn't load the scores. Try again soon!"; });
+  $("cats").innerHTML = Object.values(cats).filter(c => !c.deduction).map(c => `<span class="chip" style="border:2px solid ${c.color || "transparent"}">${c.emoji} ${c.label}</span>`).join("");
+  $("sign").textContent = "Keep it up, champ! — " + (data.bot || "Buzz 🤖");
+}).catch(e => { console.error(e); $("hello").textContent = "Oops, Buzz couldn't load the scores. Try again soon!"; });
 </script>
 </body>
 </html>

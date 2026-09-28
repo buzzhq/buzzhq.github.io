@@ -7,8 +7,14 @@ Both pages are data-driven and **additive** (append-only, updated daily):
 - Any win or tip whose `date` equals today's date (Australia/Sydney) gets a **NEW / NEW TODAY** badge.
 
 ## Status
-- Built and tested locally. **Not hosted yet.** On 2026-09-26 there was no authenticated GitHub route: `gh` is not logged in, there are no git credentials or SSH keys, and the GitHub connector needs auth.
-- Live URLs: _TBD after hosting_ (planned: GitHub Pages, repo `buzz-hq-7k3`, giving `https://<user>.github.io/buzz-hq-7k3/` and `.../tips.html`).
+- LIVE on GitHub Pages: https://buzzhq.github.io/ and https://buzzhq.github.io/tips.html (repo `buzzhq/buzzhq.github.io`, branch `main`, `gh` authenticated as buzzhq). Pages keep `noindex` and first name only.
+- Page logic lives in `scoreboard.js` (pure `compute(data, today)`, testable with node); `index.html` renders it.
+
+## Points rules (added 2026-09-28)
+- **Deductions are allowed**: use a negative `points` value with category `respect` (gentle wording, e.g. "Respect slip: ... Bounce back!"). They render in red with a minus sign and never count as a win or badge. Totals and levels include them.
+- **Streaks (automatic)**: a streak day = a Sydney calendar day whose net points are > 0. The page computes the current streak (ending today, or yesterday if today has no positive net yet), the best streak, and a **+100 streak bonus for every 7th consecutive day** in a run (days 7, 14, 21...). Bonuses are shown as 🔥 bonus rows and are included in the total.
+  **Never add streak-bonus entries to `data.json`**: they are computed in the page, so adding them would double-count (entries with category `streakbonus` are ignored anyway).
+- **Cash-out**: every 1000 points = $50 USD from Dad (`cashout` in data.json). The page shows `X / 1000 pts toward $50`, dollars earned so far (`points / 1000 * 50`) and how many full $50 cash-outs are unlocked.
 
 ## Daily update: append a win and/or tips (one commit + push)
 Append entries to the END of each array in `data.json` / `tips.json` (never delete old ones). Then:
@@ -29,7 +35,7 @@ Tip rules: GTA = driving, racing, cars, exploring and customising only (no crime
    ```json
    { "date": "2026-09-27", "emoji": "🏀", "category": "hoops", "points": 15, "text": "Shot 50 hoops in the backyard" }
    ```
-   `category` must be one of `home`, `reading`, `hoops`, `school`, `kindness`.
+   `category` must be one of `home`, `reading`, `hoops`, `school`, `kindness`, `active` (hikes, bike rides, sport adventures), or `respect` (negative points only).
 2. Check the JSON is valid: `python3 -m json.tool data.json >/dev/null && echo OK`
 3. Publish:
    ```bash
@@ -47,8 +53,10 @@ Tip rules: GTA = driving, racing, cars, exploring and customising only (no crime
 - `bot` (string): sign-off, e.g. "Buzz 🤖"
 - `updated` (YYYY-MM-DD)
 - `levels[]`: `{ name, min, emoji }` (the level applies when total >= min)
-- `categories{}`: key -> `{ label, emoji }`
-- `wins[]`: `{ date: "YYYY-MM-DD", emoji, category: <category key>, points: number, text }`
+- `categories{}`: key -> `{ label, emoji, color, deduction? }` (`deduction: true` = no badge / not shown as an earning category)
+- `cashout`: `{ points: 1000, reward: 50, currency: "USD" }`
+- `streak`: `{ bonusEvery: 7, bonusPoints: 100 }`
+- `wins[]`: `{ date: "YYYY-MM-DD", emoji, category: <category key>, points: number (negative allowed for deductions), text }`
 
 ## Local preview
 `python3 -m http.server 8765` then open http://localhost:8765/ (a server is needed because the page uses fetch).
@@ -58,4 +66,9 @@ Tip rules: GTA = driving, racing, cars, exploring and customising only (no crime
 cd /workspace/alon/scoreboard
 gh repo create buzz-hq-7k3 --public --source=. --remote=origin --push
 gh api -X POST repos/{owner}/buzz-hq-7k3/pages -f 'source[branch]=main' -f 'source[path]=/'
+```
+
+## Testing the logic
+```bash
+node -e 'const s=require("./scoreboard.js");const r=s.compute(require("./data.json"),"2026-09-28");console.log(r.total,r.level.name,r.streak,r.cash)'
 ```

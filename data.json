@@ -1,77 +1,123 @@
 {
   "name": "Alon",
-  "bot": "Buzz \ud83e\udd16",
+  "bot": "Buzz 🤖",
   "updated": "2026-09-28",
   "levels": [
     {
       "name": "Rookie",
       "min": 0,
-      "emoji": "\ud83c\udf31"
+      "emoji": "🌱"
     },
     {
       "name": "Pro",
       "min": 50,
-      "emoji": "\u2b50"
+      "emoji": "⭐"
     },
     {
       "name": "All-Star",
       "min": 150,
-      "emoji": "\ud83c\udf1f"
+      "emoji": "🌟"
     },
     {
       "name": "MVP",
       "min": 300,
-      "emoji": "\ud83c\udfc6"
+      "emoji": "🏆"
     },
     {
       "name": "Legend",
       "min": 500,
-      "emoji": "\ud83d\udc51"
+      "emoji": "👑"
     }
   ],
   "categories": {
     "home": {
       "label": "Helping at home",
-      "emoji": "\ud83c\udfe0"
+      "emoji": "🏠",
+      "color": "#ffb03f"
     },
     "reading": {
       "label": "Reading",
-      "emoji": "\ud83d\udcda"
+      "emoji": "📚",
+      "color": "#5fd3ff"
     },
     "hoops": {
       "label": "Basketball",
-      "emoji": "\ud83c\udfc0"
+      "emoji": "🏀",
+      "color": "#ff8a3d"
     },
     "school": {
       "label": "School & creativity",
-      "emoji": "\ud83c\udfa8"
+      "emoji": "🎨",
+      "color": "#c38bff"
     },
     "kindness": {
       "label": "Chat & kindness",
-      "emoji": "\ud83d\udcac"
+      "emoji": "💬",
+      "color": "#3dff9e"
+    },
+    "active": {
+      "label": "Active & adventures",
+      "emoji": "🥾",
+      "color": "#7dff5a"
+    },
+    "respect": {
+      "label": "Respect",
+      "emoji": "🙊",
+      "color": "#ff5d6c",
+      "deduction": true
     }
   },
   "wins": [
     {
       "date": "2026-09-26",
-      "emoji": "\ud83c\udf7d\ufe0f",
+      "emoji": "🍽️",
       "category": "home",
       "points": 20,
       "text": "Did the dishes before heading off on the trip"
     },
     {
       "date": "2026-09-26",
-      "emoji": "\ud83d\udcd6",
+      "emoji": "📖",
       "category": "school",
       "points": 20,
       "text": "Shared stories and awesome work from school"
     },
     {
       "date": "2026-09-26",
-      "emoji": "\ud83c\udfce\ufe0f",
+      "emoji": "🏎️",
       "category": "kindness",
       "points": 10,
       "text": "Answered the Melbourne dream-car question: GT or Tesla"
+    },
+    {
+      "date": "2026-09-27",
+      "emoji": "🥾",
+      "category": "active",
+      "points": 40,
+      "text": "Long hike on Mount Buffalo"
+    },
+    {
+      "date": "2026-09-28",
+      "emoji": "🚴",
+      "category": "active",
+      "points": 30,
+      "text": "Long bike ride"
+    },
+    {
+      "date": "2026-09-28",
+      "emoji": "🙊",
+      "category": "respect",
+      "points": -20,
+      "text": "Respect slip: some rude words. Bounce back!"
     }
-  ]
+  ],
+  "cashout": {
+    "points": 1000,
+    "reward": 50,
+    "currency": "USD"
+  },
+  "streak": {
+    "bonusEvery": 7,
+    "bonusPoints": 100
+  }
 }
