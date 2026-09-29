@@ -33,7 +33,7 @@
     {
       "date": "2026-09-26",
       "game": "Roblox",
-      "title": "Stay safe online \ud83d\udee1\ufe0f",
+      "title": "Stay safe online 🛡️",
       "tip": "Never share your password, full name, school, address or phone number, even with game 'friends'. If someone is mean or weird, block and report them, then tell Dad."
     },
     {
@@ -107,6 +107,24 @@
       "game": "Fortnite",
       "title": "Land with a plan",
       "tip": "Before you jump from the Battle Bus, pick a spot on the map. Quiet edges often mean easier loot and time to gear up before you meet other players."
+    },
+    {
+      "date": "2026-09-29",
+      "game": "GTA",
+      "title": "Smooth braking beats slamming",
+      "tip": "Ease off the accelerator before a corner, then brake gently. Slamming the brakes locks the wheels and you slide past the turn. Smooth in, fast out!"
+    },
+    {
+      "date": "2026-09-29",
+      "game": "Roblox",
+      "title": "Shift lock for precision",
+      "tip": "In many Roblox games, turn on Shift Lock (or first-person) so you turn with the camera. It makes parkour jumps and aiming feel much tighter."
+    },
+    {
+      "date": "2026-09-29",
+      "game": "Fortnite",
+      "title": "Listen before you peek",
+      "tip": "Sound tells you a lot — footsteps, chests, and builds. Pause for a second near a building and listen before you rush in."
     }
   ]
 }

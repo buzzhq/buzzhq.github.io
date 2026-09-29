@@ -94,6 +94,81 @@
       "prompt": "Read this out loud, nice and clear!",
       "text": "The rocket roared off the launch pad and zoomed into the dark blue sky. Up in space, the astronauts floated around like balloons and tried to catch wobbly drops of orange juice. One astronaut even brought a tiny basketball and made a perfect shot into a cup on the wall. Back on Earth, everyone cheered, because it was the highest basket in history!",
       "points": 10
+    },
+    {
+      "date": "2026-09-29",
+      "id": "dc1",
+      "type": "mcq",
+      "title": "Maths step",
+      "from": "318 × 24",
+      "step": "Step 1",
+      "prompt": "What is 8 × 4?",
+      "choices": {
+        "a": "28",
+        "b": "32",
+        "c": "36"
+      },
+      "tip": "Start with the ones digit — it's just a times-table fact!",
+      "points": 5,
+      "check": "67780a0ef36a26506712252a77602ba3630ac338539b07d859f1db86ab38b49d"
+    },
+    {
+      "date": "2026-09-29",
+      "id": "dc2",
+      "type": "mcq",
+      "title": "Maths step",
+      "from": "318 × 24",
+      "step": "Estimate",
+      "prompt": "Which is closest to 318 × 24?",
+      "choices": {
+        "a": "700",
+        "b": "7,000",
+        "c": "70,000"
+      },
+      "tip": "Round 318 to 300, then think 300 × 24.",
+      "points": 5,
+      "check": "99358b8ce433df345aaab1abc5d8b856fe1202ecec82ad055c72848b0ccd2e75"
+    },
+    {
+      "date": "2026-09-29",
+      "id": "dc3",
+      "type": "hebrew",
+      "title": "Hebrew letter",
+      "prompt": "What sound does this letter make?",
+      "letter": "ב",
+      "choices": {
+        "a": "n (like net)",
+        "b": "b/v (like ball / van)",
+        "c": "r (like race)",
+        "d": "t (like team)"
+      },
+      "points": 5,
+      "check": "84fa9ad47cb6722ff0a06d4b70fce12cd0bef1f6a2f53b35872c03ae4aec34dd"
+    },
+    {
+      "date": "2026-09-29",
+      "id": "dc4",
+      "type": "hebrew",
+      "title": "Hebrew letter",
+      "prompt": "What sound does this letter make?",
+      "letter": "ל",
+      "choices": {
+        "a": "l (like lion)",
+        "b": "m (like moon)",
+        "c": "d (like dog)",
+        "d": "g (like goal)"
+      },
+      "points": 5,
+      "check": "fd788d0f3665691acc9b3ae1aef7b537072f734ed89cd5a6a6edf63b9dd16a2b"
+    },
+    {
+      "date": "2026-09-29",
+      "id": "dc5",
+      "type": "reading",
+      "title": "Read aloud (English)",
+      "prompt": "Read this out loud, nice and clear! (It's also in today's WhatsApp message.)",
+      "text": "Alon's shiny blue GT rolled quietly to the basketball court. He practised ten free throws, giving each ball a soft backspin. A flock of noisy cockatoos watched from the hoop like tiny coaches. When the last shot swished through, even the birds seemed to cheer!",
+      "points": 10
     }
   ],
   "notes": [
@@ -115,6 +190,15 @@
         "name": "Meteor Multiplication (Coolmath4Kids)",
         "url": "https://www.coolmath4kids.com/math-games/meteor-multiplication",
         "why": "Space mission! 🚀 Blast the meteors by picking the right times-table answer before they hit the space station. Tap PLAY.",
+        "ads": true
+      }
+    },
+    {
+      "date": "2026-09-29",
+      "game": {
+        "name": "Hit the Button (Topmarks)",
+        "url": "https://www.topmarks.co.uk/maths-games/hit-the-button",
+        "why": "Times-table turbo! 🏎️ Hit the right answer before the clock runs out — perfect warm-up for today's 8 × 4 step.",
         "ads": true
       }
     }
