@@ -169,6 +169,81 @@
       "prompt": "Read this out loud, nice and clear! (It's also in today's WhatsApp message.)",
       "text": "Alon's shiny blue GT rolled quietly to the basketball court. He practised ten free throws, giving each ball a soft backspin. A flock of noisy cockatoos watched from the hoop like tiny coaches. When the last shot swished through, even the birds seemed to cheer!",
       "points": 10
+    },
+    {
+      "date": "2026-09-30",
+      "id": "dc1",
+      "type": "mcq",
+      "title": "Maths step",
+      "from": "318 × 24",
+      "step": "Carrying",
+      "prompt": "8 × 4 = 32: you write the 2 in the ones place. What do you carry to the tens?",
+      "choices": {
+        "a": "2",
+        "b": "3",
+        "c": "4"
+      },
+      "tip": "The ones digit stays; the tens digit is what you carry.",
+      "points": 5,
+      "check": "0e34fe9708e16a42d4fa0867fea4c2c54e6a3287113285beaf608111aeb884fe"
+    },
+    {
+      "date": "2026-09-30",
+      "id": "dc2",
+      "type": "mcq",
+      "title": "Maths step",
+      "from": "4356 ÷ 6",
+      "step": "How many fit?",
+      "prompt": "How many 6s fit in 43?",
+      "choices": {
+        "a": "6",
+        "b": "7",
+        "c": "8"
+      },
+      "tip": "Find the biggest times-table answer that is still ≤ 43.",
+      "points": 5,
+      "check": "05006ec8ebf7cb81886fcc74693df356f0b632b835f9a0148dcca6f87e0f0e84"
+    },
+    {
+      "date": "2026-09-30",
+      "id": "dc3",
+      "type": "hebrew",
+      "title": "Hebrew letter",
+      "prompt": "What sound does this letter make?",
+      "letter": "ג",
+      "choices": {
+        "a": "r (like race)",
+        "b": "n (like net)",
+        "c": "g (like goal)",
+        "d": "z (like zip)"
+      },
+      "points": 5,
+      "check": "2d303c98caef00571746d887980ceb3168974dba9314b96bf1729bc4fe5bb334"
+    },
+    {
+      "date": "2026-09-30",
+      "id": "dc4",
+      "type": "hebrew",
+      "title": "Hebrew letter",
+      "prompt": "What sound does this letter make?",
+      "letter": "ד",
+      "choices": {
+        "a": "d (like dog)",
+        "b": "b/v (like ball)",
+        "c": "t (like team)",
+        "d": "k (like kick)"
+      },
+      "points": 5,
+      "check": "d37cc05ed6ee52d5333b1d18c5f35ad454cf59a01d9268e5efd43b4a3040b6c2"
+    },
+    {
+      "date": "2026-09-30",
+      "id": "dc5",
+      "type": "reading",
+      "title": "Read aloud (English)",
+      "prompt": "Read this out loud, nice and clear! (It's also in today's WhatsApp message.)",
+      "text": "Mercury races around the Sun in just 88 Earth days — the shortest year of any planet. Alon pictured his dream GT parked on a grey rocky plain under a giant Sun. He bounced a basketball once for luck, then climbed in for an imaginary lap. Short year, long adventure!",
+      "points": 10
     }
   ],
   "notes": [
@@ -199,6 +274,15 @@
         "name": "Hit the Button (Topmarks)",
         "url": "https://www.topmarks.co.uk/maths-games/hit-the-button",
         "why": "Times-table turbo! 🏎️ Hit the right answer before the clock runs out — perfect warm-up for today's 8 × 4 step.",
+        "ads": true
+      }
+    },
+    {
+      "date": "2026-09-30",
+      "game": {
+        "name": "Just Divide (Math Playground)",
+        "url": "https://www.mathplayground.com/just_divide.html",
+        "why": "Division detective! 🧩 Figure out how many fit — perfect practice for today's 'how many 6s in 43?' step.",
         "ads": true
       }
     }

@@ -125,6 +125,24 @@
       "game": "Fortnite",
       "title": "Listen before you peek",
       "tip": "Sound tells you a lot — footsteps, chests, and builds. Pause for a second near a building and listen before you rush in."
+    },
+    {
+      "date": "2026-09-30",
+      "game": "GTA",
+      "title": "Coast into corners",
+      "tip": "Ease off the throttle before a bend so the car stays planted — smooth in, speedy out."
+    },
+    {
+      "date": "2026-09-30",
+      "game": "Roblox",
+      "title": "Hotbar heroes",
+      "tip": "Pin your favourite tools on the hotbar so you can grab them fast without digging through the backpack."
+    },
+    {
+      "date": "2026-09-30",
+      "game": "Fortnite",
+      "title": "Ping, don't shout",
+      "tip": "Tap to mark what you see for your squad — a quick ping is clearer than yelling across the room."
     }
   ]
 }
