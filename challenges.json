@@ -244,6 +244,91 @@
       "prompt": "Read this out loud, nice and clear! (It's also in today's WhatsApp message.)",
       "text": "Mercury races around the Sun in just 88 Earth days — the shortest year of any planet. Alon pictured his dream GT parked on a grey rocky plain under a giant Sun. He bounced a basketball once for luck, then climbed in for an imaginary lap. Short year, long adventure!",
       "points": 10
+    },
+    {
+      "date": "2026-10-01",
+      "id": "dc1",
+      "type": "mcq",
+      "title": "Maths step",
+      "from": "318 × 24",
+      "step": "Ones-row by splitting",
+      "prompt": "318 × 4 by splitting: 300×4 + 10×4 + 8×4 = ?",
+      "choices": {
+        "a": "1,172",
+        "b": "1,272",
+        "c": "1,372"
+      },
+      "tip": "Do each piece: 300×4=1200, 10×4=40, 8×4=32, then add.",
+      "points": 5,
+      "check": "fb92b12cb36474b80609f4c8e4d8be225e5667ec7c94f589d7a9164994819d1c"
+    },
+    {
+      "date": "2026-10-01",
+      "id": "dc2",
+      "type": "mcq",
+      "title": "Maths step",
+      "from": "4356 ÷ 6",
+      "step": "Bring down",
+      "prompt": "You got 7 remainder 1. Bring down the 5 — what number do you get?",
+      "choices": {
+        "a": "5",
+        "b": "15",
+        "c": "51"
+      },
+      "tip": "The remainder 1 sits in front of the next digit 5 → fifteen.",
+      "points": 5,
+      "check": "f84cc5cb95ee4450d0352e62ac9f51df53a40f71a8e564204b1dda55c6d0e13e"
+    },
+    {
+      "date": "2026-10-01",
+      "id": "dc3",
+      "type": "hebrew",
+      "title": "Hebrew letter",
+      "prompt": "What sound does this letter make?",
+      "letter": "ה",
+      "choices": {
+        "a": "h (like hat)",
+        "b": "m (like moon)",
+        "c": "z (like zip)",
+        "d": "r (like race)"
+      },
+      "points": 5,
+      "check": "5f9d9ff9d46b12d428a2fb6a1999a740bded4981eeab3d0d2329959183c17a98"
+    },
+    {
+      "date": "2026-10-01",
+      "id": "dc4",
+      "type": "hebrew",
+      "title": "Hebrew letter",
+      "prompt": "What sound does this letter make?",
+      "letter": "נ",
+      "choices": {
+        "a": "s (like sun)",
+        "b": "n (like net)",
+        "c": "g (like goal)",
+        "d": "t (like team)"
+      },
+      "points": 5,
+      "check": "6ba8981f8af0957711a9d72d9882534cbf8f31d2ccb186d6a791566b575f9d93"
+    },
+    {
+      "date": "2026-10-01",
+      "id": "dc5",
+      "type": "reading",
+      "title": "Read aloud (English)",
+      "prompt": "Read this out loud, nice and clear! (It's also in today's WhatsApp message.)",
+      "text": "Franklin parked his red GT beside the court and split a tough sum in his head: three hundreds, one ten, eight ones — times four. Then he bounced the ball once, spun it soft, and sank a free throw. A noisy cockatoo squawked like a tiny referee. Maths first, then swish!",
+      "points": 10
+    },
+    {
+      "date": "2026-10-01",
+      "id": "dc6",
+      "type": "paper",
+      "title": "Paper bonus (optional)",
+      "prompt": "OPTIONAL (+10): with pen and paper, work out 318 × 24. Reply with the full answer like: dc6 7632",
+      "optional": true,
+      "points": 10,
+      "check": "41275271075f19413f624d7c37c0327d13e574d08d6044e5c866c138df005af1"
     }
   ],
   "notes": [
@@ -283,6 +368,15 @@
         "name": "Just Divide (Math Playground)",
         "url": "https://www.mathplayground.com/just_divide.html",
         "why": "Division detective! 🧩 Figure out how many fit — perfect practice for today's 'how many 6s in 43?' step.",
+        "ads": true
+      }
+    },
+    {
+      "date": "2026-10-01",
+      "game": {
+        "name": "Canoe Penguins (Coolmath4Kids)",
+        "url": "https://www.coolmath4kids.com/math-games/canoe-penguins",
+        "why": "Penguin race! 🐧 Paddle by solving two-digit multiplication — great warm-up for today's 318×4 splitting step.",
         "ads": true
       }
     }

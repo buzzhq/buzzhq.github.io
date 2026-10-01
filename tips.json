@@ -143,6 +143,24 @@
       "game": "Fortnite",
       "title": "Ping, don't shout",
       "tip": "Tap to mark what you see for your squad — a quick ping is clearer than yelling across the room."
+    },
+    {
+      "date": "2026-10-01",
+      "game": "GTA",
+      "title": "Check your mirrors",
+      "tip": "Before you change lanes, glance in your mirrors and check over your shoulder. Knowing what's behind you keeps the race smooth and the car on track."
+    },
+    {
+      "date": "2026-10-01",
+      "game": "Roblox",
+      "title": "Jump + sprint timing",
+      "tip": "For long parkour gaps, start sprinting a step early, then jump at the edge. Too early and you fall short; too late and you clip the ledge."
+    },
+    {
+      "date": "2026-10-01",
+      "game": "Fortnite",
+      "title": "Land near mats",
+      "tip": "Touch down close to trees, cars, or walls so you can farm wood and metal right away — early mats mean safer rotates later."
     }
   ]
 }
