@@ -1,7 +1,7 @@
 {
   "name": "Alon",
   "bot": "Buzz 🤖",
-  "updated": "2026-09-28",
+  "updated": "2026-10-01",
   "levels": [
     {
       "name": "Rookie",
@@ -128,6 +128,13 @@
       "category": "kindness",
       "points": 10,
       "text": "Picked GT for the Melbourne lap!"
+    },
+    {
+      "date": "2026-09-29",
+      "emoji": "🚶",
+      "category": "active",
+      "points": 20,
+      "text": "Afternoon walk"
     }
   ],
   "cashout": {
