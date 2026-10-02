@@ -329,6 +329,81 @@
       "optional": true,
       "points": 10,
       "check": "41275271075f19413f624d7c37c0327d13e574d08d6044e5c866c138df005af1"
+    },
+    {
+      "date": "2026-10-02",
+      "id": "dc1",
+      "type": "mcq",
+      "title": "Maths step",
+      "from": "318 × 24",
+      "step": "Tens-row",
+      "prompt": "318 × 2 = 636, so 318 × 20 = ?",
+      "choices": {
+        "a": "636",
+        "b": "63,600",
+        "c": "6,360"
+      },
+      "tip": "×20 means ×2 and then add a zero (ones place becomes tens).",
+      "points": 5,
+      "check": "5e869e4a8fea8f2be6157cfbe67a232d2a24d26319dfe18416beb8f2ae742a94"
+    },
+    {
+      "date": "2026-10-02",
+      "id": "dc2",
+      "type": "mcq",
+      "title": "Maths step",
+      "from": "4356 ÷ 6",
+      "step": "How many fit?",
+      "prompt": "After bringing down, you have 15. How many 6s fit in 15?",
+      "choices": {
+        "a": "2",
+        "b": "3",
+        "c": "5"
+      },
+      "tip": "Biggest whole number of 6s that still fits under 15.",
+      "points": 5,
+      "check": "568cce9e3b5cc1bd3bb0a53c8d6ba50bd16cf01443ca63930cc604f01df81c96"
+    },
+    {
+      "date": "2026-10-02",
+      "id": "dc3",
+      "type": "hebrew",
+      "title": "Hebrew letter",
+      "prompt": "What sound does this letter make?",
+      "letter": "ו",
+      "choices": {
+        "a": "z (like zip)",
+        "b": "n (like net)",
+        "c": "m (like moon)",
+        "d": "v (like van)"
+      },
+      "points": 5,
+      "check": "579d1afeedd8a685ef84c568b4e380112af63f11522cb4d21ec73f075a915fbc"
+    },
+    {
+      "date": "2026-10-02",
+      "id": "dc4",
+      "type": "hebrew",
+      "title": "Hebrew letter",
+      "prompt": "What sound does this letter make?",
+      "letter": "ס",
+      "choices": {
+        "a": "sh (like ship)",
+        "b": "t (like team)",
+        "c": "s (like sun)",
+        "d": "r (like race)"
+      },
+      "points": 5,
+      "check": "34f1ff3968fdd820297eee26c0ac89df96792aa80a55e089d38c67e3973b6a18"
+    },
+    {
+      "date": "2026-10-02",
+      "id": "dc5",
+      "type": "reading",
+      "title": "Read aloud (English)",
+      "prompt": "Read this out loud, nice and clear! (It's also in today's WhatsApp message.)",
+      "text": "A silver GT zoomed past the basketball courts under a sky full of stars. Alon bounced the ball three times, then launched a perfect free throw. High above, a satellite blinked like a tiny referee whistle. Swish — and the night game was on!",
+      "points": 10
     }
   ],
   "notes": [
@@ -377,6 +452,15 @@
         "name": "Canoe Penguins (Coolmath4Kids)",
         "url": "https://www.coolmath4kids.com/math-games/canoe-penguins",
         "why": "Penguin race! 🐧 Paddle by solving two-digit multiplication — great warm-up for today's 318×4 splitting step.",
+        "ads": true
+      }
+    },
+    {
+      "date": "2026-10-02",
+      "game": {
+        "name": "Math Racer Multiplication (Math Playground)",
+        "url": "https://www.mathplayground.com/math_racer_multiplication.html",
+        "why": "Zoom! 🏎️ Race to the right product — perfect warm-up for today's tens-row (×20) step.",
         "ads": true
       }
     }
