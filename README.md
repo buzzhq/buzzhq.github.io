@@ -15,7 +15,16 @@ Both pages are data-driven and **additive** (append-only, updated daily):
 - **Deductions are allowed**: use a negative `points` value with category `respect` (gentle wording, e.g. "Respect slip: ... Bounce back!"). They render in red with a minus sign and never count as a win or badge. Totals and levels include them.
 - **Streaks (automatic)**: a streak day = a Sydney calendar day whose net points are > 0. The page computes the current streak (ending today, or yesterday if today has no positive net yet), the best streak, and a **+100 streak bonus for every 7th consecutive day** in a run (days 7, 14, 21...). Bonuses are shown as 🔥 bonus rows and are included in the total.
   **Never add streak-bonus entries to `data.json`**: they are computed in the page, so adding them would double-count (entries with category `streakbonus` are ignored anyway).
-- **Cash-out**: every 1000 points = $50 USD from Dad (`cashout` in data.json). The page shows `X / 1000 pts toward $50`, dollars earned so far (`points / 1000 * 50`) and how many full $50 cash-outs are unlocked.
+- **Cash-out**: every 1000 points = $50 USD from Dad (`cashout` in data.json), i.e. **20 pts = US$1**. The cash-out bar shows **wallet** progress (`wallet / 1000 pts toward $50`, wallet dollars = `wallet / 1000 * 50`).
+- **Lifetime vs wallet (added 2026-10-03)**:
+  - **Lifetime points** = all entries EXCEPT `cashout` (wins minus respect deductions plus computed streak bonuses). Level, level bar and all badges use lifetime, so spending never drops his level. Shown big at the top as "Lifetime".
+  - **Wallet** (spendable) = lifetime minus all cash-outs. Shown under the level and in the cash-out card.
+  - `cashout` entries render as a gold 🎁 REWARD row (not red, not a win, no NEW pulse) and are listed under "Rewards cashed in" (total pts + US$). They are IGNORED by streaks (never break or count toward a streak day).
+- **Cash-out rule (when Dad spends money on a reward)**: convert AUD to USD at the day's rate (`curl -s https://open.er-api.com/v6/latest/AUD | python3 -c 'import json,sys;print(json.load(sys.stdin)["rates"]["USD"])'`), round USD to cents, **points = round(USD × 20)**, and append a NEGATIVE `cashout` entry:
+  ```json
+  { "date": "2026-10-03", "emoji": "🎮", "category": "cashout", "points": -118, "text": "Cashed in: Descenders for PS5 (A$8.50)", "aud": 8.50, "usd": 5.91, "rate": 0.695 }
+  ```
+  (`aud`, `usd`, `rate` are optional; `usd` is shown in the rewards list, otherwise it is `points / 20`.) Never spend more than the wallet.
 
 ## Daily update: append a win and/or tips (one commit + push)
 Append entries to the END of each array in `data.json` / `tips.json` (never delete old ones). Then:
@@ -36,7 +45,7 @@ Tip rules: GTA = driving, racing, cars, exploring and customising only (no crime
    ```json
    { "date": "2026-09-27", "emoji": "🏀", "category": "hoops", "points": 15, "text": "Shot 50 hoops in the backyard" }
    ```
-   `category` must be one of `home`, `reading`, `hoops`, `school`, `kindness`, `active` (hikes, bike rides, sport adventures), `challenge` 🧠 (daily challenge answers: +5 each correct, +10 good reading), or `respect` (negative points only).
+   `category` must be one of `home`, `reading`, `hoops`, `school`, `kindness`, `active` (hikes, bike rides, sport adventures), `challenge` 🧠 (daily challenge answers: +5 each correct, +10 good reading), `respect` (negative points only), or `cashout` 🎁 (negative points only: a reward bought with wallet points, see Cash-out rule).
 2. Check the JSON is valid: `python3 -m json.tool data.json >/dev/null && echo OK`
 3. Publish:
    ```bash
@@ -54,8 +63,8 @@ Tip rules: GTA = driving, racing, cars, exploring and customising only (no crime
 - `bot` (string): sign-off, e.g. "Buzz 🤖"
 - `updated` (YYYY-MM-DD)
 - `levels[]`: `{ name, min, emoji }` (the level applies when total >= min)
-- `categories{}`: key -> `{ label, emoji, color, deduction? }` (`deduction: true` = no badge / not shown as an earning category)
-- `cashout`: `{ points: 1000, reward: 50, currency: "USD" }`
+- `categories{}`: key -> `{ label, emoji, color, deduction? }` (`deduction: true` = no badge / not shown as an earning category); `spend: true` = cash-out category (excluded from lifetime, level, badges and streaks; subtracted from wallet)
+- `cashout`: `{ points: 1000, reward: 50, currency: "USD", pointsPerUSD: 20 }`
 - `streak`: `{ bonusEvery: 7, bonusPoints: 100 }`
 - `wins[]`: `{ date: "YYYY-MM-DD", emoji, category: <category key>, points: number (negative allowed for deductions), text }`
 
@@ -71,7 +80,8 @@ gh api -X POST repos/{owner}/buzz-hq-7k3/pages -f 'source[branch]=main' -f 'sour
 
 ## Testing the logic
 ```bash
-node -e 'const s=require("./scoreboard.js");const r=s.compute(require("./data.json"),"2026-09-28");console.log(r.total,r.level.name,r.streak,r.cash)'
+node -e 'const s=require("./scoreboard.js");const r=s.compute(require("./data.json"),"2026-09-28");console.log(r.lifetime,r.wallet,r.level.name,r.streak,r.cash,r.rewards)'
+# 2026-10-03 expected: lifetime 200, wallet 82 ($4.10), All-Star, rewards 118 pts = US$5.91
 ```
 
 ## Daily Challenge (added 2026-09-28): `challenges.html` + `challenges.json`

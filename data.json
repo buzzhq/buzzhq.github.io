@@ -1,7 +1,7 @@
 {
   "name": "Alon",
   "bot": "Buzz 🤖",
-  "updated": "2026-10-01",
+  "updated": "2026-10-03",
   "levels": [
     {
       "name": "Rookie",
@@ -70,6 +70,12 @@
       "emoji": "🙊",
       "color": "#ff5d6c",
       "deduction": true
+    },
+    "cashout": {
+      "label": "Reward cashed in",
+      "emoji": "🎁",
+      "color": "#ffd23f",
+      "spend": true
     }
   },
   "wins": [
@@ -163,12 +169,23 @@
       "category": "hoops",
       "points": 20,
       "text": "Played his first basketball game of the season"
+    },
+    {
+      "date": "2026-10-03",
+      "emoji": "🎮",
+      "category": "cashout",
+      "points": -118,
+      "text": "Cashed in: Descenders for PS5 (A$8.50)",
+      "aud": 8.5,
+      "usd": 5.91,
+      "rate": 0.695
     }
   ],
   "cashout": {
     "points": 1000,
     "reward": 50,
-    "currency": "USD"
+    "currency": "USD",
+    "pointsPerUSD": 20
   },
   "streak": {
     "bonusEvery": 7,

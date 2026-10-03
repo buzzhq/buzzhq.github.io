@@ -128,3 +128,18 @@ button.choice:disabled:not(.right){opacity:.4}
 .sendbtn{display:block;background:#25d366;color:#fff;box-shadow:0 5px 0 #128c7e;text-decoration:none;font-size:1.5rem;margin:10px 0}
 .preview code{white-space:normal;word-break:break-word}
 .pick{font-size:1.15rem;font-weight:900;margin:4px 0}
+/* Wallet + rewards (added 3 Oct 2026) */
+.ltlabel{font-size:.95rem;font-weight:900;letter-spacing:2px;text-transform:uppercase;opacity:.9;margin-bottom:4px}
+.wallet{margin-top:12px;background:linear-gradient(135deg,rgba(255,210,63,.28),rgba(61,255,158,.2));border:2px solid #ffd23f;border-radius:14px;padding:10px}
+.wallet .wl{font-size:.95rem;font-weight:900;letter-spacing:1px;text-transform:uppercase}
+.wallet .wv{font-size:2rem;font-weight:900;color:#ffd23f;text-shadow:0 3px 0 #a66b00;line-height:1.2}
+.wallet .ws{font-size:.85rem;opacity:.9}
+.rewards{margin-top:10px;background:rgba(0,0,0,.22);border-radius:14px;padding:8px 10px;text-align:left}
+.rhead{font-weight:700}
+.rhead b{color:#ffd23f}
+.ritem{margin-top:6px;padding-left:4px}
+.ritem .rd{display:block;font-size:.78rem;opacity:.8;padding-left:1.6em}
+.win.reward{background:linear-gradient(90deg,rgba(255,210,63,.22),rgba(255,255,255,.08))}
+.win.reward .p{color:#ffd23f;font-size:1rem}
+.tagreward{display:inline-block;background:#ffd23f;color:#2b1055;font-size:.7rem;font-weight:900;padding:2px 7px;border-radius:999px;margin-left:6px;vertical-align:middle}
+@media (max-width:420px){.wallet .wv{font-size:1.6rem}.pts{font-size:3.4rem}}

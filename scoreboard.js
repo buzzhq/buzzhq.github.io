@@ -11,7 +11,12 @@
     const cfgS = Object.assign({ bonusEvery: 7, bonusPoints: 100 }, data.streak || {});
     const cfgC = Object.assign({ points: 1000, reward: 50, currency: "USD" }, data.cashout || {});
     // Streak bonuses are ALWAYS computed here, never stored in data.json (so no double counting).
-    const wins = (data.wins || []).filter(w => w.category !== "streakbonus");
+    const cats = categories(data);
+    const isSpend = w => w.category === "cashout" || !!(cats[w.category] && cats[w.category].spend);
+    const all = (data.wins || []).filter(w => w.category !== "streakbonus");
+    // Cash-outs (rewards bought with points) never count toward lifetime points, levels or streaks.
+    const wins = all.filter(w => !isSpend(w));
+    const spends = all.filter(isSpend).map(w => Object.assign({}, w, { reward: true }));
     const byDay = {};
     wins.forEach(w => byDay[w.date] = (byDay[w.date] || 0) + (Number(w.points) || 0));
     const posDays = Object.keys(byDay).filter(d => byDay[d] > 0).sort();
@@ -35,24 +40,30 @@
 
     const base = wins.reduce((s, w) => s + (Number(w.points) || 0), 0);
     const bonusTotal = bonuses.reduce((s, b) => s + b.points, 0);
-    const total = base + bonusTotal;
+    const lifetime = base + bonusTotal;           // LIFETIME EARNED: drives level + badges, never drops when spending
+    const total = lifetime;                       // (kept for backward compatibility)
+    const ppu = cfgC.pointsPerUSD || cfgC.points / cfgC.reward;  // 20 pts per US$1
+    const spentPts = spends.reduce((s, w) => s + Math.abs(Number(w.points) || 0), 0);
+    const spentUSD = Math.round(spends.reduce((s, w) => s + (w.usd != null ? Number(w.usd) : Math.abs(w.points) / ppu), 0) * 100) / 100;
+    const wallet = lifetime - spentPts;           // spendable balance
+    const rewards = { count: spends.length, points: spentPts, usd: spentUSD, items: [...spends].sort((a, b) => b.date.localeCompare(a.date)) };
 
     const levels = [...data.levels].sort((a, b) => a.min - b.min);
     let level = levels[0], next = levels[1] || null;
-    levels.forEach((l, i) => { if (total >= l.min) { level = l; next = levels[i + 1] || null; } });
-    const levelPct = next ? Math.max(0, Math.min(100, (total - level.min) / (next.min - level.min) * 100)) : 100;
+    levels.forEach((l, i) => { if (lifetime >= l.min) { level = l; next = levels[i + 1] || null; } });
+    const levelPct = next ? Math.max(0, Math.min(100, (lifetime - level.min) / (next.min - level.min) * 100)) : 100;
 
-    const safe = Math.max(0, total);
+    const safe = Math.max(0, wallet);              // cash-out bar = WALLET progress
     const cash = {
       goal: cfgC.points, reward: cfgC.reward, currency: cfgC.currency,
-      dollars: safe / cfgC.points * cfgC.reward,          // e.g. 100 pts -> 5.00
+      dollars: safe / cfgC.points * cfgC.reward,          // wallet value, e.g. 82 pts -> 4.10
       cashouts: Math.floor(safe / cfgC.points),          // full $50 chunks unlocked
       inGoal: safe % cfgC.points,                        // progress toward the next $50
     };
     cash.pct = cash.inGoal / cfgC.points * 100;
 
-    const entries = [...wins, ...bonuses].sort((a, b) => b.date.localeCompare(a.date) || (a.bonus ? -1 : 0) - (b.bonus ? -1 : 0));
-    return { total, base, bonusTotal, bonuses, entries, level, next, levelPct, streak: { current, best, toNextBonus, every: cfgS.bonusEvery, bonus: cfgS.bonusPoints, activeToday: pos.has(today) }, cash, byDay };
+    const entries = [...wins, ...bonuses, ...spends].sort((a, b) => b.date.localeCompare(a.date) || (a.bonus ? -1 : 0) - (b.bonus ? -1 : 0));
+    return { total, lifetime, wallet, rewards, pointsPerUSD: ppu, base, bonusTotal, bonuses, entries, level, next, levelPct, streak: { current, best, toNextBonus, every: cfgS.bonusEvery, bonus: cfgS.bonusPoints, activeToday: pos.has(today) }, cash, byDay };
   }
 
   if (typeof module !== "undefined" && module.exports) module.exports = { compute, addDays, categories };

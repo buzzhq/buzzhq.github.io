@@ -14,19 +14,22 @@
   <nav><a class="on" href="index.html">🏆 Scoreboard</a><a href="tips.html">🎮 Game Tips</a><a href="challenges.html">🧠 Challenges</a></nav>
 
   <div class="card big">
+    <div class="ltlabel">🏅 Lifetime</div>
     <div class="pts" id="total">0</div>
-    <div>total points</div>
+    <div>lifetime points earned</div>
     <div class="lvl" id="level"></div>
     <div class="bar"><div class="fill" id="fill"></div></div>
     <div class="next" id="next"></div>
+    <div class="wallet"><div class="wl">👛 Wallet (spendable)</div><div class="wv"><span id="walletpts">0 pts</span> = <span id="walletusd">$0.00</span></div><div class="ws">Spending points never lowers your level! 🙌</div></div>
   </div>
 
   <div class="card cash">
     <h2>💵 Cash-Out Goal</h2>
     <div class="cashline"><b id="cashpts">0 / 1000 pts</b> toward <b id="cashreward">$50</b></div>
     <div class="bar money"><div class="fill" id="cashfill"></div></div>
-    <div class="cashbig">💰 <span id="cashdollars">$0.00</span> earned so far</div>
+    <div class="cashbig">👛 <span id="cashdollars">$0.00</span> in your wallet</div>
     <div class="next" id="cashnote"></div>
+    <div class="rewards" id="rewards"></div>
   </div>
 
   <div class="card streak">
@@ -58,6 +61,7 @@
       <li>🧠 Daily challenge: +5 per correct answer, +10 for a great read-aloud (<a href="challenges.html" style="color:#ffd23f">see today's</a>)</li>
       <li>🔥 Log a win every day: every 7-day streak = +100 bonus</li>
     </ul>
+    <p class="rule">🎁 Cash in your wallet points for rewards with Dad (20 pts = US$1). Your lifetime points and level always stay!</p>
     <p class="rule">🙊 Respect slips (like rude words) can cost a few points, but you can always bounce back! 💪</p>
   </div>
 
@@ -71,7 +75,7 @@ const $ = id => document.getElementById(id);
 const money = n => "$" + n.toFixed(2);
 fetch("data.json?v=" + Date.now()).then(r => r.json()).then(data => {
   const S = Scoreboard.compute(data, today);
-  const { total, level: cur, next: nxt, streak, cash } = S;
+  const { lifetime: total, wallet, rewards, level: cur, next: nxt, streak, cash } = S;
   const cats = Scoreboard.categories(data);
   $("hello").textContent = "Go " + data.name + "! Every win counts 🚀";
   // count-up animation (works for negative totals too)
@@ -84,13 +88,21 @@ fetch("data.json?v=" + Date.now()).then(r => r.json()).then(data => {
     ? (nxt.min - total) + " more points to " + nxt.emoji + " " + nxt.name + "!"
     : "You reached the top level — LEGEND! 👑";
 
-  // cash-out
+  // wallet (spendable) = lifetime earned minus rewards cashed in
+  $("walletpts").textContent = wallet + " pts";
+  $("walletusd").textContent = money(cash.dollars);
+
+  // cash-out (wallet progress)
   $("cashpts").textContent = cash.inGoal + " / " + cash.goal + " pts";
   $("cashreward").textContent = "$" + cash.reward;
   setTimeout(() => $("cashfill").style.width = Math.max(cash.pct, 1.5) + "%", 100);
   $("cashdollars").textContent = money(cash.dollars);
   $("cashnote").innerHTML = (cash.cashouts ? `🎉 You've unlocked <b>${cash.cashouts} × $${cash.reward}</b> cash-out${cash.cashouts > 1 ? "s" : ""}! Ask Dad! ` : "")
     + `${cash.goal - cash.inGoal} pts to go. Every ${cash.goal} points = <b>$${cash.reward} ${cash.currency}</b> from Dad 🤑`;
+  $("rewards").innerHTML = rewards.count
+    ? `<div class="rhead">🎁 Rewards cashed in: <b>${rewards.points} pts = US$${rewards.usd.toFixed(2)}</b></div>`
+      + rewards.items.map(r => `<div class="ritem">${r.emoji} ${r.text.replace(/^Cashed in:\s*/, "")} <span class="rd">${fmt(r.date)} · −${Math.abs(r.points)} pts${r.usd != null ? " = US$" + Number(r.usd).toFixed(2) : ""}</span></div>`).join("")
+    : `<div class="rhead">🎁 No rewards cashed in yet — save up or ask Dad!</div>`;
 
   // streak
   $("streaknow").textContent = streak.current;
@@ -105,19 +117,19 @@ fetch("data.json?v=" + Date.now()).then(r => r.json()).then(data => {
   $("streakrule").textContent = "Rule: a streak day = a day with more points won than lost. Every " + streak.every + "-day streak earns a +" + streak.bonus + " streak bonus!";
 
   // badges (deduction categories don't give badges)
-  const plus = S.entries.filter(w => w.points > 0 && !w.bonus), count = {};
+  const plus = S.entries.filter(w => w.points > 0 && !w.bonus && !w.reward), count = {};
   plus.forEach(w => count[w.category] = (count[w.category] || 0) + 1);
   const levels = [...data.levels].sort((a, b) => a.min - b.min);
   const badges = [
     { e: "🎉", n: "First Win", ok: plus.length >= 1 },
-    ...Object.entries(cats).filter(([k, c]) => !c.deduction).map(([k, c]) => ({ e: c.emoji, n: c.label, ok: !!count[k] })),
+    ...Object.entries(cats).filter(([k, c]) => !c.deduction && !c.spend && k !== "cashout").map(([k, c]) => ({ e: c.emoji, n: c.label, ok: !!count[k] })),
     { e: "🖐️", n: "5 Wins", ok: plus.length >= 5 },
     { e: "🔟", n: "10 Wins", ok: plus.length >= 10 },
     { e: "🔥", n: "3-Day Streak", ok: streak.best >= 3 },
     { e: "🎁", n: "7-Day Streak", ok: streak.best >= 7 },
     { e: "💯", n: "100 Points", ok: total >= 100 },
     ...levels.slice(1).map(l => ({ e: l.emoji, n: l.name, ok: total >= l.min })),
-    { e: "💵", n: "First $50", ok: cash.cashouts >= 1 }
+    { e: "💵", n: "First $50", ok: total >= cash.goal }
   ];
   $("badges").innerHTML = badges.map(b =>
     `<div class="badge ${b.ok ? "" : "off"}"><span class="e">${b.e}</span>${b.n}</div>`).join("");
@@ -125,12 +137,12 @@ fetch("data.json?v=" + Date.now()).then(r => r.json()).then(data => {
   // entries: wins, gentle deductions, computed streak bonuses
   $("wins").innerHTML = S.entries.map(w => {
     const c = w.bonus ? { label: "Streak bonus", emoji: "🔥", color: "#ffd23f" } : (cats[w.category] || { label: "", emoji: "" });
-    const neg = w.points < 0;
-    const tag = w.date === today ? (neg ? '<span class="tagtoday">TODAY</span>' : '<span class="new">NEW</span>') : "";
-    const cls = "win" + (neg ? " minus" : "") + (w.bonus ? " bonus" : "");
-    return `<div class="${cls}" style="border-left-color:${c.color || "transparent"}"><div class="e">${w.emoji}</div><div class="t">${w.text}${tag}<div class="d">${fmt(w.date)} · ${c.emoji} ${c.label}</div></div><div class="p">${neg ? "−" + Math.abs(w.points) : "+" + w.points}</div></div>`;
+    const neg = w.points < 0 && !w.reward;
+    const tag = w.reward ? '<span class="tagreward">REWARD</span>' : w.date === today ? (neg ? '<span class="tagtoday">TODAY</span>' : '<span class="new">NEW</span>') : "";
+    const cls = "win" + (neg ? " minus" : "") + (w.bonus ? " bonus" : "") + (w.reward ? " reward" : "");
+    return `<div class="${cls}" style="border-left-color:${c.color || "transparent"}"><div class="e">${w.emoji}</div><div class="t">${w.text}${tag}<div class="d">${fmt(w.date)} · ${c.emoji} ${c.label}</div></div><div class="p">${w.reward ? "🎁 " + Math.abs(w.points) + " pts" : neg ? "−" + Math.abs(w.points) : "+" + w.points}</div></div>`;
   }).join("") || "<p>No wins yet — go get one! 💪</p>";
-  $("cats").innerHTML = Object.values(cats).filter(c => !c.deduction).map(c => `<span class="chip" style="border:2px solid ${c.color || "transparent"}">${c.emoji} ${c.label}</span>`).join("");
+  $("cats").innerHTML = Object.entries(cats).filter(([k, c]) => !c.deduction && !c.spend && k !== "cashout").map(([k, c]) => `<span class="chip" style="border:2px solid ${c.color || "transparent"}">${c.emoji} ${c.label}</span>`).join("");
   $("sign").textContent = "Keep it up, champ! — " + (data.bot || "Buzz 🤖");
 }).catch(e => { console.error(e); $("hello").textContent = "Oops, Buzz couldn't load the scores. Try again soon!"; });
 </script>
