@@ -20,7 +20,7 @@
     <div class="lvl" id="level"></div>
     <div class="bar"><div class="fill" id="fill"></div></div>
     <div class="next" id="next"></div>
-    <div class="wallet"><div class="wl">👛 Wallet (spendable)</div><div class="wv"><span id="walletpts">0 pts</span> = <span id="walletusd">$0.00</span></div><div class="ws">Spending points never lowers your level! 🙌</div></div>
+    <div class="wallet"><div class="wl">👛 Wallet (spendable)</div><div class="wv"><span id="walletpts">0 pts</span> = <span id="walletdollars">$0.00</span></div><div class="ws">Spending points never lowers your level! 🙌</div></div>
   </div>
 
   <div class="card cash">
@@ -61,7 +61,7 @@
       <li>🧠 Daily challenge: +5 per correct answer, +10 for a great read-aloud (<a href="challenges.html" style="color:#ffd23f">see today's</a>)</li>
       <li>🔥 Log a win every day: every 7-day streak = +100 bonus</li>
     </ul>
-    <p class="rule">🎁 Cash in your wallet points for rewards with Dad (20 pts = US$1). Your lifetime points and level always stay!</p>
+    <p class="rule">🎁 Cash in your wallet points for rewards with Dad (20 pts = $1). Your lifetime points and level always stay!</p>
     <p class="rule">🙊 Respect slips (like rude words) can cost a few points, but you can always bounce back! 💪</p>
   </div>
 
@@ -90,7 +90,7 @@ fetch("data.json?v=" + Date.now()).then(r => r.json()).then(data => {
 
   // wallet (spendable) = lifetime earned minus rewards cashed in
   $("walletpts").textContent = wallet + " pts";
-  $("walletusd").textContent = money(cash.dollars);
+  $("walletdollars").textContent = money(cash.dollars);
 
   // cash-out (wallet progress)
   $("cashpts").textContent = cash.inGoal + " / " + cash.goal + " pts";
@@ -98,10 +98,10 @@ fetch("data.json?v=" + Date.now()).then(r => r.json()).then(data => {
   setTimeout(() => $("cashfill").style.width = Math.max(cash.pct, 1.5) + "%", 100);
   $("cashdollars").textContent = money(cash.dollars);
   $("cashnote").innerHTML = (cash.cashouts ? `🎉 You've unlocked <b>${cash.cashouts} × $${cash.reward}</b> cash-out${cash.cashouts > 1 ? "s" : ""}! Ask Dad! ` : "")
-    + `${cash.goal - cash.inGoal} pts to go. Every ${cash.goal} points = <b>$${cash.reward} ${cash.currency}</b> from Dad 🤑`;
+    + `${cash.goal - cash.inGoal} pts to go. Every ${cash.goal} points = <b>$${cash.reward}</b> from Dad 🤑`;
   $("rewards").innerHTML = rewards.count
-    ? `<div class="rhead">🎁 Rewards cashed in: <b>${rewards.points} pts = US$${rewards.usd.toFixed(2)}</b></div>`
-      + rewards.items.map(r => `<div class="ritem">${r.emoji} ${r.text.replace(/^Cashed in:\s*/, "")} <span class="rd">${fmt(r.date)} · −${Math.abs(r.points)} pts${r.usd != null ? " = US$" + Number(r.usd).toFixed(2) : ""}</span></div>`).join("")
+    ? `<div class="rhead">🎁 Rewards cashed in: <b>${rewards.points} pts = $${rewards.dollars.toFixed(2)}</b></div>`
+      + rewards.items.map(r => `<div class="ritem">${r.emoji} ${r.text.replace(/^Cashed in:\s*/, "")} <span class="rd">${fmt(r.date)} · −${Math.abs(r.points)} pts = $${(Math.abs(r.points) / S.pointsPerDollar).toFixed(2)}</span></div>`).join("")
     : `<div class="rhead">🎁 No rewards cashed in yet — save up or ask Dad!</div>`;
 
   // streak

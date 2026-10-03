@@ -174,18 +174,15 @@
       "date": "2026-10-03",
       "emoji": "🎮",
       "category": "cashout",
-      "points": -118,
-      "text": "Cashed in: Descenders for PS5 (A$8.50)",
-      "aud": 8.5,
-      "usd": 5.91,
-      "rate": 0.695
+      "points": -170,
+      "text": "Cashed in: Descenders for PS5 ($8.50)",
+      "dollars": 8.5
     }
   ],
   "cashout": {
     "points": 1000,
     "reward": 50,
-    "currency": "USD",
-    "pointsPerUSD": 20
+    "pointsPerDollar": 20
   },
   "streak": {
     "bonusEvery": 7,
