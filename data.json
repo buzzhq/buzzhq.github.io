@@ -135,6 +135,34 @@
       "category": "active",
       "points": 20,
       "text": "Afternoon walk"
+    },
+    {
+      "date": "2026-09-30",
+      "emoji": "🎤",
+      "category": "challenge",
+      "points": 10,
+      "text": "Read the Mercury story aloud (voice note)"
+    },
+    {
+      "date": "2026-10-03",
+      "emoji": "🧠",
+      "category": "challenge",
+      "points": 20,
+      "text": "Day 4 challenges: 4 out of 4, first try!"
+    },
+    {
+      "date": "2026-10-03",
+      "emoji": "🎤",
+      "category": "challenge",
+      "points": 10,
+      "text": "Read the silver GT story aloud: 93% spot on"
+    },
+    {
+      "date": "2026-10-03",
+      "emoji": "🏀",
+      "category": "hoops",
+      "points": 20,
+      "text": "Played his first basketball game of the season"
     }
   ],
   "cashout": {
