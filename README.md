@@ -34,11 +34,11 @@ python3 -m json.tool data.json >/dev/null && python3 -m json.tool tips.json >/de
 git add data.json tips.json && git commit -m "Daily update $(TZ=Australia/Sydney date +%F)" && git push
 ```
 
-Example tip entry (`game` is free text; the known icons are GTA 🚗, Roblox 🧱, Fortnite 🏗️, and any other game gets 🎮):
+Example tip entry (`game` is free text; the known icons are GTA 🚗, Roblox 🧱, Fortnite 🏗️, Descenders 🚵, and any other game gets 🎮; add new icons to the `icons` map in `tips.html`):
 ```json
 { "date": "2026-09-27", "game": "Roblox", "title": "Short catchy title", "tip": "One or two kid-safe sentences." }
 ```
-Tip rules: GTA = driving, racing, cars, exploring and customising only (no crime, violence, weapons or police). Fortnite = building, editing, Creative, storm and rotation. Keep everything accurate and generic, with no external links.
+Tip rules: GTA = driving, racing, cars, exploring and customising only (no crime, violence, weapons or police). Fortnite = building, editing, Creative, storm and rotation. Descenders (PS5 downhill MTB, added 4 Oct 2026; Alon got it 3 Oct 2026) = riding skills, jumps/landings, health/lives, map routes, Rep, crew, tricks, Bike Parks; include at least 1 Descenders tip in each daily batch of 2-3 while he's into it. Keep everything accurate and generic, with no external links.
 
 ## Add a win
 1. Add an entry to the `wins` array in `data.json` (order doesn't matter; the page sorts newest first):

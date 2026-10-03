@@ -26,7 +26,7 @@
 <script>
 const today = new Intl.DateTimeFormat("en-CA", {timeZone: "Australia/Sydney"}).format(new Date());
 const fmt = d => new Date(d + "T00:00:00").toLocaleDateString("en-AU", {day:"numeric", month:"short", year:"numeric"});
-const icons = { "GTA": "🚗", "Roblox": "🧱", "Fortnite": "🏗️" };
+const icons = { "GTA": "🚗", "Roblox": "🧱", "Fortnite": "🏗️", "Descenders": "🚵" };
 const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 let tips = [], filter = "All";
 function render() {

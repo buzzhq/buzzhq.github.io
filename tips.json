@@ -179,6 +179,42 @@
       "game": "Fortnite",
       "title": "Reload behind cover",
       "tip": "Duck behind a wall or rock before you reload. An empty clip in the open is the quickest way to get sent back to the lobby."
+    },
+    {
+      "date": "2026-10-04",
+      "game": "Descenders",
+      "title": "Ride at your own pace",
+      "tip": "Every jump needs the right speed: too fast and you overshoot, too slow and you come up short. It's totally fine to brake before a big jump, and watch the drone fly-over at the start of a track to spot what's coming."
+    },
+    {
+      "date": "2026-10-04",
+      "game": "Descenders",
+      "title": "Bunny hop like a pro",
+      "tip": "Hold the right stick down to load up, then push it up to hop. Push up when you're higher up the ramp and you'll fly higher!"
+    },
+    {
+      "date": "2026-10-04",
+      "game": "Descenders",
+      "title": "Soft, flat landings",
+      "tip": "Try to land with both wheels together, and push the right stick up as you touch down to soak up the hit. It helps you ride away from big drops instead of bailing."
+    },
+    {
+      "date": "2026-10-04",
+      "game": "Descenders",
+      "title": "Earn back your health",
+      "tip": "Every bonus objective you finish gives you +1 life. Medic Camp tracks give a life just for finishing, plus another for their bonus, so visit one when you're running low!"
+    },
+    {
+      "date": "2026-10-04",
+      "game": "Descenders",
+      "title": "Head for the Boss Jump",
+      "tip": "On the map, pick tracks that lead toward the Boss Jump. After about 7 tracks it starts getting dark, so don't wander too long. Grab the checkpoint just before the Boss Jump so you can retry it."
+    },
+    {
+      "date": "2026-10-04",
+      "game": "Descenders",
+      "title": "Mix tricks for Rep",
+      "tip": "Press L1 with a stick direction to do tricks and earn Rep. Doing the same trick again gives less, so mix it up! At 1,000 Rep you pick your first crew member, and Landing Impact is a great choice."
     }
   ]
 }
