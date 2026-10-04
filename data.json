@@ -191,6 +191,27 @@
       "category": "challenge",
       "points": 10,
       "text": "Read the Descenders story aloud: 94% spot on"
+    },
+    {
+      "date": "2026-10-04",
+      "emoji": "🥾",
+      "category": "active",
+      "points": 40,
+      "text": "Hiked Cape Woolamai on Phillip Island"
+    },
+    {
+      "date": "2026-10-04",
+      "emoji": "🔊",
+      "category": "respect",
+      "points": -10,
+      "text": "A bit too loud in the back seat on the way there"
+    },
+    {
+      "date": "2026-10-04",
+      "emoji": "🚗",
+      "category": "respect",
+      "points": 10,
+      "text": "Great, calm ride home"
     }
   ],
   "cashout": {
