@@ -524,8 +524,7 @@
       "word": "דג",
       "prompt": "Sound out this Hebrew word letter by letter (right to left!), then find out what it means.",
       "key": "8ab46d5ea481c208",
-      "points": 10,
-      "optional": true
+      "points": 10
     },
     {
       "date": "2026-10-05",
@@ -535,8 +534,7 @@
       "word": "גלגל",
       "prompt": "Sound out this Hebrew word letter by letter (right to left!), then find out what it means.",
       "key": "9392860eb72b9959",
-      "points": 10,
-      "optional": true
+      "points": 10
     }
   ],
   "notes": [

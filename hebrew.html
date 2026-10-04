@@ -206,7 +206,8 @@ const qd = new URLSearchParams(location.search).get("date");
 fetch("challenges.json?v=" + Date.now()).then(r => r.json()).then(d => {
   const ch = d.challenges || [];
   // letters he has learned = letters from the daily Hebrew letter challenges so far (+ new letters from finished words)
-  KNOWN = [...new Set(ch.filter(c => c.type === "hebrew" && c.letter && c.date <= today).map(c => c.letter))];
+  KNOWN = [...new Set(ch.filter(c => c.type === "hebrew" && c.letter && c.date <= today).map(c => c.letter)
+    .concat(ch.filter(c => c.type === "hebword" && c.word && c.date < today).flatMap(c => [...c.word])))];
   const all = ch.filter(c => c.type === "hebword" && c.key && H.BY[c.word]);
   const dates = [...new Set(all.map(c => c.date))].sort(), past = dates.filter(x => x <= today);
   DDATE = qd && dates.includes(qd) ? qd : (past.length ? past[past.length - 1] : dates[0]);
