@@ -1,44 +1,36 @@
 {
-  "jokes": [
-    {
-      "date": "2026-09-27",
-      "slot": "pm",
-      "topic": "Basketball",
-      "emoji": "🏀",
-      "setup": "Why did the basketball player go to the bank?",
-      "punchline": "To get his bounce checked! 💸"
-    },
-    {
-      "date": "2026-09-30",
-      "slot": "pm",
-      "topic": "Basketball",
-      "emoji": "🏀",
-      "setup": "Why did the basketball take a rest day?",
-      "punchline": "It was feeling a bit deflated! 😴"
-    },
-    {
-      "date": "2026-10-02",
-      "slot": "am",
-      "topic": "Basketball",
-      "emoji": "🏀",
-      "setup": "Why did the basketball go to school?",
-      "punchline": "It wanted to get a little taller! 😄"
-    },
-    {
-      "date": "2026-10-02",
-      "slot": "pm",
-      "topic": "Basketball",
-      "emoji": "🏀",
-      "setup": "Why did the basketball bring a suitcase?",
-      "punchline": "Because it was going on a court trip! 🧳"
-    },
-    {
-      "date": "2026-10-04",
-      "slot": "extra",
-      "topic": "Bikes",
-      "emoji": "🚵",
-      "setup": "Why couldn't the mountain bike stand up by itself?",
-      "punchline": "Because it was two-tired! 😴"
-    }
-  ]
+ "jokes": [
+  {
+   "date": "2026-09-27",
+   "slot": "pm",
+   "topic": "Basketball",
+   "emoji": "🏀",
+   "setup": "Why did the basketball player go to the bank?",
+   "punchline": "To get his bounce checked! 💸"
+  },
+  {
+   "date": "2026-09-30",
+   "slot": "pm",
+   "topic": "Basketball",
+   "emoji": "🏀",
+   "setup": "Why did the basketball take a rest day?",
+   "punchline": "It was feeling a bit deflated! 😴"
+  },
+  {
+   "date": "2026-10-04",
+   "slot": "extra",
+   "topic": "Bikes",
+   "emoji": "🚵",
+   "setup": "Why couldn't the mountain bike stand up by itself?",
+   "punchline": "Because it was two-tired! 😴"
+  },
+  {
+   "date": "2026-10-04",
+   "slot": "extra",
+   "topic": "Basketball",
+   "emoji": "🏀",
+   "setup": "Why are basketball players such messy eaters?",
+   "punchline": "Because they're always dribbling! 🤤"
+  }
+ ]
 }
