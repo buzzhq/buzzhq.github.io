@@ -404,6 +404,91 @@
       "prompt": "Read this out loud, nice and clear! (It's also in today's WhatsApp message.)",
       "text": "A silver GT zoomed past the basketball courts under a sky full of stars. Alon bounced the ball three times, then launched a perfect free throw. High above, a satellite blinked like a tiny referee whistle. Swish — and the night game was on!",
       "points": 10
+    },
+    {
+      "date": "2026-10-04",
+      "id": "dc1",
+      "type": "mcq",
+      "title": "Maths step",
+      "from": "318 × 24",
+      "step": "Adding partial products",
+      "prompt": "1,272 + 6,360 = ?",
+      "choices": {
+        "a": "7,532",
+        "b": "7,632",
+        "c": "8,632"
+      },
+      "tip": "Line up the place values carefully — and watch for a carry in the thousands!",
+      "points": 5,
+      "check": "72294b06c37832558b75a130fa18033814c4f776efea6d4a917d5622648bf8a1"
+    },
+    {
+      "date": "2026-10-04",
+      "id": "dc2",
+      "type": "mcq",
+      "title": "Maths step",
+      "from": "4356 ÷ 6",
+      "step": "Check by multiplying back",
+      "prompt": "Check: what is 726 × 6?",
+      "choices": {
+        "a": "4,256",
+        "b": "4,356",
+        "c": "4,556"
+      },
+      "tip": "Split it: 700×6 and 26×6, then add.",
+      "points": 5,
+      "check": "174d5374fb622f0576e65d6027ae8ed7dcda8bd8f9f9b707a3819a3bb7c09d48"
+    },
+    {
+      "date": "2026-10-04",
+      "id": "dc3",
+      "type": "hebrew",
+      "title": "Hebrew letter",
+      "prompt": "What sound does this letter make?",
+      "letter": "ז",
+      "choices": {
+        "a": "s (like sun)",
+        "b": "v (like van)",
+        "c": "z (like zip)",
+        "d": "sh (like ship)"
+      },
+      "points": 5,
+      "check": "667a224ae726f01df47f7b2c711c6498f1cb6d6d339a684bdbd270d303082a23"
+    },
+    {
+      "date": "2026-10-04",
+      "id": "dc4",
+      "type": "hebrew",
+      "title": "Hebrew letter",
+      "prompt": "What sound does this letter make?",
+      "letter": "ח",
+      "choices": {
+        "a": "ch (like Bach / loch)",
+        "b": "h (like hat)",
+        "c": "k (like kick)",
+        "d": "r (like race)"
+      },
+      "points": 5,
+      "check": "e173f7655ebbb24c38efb51b3149a1cbadce688d65ffac5b3730f944bca33e14"
+    },
+    {
+      "date": "2026-10-04",
+      "id": "dc5",
+      "type": "reading",
+      "title": "Read aloud (English)",
+      "prompt": "Read this out loud, nice and clear! (It's also in today's WhatsApp message.)",
+      "text": "Alon tore down a Descenders trail on his mountain bike, then rolled straight to the basketball court still grinning. He bounced the ball twice, pictured his dream GT parked courtside in a secret colour, and sank a free throw. Pump the pedals, pump the shot — same smooth rhythm!",
+      "points": 10
+    },
+    {
+      "date": "2026-10-04",
+      "id": "dc6",
+      "type": "paper",
+      "title": "Paper bonus (optional)",
+      "prompt": "OPTIONAL (+10): with pen and paper, work out 318 × 24. Reply with the full answer like: dc6 7632",
+      "optional": true,
+      "points": 10,
+      "check": "b829eda3279e8d137edf947054e57898646c17e9d3ce23fa094d068d42412d43"
     }
   ],
   "notes": [
@@ -461,6 +546,15 @@
         "name": "Math Racer Multiplication (Math Playground)",
         "url": "https://www.mathplayground.com/math_racer_multiplication.html",
         "why": "Zoom! 🏎️ Race to the right product — perfect warm-up for today's tens-row (×20) step.",
+        "ads": true
+      }
+    },
+    {
+      "date": "2026-10-04",
+      "game": {
+        "name": "Daily 10 (Topmarks)",
+        "url": "https://www.topmarks.co.uk/maths-games/daily10",
+        "why": "Ten quick mental maths Qs! 🧠 Pick Multiplication — perfect warm-up for today's adding step and the Sunday paper bonus.",
         "ads": true
       }
     }
