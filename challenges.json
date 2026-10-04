@@ -489,6 +489,32 @@
       "optional": true,
       "points": 10,
       "check": "b829eda3279e8d137edf947054e57898646c17e9d3ce23fa094d068d42412d43"
+    },
+    {
+      "date": "2026-10-05",
+      "id": "mg1",
+      "type": "stepgame",
+      "title": "Maths Garage: long multiplication",
+      "mode": "mult",
+      "a": 318,
+      "b": 24,
+      "sum": "318 × 24",
+      "prompt": "Solve it step by step in Buzz's Maths Garage, then send Buzz your finish code!",
+      "key": "8e900900c2425e34",
+      "points": 10
+    },
+    {
+      "date": "2026-10-05",
+      "id": "mg2",
+      "type": "stepgame",
+      "title": "Maths Garage: long division",
+      "mode": "div",
+      "a": 852,
+      "b": 4,
+      "sum": "852 ÷ 4",
+      "prompt": "Solve it step by step in Buzz's Maths Garage, then send Buzz your finish code!",
+      "key": "077782b96db1adc0",
+      "points": 10
     }
   ],
   "notes": [

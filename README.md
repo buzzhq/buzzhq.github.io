@@ -144,3 +144,43 @@ The hash hides the answer from casual reading only (a determined person could br
 
 Answer codes in Chuchu HQ (parse leniently: spacing/case): `dc1 b`, `dc3 c`, `dc 4b`, paper bonus `dc6 7632` (old 28 Sep style `dc1 A=4 B=8`), or the page's Send-to-Buzz line `dc1 b, dc2 b, dc3 b, dc4 c (first try: 3/4)` (comma-separated; IGNORE the `(first try: …)` claim for scoring: verify every code against challenge-answers.json, +5 each correct, nothing extra for first try); reading = voice note + `dc5`. The afternoon WhatsApp message must contain the FULL reading passage (see journey.md).
 Reading check (offline): `/workspace/alon/check_reading.py <audio.ogg> "<expected text>"` (faster-whisper base.en, CPU int8; pass >= 85% word match). Voice notes go to `/workspace/alon/voice/`.
+
+## 🏎️ Buzz's Maths Garage (added 2026-10-04): `maths.html` + `maths-engine.js`
+Page: https://buzzhq.github.io/maths.html. It replaces the daily one-step maths MCQs (`dc1`/`dc2` `mcq`) **from Mon 5 Oct 2026**; older days keep their `mcq` entries (append-only).
+Alon solves a whole long multiplication or long division **one step at a time**: the working (columns with carries, partial products and placeholder zero, or a bus-stop division with carried remainders) fills in as he goes. Each step asks a short question with **3 tap options** (one right, two typical-mistake distractors: forgot the carry, off-by-one times-table fact, forgot the placeholder zero, wrong order, too many/too few in division). Wrong tap = gentle hint + retry; right tap = working updates + mini confetti; car progress bar to the 🏁.
+- **Tabs**: 🏁 *Today's races* (from `challenges.json`) and 🛠️ *Practice* (random problems generated on the page, 6 levels each for × and ÷, no points).
+- **Engine**: `maths-engine.js` (pure JS, also `require`-able in node): `buildMult(a,b)`, `buildDiv(a,d)`, `randomProblem(kind, level)`, `LEVELS`, `codeFromHex`. Practice levels: × 2d×1d, 3d×1d, 4d×1d, 2d×2d, 3d×2d, 4d×2d; ÷ 2d÷1d, 3d÷1d (exact), 3d÷1d with remainders, 4d÷1d, 3d÷2d (exact, ÷11-25), 4d÷2d (÷11-30).
+- **Tests**: `node tests/engine.test.js` (27k+ random/sweep problems: every correct option leads to the right final answer, exactly one correct option, distractors never equal it, every distractor has a hint). Run it after any engine change.
+
+### Daily problems = `stepgame` entries in `challenges.json`
+```json
+{ "date": "2026-10-05", "id": "mg1", "type": "stepgame", "title": "Maths Garage: long multiplication", "mode": "mult", "a": 318, "b": 24, "sum": "318 × 24",
+  "prompt": "Solve it step by step in Buzz's Maths Garage, then send Buzz your finish code!", "key": "8e900900c2425e34", "points": 10 }
+```
+`mode` = `mult` or `div` (`b` is the multiplier / divisor). Ids are **`mg1`, `mg2`** (not dc1/dc2, so they never clash with the old maths ids; Hebrew stays `dc3`/`dc4`, reading `dc5`). `challenges.html` shows each as a 🏎️ card with a "Solve it in the Maths Garage" button; when finished (same phone/browser), the card shows the code and the Challenges **Send to Buzz** line includes it (e.g. `mg1 ST81, mg2 TX67, dc3 b, dc4 a (first try: 2/2)`). `maths.html` has its own Send to Buzz button too (wa.me share picker, he picks Chuchu HQ).
+
+**NEVER write stepgame entries by hand.** Use the helper (it validates the numbers, runs the engine, creates the `key`, and writes the private answer + expected code to `/workspace/alon/challenge-answers.json`):
+```bash
+cd /workspace/alon/scoreboard
+tools/stepgame.py add 2026-10-06 --mult 427x36 --div 936/4   # one of each (mult = mg1, div = mg2); --order div-first to swap
+tools/stepgame.py codes 2026-10-06                            # expected codes, e.g. "mg1 ST81"
+tools/stepgame.py verify "mg1 ST81, mg2 TX67"                 # checks today + yesterday (or --date YYYY-MM-DD)
+tools/stepgame.py list
+python3 -m json.tool challenges.json >/dev/null && echo JSON OK
+```
+Rules enforced: × top number 2-4 digits, multiplier 2-99 with no 0 digit; ÷ dividend 2-4 digits, divisor 2-99 (not a multiple of 10), quotient ≥ 2.
+
+### Finish code + scoring
+- When a daily race is finished the page shows a code like **`mg1 ST81`** = 2 letters + 2 digits from `sha256("<key>|<answer>")` (answer `7632`, or `213` / `213r1` for division). `key` = `sha256("<secret>|<date>|<id>")[:16]`; the `secret` lives only in `challenge-answers.json` → `stepgame.secret`, with each day's `answers[date][mgN] = {type:"stepgame", mode, sum, answer, code, steps, points, hint}`. Codes change every day and per problem.
+- Like the `check` hashes, this only stops casual guessing (the page must be able to make the code); real scoring is Buzz verifying with `tools/stepgame.py verify`.
+- **+10 per finished race** (mult +10, div +10), scored once each, category **`challenge`** 🧠, e.g. `{ "date": "2026-10-05", "emoji": "🏎️", "category": "challenge", "points": 10, "text": "Maths Garage mg1 ✅ 318 × 24" }`. Mistakes/hints along the way never cost points (the page counts "pit stops" just for fun; ignore them for scoring).
+- Progress is saved per day in the browser (`localStorage` `buzz-garage-<date>`), so he can stop and continue later. If no race is dated today the page shows the latest one; if only future races exist it shows a 👀 sneak peek (`maths.html?date=YYYY-MM-DD` previews a given day).
+
+### Progression for the daily races (grow SLOWLY, mix × and ÷)
+Usually 1 multiplication (`mg1`) + 1 division (`mg2`) a day. Step up one notch only after ~3 days finished with few pit stops; step back if he gets stuck or skips 2 days in a row. Prefer numbers that exercise the method (some carries) but stay friendly; vary them (don't repeat a sum within 2 weeks, except 318 × 24 to start).
+1. Week of 5 Oct: 3-digit × 2-digit (318 × 24 first, then e.g. 214 × 13, 326 × 21) + 3-digit ÷ 1-digit, no remainder (852 ÷ 4, 936 ÷ 3, 714 ÷ 6).
+2. Then 3-digit × 2-digit with more carries (e.g. 457 × 36) + 3-digit ÷ 1-digit with a remainder (e.g. 755 ÷ 4 = 188 r 3).
+3. Then 4-digit × 1-digit / 4-digit ÷ 1-digit (incl. a 0 in the middle, e.g. 4,812 ÷ 4 = 1,203).
+4. Then 4-digit × 2-digit (e.g. 2,347 × 26) + 3-digit ÷ easy 2-digit (÷ 11, 12, 15, 20-25, e.g. 864 ÷ 12 = 72).
+5. Later: 4-digit ÷ 2-digit (e.g. 7,245 ÷ 23 = 315), remainders with 2-digit divisors.
+The old 📝 paper bonus (`dc6`, optional +10) can still be added once a week for the same race sum, but it's no longer needed.

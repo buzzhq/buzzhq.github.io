@@ -143,3 +143,62 @@ button.choice:disabled:not(.right){opacity:.4}
 .win.reward .p{color:#ffd23f;font-size:1rem}
 .tagreward{display:inline-block;background:#ffd23f;color:#2b1055;font-size:.7rem;font-weight:900;padding:2px 7px;border-radius:999px;margin-left:6px;vertical-align:middle}
 @media (max-width:420px){.wallet .wv{font-size:1.6rem}.pts{font-size:3.4rem}}
+/* Buzz's Maths Garage (maths.html, added 4 Oct 2026) */
+.mg-tabs,.mg-kinds{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:14px}
+.mg-tabs button,.mg-kinds button,.mg-levels button{font:inherit;font-weight:900;font-size:1.1rem;border:0;border-radius:14px;min-height:52px;padding:8px;background:rgba(255,255,255,.18);color:#fff;cursor:pointer;touch-action:manipulation}
+.mg-tabs button.on,.mg-kinds button.on,.mg-levels button.on{background:#ffd23f;color:#2b1055;box-shadow:0 4px 0 #c99a00}
+.mg-levels{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:12px}
+.mg-levels button{font-size:.95rem;font-weight:700;text-align:left;min-height:56px}
+.mg-levels button b{display:block;font-size:.8rem;opacity:.8}
+.mg-play{border-color:#ffd23f;background:linear-gradient(160deg,rgba(255,255,255,.14),rgba(0,0,0,.18))}
+.mg-play h2{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.mg-sum{font-family:ui-monospace,Menlo,Consolas,monospace;font-weight:900;color:#ffd23f;white-space:nowrap}
+.mg-track{position:relative;margin:6px 2.2em 0 0}
+.mg-track .bar{height:18px}
+.mg-track .fill{transition:width .5s ease}
+.mg-car{position:absolute;top:-.55em;font-size:1.6rem;transition:left .5s ease;transform:scaleX(-1);line-height:1}
+.mg-flag{position:absolute;right:-1.9em;top:-.35em;font-size:1.5rem}
+.mg-stepn{font-size:.95rem;opacity:.9;margin:8px 0 4px}
+.mg-work{display:flex;justify-content:center;margin:4px 0 8px}
+.mg-grid{display:grid;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:2.3rem;font-weight:900;background:rgba(0,0,0,.28);border-radius:14px;padding:6px 14px 8px;row-gap:2px}
+.mg-grid .k{display:flex;align-items:center;justify-content:center;height:1.3em;position:relative;border-radius:8px;transition:background .3s}
+.mg-grid .k.cy{font-size:.55em;height:1.3em;color:#3dff9e;align-items:flex-end}
+.mg-grid .k.cy.used{opacity:.35;text-decoration:line-through}
+.mg-grid .k.ln{border-bottom:4px solid #fff;border-radius:0}
+.mg-grid .k.res{color:#ffd23f}
+.mg-grid .k.hl{background:rgba(255,210,63,.35);box-shadow:0 0 0 2px #ffd23f inset}
+.mg-grid .k.tg{box-shadow:0 0 0 3px #ff3d7f inset;color:#ff3d7f;animation:pulse 1.2s ease-in-out infinite}
+.mg-grid .fresh{animation:popin .5s ease;display:inline-block}.mg-grid .k.fresh{display:flex}
+@keyframes pulse{50%{box-shadow:0 0 0 3px rgba(255,61,127,.35) inset}}
+.mg-grid.bus2 .k.rem{justify-content:flex-start;color:#ffd23f;font-size:.8em;padding-left:.15em;white-space:nowrap}
+.mg-grid .dvk.dvr{border-right:4px solid #fff;border-radius:0}
+.mg-grid .house{border-top:4px solid #fff;border-radius:0}
+.mg-grid .house.hl{border-radius:0}
+.mg-grid .house sup{position:absolute;left:-.05em;top:.1em;font-size:.45em;line-height:1;color:#3dff9e;padding:1px 2px;border-radius:4px}
+.mg-grid .house sup.hl{background:rgba(255,210,63,.5)}
+.mg-ask{display:flex;gap:10px;align-items:flex-start;background:#fff;color:#2b1055;border-radius:16px;padding:10px 12px;margin:6px 0 10px}
+.mg-ask p{margin:0;font-size:1.25rem;font-weight:900;line-height:1.3}
+.mg-bot{font-size:1.8rem;line-height:1}
+.mg-opts{display:grid;grid-template-columns:1fr;gap:10px}
+.mg-opts.row{grid-template-columns:repeat(3,1fr)}
+.mg-opt{font:inherit;font-weight:900;font-size:1.35rem;min-height:64px;padding:10px;border-radius:16px;border:3px solid rgba(255,255,255,.5);background:rgba(0,0,0,.28);color:#fff;cursor:pointer;touch-action:manipulation;-webkit-tap-highlight-color:transparent;transition:transform .1s}
+.mg-opt:active{transform:scale(.96)}
+.mg-opt.wrong{border-color:#ff6b7d;background:rgba(255,60,90,.25);opacity:.55;text-decoration:line-through}
+.mg-fb{min-height:1.6em;font-size:1.1rem;font-weight:700;margin-top:10px;line-height:1.35}
+.mg-fb .yes{color:#3dff9e;font-weight:900}.mg-fb .no{color:#ffd23f;font-weight:900}
+.mg-tool{margin-top:10px;background:rgba(0,0,0,.2);border-radius:12px;padding:8px 10px}
+.mg-tool summary{cursor:pointer;font-weight:700}
+.mg-tool p{font-family:ui-monospace,Menlo,Consolas,monospace;margin:6px 0 0;columns:2}
+.mg-finish{text-align:center;margin-top:8px}
+.mg-flagline{font-size:1.7rem;font-weight:900;color:#ffd23f;text-shadow:0 3px 0 #ff3d7f;animation:popin .6s ease}
+.mg-result{font-size:1.6rem;margin:6px 0}
+.mg-code{display:inline-block;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:2.2rem;font-weight:900;background:#ffd23f;color:#2b1055;border-radius:14px;padding:6px 18px;box-shadow:0 5px 0 #c99a00;letter-spacing:1px}
+.mg-done{border-color:#3dff9e}
+.mg-race{display:flex;align-items:center;gap:10px;background:rgba(0,0,0,.22);border-radius:14px;padding:10px;margin-bottom:8px}
+.mg-race.done{background:rgba(61,255,158,.18)}
+.mg-rl{flex:1;font-size:1.1rem}
+.mg-go{font:inherit;font-weight:900;font-size:1.1rem;border:0;border-radius:12px;min-height:52px;padding:8px 16px;background:#ffd23f;color:#2b1055;box-shadow:0 4px 0 #c99a00;cursor:pointer}
+.mg-link{color:#ffd23f}
+.stepgame .play{display:block;text-align:center}
+@media (max-width:420px){.mg-grid{font-size:2rem;padding:6px 10px}.mg-ask p{font-size:1.15rem}.mg-opt{font-size:1.25rem}}
+.mg-grid .dvk{color:#3dff9e}

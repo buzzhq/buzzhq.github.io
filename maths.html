@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Buzz's Maths Garage</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+  <h1>🏎️ Buzz's Maths Garage</h1>
+  <p class="sub" id="sub">Long multiplication &amp; division, one step at a time</p>
+  <nav><a href="index.html">🏆 Scoreboard</a><a href="tips.html">🎮 Game Tips</a><a href="challenges.html">🧠 Challenges</a><a class="on" href="maths.html">🏎️ Maths Garage</a></nav>
+
+  <div class="mg-tabs" role="tablist">
+    <button type="button" class="on" data-tab="daily">🏁 Today's races</button>
+    <button type="button" data-tab="practice">🛠️ Practice</button>
+  </div>
+
+  <div id="play"></div>
+  <section id="daily"><p class="sub">Loading today's races…</p></section>
+  <section id="practice" hidden></section>
+
+  <div class="card howto">
+    <h2>🔧 How it works</h2>
+    <p>👆 Buzz asks one small question at a time. <b>Tap the right next step</b> and the working fills in.</p>
+    <p>🤔 Wrong tap? No stress: Buzz gives you a hint and you try again.</p>
+    <p>🏁 Finish today's race to get a <b>finish code</b>, then tap <b>Send to Buzz</b>. Each finished race = <b>+10 pts</b>!</p>
+  </div>
+
+  <p class="sign">Brain before boost! — Buzz 🤖</p>
+</div>
+<script src="maths-engine.js"></script>
+<script>
+const E = window.MathsEngine, fmt = E.fmt;
+const today = new Intl.DateTimeFormat("en-CA", {timeZone: "Australia/Sydney"}).format(new Date());
+const fmtD = d => new Date(d + "T00:00:00").toLocaleDateString("en-AU", {weekday: "short", day: "numeric", month: "short"});
+const esc = s => String(s).replace(/[&<>"]/g, c => ({"&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;"}[c]));
+const $ = id => document.getElementById(id);
+async function sha256(t) {
+  const buf = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(t));
+  return [...new Uint8Array(buf)].map(b => b.toString(16).padStart(2, "0")).join("");
+}
+const getLS = k => { try { return JSON.parse(localStorage.getItem(k)) || {}; } catch (e) { return {}; } };
+const setLS = (k, v) => { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} };
+
+// ---------- celebration ----------
+function confetti(el, n) {
+  const r = el.getBoundingClientRect(), EM = ["🎉", "⭐", "🏎️", "✨", "🏁", "💥", "🔥", "🏆"];
+  for (let i = 0; i < (n || 12); i++) {
+    const s = document.createElement("span");
+    s.className = "boom"; s.textContent = EM[i % EM.length];
+    s.style.left = (r.left + r.width / 2) + "px"; s.style.top = (r.top + r.height / 2) + "px";
+    const a = Math.random() * Math.PI * 2, d = 50 + Math.random() * (n > 12 ? 160 : 80);
+    s.style.setProperty("--dx", Math.cos(a) * d + "px"); s.style.setProperty("--dy", (Math.sin(a) * d - 40) + "px");
+    document.body.appendChild(s); setTimeout(() => s.remove(), 1100);
+  }
+}
+const CHEERS = ["✅ Yes!", "✅ Nailed it!", "✅ Vroom!", "✅ Spot on!", "✅ Boom!", "✅ Smooth!"];
+const FINISH = ["🏁 CHECKERED FLAG!", "🏆 RACE WON!", "🏁 You crossed the line!"];
+
+// ---------- the working (column layout / bus stop) ----------
+function workHTML(p, cells, step, fresh) {
+  const focus = new Set((step ? step.focus : []).map(f => f.join(":")));
+  const tgt = P.target ? P.target.join(":") : "";
+  const cls = (r, c) => (focus.has(r + ":" + c) || focus.has(r + ":-1") ? " hl" : "") + (fresh.has(r + ":" + c) ? " fresh" : "") + (tgt === r + ":" + c ? " tg" : "");
+  const get = (r, c) => (cells[r] || {})[c];
+  if (p.kind === "mult") {
+    const A = String(p.a), B = String(p.b), two = B.length === 2;
+    const W = Math.max(A.length, B.length + 1, String(p.a * p.b).length, two ? String(p.a * Number(B[0]) * 10).length : 0) + 1;
+    const onRow2 = two && (Object.keys(cells.p1 || {}).length > 0 || (step && step.kind === "zero"));
+    let h = "";
+    for (const r of p.rows) {
+      const line = r === "bot" || (r === "p1") || (r === "p0" && !two) ? " ln" : "";
+      const small = r === "c0" || r === "c1";
+      const used = (r === "c0" && onRow2) || (r === "c1" && step && step.kind === "add") || (small && !step);
+      for (let pos = 0; pos < W; pos++) {
+        const c = W - 1 - pos;
+        let v = "";
+        if (r === "top") v = A[A.length - 1 - c] || "";
+        else if (r === "bot") v = c < B.length ? B[B.length - 1 - c] : (c === B.length ? "×" : "");
+        else v = get(r, c) || "";
+        const isTg = tgt === r + ":" + c;
+        h += `<span class="k${small ? " cy" : ""}${used ? " used" : ""}${line}${r === "tot" || (r === "p0" && !two) ? " res" : ""}${cls(r, c)}">${esc(v || (isTg ? "?" : ""))}</span>`;
+      }
+    }
+    return `<div class="mg-work"><div class="mg-grid" style="grid-template-columns:repeat(${W},1.2em)">${h}</div></div>`;
+  }
+  // division: bus stop
+  const D = String(p.a), d = String(p.b), n = D.length, rem = get("rem", 0);
+  const cols = d.length + n + 1;
+  let h = "";
+  for (let i = 0; i < d.length; i++) h += `<span class="k"></span>`;
+  for (let i = 0; i < n; i++) { const v = get("q", i) || "", isTg = tgt === "q:" + i; h += `<span class="k res${cls("q", i)}">${esc(v || (isTg ? "?" : ""))}</span>`; }
+  h += `<span class="k rem">${rem ? `<span class="${fresh.has("rem:0") ? "fresh" : ""}">r${esc(rem)}</span>` : ""}</span>`;
+  for (let i = 0; i < d.length; i++) h += `<span class="k dvk${i === d.length - 1 ? " dvr" : ""}${focus.has("dv:0") ? " hl" : ""}">${esc(d[i])}</span>`;
+  for (let i = 0; i < n; i++) {
+    const cy = get("cy", i);
+    h += `<span class="k house${i === 0 ? " hfirst" : ""}${cls("dd", i)}">${cy ? `<sup class="${fresh.has("cy:" + i) ? "fresh" : ""}${focus.has("cy:" + i) ? " hl" : ""}">${esc(cy)}</sup>` : ""}${esc(D[i])}</span>`;
+  }
+  h += `<span class="k"></span>`;
+  return `<div class="mg-work"><div class="mg-grid bus2" style="grid-template-columns:repeat(${cols - 1},1.2em) auto">${h}</div></div>`;
+}
+
+// ---------- playing one problem ----------
+let P = null; // { prob, ctx, idx, cells, mistakes, order, wrong:Set }
+function applyWrites(cells, step, fresh) { step.writes.forEach(w => { (cells[w.r] = cells[w.r] || {})[w.c] = w.v; if (fresh) fresh.add(w.r + ":" + w.c); }); }
+function targetOf(prob, idx) {
+  const s = prob.steps[idx]; if (!s) return null;
+  const w = s.writes[0] || (s.kind === "fact" && prob.steps[idx + 1] && prob.steps[idx + 1].writes[0]);
+  if (s.kind === "howmany") return ["q", s.writes[0].c];
+  return w && w.r !== "cy" && w.r !== "rem" && w.r !== "tot" ? [w.r, w.c] : null;
+}
+function shuffle(a) { a = a.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; }
+function startPlay(prob, ctx, idx) {
+  const cells = {};
+  for (let i = 0; i < (idx || 0); i++) applyWrites(cells, prob.steps[i]);
+  P = { prob, ctx, idx: idx || 0, cells, mistakes: (ctx.saved && ctx.saved.mistakes) || 0, order: {}, wrong: new Set(), fb: "", fresh: new Set() };
+  renderPlay();
+  $("play").scrollIntoView({behavior: "smooth", block: "start"});
+}
+const sym = p => p.kind === "mult" ? "×" : "÷";
+function renderPlay() {
+  const p = P.prob, total = p.steps.length, done = P.idx >= total, step = p.steps[P.idx];
+  P.target = done ? null : targetOf(p, P.idx);
+  const pct = Math.round(100 * P.idx / total);
+  const title = P.ctx.type === "daily" ? `🏁 ${esc(P.ctx.label)}` : "🛠️ Practice";
+  let h = `<div class="card mg-play${done ? " mg-done" : ""}"><h2>${title} · <span class="mg-sum">${fmt(p.a)} ${sym(p)} ${p.b}</span>${P.ctx.type === "daily" ? `<span class="ptag">+${P.ctx.c.points}</span>` : ""}</h2>` +
+    `<div class="mg-track"><div class="bar"><div class="fill" style="width:${pct}%"></div></div><span class="mg-car" style="left:calc(${pct}% - ${pct / 100 * 1.6}em)">🏎️</span><span class="mg-flag">🏁</span></div>` +
+    `<p class="mg-stepn">${done ? `All ${total} steps done!` : `Step ${P.idx + 1} of ${total}`}${P.mistakes ? ` · 🔧 pit stops: ${P.mistakes}` : ""}</p>` +
+    workHTML(p, P.cells, done ? null : step, P.fresh);
+  if (!done) {
+    if (!P.order[P.idx]) P.order[P.idx] = shuffle(step.opts.map((_, i) => i));
+    const short = step.opts.every(o => o.label.length <= 7);
+    h += `<div class="mg-ask"><span class="mg-bot">🤖</span><p>${esc(step.q)}</p></div>` +
+      `<div class="mg-opts${short ? " row" : ""}">` + P.order[P.idx].map(i => {
+        const o = step.opts[i], w = P.wrong.has(i);
+        return `<button type="button" class="mg-opt${w ? " wrong" : ""}" data-i="${i}"${w ? " disabled" : ""}>${esc(o.label)}</button>`;
+      }).join("") + `</div>` +
+      (step.tool ? `<details class="mg-tool"><summary>🧰 Buzz's toolbox: the ${p.b} times table</summary><p>${step.tool.map(esc).join("<br>")}</p></details>` : "");
+  }
+  h += `<div class="mg-fb" id="mgfb" aria-live="polite">${P.fb}</div>`;
+  if (done) h += `<div id="mgfin"></div>`;
+  h += `</div>`;
+  $("play").innerHTML = h;
+  P.fresh = new Set();
+  if (done) finish();
+}
+async function finish() {
+  const p = P.prob, box = $("mgfin");
+  let line = p.kind === "mult" ? `${fmt(p.a)} × ${p.b} = <b>${fmt(p.a * p.b)}</b>` : `${fmt(p.a)} ÷ ${p.b} = <b>${fmt(p.quotient)}${p.remainder ? ` r ${p.remainder}` : ""}</b>`;
+  let check = "";
+  if (p.kind === "mult" && String(p.b).length === 2) { const est = p.steps[0].opts[0].value; check = `Close to our estimate of about ${fmt(est)} ✔`; }
+  if (p.kind === "div") check = `Check: ${fmt(p.quotient)} × ${p.b}${p.remainder ? ` + ${p.remainder}` : ""} = ${fmt(p.a)} ✔`;
+  let h = `<div class="mg-finish"><div class="mg-flagline">${FINISH[Math.floor(Math.random() * FINISH.length)]}</div><div class="mg-result">${line}</div><p class="rule">${check}</p>`;
+  if (P.ctx.type === "daily") {
+    const c = P.ctx.c, key = "buzz-garage-" + c.date, st = getLS(key);
+    let code = st[c.id] && st[c.id].code;
+    if (!code) {
+      code = E.codeFromHex(await sha256(`${c.key}|${p.answer}`));
+      st[c.id] = { done: true, code, mistakes: P.mistakes, step: p.steps.length }; setLS(key, st);
+    }
+    h += `<p>Your finish code:</p><div class="mg-code">${esc(c.id)} ${esc(code)}</div><p class="rule">Send it to Buzz for <b>+${c.points} pts</b>! 👇</p>`;
+  } else {
+    const ps = getLS("buzz-garage-practice"); ps.finished = (ps.finished || 0) + 1; setLS("buzz-garage-practice", ps);
+    h += `<p class="rule">Practice races finished: <b>${ps.finished}</b> 🏆 (practice is just for fun, no points)</p><button type="button" class="checkbtn" id="again">Another one 🎲</button>`;
+  }
+  box.innerHTML = h + `</div>`;
+  confetti(box, 28);
+  if (P.ctx.type === "daily") renderDaily();
+  else renderPractice();
+}
+document.addEventListener("click", e => {
+  const b = e.target.closest(".mg-opt");
+  if (b && P) {
+    const step = P.prob.steps[P.idx], i = Number(b.dataset.i), o = step.opts[i];
+    if (o.ok) {
+      confetti(b, 10);
+      applyWrites(P.cells, step, P.fresh);
+      P.fb = `<span class="yes pop">${CHEERS[Math.floor(Math.random() * CHEERS.length)]}</span> ${esc(step.say)}`;
+      P.idx++; P.wrong = new Set();
+      if (P.ctx.type === "daily") { const key = "buzz-garage-" + P.ctx.c.date, st = getLS(key), cur = st[P.ctx.c.id] || {}; if (!cur.done) { st[P.ctx.c.id] = { ...cur, step: P.idx, mistakes: P.mistakes }; setLS(key, st); } }
+      renderPlay();
+      if (P.ctx.type === "daily" && P.idx < P.prob.steps.length) renderDaily();
+    } else {
+      P.mistakes++; P.wrong.add(i);
+      P.fb = `<span class="no">🤔 Not quite.</span> ${esc(o.hint)}`;
+      if (P.ctx.type === "daily") { const key = "buzz-garage-" + P.ctx.c.date, st = getLS(key), cur = st[P.ctx.c.id] || {}; if (!cur.done) { st[P.ctx.c.id] = { ...cur, step: P.idx, mistakes: P.mistakes }; setLS(key, st); } }
+      renderPlay();
+      const card = document.querySelector(".mg-play"); card.classList.remove("shake"); void card.offsetWidth; card.classList.add("shake");
+    }
+    return;
+  }
+  const t = e.target.closest(".mg-tabs button");
+  if (t) { setTab(t.dataset.tab); return; }
+  const s = e.target.closest("[data-race]");
+  if (s) { const c = DAILY.find(x => x.id === s.dataset.race); if (c) openRace(c, s.dataset.replay === "1"); return; }
+  if (e.target.closest("#again") || e.target.closest("#newp")) { newPractice(); return; }
+  const k = e.target.closest("[data-kind]");
+  if (k) { PS.kind = k.dataset.kind; setLS("buzz-garage-practice", { ...getLS("buzz-garage-practice"), kind: PS.kind }); renderPractice(); newPractice(); return; }
+  const l = e.target.closest("[data-level]");
+  if (l) { PS.level[PS.kind] = Number(l.dataset.level); setLS("buzz-garage-practice", { ...getLS("buzz-garage-practice"), level: PS.level }); renderPractice(); newPractice(); return; }
+});
+
+// ---------- tabs ----------
+let TAB = "daily";
+function setTab(t) {
+  TAB = t;
+  document.querySelectorAll(".mg-tabs button").forEach(b => b.classList.toggle("on", b.dataset.tab === t));
+  $("daily").hidden = t !== "daily"; $("practice").hidden = t !== "practice";
+  $("play").innerHTML = ""; P = null;
+  if (t === "practice") { renderPractice(); newPractice(); } else { renderDaily(); autoOpen(); }
+}
+
+// ---------- daily races (from challenges.json: type "stepgame") ----------
+let DAILY = [], DDATE = null, PEEK = false;
+function openRace(c, replay) {
+  const st = getLS("buzz-garage-" + c.date)[c.id] || {};
+  const prob = E.build({ mode: c.mode, a: c.a, b: c.b });
+  const idx = replay || st.done ? 0 : Math.min(st.step || 0, prob.steps.length);
+  startPlay(prob, { type: "daily", c, label: `Race ${DAILY.indexOf(c) + 1}`, saved: replay || st.done ? null : st }, idx);
+}
+function sendLine() {
+  const st = getLS("buzz-garage-" + DDATE);
+  return DAILY.filter(c => st[c.id] && st[c.id].done).map(c => `${c.id} ${st[c.id].code}`).join(", ");
+}
+function renderDaily() {
+  const el = $("daily");
+  if (!DAILY.length) { el.innerHTML = `<div class="card"><h2>🏁 No races yet</h2><p>Buzz is building the track. Try <b>Practice</b> for now! 🛠️</p></div>`; return; }
+  const st = getLS("buzz-garage-" + DDATE);
+  const cards = DAILY.map((c, i) => {
+    const s = st[c.id] || {}, steps = E.build({ mode: c.mode, a: c.a, b: c.b }).steps.length;
+    const status = s.done ? `✅ Finished! Code <code>${esc(c.id)} ${esc(s.code)}</code>` : (s.step ? `⏱️ Step ${s.step + 1} of ${steps}` : `${steps} steps`);
+    return `<div class="mg-race${s.done ? " done" : ""}"><div class="mg-rl"><b>Race ${i + 1}</b> ${c.mode === "mult" ? "✖️" : "➗"} <span class="mg-sum">${esc(c.sum)}</span><br><small>${status}</small></div>` +
+      `<button type="button" class="mg-go" data-race="${esc(c.id)}"${s.done ? ' data-replay="1"' : ""}>${s.done ? "Replay" : (s.step ? "Continue ▶" : "Start ▶")}</button></div>`;
+  }).join("");
+  const m = sendLine(), done = DAILY.filter(c => st[c.id] && st[c.id].done).length;
+  const head = PEEK ? `👀 Sneak peek: these races go live on ${fmtD(DDATE)}` : (DDATE === today ? `🆕 ${fmtD(today)}` : `Latest races: ${fmtD(DDATE)} · fresh ones land this afternoon! ⏰`);
+  el.innerHTML = `<div class="card"><h2>🏁 Today's races <small>(+${DAILY.reduce((s, c) => s + (c.points || 0), 0)} pts)</small></h2><p class="rule">${head}</p>${cards}</div>` +
+    `<div class="card sendcard"><h2>🤖 Send your codes to Buzz</h2><p class="rule">${done} of ${DAILY.length} races finished</p>` +
+    (m ? `<p class="preview"><code>${esc(m)}</code></p><a class="sendbtn" href="https://wa.me/?text=${encodeURIComponent(m)}" target="_blank" rel="noopener">Send to Buzz 🤖</a><p class="pick">👉 Pick <b>Chuchu HQ</b> and hit send!</p>`
+       : `<p>Finish a race to get your code! 🏎️</p>`) +
+    `<p class="rule">🧠 Hebrew letters and reading are on the <a href="challenges.html" class="mg-link">Challenges page</a> (its Send button includes these codes too).</p></div>`;
+}
+function autoOpen() {
+  const st = getLS("buzz-garage-" + DDATE);
+  const next = DAILY.find(c => !(st[c.id] && st[c.id].done));
+  const want = location.hash.slice(1), pick = DAILY.find(c => c.id === want) || next;
+  if (pick) {
+    const s = st[pick.id] || {};
+    const prob = E.build({ mode: pick.mode, a: pick.a, b: pick.b });
+    const cells = {}; const idx = s.done ? prob.steps.length : Math.min(s.step || 0, prob.steps.length);
+    if (s.done) { openRace(pick, true); return; }
+    P = null; startPlayQuiet(prob, { type: "daily", c: pick, label: `Race ${DAILY.indexOf(pick) + 1}`, saved: s }, idx, !!want);
+  }
+}
+function startPlayQuiet(prob, ctx, idx, scroll) {
+  const cells = {};
+  for (let i = 0; i < idx; i++) applyWrites(cells, prob.steps[i]);
+  P = { prob, ctx, idx, cells, mistakes: (ctx.saved && ctx.saved.mistakes) || 0, order: {}, wrong: new Set(), fb: "", fresh: new Set() };
+  renderPlay();
+  if (scroll) $("play").scrollIntoView({block: "start"});
+}
+
+// ---------- practice ----------
+const PS = (() => { const s = getLS("buzz-garage-practice"); return { kind: s.kind || "mult", level: Object.assign({ mult: 4, div: 1 }, s.level || {}) }; })();
+function renderPractice() {
+  const L = E.LEVELS[PS.kind], ps = getLS("buzz-garage-practice");
+  $("practice").innerHTML = `<div class="card"><h2>🛠️ Practice garage</h2>` +
+    `<div class="mg-kinds"><button type="button" data-kind="mult" class="${PS.kind === "mult" ? "on" : ""}">✖️ Multiply</button><button type="button" data-kind="div" class="${PS.kind === "div" ? "on" : ""}">➗ Divide</button></div>` +
+    `<div class="mg-levels">${L.map((l, i) => `<button type="button" data-level="${i}" class="${PS.level[PS.kind] === i ? "on" : ""}"><b>Lv ${i + 1}</b> ${esc(l.name)}</button>`).join("")}</div>` +
+    `<button type="button" class="checkbtn" id="newp">New problem 🎲</button>` +
+    `<p class="rule">Random problems, as many as you like. Just for fun (no points). Finished so far: <b>${ps.finished || 0}</b> 🏆</p></div>`;
+}
+function newPractice() {
+  const prob = E.randomProblem(PS.kind, PS.level[PS.kind]);
+  startPlay(prob, { type: "practice" }, 0);
+}
+
+// ---------- load ----------
+const qd = new URLSearchParams(location.search).get("date");
+fetch("challenges.json?v=" + Date.now()).then(r => r.json()).then(d => {
+  const all = (d.challenges || []).filter(c => c.type === "stepgame" && c.key);
+  const dates = [...new Set(all.map(c => c.date))].sort();
+  const past = dates.filter(x => x <= today);
+  DDATE = qd && dates.includes(qd) ? qd : (past.length ? past[past.length - 1] : dates[0]);
+  PEEK = !!DDATE && DDATE > today;
+  DAILY = all.filter(c => c.date === DDATE);
+  renderDaily(); autoOpen();
+}).catch(e => { console.error(e); $("daily").innerHTML = `<div class="card"><p>Oops, Buzz couldn't load today's races. Try <b>Practice</b>! 🛠️</p></div>`; });
+</script>
+</body>
+</html>
