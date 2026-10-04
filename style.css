@@ -231,3 +231,18 @@ button.choice:disabled:not(.right){opacity:.4}
 .hebword .play{display:block;text-align:center}
 .bigheb{font-family:"Noto Sans Hebrew","Arial Hebrew","IBM Plex Sans Hebrew",Arial,sans-serif;font-size:3.5rem;font-weight:900;text-align:center;color:#ffd23f}
 @media (max-width:420px){.hw-ch{font-size:4rem}.hw-word{gap:4px}}
+/* Buzz's Joke Garage (jokes.html, added 4 Oct 2026) */
+.jhead{font-size:1.2rem;margin:6px 0 8px}
+.joke{border-color:rgba(255,210,63,.5)}
+.jbig{background:linear-gradient(135deg,rgba(255,210,63,.28),rgba(255,61,127,.22));border-color:#ffd23f}
+.jmeta{display:flex;justify-content:space-between;gap:6px;flex-wrap:wrap;font-size:.8rem;opacity:.9;margin-bottom:6px}
+.jsetup{font-size:1.3rem;font-weight:900;margin:4px 0 10px;line-height:1.35}
+.jbig .jsetup{font-size:1.55rem}
+.jreveal{display:block;width:100%;font:inherit;font-weight:900;font-size:1.15rem;min-height:60px;border:3px dashed rgba(255,255,255,.6);border-radius:16px;background:rgba(0,0,0,.25);color:#ffd23f;cursor:pointer;touch-action:manipulation;padding:10px}
+.jreveal .jpunch{display:none}
+.joke.open .jreveal{border:3px solid #3dff9e;background:rgba(61,255,158,.18);color:#fff;cursor:default;font-size:1.3rem}
+.joke.open .jpunch{display:inline-block;animation:popin .5s ease}
+.jbig.open .jreveal{font-size:1.5rem}
+.jlol{font:inherit;font-weight:900;font-size:1rem;margin-top:10px;min-height:44px;padding:6px 16px;border:0;border-radius:999px;background:rgba(255,255,255,.18);color:#fff;cursor:pointer;touch-action:manipulation}
+.jlol.on{background:#ffd23f;color:#2b1055}
+@media (max-width:420px){nav{gap:6px}nav a{padding:7px 11px;font-size:.92rem}}

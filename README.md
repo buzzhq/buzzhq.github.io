@@ -1,6 +1,6 @@
 # Chuchu Scoreboard (for Alon)
 
-Static site: `index.html` (the scoreboard), `tips.html` (Game Tips & Tricks), `challenges.html` (🧠 Daily Challenge), `maths.html` (🏎️ Maths Garage, see below) and `hebrew.html` (🔤 Hebrew Word Rally, see below).
+Static site: `index.html` (the scoreboard), `tips.html` (Game Tips & Tricks), `challenges.html` (🧠 Daily Challenge), `maths.html` (🏎️ Maths Garage, see below), `hebrew.html` (🔤 Hebrew Word Rally, see below) and `jokes.html` (😂 Joke Garage, see below).
 Both pages are data-driven and **additive** (append-only, updated daily):
 - **`data.json`**: scoreboard wins. The page adds up the total, level, progress bar and badges automatically.
 - **`challenges.json`**: daily learning challenges (see below). Answers are NEVER in the repo.
@@ -87,7 +87,7 @@ node -e 'const s=require("./scoreboard.js");const r=s.compute(require("./data.js
 ## Daily Challenge (added 2026-09-28): `challenges.html` + `challenges.json`
 Page: https://buzzhq.github.io/challenges.html — shows the set whose `date` = today (Sydney) big and clear (or the latest set, with "a fresh set lands this afternoon"), a "How to answer" box, and older days collapsed below. Append-only.
 
-> **🚨 From Mon 5 Oct 2026 the daily maths is the 🏎️ Maths Garage (ACTIVE, Ron approved 4 Oct 2026): races `mg1` (×) + `mg2` (÷), +10 each, added with `tools/stepgame.py add`. NO more `dc1`/`dc2` maths MCQs. 5 Oct is already seeded. See "Buzz's Maths Garage" below.** **🔤 From Mon 5 Oct 2026 the daily Hebrew is the Hebrew Word Rally (ACTIVE, Ron approved 4 Oct 2026): `hb1` (+ optional `hb2`) words, +10 each, added with `tools/hebword.py add`. NO more `dc3`/`dc4` letter MCQs. 5 Oct is already seeded (hb1 דג, hb2 גלגל).** Daily messages end with FIVE links (Scoreboard, Tips, Challenges, Maths Garage, Hebrew Rally).
+> **🚨 From Mon 5 Oct 2026 the daily maths is the 🏎️ Maths Garage (ACTIVE, Ron approved 4 Oct 2026): races `mg1` (×) + `mg2` (÷), +10 each, added with `tools/stepgame.py add`. NO more `dc1`/`dc2` maths MCQs. 5 Oct is already seeded. See "Buzz's Maths Garage" below.** **🔤 From Mon 5 Oct 2026 the daily Hebrew is the Hebrew Word Rally (ACTIVE, Ron approved 4 Oct 2026): `hb1` (+ optional `hb2`) words, +10 each, added with `tools/hebword.py add`. NO more `dc3`/`dc4` letter MCQs. 5 Oct is already seeded (hb1 דג, hb2 גלגל).** Daily messages end with SIX links (Scoreboard, Tips, Challenges, Maths Garage, Hebrew Rally, Jokes).
 
 Daily set (appended by the afternoon routine). **Maths format changed 28 Sep 2026 evening** (Ron: full long multiplication/division with blanks was too hard on a phone). The 28 Sep `mult`/`div` entries stay as they are (append-only); from 29 Sep:
 1. `dc1`, `dc2` `mcq`: 2 maths challenges, each ONE mental step with multiple choice a/b/c(/d), taken from a bigger 3-4 digit × 2-digit multiplication or long division (e.g. "Step 1 of 247 × 36: what is 7 × 6?", "Which is closest to 247 × 36? a) 900 b) 9,000 c) 90,000", "5838 ÷ 6: how many 6s fit in 58?"). Over a week they walk through the full method: times-tables facts → estimating → carrying → partial products → adding up → sense-check (full plan in `/workspace/alon/journey.md`, MATHS FORMAT).
@@ -203,3 +203,18 @@ tools/hebword.py verify "hb1 TX33, hb2 GX40"           # today + yesterday (or -
   Finish code `hb1 TX33` = same scheme as the Maths Garage (sha256 of `<key>|<transliteration>`; secret only in challenge-answers.json → `hebword.secret`, expected codes in `answers[date][hbN]`). Scoring: +10 per valid code, category `challenge`, emoji 🔤, e.g. "Hebrew word hb1 ✅ דג (dag = fish)". `challenges.html` shows `hebword` cards with a "Sound it out in the Hebrew Rally" button and includes the codes in its Send line.
 - **✅ ACTIVE from Mon 5 Oct 2026 (Ron approved 4 Oct 2026), replacing the dc3/dc4 letter MCQs.** Seeded Mon 5 Oct as the main Hebrew challenge: hb1 דג dag = fish 🐟 (code hb1 TX33), hb2 גלגל galgal = wheel 🛞 (code hb2 GX40).
 - Daily: 1-2 words a day; mostly learned-letter words, sometimes a word with the next new letter (then add that letter to `hebrew_tracker.done` once he finishes it; a brand-new letter also needs a `LETTERS` entry in hebrew-engine.js: name + 3 mix-ups with hints, then run the test); don't repeat a word within 2 weeks (`bank` shows used words); grow from 2-letter to 3-4-letter words slowly.
+
+## 😂 Buzz's Joke Garage (added 2026-10-04): `jokes.html` + `jokes.json`
+Page: https://buzzhq.github.io/jokes.html. Today's (latest) joke big at the top with a **NEW TODAY** badge, then all older jokes (newest first, with dates and Morning/Afternoon/Bonus tags, topic filter chips). Punchlines are **tap-to-reveal**; a 😂 Funny! button and the revealed state are saved only in the browser (`localStorage` key `buzz-jokes`, no backend).
+- **Standing rule (Ron, 4 Oct 2026):** every morning AND afternoon Buzz message has ONE new 1–2 line joke (punchline included, or now and then a teaser "Tap the 😂 Jokes page for the punchline!"), and the SAME joke is appended to `jokes.json` in that run's commit. Clean and kid-safe for a 10-year-old (cars/racing, basketball, space, animals, school, bikes, gaming; GTA cars only; no Minecraft; no mean/put-down jokes). Never repeat a joke.
+- **Helper** (repeat check + append):
+```bash
+cd /workspace/alon/scoreboard
+tools/jokes.py check "Why did the race car go to the doctor?" "It had a bad case of exhaust-ion!"   # exit 1 = TOO SIMILAR, pick another
+tools/jokes.py add 2026-10-05 am --topic Cars --emoji 🏎️ --setup "Why did ...?" --punchline "Because ...!"
+tools/jokes.py list
+git add jokes.json   # together with the run's other files
+```
+- Schema `jokes[]` (append-only, file order = oldest first): `{ "date": "YYYY-MM-DD", "slot": "am"|"pm"|"extra", "topic": "Basketball", "emoji": "🏀", "setup": "...?", "punchline": "...!" }`. Jokes dated in the future stay hidden until their day.
+- Seeded 4 Oct 2026 with the 4 jokes already sent in Chuchu HQ (27 Sep pm, 30 Sep pm, 2 Oct am, 2 Oct pm; the 24 Sep Minecraft joke is left out on purpose) + one bonus 4 Oct joke.
+- Every daily message ends with SIX links; the 6th is "😂 Jokes: https://buzzhq.github.io/jokes.html".

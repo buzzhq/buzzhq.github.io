@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Buzz's Joke Garage</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+  <h1>😂 Buzz's Joke Garage</h1>
+  <p class="sub" id="sub">A fresh joke in every Buzz message</p>
+  <nav><a href="index.html">🏆 Scoreboard</a><a href="tips.html">🎮 Game Tips</a><a href="challenges.html">🧠 Challenges</a><a href="maths.html">🏎️ Maths Garage</a><a href="hebrew.html">🔤 Hebrew Rally</a><a class="on" href="jokes.html">😂 Jokes</a></nav>
+
+  <div id="top"></div>
+  <div class="filters" id="filters"></div>
+  <div id="list"><p class="sub">Loading jokes…</p></div>
+
+  <p class="sign">Keep laughing! — Buzz 🤖</p>
+</div>
+<script>
+const today = new Intl.DateTimeFormat("en-CA", {timeZone: "Australia/Sydney"}).format(new Date());
+const fmt = d => new Date(d + "T00:00:00").toLocaleDateString("en-AU", {weekday: "short", day: "numeric", month: "short", year: "numeric"});
+const esc = s => String(s).replace(/[&<>"]/g, c => ({"&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;"}[c]));
+const $ = id => document.getElementById(id);
+const KEY = "buzz-jokes";
+const getS = () => { try { return JSON.parse(localStorage.getItem(KEY)) || {}; } catch (e) { return {}; } };
+const setS = v => { try { localStorage.setItem(KEY, JSON.stringify(v)); } catch (e) {} };
+const SLOT = { am: "🌅 Morning", pm: "🌇 Afternoon", extra: "⭐ Bonus" };
+let JOKES = [], FILTER = "All";
+const idOf = j => `${j.date}-${j.slot}-${JOKES.indexOf(j)}`;
+function confetti(el) {
+  const r = el.getBoundingClientRect(), E = ["😂", "🤣", "😆", "✨", "🎉"];
+  for (let i = 0; i < 12; i++) {
+    const s = document.createElement("span"); s.className = "boom"; s.textContent = E[i % E.length];
+    s.style.left = (r.left + r.width / 2) + "px"; s.style.top = (r.top + r.height / 2) + "px";
+    const a = Math.random() * Math.PI * 2, d = 50 + Math.random() * 90;
+    s.style.setProperty("--dx", Math.cos(a) * d + "px"); s.style.setProperty("--dy", (Math.sin(a) * d - 40) + "px");
+    document.body.appendChild(s); setTimeout(() => s.remove(), 1100);
+  }
+}
+function card(j, big) {
+  const st = getS(), id = idOf(j), open = st.open && st.open[id], lol = st.lol && st.lol[id];
+  return `<div class="card joke${big ? " jbig" : ""}${open ? " open" : ""}" data-id="${esc(id)}">` +
+    `<div class="jmeta"><span>${esc(j.emoji || "😂")} ${esc(j.topic || "")}</span><span>${SLOT[j.slot] || ""} · ${fmt(j.date)}${j.date === today ? '<span class="new">NEW TODAY</span>' : ""}</span></div>` +
+    `<p class="jsetup">${esc(j.setup)}</p>` +
+    `<button type="button" class="jreveal" data-id="${esc(id)}" aria-expanded="${open ? "true" : "false"}">${open ? "" : "👆 Tap for the punchline"}<span class="jpunch">${esc(j.punchline).replace(/-/g, "\u2011")}</span></button>` +
+    `<button type="button" class="jlol${lol ? " on" : ""}" data-id="${esc(id)}" aria-pressed="${lol ? "true" : "false"}">${lol ? "😂 You laughed!" : "😂 Funny!"}</button></div>`;
+}
+function render() {
+  const st = getS(), laughs = Object.values(st.lol || {}).filter(Boolean).length;
+  const latest = JOKES[0];
+  $("top").innerHTML = latest ? `<h2 class="jhead">${latest.date === today ? "🆕 Today's joke" : "😂 Latest joke"}</h2>` + card(latest, true) +
+    `<p class="sub">${JOKES.length} jokes so far · you laughed at ${laughs} 😂</p>` : "";
+  const topics = ["All", ...new Set(JOKES.map(j => j.topic).filter(Boolean))];
+  $("filters").innerHTML = topics.length > 2 ? topics.map(t => `<button type="button" data-t="${esc(t)}" class="${t === FILTER ? "on" : ""}">${esc(t)}</button>`).join("") : "";
+  const rest = JOKES.slice(1).filter(j => FILTER === "All" || j.topic === FILTER);
+  $("list").innerHTML = rest.length ? `<h2 class="jhead">📜 Older jokes</h2>` + rest.map(j => card(j)).join("") : "";
+}
+document.addEventListener("click", e => {
+  const r = e.target.closest(".jreveal"), l = e.target.closest(".jlol"), f = e.target.closest(".filters button");
+  if (r) { const st = getS(); st.open = st.open || {}; if (st.open[r.dataset.id]) return; st.open[r.dataset.id] = true; setS(st); render(); const c = document.querySelector(`.joke[data-id="${CSS.escape(r.dataset.id)}"] .jpunch`); if (c) confetti(c); }
+  else if (l) { const st = getS(); st.lol = st.lol || {}; st.lol[l.dataset.id] = !st.lol[l.dataset.id]; setS(st); render(); if (st.lol[l.dataset.id]) { const c = document.querySelector(`.joke[data-id="${CSS.escape(l.dataset.id)}"] .jlol`); if (c) confetti(c); } }
+  else if (f) { FILTER = f.dataset.t; render(); }
+});
+fetch("jokes.json?v=" + Date.now()).then(r => r.json()).then(d => {
+  // newest first: by date, then afternoon/bonus after morning (file order breaks ties)
+  const order = { am: 0, pm: 1, extra: 2 };
+  JOKES = (d.jokes || []).map((j, i) => ({ ...j, _i: i })).filter(j => j.date <= today)
+    .sort((a, b) => a.date !== b.date ? (a.date < b.date ? 1 : -1) : ((order[b.slot] || 0) - (order[a.slot] || 0) || b._i - a._i));
+  render();
+}).catch(e => { console.error(e); $("list").innerHTML = `<p class="sub">Oops, Buzz couldn't load the jokes. Try again soon!</p>`; });
+</script>
+</body>
+</html>
