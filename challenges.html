@@ -11,15 +11,16 @@
 <div class="wrap">
   <h1>🧠 Daily Challenge</h1>
   <p class="sub" id="sub">Loading today's challenges…</p>
-  <nav><a href="index.html">🏆 Scoreboard</a><a href="tips.html">🎮 Game Tips</a><a class="on" href="challenges.html">🧠 Challenges</a><a href="maths.html">🏎️ Maths Garage</a></nav>
+  <nav><a href="index.html">🏆 Scoreboard</a><a href="tips.html">🎮 Game Tips</a><a class="on" href="challenges.html">🧠 Challenges</a><a href="maths.html">🏎️ Maths Garage</a><a href="hebrew.html">🔤 Hebrew Rally</a></nav>
 
   <div class="card howto">
     <h2>✍️ How to answer</h2>
     <p>🏎️ <b>Maths:</b> tap <b>Solve it in the Maths Garage</b>, pick the right next step each time, and you'll get a <b>finish code</b>.</p>
+    <p>🔤 <b>Hebrew words:</b> tap <b>Sound it out in the Hebrew Rally</b>, tap each letter's sound (right to left!), and get a finish code.</p>
     <p>👆 <b>Tap your answer</b> (or type the number and tap <b>Check</b>). You'll know straight away if it's right, and you can try again!</p>
     <p>🤖 When you're done, tap <b>Send to Buzz</b> at the bottom, then <b>pick Chuchu HQ and hit send!</b></p>
     <p>📖 Reading: record a <b>voice note</b> in Chuchu HQ reading the passage aloud.</p>
-    <p class="rule">🏎️ Each finished Maths Garage race = <b>+10 pts</b> · ✅ Each correct answer = <b>+5 pts</b> · 🎤 A good reading = <b>+10 pts</b> · 📝 Paper bonus = <b>+10 pts</b><br>🤖 Buzz adds your points every evening. You can still type codes like <code>dc1 b</code> in Chuchu HQ if you like.</p>
+    <p class="rule">🏎️ Each finished Maths Garage race = <b>+10 pts</b> · 🔤 Each finished Hebrew word = <b>+10 pts</b> · ✅ Each correct answer = <b>+5 pts</b> · 🎤 A good reading = <b>+10 pts</b> · 📝 Paper bonus = <b>+10 pts</b><br>🤖 Buzz adds your points every evening. You can still type codes like <code>dc1 b</code> in Chuchu HQ if you like.</p>
   </div>
 
   <div id="game"></div>
@@ -33,7 +34,7 @@
 const today = new Intl.DateTimeFormat("en-CA", {timeZone: "Australia/Sydney"}).format(new Date());
 const fmt = d => new Date(d + "T00:00:00").toLocaleDateString("en-AU", {weekday:"short", day:"numeric", month:"short", year:"numeric"});
 const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
-const icon = { stepgame: "🏎️", mult: "✖️", div: "➗", mcq: "🔢", paper: "📝", hebrew: "🔤", reading: "📖" };
+const icon = { hebword: "🔤", stepgame: "🏎️", mult: "✖️", div: "➗", mcq: "🔢", paper: "📝", hebrew: "🔤", reading: "📖" };
 // one grid cell per character; A/B = blanks to fill in
 const cell = ch => /[A-Z]/.test(ch) ? `<span class="c blank">${ch}</span>` : `<span class="c">${ch === " " ? "&nbsp;" : esc(ch)}</span>`;
 const row = (s, w, cls = "") => `<div class="mrow ${cls}">${s.padStart(w, " ").split("").map(cell).join("")}</div>`;
@@ -98,6 +99,9 @@ function card(c, live) {
   else if (c.type === "stepgame") body = (c.sum ? `<div class="bigsum">${esc(c.sum)}</div>` : "") +
     (live ? `<a class="play" href="maths.html#${esc(c.id)}">🏎️ Solve it in the Maths Garage</a>` + fb(c)
       : `<p class="ans">Solved step by step in the <a class="mg-link" href="maths.html">🏎️ Maths Garage</a> (finish code like <code>${esc(c.id)} GT47</code>)</p>`);
+  else if (c.type === "hebword") body = `<div class="bigheb" lang="he" dir="rtl">${esc(c.word)}</div>` +
+    (live ? `<a class="play" href="hebrew.html#${esc(c.id)}">🔤 Sound it out in the Hebrew Rally</a>` + fb(c)
+      : `<p class="ans">Sounded out in the <a class="mg-link" href="hebrew.html">🔤 Hebrew Word Rally</a> (finish code like <code>${esc(c.id)} GT47</code>)</p>`);
   else if (c.type === "reading") body = `<p class="readnote">🎤 Read this in the WhatsApp message and send a <b>voice note</b> in Chuchu HQ = <b>+${c.points} pts</b></p><p class="read">${esc(c.text)}</p>`;
   return `<div class="card chal ${c.type}" id="card-${esc(c.id)}"><h2>${icon[c.type] || "🧠"} <span class="id">${esc(c.id)}</span> ${esc(c.title || "")}<span class="ptag">+${c.points}${c.optional ? " bonus" : ""}</span></h2>` +
     note + `<p class="prompt">${esc(c.prompt)}</p>${body}</div>`;
@@ -125,7 +129,7 @@ function showState(c) {
     b.disabled = !!s.ok;
   });
   else if (s.ok) el.querySelectorAll(".blanks input").forEach(i => { i.value = s.vals ? s.vals[i.dataset.n] : s.ans; i.disabled = true; });
-  if (c.type === "stepgame") { box.innerHTML = s.ok ? `<span class="yes">✅ Finished! Code <code>${esc(c.id)} ${esc(s.ans)}</code></span>` : (s.step ? `<span class="saved">⏱️ Started, keep going in the Maths Garage!</span>` : ""); renderSend(); return; }
+  if (c.type === "stepgame" || c.type === "hebword") { box.innerHTML = s.ok ? `<span class="yes">✅ Finished! Code <code>${esc(c.id)} ${esc(s.ans)}</code></span>` : (s.step ? `<span class="saved">⏱️ Started, keep going in the ${c.type === "stepgame" ? "Maths Garage" : "Hebrew Rally"}!</span>` : ""); renderSend(); return; }
   if (s.ok === true) box.innerHTML = `<span class="yes">${s.first ? "✅ Got it first try! 🌟" : "✅ Got it!"}</span>`;
   else if (s.ok === null) box.innerHTML = `<span class="saved">📝 Saved! Buzz will check this one tonight.</span>`;
   renderSend();
@@ -195,12 +199,12 @@ fetch("challenges.json?v=" + Date.now()).then(r => r.json()).then(d => {
   const todays = all.filter(c => c.date === showDate);
   SHOW = showDate; SET = todays; ST = showDate ? load(showDate) : {};
   // Maths Garage (maths.html) progress for this day: finished races give a code like "mg1 GT47"
-  let G = {}; try { G = JSON.parse(localStorage.getItem("buzz-garage-" + showDate)) || {}; } catch (e) {}
-  todays.filter(c => c.type === "stepgame").forEach(c => { const g = G[c.id]; ST[c.id] = g && g.done ? { ok: true, ans: g.code } : (g ? { step: g.step } : undefined); if (!ST[c.id]) delete ST[c.id]; });
+  const G = {}; for (const [t, k] of [["stepgame", "buzz-garage-"], ["hebword", "buzz-hebrew-"]]) { let g = {}; try { g = JSON.parse(localStorage.getItem(k + showDate)) || {}; } catch (e) {} todays.filter(c => c.type === t).forEach(c => { if (g[c.id]) G[c.id] = g[c.id]; }); }
+  todays.filter(c => c.type === "stepgame" || c.type === "hebword").forEach(c => { const g = G[c.id]; ST[c.id] = g && g.done ? { ok: true, ans: g.code } : (g ? { step: g.step } : undefined); if (!ST[c.id]) delete ST[c.id]; });
   const total = todays.filter(c => !c.optional).reduce((s, c) => s + (c.points || 0), 0);
   const bonus = todays.filter(c => c.optional).reduce((s, c) => s + (c.points || 0), 0);
   document.getElementById("sub").innerHTML = showDate === today
-    ? `🆕 ${fmt(today)} · ${todays.length} challenges · up to <b>+${total} pts</b>${bonus ? ` (+${bonus} paper bonus)` : ""}!`
+    ? `🆕 ${fmt(today)} · ${todays.length} challenges · up to <b>+${total} pts</b>${bonus ? ` (+${bonus} bonus)` : ""}!`
     : (showDate ? `Latest set: ${fmt(showDate)} · a fresh set lands this afternoon! ⏰` : "No challenges yet — check back soon!");
   const g = (d.games || []).filter(x => x.date <= today && x.game && /^https:\/\//.test(x.game.url)).sort((a, b) => a.date < b.date ? -1 : 1).pop();
   if (g) document.getElementById("game").innerHTML = `<div class="card gamebox"><h2>🎮 Maths game of the day${g.date === today ? "" : ` <small>(${fmt(g.date)})</small>`}</h2>` +

@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Buzz's Hebrew Word Rally</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+  <h1>🔤 Buzz's Hebrew Word Rally</h1>
+  <p class="sub" id="sub">Sound out a Hebrew word, one letter at a time</p>
+  <nav><a href="index.html">🏆 Scoreboard</a><a href="tips.html">🎮 Game Tips</a><a href="challenges.html">🧠 Challenges</a><a href="maths.html">🏎️ Maths Garage</a><a class="on" href="hebrew.html">🔤 Hebrew Rally</a></nav>
+
+  <div class="mg-tabs" role="tablist">
+    <button type="button" class="on" data-tab="daily">🏁 Today's words</button>
+    <button type="button" data-tab="practice">🛠️ Practice</button>
+  </div>
+
+  <div id="play"></div>
+  <section id="daily"><p class="sub">Loading today's words…</p></section>
+  <section id="practice" hidden></section>
+
+  <div class="card howto">
+    <h2>🔧 How it works</h2>
+    <p>➡️ Hebrew reads from <b>right to left</b>, so we start with the letter on the RIGHT.</p>
+    <p>👆 Tap the sound each glowing letter makes. The word builds up as you go: <i>da… dag!</i></p>
+    <p>🤔 Wrong tap? Buzz gives you a hint and you try again.</p>
+    <p>🏁 Then guess what the word means! Finish today's word to get a <b>finish code</b> and tap <b>Send to Buzz</b> = <b>+10 pts</b> each.</p>
+  </div>
+
+  <p class="sign">Kol hakavod (well done)! — Buzz 🤖</p>
+</div>
+<script src="hebrew-engine.js"></script>
+<script>
+const H = window.HebrewEngine;
+const today = new Intl.DateTimeFormat("en-CA", {timeZone: "Australia/Sydney"}).format(new Date());
+const fmtD = d => new Date(d + "T00:00:00").toLocaleDateString("en-AU", {weekday: "short", day: "numeric", month: "short"});
+const esc = s => String(s).replace(/[&<>"]/g, c => ({"&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;"}[c]));
+const $ = id => document.getElementById(id);
+async function sha256(t) {
+  const buf = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(t));
+  return [...new Uint8Array(buf)].map(b => b.toString(16).padStart(2, "0")).join("");
+}
+const getLS = k => { try { return JSON.parse(localStorage.getItem(k)) || {}; } catch (e) { return {}; } };
+const setLS = (k, v) => { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} };
+function confetti(el, n) {
+  const r = el.getBoundingClientRect(), EM = ["🎉", "⭐", "✨", "🏁", "💥", "🔥", "🏆", "🚀"];
+  for (let i = 0; i < (n || 12); i++) {
+    const s = document.createElement("span"); s.className = "boom"; s.textContent = EM[i % EM.length];
+    s.style.left = (r.left + r.width / 2) + "px"; s.style.top = (r.top + r.height / 2) + "px";
+    const a = Math.random() * Math.PI * 2, d = 50 + Math.random() * (n > 12 ? 160 : 80);
+    s.style.setProperty("--dx", Math.cos(a) * d + "px"); s.style.setProperty("--dy", (Math.sin(a) * d - 40) + "px");
+    document.body.appendChild(s); setTimeout(() => s.remove(), 1100);
+  }
+}
+const CHEERS = ["✅ Yes!", "✅ Nailed it!", "✅ Spot on!", "✅ Boom!", "✅ Sababa!"];
+const shuffle = a => { a = a.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+
+// ---------- playing one word ----------
+let P = null; // { prob, ctx, idx, mistakes, order, wrong, fb }
+function wordHTML(p, idx) {
+  const n = p.parts.length, done = idx >= n;
+  const letters = [...p.word].map((ch, i) => {
+    const st = i < idx ? " done" : (i === idx ? " cur" : "");
+    return `<span class="hw-l${st}${p.newLetter === ch && i >= idx ? " isnew" : ""}"><span class="hw-ch">${esc(ch)}</span><span class="hw-tr">${i < idx ? esc(p.parts[i][1]) : (i === idx ? "?" : "")}</span></span>`;
+  }).join("");
+  const sofar = p.parts.slice(0, Math.min(idx, n)).map(x => x[1]).join("");
+  return `<div class="hw-box"><div class="hw-word" dir="rtl" lang="he">${letters}</div>` +
+    `<div class="hw-dir">⬅️ ⬅️ read this way ⬅️ ⬅️</div>` +
+    `<div class="hw-build">${sofar ? esc(sofar) + (done ? "!" : "…") : "&nbsp;"}</div></div>`;
+}
+function startPlay(prob, ctx, idx, scroll) {
+  P = { prob, ctx, idx: idx || 0, mistakes: (ctx.saved && ctx.saved.mistakes) || 0, order: {}, wrong: new Set(), fb: "" };
+  renderPlay();
+  if (scroll) $("play").scrollIntoView({behavior: "smooth", block: "start"});
+}
+function renderPlay() {
+  const p = P.prob, total = p.steps.length, done = P.idx >= total, step = p.steps[P.idx];
+  const pct = Math.round(100 * P.idx / total);
+  const title = P.ctx.type === "daily" ? `🏁 ${esc(P.ctx.label)}` : "🛠️ Practice";
+  let h = `<div class="card mg-play${done ? " mg-done" : ""}"><h2>${title}${P.ctx.type === "daily" ? `<span class="ptag">+${P.ctx.c.points}${P.ctx.c.optional ? " bonus" : ""}</span>` : ""}</h2>` +
+    `<div class="mg-track"><div class="bar"><div class="fill" style="width:${pct}%"></div></div><span class="mg-car" style="left:calc(${pct}% - ${pct / 100 * 1.6}em)">🚙</span><span class="mg-flag">🏁</span></div>` +
+    `<p class="mg-stepn">${done ? `All ${total} steps done!` : `Step ${P.idx + 1} of ${total}`}${P.mistakes ? ` · 🔧 pit stops: ${P.mistakes}` : ""}</p>` +
+    wordHTML(p, P.idx);
+  if (!done) {
+    if (!P.order[P.idx]) P.order[P.idx] = shuffle(step.opts.map((_, i) => i));
+    h += `<div class="mg-ask"><span class="mg-bot">🤖</span><p>${step.kind === "letter" ? esc(step.q).replace(esc(step.ch), `<span class="hw-q" lang="he">${esc(step.ch)}</span>`) : esc(step.q)}</p></div>` +
+      `<div class="mg-opts">` + P.order[P.idx].map(i => {
+        const o = step.opts[i], w = P.wrong.has(i);
+        return `<button type="button" class="mg-opt hw-opt${w ? " wrong" : ""}" data-i="${i}"${w ? " disabled" : ""}>${esc(o.label)}</button>`;
+      }).join("") + `</div>`;
+  }
+  h += `<div class="mg-fb" aria-live="polite">${P.fb}</div>`;
+  if (done) h += `<div id="mgfin"></div>`;
+  $("play").innerHTML = h + `</div>`;
+  if (done) finish();
+}
+async function finish() {
+  const p = P.prob, box = $("mgfin");
+  let h = `<div class="mg-finish"><div class="hw-emoji">${p.emoji}</div><div class="mg-result"><span lang="he" dir="rtl" class="hw-inline">${esc(p.word)}</span> = <b>${esc(p.tr)}</b> = <b>${esc(p.en)}</b></div><p class="hw-fact">💡 ${esc(p.fact)}</p>`;
+  if (p.newLetter) h += `<p class="rule">🆕 You just learned a new letter: <span lang="he" class="hw-inline">${esc(p.newLetter)}</span> (${esc(H.LETTERS[p.newLetter].name)})!</p>`;
+  if (P.ctx.type === "daily") {
+    const c = P.ctx.c, key = "buzz-hebrew-" + c.date, st = getLS(key);
+    let code = st[c.id] && st[c.id].code;
+    if (!code) { code = H.codeFromHex(await sha256(`${c.key}|${p.answer}`)); st[c.id] = { done: true, code, mistakes: P.mistakes, step: p.steps.length }; setLS(key, st); }
+    h += `<p>Your finish code:</p><div class="mg-code">${esc(c.id)} ${esc(code)}</div><p class="rule">Send it to Buzz for <b>+${c.points} pts</b>! 👇</p>`;
+  } else {
+    const ps = getLS("buzz-hebrew-practice"); ps.finished = (ps.finished || 0) + 1; ps.done = [...new Set([...(ps.done || []), p.word])]; setLS("buzz-hebrew-practice", ps);
+    h += `<p class="rule">Practice words finished: <b>${ps.finished}</b> 🏆 (just for fun, no points)</p><button type="button" class="checkbtn" id="again">Another word 🎲</button>`;
+  }
+  box.innerHTML = h + `</div>`;
+  confetti(box, 28);
+  if (P.ctx.type === "daily") renderDaily(); else renderPractice();
+}
+function saveStep() {
+  if (!P || P.ctx.type !== "daily") return;
+  const key = "buzz-hebrew-" + P.ctx.c.date, st = getLS(key), cur = st[P.ctx.c.id] || {};
+  if (!cur.done) { st[P.ctx.c.id] = { ...cur, step: P.idx, mistakes: P.mistakes }; setLS(key, st); }
+}
+document.addEventListener("click", e => {
+  const b = e.target.closest(".mg-opt");
+  if (b && P) {
+    const step = P.prob.steps[P.idx], i = Number(b.dataset.i), o = step.opts[i];
+    if (o.ok) {
+      confetti(b, 10);
+      P.fb = `<span class="yes pop">${CHEERS[Math.floor(Math.random() * CHEERS.length)]}</span> ${esc(step.say)}`;
+      P.idx++; P.wrong = new Set(); saveStep(); renderPlay();
+      if (P.ctx.type === "daily" && P.idx < P.prob.steps.length) renderDaily();
+    } else {
+      P.mistakes++; P.wrong.add(i); saveStep();
+      P.fb = `<span class="no">🤔 Not quite.</span> ${esc(o.hint)}`;
+      renderPlay();
+      const card = document.querySelector(".mg-play"); card.classList.remove("shake"); void card.offsetWidth; card.classList.add("shake");
+    }
+    return;
+  }
+  const t = e.target.closest(".mg-tabs button"); if (t) { setTab(t.dataset.tab); return; }
+  const s = e.target.closest("[data-race]");
+  if (s) { const c = DAILY.find(x => x.id === s.dataset.race); if (c) openDaily(c, s.dataset.replay === "1", true); return; }
+  if (e.target.closest("#again") || e.target.closest("#newp")) { randomPractice(); return; }
+  const w = e.target.closest("[data-word]"); if (w) { startPlay(H.buildWord(w.dataset.word), { type: "practice" }, 0, true); return; }
+});
+
+// ---------- tabs ----------
+function setTab(t) {
+  document.querySelectorAll(".mg-tabs button").forEach(b => b.classList.toggle("on", b.dataset.tab === t));
+  $("daily").hidden = t !== "daily"; $("practice").hidden = t !== "practice";
+  $("play").innerHTML = ""; P = null;
+  if (t === "practice") { renderPractice(); randomPractice(); } else { renderDaily(); autoOpen(); }
+}
+
+// ---------- daily words (challenges.json type "hebword") ----------
+let DAILY = [], DDATE = null, PEEK = false, KNOWN = [];
+function openDaily(c, replay, scroll) {
+  const st = getLS("buzz-hebrew-" + c.date)[c.id] || {}, prob = H.buildWord(c.word);
+  const fresh = replay || st.done;
+  startPlay(prob, { type: "daily", c, label: `Word ${DAILY.indexOf(c) + 1}`, saved: fresh ? null : st }, fresh ? 0 : Math.min(st.step || 0, prob.steps.length), scroll);
+}
+function renderDaily() {
+  const el = $("daily");
+  if (!DAILY.length) { el.innerHTML = `<div class="card"><h2>🏁 No words yet</h2><p>Buzz is warming up. Try <b>Practice</b> for now! 🛠️</p></div>`; return; }
+  const st = getLS("buzz-hebrew-" + DDATE);
+  const cards = DAILY.map((c, i) => {
+    const s = st[c.id] || {}, n = H.buildWord(c.word).steps.length;
+    const status = s.done ? `✅ Finished! Code <code>${esc(c.id)} ${esc(s.code)}</code>` : (s.step ? `⏱️ Step ${s.step + 1} of ${n}` : `${[...c.word].length} letters`);
+    return `<div class="mg-race${s.done ? " done" : ""}"><div class="mg-rl"><b>Word ${i + 1}</b> <span class="hw-inline" lang="he" dir="rtl">${esc(c.word)}</span>${c.optional ? ` <small>(bonus)</small>` : ""}<br><small>${status}</small></div>` +
+      `<button type="button" class="mg-go" data-race="${esc(c.id)}"${s.done ? ' data-replay="1"' : ""}>${s.done ? "Replay" : (s.step ? "Continue ▶" : "Start ▶")}</button></div>`;
+  }).join("");
+  const m = DAILY.filter(c => st[c.id] && st[c.id].done).map(c => `${c.id} ${st[c.id].code}`).join(", ");
+  const done = DAILY.filter(c => st[c.id] && st[c.id].done).length;
+  const head = PEEK ? `👀 Sneak peek: these words go live on ${fmtD(DDATE)}` : (DDATE === today ? `🆕 ${fmtD(today)}` : `Latest words: ${fmtD(DDATE)} · fresh ones land this afternoon! ⏰`);
+  el.innerHTML = `<div class="card"><h2>🏁 Today's words <small>(+${DAILY.reduce((s, c) => s + (c.points || 0), 0)} pts)</small></h2><p class="rule">${head}</p>${cards}</div>` +
+    `<div class="card sendcard"><h2>🤖 Send your codes to Buzz</h2><p class="rule">${done} of ${DAILY.length} words finished</p>` +
+    (m ? `<p class="preview"><code>${esc(m)}</code></p><a class="sendbtn" href="https://wa.me/?text=${encodeURIComponent(m)}" target="_blank" rel="noopener">Send to Buzz 🤖</a><p class="pick">👉 Pick <b>Chuchu HQ</b> and hit send!</p>`
+       : `<p>Finish a word to get your code! 🔤</p>`) +
+    `<p class="rule">🧠 The rest of today's challenges are on the <a href="challenges.html" class="mg-link">Challenges page</a> (its Send button includes these codes too).</p></div>`;
+}
+function autoOpen() {
+  const st = getLS("buzz-hebrew-" + DDATE), want = location.hash.slice(1);
+  const pick = DAILY.find(c => c.id === want) || DAILY.find(c => !(st[c.id] && st[c.id].done));
+  if (pick) openDaily(pick, false, !!want);
+}
+
+// ---------- practice ----------
+function renderPractice() {
+  const ps = getLS("buzz-hebrew-practice"), mine = new Set(ps.done || []);
+  const ok = H.suitable(KNOWN, 0), one = H.suitable(KNOWN, 1).filter(x => !ok.includes(x));
+  const btn = x => `<button type="button" class="hw-pick${mine.has(x.w) ? " done" : ""}" data-word="${esc(x.w)}"><span lang="he" dir="rtl">${esc(x.w)}</span>${mine.has(x.w) ? `<small>${x.emoji} ${esc(x.en)}</small>` : ""}</button>`;
+  $("practice").innerHTML = `<div class="card"><h2>🛠️ Practice words</h2>` +
+    `<p class="rule">Letters you know (${KNOWN.length}): <span class="hw-known" lang="he" dir="rtl">${KNOWN.map(esc).join(" ")}</span></p>` +
+    `<button type="button" class="checkbtn" id="newp">Random word 🎲</button>` +
+    `<h3 class="hw-h3">⭐ Words with your letters</h3><div class="hw-grid">${ok.map(btn).join("")}</div>` +
+    (one.length ? `<h3 class="hw-h3">🆕 One new letter (Buzz introduces it)</h3><div class="hw-grid">${one.map(btn).join("")}</div>` : "") +
+    `<p class="rule">Just for fun (no points). Finished so far: <b>${ps.finished || 0}</b> 🏆</p></div>`;
+}
+function randomPractice() {
+  const pool = H.suitable(KNOWN, 0), ps = getLS("buzz-hebrew-practice"), fresh = pool.filter(x => !(ps.done || []).includes(x.w));
+  const list = fresh.length ? fresh : pool, x = list[Math.floor(Math.random() * list.length)];
+  startPlay(H.buildWord(x.w), { type: "practice" }, 0, false);
+}
+
+// ---------- load ----------
+const qd = new URLSearchParams(location.search).get("date");
+fetch("challenges.json?v=" + Date.now()).then(r => r.json()).then(d => {
+  const ch = d.challenges || [];
+  // letters he has learned = letters from the daily Hebrew letter challenges so far (+ new letters from finished words)
+  KNOWN = [...new Set(ch.filter(c => c.type === "hebrew" && c.letter && c.date <= today).map(c => c.letter))];
+  const all = ch.filter(c => c.type === "hebword" && c.key && H.BY[c.word]);
+  const dates = [...new Set(all.map(c => c.date))].sort(), past = dates.filter(x => x <= today);
+  DDATE = qd && dates.includes(qd) ? qd : (past.length ? past[past.length - 1] : dates[0]);
+  PEEK = !!DDATE && DDATE > today;
+  DAILY = all.filter(c => c.date === DDATE);
+  renderDaily(); autoOpen();
+}).catch(e => { console.error(e); $("daily").innerHTML = `<div class="card"><p>Oops, Buzz couldn't load today's words. Try <b>Practice</b>! 🛠️</p></div>`; });
+</script>
+</body>
+</html>

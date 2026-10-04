@@ -1,6 +1,6 @@
 # Chuchu Scoreboard (for Alon)
 
-Static site with three pages: `index.html` (the scoreboard), `tips.html` (Game Tips & Tricks) and `challenges.html` (🧠 Daily Challenge).
+Static site: `index.html` (the scoreboard), `tips.html` (Game Tips & Tricks), `challenges.html` (🧠 Daily Challenge), `maths.html` (🏎️ Maths Garage, see below) and `hebrew.html` (🔤 Hebrew Word Rally, see below).
 Both pages are data-driven and **additive** (append-only, updated daily):
 - **`data.json`**: scoreboard wins. The page adds up the total, level, progress bar and badges automatically.
 - **`challenges.json`**: daily learning challenges (see below). Answers are NEVER in the repo.
@@ -87,6 +87,8 @@ node -e 'const s=require("./scoreboard.js");const r=s.compute(require("./data.js
 ## Daily Challenge (added 2026-09-28): `challenges.html` + `challenges.json`
 Page: https://buzzhq.github.io/challenges.html — shows the set whose `date` = today (Sydney) big and clear (or the latest set, with "a fresh set lands this afternoon"), a "How to answer" box, and older days collapsed below. Append-only.
 
+> **🚨 From Mon 5 Oct 2026 the daily maths is the 🏎️ Maths Garage (ACTIVE, Ron approved 4 Oct 2026): races `mg1` (×) + `mg2` (÷), +10 each, added with `tools/stepgame.py add`. NO more `dc1`/`dc2` maths MCQs. 5 Oct is already seeded. See "Buzz's Maths Garage" below.** Hebrew `dc3`/`dc4` letter MCQs stay until Ron approves the Hebrew Word Rally switch (PENDING).
+
 Daily set (appended by the afternoon routine). **Maths format changed 28 Sep 2026 evening** (Ron: full long multiplication/division with blanks was too hard on a phone). The 28 Sep `mult`/`div` entries stay as they are (append-only); from 29 Sep:
 1. `dc1`, `dc2` `mcq`: 2 maths challenges, each ONE mental step with multiple choice a/b/c(/d), taken from a bigger 3-4 digit × 2-digit multiplication or long division (e.g. "Step 1 of 247 × 36: what is 7 × 6?", "Which is closest to 247 × 36? a) 900 b) 9,000 c) 90,000", "5838 ÷ 6: how many 6s fit in 58?"). Over a week they walk through the full method: times-tables facts → estimating → carrying → partial products → adding up → sense-check (full plan in `/workspace/alon/journey.md`, MATHS FORMAT).
 2. `dc3`, `dc4` `hebrew`: one letter each, 4 sound choices a-d (standard Israeli sounds, unambiguous distractors), cycling the whole alphabet (unchanged)
@@ -146,7 +148,7 @@ Answer codes in Chuchu HQ (parse leniently: spacing/case): `dc1 b`, `dc3 c`, `dc
 Reading check (offline): `/workspace/alon/check_reading.py <audio.ogg> "<expected text>"` (faster-whisper base.en, CPU int8; pass >= 85% word match). Voice notes go to `/workspace/alon/voice/`.
 
 ## 🏎️ Buzz's Maths Garage (added 2026-10-04): `maths.html` + `maths-engine.js`
-Page: https://buzzhq.github.io/maths.html. It replaces the daily one-step maths MCQs (`dc1`/`dc2` `mcq`) **from Mon 5 Oct 2026**; older days keep their `mcq` entries (append-only).
+Page: https://buzzhq.github.io/maths.html. **✅ ACTIVE (Ron approved 4 Oct 2026 evening): it replaces the daily one-step maths MCQs (`dc1`/`dc2` `mcq`) from Mon 5 Oct 2026** (5 Oct already seeded; from 6 Oct the afternoon routine adds mg1 + mg2 daily). Older days keep their `mcq` entries (append-only). Every daily message ends with FOUR links (Scoreboard, Tips, Challenges, Maths Garage).
 Alon solves a whole long multiplication or long division **one step at a time**: the working (columns with carries, partial products and placeholder zero, or a bus-stop division with carried remainders) fills in as he goes. Each step asks a short question with **3 tap options** (one right, two typical-mistake distractors: forgot the carry, off-by-one times-table fact, forgot the placeholder zero, wrong order, too many/too few in division). Wrong tap = gentle hint + retry; right tap = working updates + mini confetti; car progress bar to the 🏁.
 - **Tabs**: 🏁 *Today's races* (from `challenges.json`) and 🛠️ *Practice* (random problems generated on the page, 6 levels each for × and ÷, no points).
 - **Engine**: `maths-engine.js` (pure JS, also `require`-able in node): `buildMult(a,b)`, `buildDiv(a,d)`, `randomProblem(kind, level)`, `LEVELS`, `codeFromHex`. Practice levels: × 2d×1d, 3d×1d, 4d×1d, 2d×2d, 3d×2d, 4d×2d; ÷ 2d÷1d, 3d÷1d (exact), 3d÷1d with remainders, 4d÷1d, 3d÷2d (exact, ÷11-25), 4d÷2d (÷11-30).
@@ -184,3 +186,20 @@ Usually 1 multiplication (`mg1`) + 1 division (`mg2`) a day. Step up one notch o
 4. Then 4-digit × 2-digit (e.g. 2,347 × 26) + 3-digit ÷ easy 2-digit (÷ 11, 12, 15, 20-25, e.g. 864 ÷ 12 = 72).
 5. Later: 4-digit ÷ 2-digit (e.g. 7,245 ÷ 23 = 315), remainders with 2-digit divisors.
 The old 📝 paper bonus (`dc6`, optional +10) can still be added once a week for the same race sum, but it's no longer needed.
+
+## 🔤 Buzz's Hebrew Word Rally (added 2026-10-04): `hebrew.html` + `hebrew-engine.js`
+Page: https://buzzhq.github.io/hebrew.html. Alon sounds out a short Hebrew word (2-4 letters, no nikud) **letter by letter, right to left**: the current letter glows, he taps its sound from 3 options (lookalike/sound mix-ups such as ד/ר, ה/ח, ו/ז, ב/כ, ג/נ, ס/ם, each with a gentle hint), and the sounded-out word builds up underneath (`da… dag!`). Then "What do you think it means?" with a clue and 3 English options, then the meaning with a big emoji and a fun fact. Same car progress bar, confetti, pit-stop counter and Send to Buzz as the Maths Garage.
+- **Word bank** = `WORDS` in `hebrew-engine.js` (29 words, each: spelling, per-letter sound + transliteration chunk, meaning, emoji, clue, fact, `newLetter`). Words use only learned letters, or at most ONE new letter, which the game introduces (`א` in אבא/סבא/אמא, final `ם` in חם/גשם/לחם/שלום). ב is v at the end/after a vowel (לב lev, חלב chalav, זהב zahav, דבש dvash) and b in אבא/סבא; ו is a vowel in סוס sus, חול chol, דוד dod, שלום shalom; every ש is sh. The game never offers a letter's other real sound as a "wrong" answer.
+- **Tests**: `node tests/hebrew.test.js` (checks every word: plain letters, 2-4 long, final forms only at the end, chunks spell the transliteration, ≤1 new letter vs `hebrew_tracker.done`, 3 distinct options with exactly one correct, every wrong option has a hint). Add new words ONLY to the bank + rerun the test; double-check spelling and meaning.
+- **Practice tab**: all bank words, grouped "⭐ Words with your letters" / "🆕 One new letter"; "letters you know" = the letters from the dc3/dc4 Hebrew letter challenges so far (automatic).
+- **Daily words** = `hebword` entries in `challenges.json`, ids **`hb1`** (and optional `hb2`), +10 each. Added ONLY with the helper:
+```bash
+cd /workspace/alon/scoreboard
+tools/hebword.py bank                                  # which words fit his letters (OK / NEW1 / LATER) + which were used
+tools/hebword.py add 2026-10-06 --word דגל [--word זהב] [--optional]   # optional = shown as "+10 bonus" (not in the "up to" total)
+tools/hebword.py codes 2026-10-06
+tools/hebword.py verify "hb1 TX33, hb2 GX40"           # today + yesterday (or --date)
+```
+  Finish code `hb1 TX33` = same scheme as the Maths Garage (sha256 of `<key>|<transliteration>`; secret only in challenge-answers.json → `hebword.secret`, expected codes in `answers[date][hbN]`). Scoring: +10 per valid code, category `challenge`, emoji 🔤, e.g. "Hebrew word hb1 ✅ דג (dag = fish)". `challenges.html` shows `hebword` cards with a "Sound it out in the Hebrew Rally" button and includes the codes in its Send line.
+- Seeded Mon 5 Oct 2026 as **optional extras** (Hebrew switch PENDING Ron's go-ahead): hb1 דג dag = fish 🐟 (code hb1 TX33), hb2 גלגל galgal = wheel 🛞 (code hb2 GX40). Until Ron approves, the dc3/dc4 letter MCQs stay.
+- When approved: 1-2 words a day; mostly learned-letter words, sometimes a word with the next new letter (then add that letter to `hebrew_tracker.done` once he finishes it); don't repeat a word within 2 weeks (`bank` shows used words); grow from 2-letter to 3-4-letter words slowly.

@@ -515,6 +515,28 @@
       "prompt": "Solve it step by step in Buzz's Maths Garage, then send Buzz your finish code!",
       "key": "077782b96db1adc0",
       "points": 10
+    },
+    {
+      "date": "2026-10-05",
+      "id": "hb1",
+      "type": "hebword",
+      "title": "Hebrew word rally",
+      "word": "דג",
+      "prompt": "Sound out this Hebrew word letter by letter (right to left!), then find out what it means.",
+      "key": "8ab46d5ea481c208",
+      "points": 10,
+      "optional": true
+    },
+    {
+      "date": "2026-10-05",
+      "id": "hb2",
+      "type": "hebword",
+      "title": "Hebrew word rally",
+      "word": "גלגל",
+      "prompt": "Sound out this Hebrew word letter by letter (right to left!), then find out what it means.",
+      "key": "9392860eb72b9959",
+      "points": 10,
+      "optional": true
     }
   ],
   "notes": [
