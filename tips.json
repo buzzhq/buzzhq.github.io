@@ -233,6 +233,24 @@
       "game": "Fortnite",
       "title": "High ground helps",
       "tip": "Stairs or a ramp to higher ground make it easier to see what's coming and harder for others to reach you. Build up early when you can, then peek carefully."
+    },
+    {
+      "date": "2026-10-05",
+      "game": "Descenders",
+      "title": "Eyes up the trail",
+      "tip": "Look a few metres ahead down the trail, not at your front wheel. You'll spot rocks, turns and jumps early and have time to pick a smooth line."
+    },
+    {
+      "date": "2026-10-05",
+      "game": "Roblox",
+      "title": "Laggy game? Lower the graphics",
+      "tip": "Open Roblox Settings, set Graphics Mode to Manual and slide Graphics Quality down a few notches. It looks a bit simpler but runs much smoother."
+    },
+    {
+      "date": "2026-10-05",
+      "game": "GTA",
+      "title": "Switch your camera view",
+      "tip": "While driving, press the camera button (the touchpad on PlayStation) to cycle views. A further-back view helps you see corners and traffic coming in races."
     }
   ]
 }

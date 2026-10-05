@@ -535,6 +535,15 @@
       "prompt": "Sound out this Hebrew word letter by letter (right to left!), then find out what it means.",
       "key": "9392860eb72b9959",
       "points": 10
+    },
+    {
+      "date": "2026-10-05",
+      "id": "dc5",
+      "type": "reading",
+      "title": "Read aloud (English)",
+      "prompt": "Read this out loud, nice and clear! (It's also in today's WhatsApp message.)",
+      "text": "Alon zoomed into Buzz's Maths Garage after school and solved 318 × 24 one careful step at a time. Then he grabbed his basketball and sank five free throws in a row on the driveway. His dream GT purred in the garage like a very happy cat. Brain first, then boost!",
+      "points": 10
     }
   ],
   "notes": [
@@ -601,6 +610,15 @@
         "name": "Daily 10 (Topmarks)",
         "url": "https://www.topmarks.co.uk/maths-games/daily10",
         "why": "Ten quick mental maths Qs! 🧠 Pick Multiplication — perfect warm-up for today's adding step and the Sunday paper bonus.",
+        "ads": true
+      }
+    },
+    {
+      "date": "2026-10-05",
+      "game": {
+        "name": "Math Mine Multiply Divide (Toy Theater)",
+        "url": "https://toytheater.com/math-mine-multiply-divide/",
+        "why": "Dig up the missing numbers in × and ÷ facts ⛏️ — a perfect warm-up for today's 852 ÷ 4 race!",
         "ads": true
       }
     }
