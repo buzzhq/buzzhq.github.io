@@ -251,6 +251,24 @@
       "game": "GTA",
       "title": "Switch your camera view",
       "tip": "While driving, press the camera button (the touchpad on PlayStation) to cycle views. A further-back view helps you see corners and traffic coming in races."
+    },
+    {
+      "date": "2026-10-06",
+      "game": "Descenders",
+      "title": "Low on lives? Pick a calmer track",
+      "tip": "Before you choose the next track on the map, check its info: some are steeper or have bigger jumps. If you're down to your last life, pick the calmer one to keep your run going."
+    },
+    {
+      "date": "2026-10-06",
+      "game": "Roblox",
+      "title": "Star your favourites ⭐",
+      "tip": "Found a game you love? Tap the star (Favourite) on its page. It's saved in your Favourites so you can find it again in a second next time."
+    },
+    {
+      "date": "2026-10-06",
+      "game": "Fortnite",
+      "title": "Heal up before you move on",
+      "tip": "After a close call, find a safe spot and top up your health and shield before running to the next area. Starting fresh beats rushing in with low health."
     }
   ]
 }

@@ -501,7 +501,8 @@
       "sum": "318 × 24",
       "prompt": "Solve it step by step in Buzz's Maths Garage, then send Buzz your finish code!",
       "key": "8e900900c2425e34",
-      "points": 10
+      "points": 10,
+      "check": "06f2783d578bd57f95d32e21d3ad0f36c7272249190fcf040df4831fe7dfcf93"
     },
     {
       "date": "2026-10-05",
@@ -514,7 +515,8 @@
       "sum": "852 ÷ 4",
       "prompt": "Solve it step by step in Buzz's Maths Garage, then send Buzz your finish code!",
       "key": "077782b96db1adc0",
-      "points": 10
+      "points": 10,
+      "check": "282cddddc7a1624e109e4546ffde7921ca21fffb7b7c402d430218fe0eba9b10"
     },
     {
       "date": "2026-10-05",
@@ -524,7 +526,8 @@
       "word": "דג",
       "prompt": "Sound out this Hebrew word letter by letter (right to left!), then find out what it means.",
       "key": "8ab46d5ea481c208",
-      "points": 10
+      "points": 10,
+      "check": "f855a06c210906fca32c26d172a2fefbcf0f7e14bb8e7d90b48940e39067d82b"
     },
     {
       "date": "2026-10-05",
@@ -534,7 +537,8 @@
       "word": "גלגל",
       "prompt": "Sound out this Hebrew word letter by letter (right to left!), then find out what it means.",
       "key": "9392860eb72b9959",
-      "points": 10
+      "points": 10,
+      "check": "f7ec6bf82c37f954554ab81530eb35639e0a4ebad9d15c0b98c78e2d41be4032"
     },
     {
       "date": "2026-10-05",
@@ -543,6 +547,54 @@
       "title": "Read aloud (English)",
       "prompt": "Read this out loud, nice and clear! (It's also in today's WhatsApp message.)",
       "text": "Alon zoomed into Buzz's Maths Garage after school and solved 318 × 24 one careful step at a time. Then he grabbed his basketball and sank five free throws in a row on the driveway. His dream GT purred in the garage like a very happy cat. Brain first, then boost!",
+      "points": 10
+    },
+    {
+      "date": "2026-10-06",
+      "id": "mg1",
+      "type": "stepgame",
+      "title": "Maths Garage: long multiplication",
+      "mode": "mult",
+      "a": 214,
+      "b": 13,
+      "sum": "214 × 13",
+      "prompt": "Solve it step by step in Buzz's Maths Garage, then send Buzz your finish code!",
+      "key": "b1ec2b4e40cb261f",
+      "points": 10,
+      "check": "a8ed4e24f14f7ddf0c06015280e567726e37f8ece617a559aff4eb4cd4b78b69"
+    },
+    {
+      "date": "2026-10-06",
+      "id": "mg2",
+      "type": "stepgame",
+      "title": "Maths Garage: long division",
+      "mode": "div",
+      "a": 936,
+      "b": 3,
+      "sum": "936 ÷ 3",
+      "prompt": "Solve it step by step in Buzz's Maths Garage, then send Buzz your finish code!",
+      "key": "475523e2650ed30a",
+      "points": 10,
+      "check": "237973ad50caafdfe41b6a8f54a3dc8007f9c817b91697f02fa39b3169b6f52a"
+    },
+    {
+      "date": "2026-10-06",
+      "id": "hb1",
+      "type": "hebword",
+      "title": "Hebrew word rally",
+      "word": "סל",
+      "prompt": "Sound out this Hebrew word letter by letter (right to left!), then find out what it means.",
+      "key": "6396fd50a5eb5a95",
+      "points": 10,
+      "check": "c1fbe7f7b62937bd52fc90ba45a91c2228ad6c8f168cfc8b976cd400c8319d8d"
+    },
+    {
+      "date": "2026-10-06",
+      "id": "dc5",
+      "type": "reading",
+      "title": "Read aloud (English)",
+      "prompt": "Read this out loud, nice and clear! (It's also in today's WhatsApp message.)",
+      "text": "Imagine riding a space elevator all the way up past the clouds, the planes and the shooting stars. Alon pressed the top button and his ears went pop! Up there a basketball would float instead of bounce, so he invented zero-gravity hoops. Then he rode back down, where his dream GT was waiting to race him home.",
       "points": 10
     }
   ],
@@ -619,6 +671,15 @@
         "name": "Math Mine Multiply Divide (Toy Theater)",
         "url": "https://toytheater.com/math-mine-multiply-divide/",
         "why": "Dig up the missing numbers in × and ÷ facts ⛏️ — a perfect warm-up for today's 852 ÷ 4 race!",
+        "ads": true
+      }
+    },
+    {
+      "date": "2026-10-06",
+      "game": {
+        "name": "Multiply Race (Toy Theater)",
+        "url": "https://toytheater.com/multiply-race/",
+        "why": "Race your car to the right answer 🏎️ — a speedy warm-up for today's 214 × 13 race!",
         "ads": true
       }
     }
