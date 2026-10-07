@@ -589,6 +589,51 @@
       "prompt": "Read this out loud, nice and clear! (It's also in today's WhatsApp message.)",
       "text": "Imagine riding a space elevator all the way up past the clouds, the planes and the shooting stars. Alon pressed the top button and his ears went pop! Up there a basketball would float instead of bounce, so he invented zero-gravity hoops. Then he rode back down, where his dream GT was waiting to race him home.",
       "points": 10
+    },
+    {
+      "date": "2026-10-07",
+      "id": "mg1",
+      "type": "stepgame",
+      "title": "Maths Garage: long multiplication",
+      "mode": "mult",
+      "a": 326,
+      "b": 14,
+      "sum": "326 × 14",
+      "prompt": "Solve it step by step in Buzz's Maths Garage, then send Buzz your finish code!",
+      "key": "5ad31a1453d67cc1",
+      "points": 10
+    },
+    {
+      "date": "2026-10-07",
+      "id": "mg2",
+      "type": "stepgame",
+      "title": "Maths Garage: long division",
+      "mode": "div",
+      "a": 735,
+      "b": 5,
+      "sum": "735 ÷ 5",
+      "prompt": "Solve it step by step in Buzz's Maths Garage, then send Buzz your finish code!",
+      "key": "3c0dce4e88992622",
+      "points": 10
+    },
+    {
+      "date": "2026-10-07",
+      "id": "hb1",
+      "type": "hebword",
+      "title": "Hebrew word rally",
+      "word": "דב",
+      "prompt": "Sound out this Hebrew word letter by letter (right to left!), then find out what it means.",
+      "key": "a5b79b0604cc5763",
+      "points": 10
+    },
+    {
+      "date": "2026-10-07",
+      "id": "dc5",
+      "type": "reading",
+      "title": "Read aloud (English)",
+      "prompt": "Read this out loud, nice and clear! (It's also in today's WhatsApp message.)",
+      "text": "The first basketball hoops were peach baskets, so every time a player scored, someone had to climb a ladder to get the ball back. Alon thought that sounded slow, so he imagined a robot that catches the ball and throws it straight back down. Then a friendly bear wandered into the gym and asked for honey instead of a high five. Alon laughed, made one more shot, and drove home in his dream GT.",
+      "points": 10
     }
   ],
   "notes": [
@@ -673,6 +718,15 @@
         "name": "Multiply Race (Toy Theater)",
         "url": "https://toytheater.com/multiply-race/",
         "why": "Race your car to the right answer 🏎️ — a speedy warm-up for today's 214 × 13 race!",
+        "ads": true
+      }
+    },
+    {
+      "date": "2026-10-07",
+      "game": {
+        "name": "Math Trainer – Divide (Maths is Fun)",
+        "url": "https://www.mathsisfun.com/numbers/math-trainer-divide.html",
+        "why": "Quick-fire division facts ⚡ a speedy warm-up for today's 735 ÷ 5 race!",
         "ads": true
       }
     }

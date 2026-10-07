@@ -47,6 +47,14 @@
       "emoji": "🪐",
       "setup": "How do you throw a party in space?",
       "punchline": "You planet! 🪐"
+    },
+    {
+      "date": "2026-10-07",
+      "slot": "pm",
+      "topic": "Animals",
+      "emoji": "🐻",
+      "setup": "What do you call a bear with no teeth?",
+      "punchline": "A gummy bear! 🐻"
     }
   ]
 }
