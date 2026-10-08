@@ -634,6 +634,61 @@
       "prompt": "Read this out loud, nice and clear! (It's also in today's WhatsApp message.)",
       "text": "The first basketball hoops were peach baskets, so every time a player scored, someone had to climb a ladder to get the ball back. Alon thought that sounded slow, so he imagined a robot that catches the ball and throws it straight back down. Then a friendly bear wandered into the gym and asked for honey instead of a high five. Alon laughed, made one more shot, and drove home in his dream GT.",
       "points": 10
+    },
+    {
+      "date": "2026-10-08",
+      "id": "mg1",
+      "type": "stepgame",
+      "title": "Maths Garage: long multiplication",
+      "mode": "mult",
+      "a": 247,
+      "b": 23,
+      "sum": "247 × 23",
+      "prompt": "Solve it step by step in Buzz's Maths Garage, then send Buzz your finish code!",
+      "key": "a716f988e6fbc03b",
+      "points": 10
+    },
+    {
+      "date": "2026-10-08",
+      "id": "mg2",
+      "type": "stepgame",
+      "title": "Maths Garage: long division",
+      "mode": "div",
+      "a": 714,
+      "b": 6,
+      "sum": "714 ÷ 6",
+      "prompt": "Solve it step by step in Buzz's Maths Garage, then send Buzz your finish code!",
+      "key": "60392407cd7858ee",
+      "points": 10
+    },
+    {
+      "date": "2026-10-08",
+      "id": "hb1",
+      "type": "hebword",
+      "title": "Hebrew word rally",
+      "word": "לב",
+      "prompt": "Sound out this Hebrew word letter by letter (right to left!), then find out what it means.",
+      "key": "5bb370cc435c3604",
+      "points": 10
+    },
+    {
+      "date": "2026-10-08",
+      "id": "hb2",
+      "type": "hebword",
+      "title": "Hebrew word rally",
+      "word": "דגל",
+      "prompt": "Sound out this Hebrew word letter by letter (right to left!), then find out what it means.",
+      "key": "d9dfadb303c853a1",
+      "points": 10
+    },
+    {
+      "date": "2026-10-08",
+      "id": "dc5",
+      "type": "reading",
+      "title": "Read aloud (English)",
+      "prompt": "Read this out loud, nice and clear! (It's also in today's WhatsApp message.)",
+      "text": "Franklin parked his shiny GT next to the basketball court and pulled out a checkered flag. \"Ready, set, shoot!\" he shouted, waving the flag high in the air. A school of tiny fish watched from the pond and cheered with bubbles. His first shot bounced off the rim, but his second one was a perfect swish. \"Practice beats turbo every time,\" Franklin laughed.",
+      "points": 10
     }
   ],
   "notes": [
@@ -727,6 +782,15 @@
         "name": "Math Trainer – Divide (Maths is Fun)",
         "url": "https://www.mathsisfun.com/numbers/math-trainer-divide.html",
         "why": "Quick-fire division facts ⚡ a speedy warm-up for today's 735 ÷ 5 race!",
+        "ads": true
+      }
+    },
+    {
+      "date": "2026-10-08",
+      "game": {
+        "name": "Hit the Button (Topmarks)",
+        "url": "https://www.topmarks.co.uk/maths-games/hit-the-button",
+        "why": "Smash the times tables against the clock ⚡ a speedy warm-up for today's 247 × 23 race!",
         "ads": true
       }
     }

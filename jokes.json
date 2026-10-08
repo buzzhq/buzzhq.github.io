@@ -55,6 +55,14 @@
       "emoji": "🐻",
       "setup": "What do you call a bear with no teeth?",
       "punchline": "A gummy bear! 🐻"
+    },
+    {
+      "date": "2026-10-08",
+      "slot": "pm",
+      "topic": "Animals",
+      "emoji": "🐟",
+      "setup": "Why are fish so smart?",
+      "punchline": "Because they live in schools! 🐟"
     }
   ]
 }

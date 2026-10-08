@@ -287,6 +287,24 @@
       "game": "Fortnite",
       "title": "Drop a map marker 📍",
       "tip": "Open the map and place a marker where you want to go. A line on your compass points you there, and your squad can see it too, so everyone knows the plan without shouting."
+    },
+    {
+      "date": "2026-10-08",
+      "game": "Descenders",
+      "title": "Bonus objectives = extra lives ❤️",
+      "tip": "Before a track starts, check its bonus objective (like landing some tricks). Finish it during the run and you earn an extra life, which helps you get further down the map."
+    },
+    {
+      "date": "2026-10-08",
+      "game": "GTA",
+      "title": "Set a waypoint 📍",
+      "tip": "Open the map, pick where you want to go and set a waypoint. A line shows the best route on your mini-map, so you can enjoy the drive instead of getting lost."
+    },
+    {
+      "date": "2026-10-08",
+      "game": "Roblox",
+      "title": "Jump back in with Continue",
+      "tip": "The Continue row on the Roblox home screen shows games you played recently, so you can get back to your favourite one in one tap."
     }
   ]
 }
