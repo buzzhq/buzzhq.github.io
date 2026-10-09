@@ -71,6 +71,14 @@
       "emoji": "🐂",
       "setup": "What do you call a sleeping bull?",
       "punchline": "A bulldozer!"
+    },
+    {
+      "date": "2026-10-10",
+      "slot": "am",
+      "topic": "Cars",
+      "emoji": "🚛",
+      "setup": "What has four wheels and flies?",
+      "punchline": "A garbage truck!"
     }
   ]
 }
