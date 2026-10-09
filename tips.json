@@ -305,6 +305,24 @@
       "game": "Roblox",
       "title": "Jump back in with Continue",
       "tip": "The Continue row on the Roblox home screen shows games you played recently, so you can get back to your favourite one in one tap."
+    },
+    {
+      "date": "2026-10-09",
+      "game": "Descenders",
+      "title": "Hold your line on jumps",
+      "tip": "On a jump, keep the bike pointed where you want to land — don't steer hard mid-air or you'll twist and crash. Soft landings save health."
+    },
+    {
+      "date": "2026-10-09",
+      "game": "GTA",
+      "title": "Brake early into corners",
+      "tip": "For clean driving, tap the brake BEFORE the bend, then accelerate out. Smooth in, fast out — racing-game style."
+    },
+    {
+      "date": "2026-10-09",
+      "game": "Roblox",
+      "title": "Mute noisy players",
+      "tip": "If voice chat is too loud or distracting, mute that player in the menu. You can still play together — just quieter and calmer."
     }
   ]
 }

@@ -689,6 +689,61 @@
       "prompt": "Read this out loud, nice and clear! (It's also in today's WhatsApp message.)",
       "text": "Franklin parked his shiny GT next to the basketball court and pulled out a checkered flag. \"Ready, set, shoot!\" he shouted, waving the flag high in the air. A school of tiny fish watched from the pond and cheered with bubbles. His first shot bounced off the rim, but his second one was a perfect swish. \"Practice beats turbo every time,\" Franklin laughed.",
       "points": 10
+    },
+    {
+      "date": "2026-10-09",
+      "id": "mg1",
+      "type": "stepgame",
+      "title": "Maths Garage: long multiplication",
+      "mode": "mult",
+      "a": 352,
+      "b": 15,
+      "sum": "352 × 15",
+      "prompt": "Solve it step by step in Buzz's Maths Garage, then send Buzz your finish code!",
+      "key": "033744ae49a44389",
+      "points": 10
+    },
+    {
+      "date": "2026-10-09",
+      "id": "mg2",
+      "type": "stepgame",
+      "title": "Maths Garage: long division",
+      "mode": "div",
+      "a": 864,
+      "b": 4,
+      "sum": "864 ÷ 4",
+      "prompt": "Solve it step by step in Buzz's Maths Garage, then send Buzz your finish code!",
+      "key": "ca5127edadc44231",
+      "points": 10
+    },
+    {
+      "date": "2026-10-09",
+      "id": "hb1",
+      "type": "hebword",
+      "title": "Hebrew word rally",
+      "word": "זהב",
+      "prompt": "Sound out this Hebrew word letter by letter (right to left!), then find out what it means.",
+      "key": "f90a665a58d3be3c",
+      "points": 10
+    },
+    {
+      "date": "2026-10-09",
+      "id": "hb2",
+      "type": "hebword",
+      "title": "Hebrew word rally",
+      "word": "סוס",
+      "prompt": "Sound out this Hebrew word letter by letter (right to left!), then find out what it means.",
+      "key": "16232b064a9539f6",
+      "points": 10
+    },
+    {
+      "date": "2026-10-09",
+      "id": "dc5",
+      "type": "reading",
+      "title": "Read aloud (English)",
+      "prompt": "Read this out loud, nice and clear! (It's also in today's WhatsApp message.)",
+      "text": "Alon hopped on his Descenders bike and raced down a sunny trail toward a golden finish line. A friendly horse galloped beside him for luck. At the bottom he parked next to a shiny GT and drained five free throws before dinner. Brain first, then boost — and clear your plate!",
+      "points": 10
     }
   ],
   "notes": [
@@ -791,6 +846,15 @@
         "name": "Hit the Button (Topmarks)",
         "url": "https://www.topmarks.co.uk/maths-games/hit-the-button",
         "why": "Smash the times tables against the clock ⚡ a speedy warm-up for today's 247 × 23 race!",
+        "ads": true
+      }
+    },
+    {
+      "date": "2026-10-09",
+      "game": {
+        "name": "Just Divide (Math Playground)",
+        "url": "https://www.mathplayground.com/just_divide.html",
+        "why": "Division puzzle warm-up for today's 864 ÷ 4 race!",
         "ads": true
       }
     }

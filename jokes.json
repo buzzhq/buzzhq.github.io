@@ -63,6 +63,14 @@
       "emoji": "🐟",
       "setup": "Why are fish so smart?",
       "punchline": "Because they live in schools! 🐟"
+    },
+    {
+      "date": "2026-10-09",
+      "slot": "pm",
+      "topic": "Animals",
+      "emoji": "🐂",
+      "setup": "What do you call a sleeping bull?",
+      "punchline": "A bulldozer!"
     }
   ]
 }
