@@ -87,6 +87,14 @@
       "emoji": "🏀",
       "setup": "How do basketball players stay cool?",
       "punchline": "They stand near the fans!"
+    },
+    {
+      "date": "2026-10-11",
+      "slot": "am",
+      "topic": "Cars",
+      "emoji": "🚗",
+      "setup": "What kind of car does a Jedi drive?",
+      "punchline": "A Toy-Yoda!"
     }
   ]
 }
