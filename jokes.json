@@ -79,6 +79,14 @@
       "emoji": "🚛",
       "setup": "What has four wheels and flies?",
       "punchline": "A garbage truck!"
+    },
+    {
+      "date": "2026-10-10",
+      "slot": "pm",
+      "topic": "Basketball",
+      "emoji": "🏀",
+      "setup": "How do basketball players stay cool?",
+      "punchline": "They stand near the fans!"
     }
   ]
 }

@@ -323,6 +323,24 @@
       "game": "Roblox",
       "title": "Mute noisy players",
       "tip": "If voice chat is too loud or distracting, mute that player in the menu. You can still play together — just quieter and calmer."
+    },
+    {
+      "date": "2026-10-10",
+      "game": "Descenders",
+      "title": "Tap Manual when you wipe out",
+      "tip": "After a crash, tap Manual as soon as you can so you land on your wheels and keep rolling instead of losing more speed."
+    },
+    {
+      "date": "2026-10-10",
+      "game": "GTA",
+      "title": "Cruise the coast for fun views",
+      "tip": "Pick a chill coastal road and just drive — no rush. Smooth steering and looking ahead beats zooming into every turn."
+    },
+    {
+      "date": "2026-10-10",
+      "game": "Fortnite",
+      "title": "Land near a named POI edge",
+      "tip": "Drop at the edge of a named place so you loot quickly, then rotate in — fewer early fights, more gear."
     }
   ]
 }

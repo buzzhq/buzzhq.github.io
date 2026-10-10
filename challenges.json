@@ -744,6 +744,61 @@
       "prompt": "Read this out loud, nice and clear! (It's also in today's WhatsApp message.)",
       "text": "Alon hopped on his Descenders bike and raced down a sunny trail toward a golden finish line. A friendly horse galloped beside him for luck. At the bottom he parked next to a shiny GT and drained five free throws before dinner. Brain first, then boost — and clear your plate!",
       "points": 10
+    },
+    {
+      "date": "2026-10-10",
+      "id": "mg1",
+      "type": "stepgame",
+      "title": "Maths Garage: long multiplication",
+      "mode": "mult",
+      "a": 263,
+      "b": 16,
+      "sum": "263 × 16",
+      "prompt": "Solve it step by step in Buzz's Maths Garage, then send Buzz your finish code!",
+      "key": "8967c71611476790",
+      "points": 10
+    },
+    {
+      "date": "2026-10-10",
+      "id": "mg2",
+      "type": "stepgame",
+      "title": "Maths Garage: long division",
+      "mode": "div",
+      "a": 945,
+      "b": 5,
+      "sum": "945 ÷ 5",
+      "prompt": "Solve it step by step in Buzz's Maths Garage, then send Buzz your finish code!",
+      "key": "a1e75e3fc4861f50",
+      "points": 10
+    },
+    {
+      "date": "2026-10-10",
+      "id": "hb1",
+      "type": "hebword",
+      "title": "Hebrew word rally",
+      "word": "שמש",
+      "prompt": "Sound out this Hebrew word letter by letter (right to left!), then find out what it means.",
+      "key": "6b4f081fa47a7633",
+      "points": 10
+    },
+    {
+      "date": "2026-10-10",
+      "id": "hb2",
+      "type": "hebword",
+      "title": "Hebrew word rally",
+      "word": "חול",
+      "prompt": "Sound out this Hebrew word letter by letter (right to left!), then find out what it means.",
+      "key": "65d3651bcb7829ea",
+      "points": 10
+    },
+    {
+      "date": "2026-10-10",
+      "id": "dc5",
+      "type": "reading",
+      "title": "Read aloud (English)",
+      "prompt": "Read this out loud, nice and clear! (It's also in today's WhatsApp message.)",
+      "text": "On Saturday Alon parked his dream GT by the beach and drew a sun in the sand with his shoe. A seagull tried to steal his basketball, so he dribbled around it and scored an imaginary free throw into a sandcastle. Then he hopped on his Descenders bike and raced home before dinner. Brain first, then boost!",
+      "points": 10
     }
   ],
   "notes": [
@@ -855,6 +910,15 @@
         "name": "Just Divide (Math Playground)",
         "url": "https://www.mathplayground.com/just_divide.html",
         "why": "Division puzzle warm-up for today's 864 ÷ 4 race!",
+        "ads": true
+      }
+    },
+    {
+      "date": "2026-10-10",
+      "game": {
+        "name": "Meteor Multiplication (Coolmath4Kids)",
+        "url": "https://www.coolmath4kids.com/math-games/meteor-multiplication",
+        "why": "Blast space rocks with times-table answers ☄️ — a fun warm-up for today's 263 × 16 race!",
         "ads": true
       }
     }
