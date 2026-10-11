@@ -95,6 +95,14 @@
       "emoji": "🚗",
       "setup": "What kind of car does a Jedi drive?",
       "punchline": "A Toy-Yoda!"
+    },
+    {
+      "date": "2026-10-11",
+      "slot": "pm",
+      "topic": "Cars",
+      "emoji": "🚗",
+      "setup": "What do cars do at a disco?",
+      "punchline": "They brake-dance!"
     }
   ]
 }

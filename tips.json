@@ -341,6 +341,24 @@
       "game": "Fortnite",
       "title": "Land near a named POI edge",
       "tip": "Drop at the edge of a named place so you loot quickly, then rotate in — fewer early fights, more gear."
+    },
+    {
+      "date": "2026-10-11",
+      "game": "Descenders",
+      "title": "Scout the landing before you launch",
+      "tip": "Before a big jump, peek where you'll land — if it's rocky or tight, slow down or pick another line."
+    },
+    {
+      "date": "2026-10-11",
+      "game": "GTA",
+      "title": "Ease on the throttle out of corners",
+      "tip": "Roll on the gas smoothly as you exit a bend — too much too soon spins you out and costs race time."
+    },
+    {
+      "date": "2026-10-11",
+      "game": "Roblox",
+      "title": "Check inventory before you jump in",
+      "tip": "Open your backpack before a round so tools and items are ready — no mid-game scramble."
     }
   ]
 }

@@ -799,6 +799,71 @@
       "prompt": "Read this out loud, nice and clear! (It's also in today's WhatsApp message.)",
       "text": "On Saturday Alon parked his dream GT by the beach and drew a sun in the sand with his shoe. A seagull tried to steal his basketball, so he dribbled around it and scored an imaginary free throw into a sandcastle. Then he hopped on his Descenders bike and raced home before dinner. Brain first, then boost!",
       "points": 10
+    },
+    {
+      "date": "2026-10-11",
+      "id": "mg1",
+      "type": "stepgame",
+      "title": "Maths Garage: long multiplication",
+      "mode": "mult",
+      "a": 285,
+      "b": 17,
+      "sum": "285 × 17",
+      "prompt": "Solve it step by step in Buzz's Maths Garage, then send Buzz your finish code!",
+      "key": "46aababf79e4c24d",
+      "points": 10
+    },
+    {
+      "date": "2026-10-11",
+      "id": "mg2",
+      "type": "stepgame",
+      "title": "Maths Garage: long division",
+      "mode": "div",
+      "a": 828,
+      "b": 6,
+      "sum": "828 ÷ 6",
+      "prompt": "Solve it step by step in Buzz's Maths Garage, then send Buzz your finish code!",
+      "key": "bae92c9da195e4a8",
+      "points": 10
+    },
+    {
+      "date": "2026-10-11",
+      "id": "hb1",
+      "type": "hebword",
+      "title": "Hebrew word rally",
+      "word": "דבש",
+      "prompt": "Sound out this Hebrew word letter by letter (right to left!), then find out what it means.",
+      "key": "c52e20ee91c86888",
+      "points": 10
+    },
+    {
+      "date": "2026-10-11",
+      "id": "hb2",
+      "type": "hebword",
+      "title": "Hebrew word rally",
+      "word": "גמל",
+      "prompt": "Sound out this Hebrew word letter by letter (right to left!), then find out what it means.",
+      "key": "e45f1210c6370cd7",
+      "points": 10
+    },
+    {
+      "date": "2026-10-11",
+      "id": "dc5",
+      "type": "reading",
+      "title": "Read aloud (English)",
+      "prompt": "Read this out loud, nice and clear! (It's also in today's WhatsApp message.)",
+      "text": "On Sunday Alon lined up his dream GT next to a cheetah for a silly race. The cheetah sprinted first, but the GT caught up on the straight and they finished side by side, laughing. Then Alon hopped on his Descenders bike for a downhill victory lap before dinner. Brain first, then boost!",
+      "points": 10
+    },
+    {
+      "date": "2026-10-11",
+      "id": "dc6",
+      "type": "paper",
+      "title": "Paper bonus (optional)",
+      "prompt": "OPTIONAL (+10): with pen and paper, work out 285 × 17. Reply with the full answer like: dc6 4845",
+      "optional": true,
+      "points": 10,
+      "check": "1314c9b0ae02d05b6a0a1d7e25f023383ab4c6d75c22929cd85941de6b805141"
     }
   ],
   "notes": [
@@ -919,6 +984,15 @@
         "name": "Meteor Multiplication (Coolmath4Kids)",
         "url": "https://www.coolmath4kids.com/math-games/meteor-multiplication",
         "why": "Blast space rocks with times-table answers ☄️ — a fun warm-up for today's 263 × 16 race!",
+        "ads": true
+      }
+    },
+    {
+      "date": "2026-10-11",
+      "game": {
+        "name": "Canoe Penguins (Coolmath4Kids)",
+        "url": "https://www.coolmath4kids.com/math-games/canoe-penguins",
+        "why": "Race penguins with two-digit times tables 🐧 — perfect warm-up for today's 285 × 17!",
         "ads": true
       }
     }
