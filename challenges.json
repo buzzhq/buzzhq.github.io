@@ -864,6 +864,60 @@
       "optional": true,
       "points": 10,
       "check": "1314c9b0ae02d05b6a0a1d7e25f023383ab4c6d75c22929cd85941de6b805141"
+    },
+    {
+      "date": "2026-10-12",
+      "id": "mg1",
+      "type": "stepgame",
+      "title": "Maths Garage: long multiplication",
+      "mode": "mult",
+      "a": 294,
+      "b": 18,
+      "sum": "294 × 18",
+      "prompt": "Solve it step by step in Buzz's Maths Garage, then send Buzz your finish code!",
+      "key": "42fda24005a7cf00",
+      "points": 10
+    },
+    {
+      "date": "2026-10-12",
+      "id": "mg2",
+      "type": "stepgame",
+      "title": "Maths Garage: long division",
+      "mode": "div",
+      "a": 861,
+      "b": 7,
+      "sum": "861 ÷ 7",
+      "prompt": "Solve it step by step in Buzz's Maths Garage, then send Buzz your finish code!",
+      "key": "f01d732dc05904b5",
+      "points": 10
+    },
+    {
+      "date": "2026-10-12",
+      "id": "hb1",
+      "type": "hebword",
+      "title": "Hebrew word rally",
+      "word": "חלב",
+      "prompt": "Sound out this Hebrew word letter by letter (right to left!), then find out what it means.",
+      "key": "1dc4591b0176fd59",
+      "points": 10
+    },
+    {
+      "date": "2026-10-12",
+      "id": "hb2",
+      "type": "hebword",
+      "title": "Hebrew word rally",
+      "word": "מזל",
+      "prompt": "Sound out this Hebrew word letter by letter (right to left!), then find out what it means.",
+      "key": "840f6dcd800ed610",
+      "points": 10
+    },
+    {
+      "date": "2026-10-12",
+      "id": "dc5",
+      "type": "reading",
+      "title": "Read aloud",
+      "text": "After school on Monday Alon parked his shiny GT outside Buzz's Maths Garage and raced through two big sums, one careful step at a time. Then he drained ten free throws in the backyard — swish, swish, swish! Last of all he hopped on his Descenders bike for one smooth downhill run before dinner. Brain first, then boost!",
+      "points": 10
     }
   ],
   "notes": [
@@ -993,6 +1047,15 @@
         "name": "Canoe Penguins (Coolmath4Kids)",
         "url": "https://www.coolmath4kids.com/math-games/canoe-penguins",
         "why": "Race penguins with two-digit times tables 🐧 — perfect warm-up for today's 285 × 17!",
+        "ads": true
+      }
+    },
+    {
+      "date": "2026-10-12",
+      "game": {
+        "name": "Math Racer Multiplication (Math Playground)",
+        "url": "https://www.mathplayground.com/math_racer_multiplication.html",
+        "why": "Drive to the right product — perfect warm-up for today's 294 × 18!",
         "ads": true
       }
     }

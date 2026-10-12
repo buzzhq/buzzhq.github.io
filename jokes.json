@@ -103,6 +103,14 @@
       "emoji": "🚗",
       "setup": "What do cars do at a disco?",
       "punchline": "They brake-dance!"
+    },
+    {
+      "date": "2026-10-12",
+      "slot": "pm",
+      "topic": "Cars",
+      "emoji": "🏎️",
+      "setup": "What's a race car's favorite meal?",
+      "punchline": "Fast food!"
     }
   ]
 }
