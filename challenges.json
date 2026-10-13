@@ -918,6 +918,60 @@
       "title": "Read aloud",
       "text": "After school on Monday Alon parked his shiny GT outside Buzz's Maths Garage and raced through two big sums, one careful step at a time. Then he drained ten free throws in the backyard — swish, swish, swish! Last of all he hopped on his Descenders bike for one smooth downhill run before dinner. Brain first, then boost!",
       "points": 10
+    },
+    {
+      "date": "2026-10-13",
+      "id": "mg1",
+      "type": "stepgame",
+      "title": "Maths Garage: long multiplication",
+      "mode": "mult",
+      "a": 367,
+      "b": 19,
+      "sum": "367 × 19",
+      "prompt": "Solve it step by step in Buzz's Maths Garage, then send Buzz your finish code!",
+      "key": "f2dbcbc8218f1ca7",
+      "points": 10
+    },
+    {
+      "date": "2026-10-13",
+      "id": "mg2",
+      "type": "stepgame",
+      "title": "Maths Garage: long division",
+      "mode": "div",
+      "a": 924,
+      "b": 6,
+      "sum": "924 ÷ 6",
+      "prompt": "Solve it step by step in Buzz's Maths Garage, then send Buzz your finish code!",
+      "key": "572e0cb2949106ec",
+      "points": 10
+    },
+    {
+      "date": "2026-10-13",
+      "id": "hb1",
+      "type": "hebword",
+      "title": "Hebrew word rally",
+      "word": "שלג",
+      "prompt": "Sound out this Hebrew word letter by letter (right to left!), then find out what it means.",
+      "key": "0d100d00f74595a6",
+      "points": 10
+    },
+    {
+      "date": "2026-10-13",
+      "id": "hb2",
+      "type": "hebword",
+      "title": "Hebrew word rally",
+      "word": "מלח",
+      "prompt": "Sound out this Hebrew word letter by letter (right to left!), then find out what it means.",
+      "key": "fe46779a510690f4",
+      "points": 10
+    },
+    {
+      "date": "2026-10-13",
+      "id": "dc5",
+      "type": "reading",
+      "title": "Read aloud",
+      "text": "After school Alon finished two Maths Garage races, then sounded out the Hebrew words for snow and salt, letter by letter. Next he stepped into the backyard and drained a free-throw streak — swish after swish! He ended the day with one clean Descenders run down a sunny hillside before dinner.",
+      "points": 10
     }
   ],
   "notes": [
@@ -1056,6 +1110,15 @@
         "name": "Math Racer Multiplication (Math Playground)",
         "url": "https://www.mathplayground.com/math_racer_multiplication.html",
         "why": "Drive to the right product — perfect warm-up for today's 294 × 18!",
+        "ads": true
+      }
+    },
+    {
+      "date": "2026-10-13",
+      "game": {
+        "name": "Daily 10 (Topmarks)",
+        "url": "https://www.topmarks.co.uk/maths-games/daily10",
+        "why": "Ten quick mental maths Qs — a perfect warm-up for today's 367 × 19 and 924 ÷ 6 races!",
         "ads": true
       }
     }

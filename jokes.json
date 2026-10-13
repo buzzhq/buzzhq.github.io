@@ -111,6 +111,14 @@
       "emoji": "🏎️",
       "setup": "What's a race car's favorite meal?",
       "punchline": "Fast food!"
+    },
+    {
+      "date": "2026-10-13",
+      "slot": "pm",
+      "topic": "Animals",
+      "emoji": "⛄",
+      "setup": "What do you call a snowman in summer?",
+      "punchline": "A puddle!"
     }
   ]
 }
