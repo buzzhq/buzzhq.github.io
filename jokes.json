@@ -119,6 +119,14 @@
       "emoji": "⛄",
       "setup": "What do you call a snowman in summer?",
       "punchline": "A puddle!"
+    },
+    {
+      "date": "2026-10-14",
+      "slot": "pm",
+      "topic": "Cars",
+      "emoji": "🚗",
+      "setup": "Why did the car get a flat tyre?",
+      "punchline": "Because there was a fork in the road!"
     }
   ]
 }
