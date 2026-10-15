@@ -127,6 +127,14 @@
       "emoji": "🚗",
       "setup": "Why did the car get a flat tyre?",
       "punchline": "Because there was a fork in the road!"
+    },
+    {
+      "date": "2026-10-15",
+      "slot": "pm",
+      "topic": "Food",
+      "emoji": "🍪",
+      "setup": "Why did the cookie go to the doctor?",
+      "punchline": "Because it felt crummy!"
     }
   ]
 }
