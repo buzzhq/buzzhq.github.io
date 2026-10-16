@@ -1,6 +1,6 @@
 # Chuchu Scoreboard (for Alon)
 
-Static site: `index.html` (the scoreboard), `tips.html` (Game Tips & Tricks), `challenges.html` (🧠 Daily Challenge), `maths.html` (🏎️ Maths Garage, see below), `hebrew.html` (🔤 Hebrew Word Rally, see below) and `jokes.html` (😂 Joke Garage, see below).
+Static site: `index.html` (the scoreboard), `tips.html` (Game Tips & Tricks), `challenges.html` (🧠 Daily Challenge), `maths.html` (🏎️ Maths Garage, see below), `hebrew.html` (🔤 Hebrew Word Rally + 💬 Hebrew sentences, see below), `jokes.html` (😂 Joke Garage, see below) and `grammar.html` (🕵️ Sentence Detective, see below).
 Both pages are data-driven and **additive** (append-only, updated daily):
 - **`data.json`**: scoreboard wins. The page adds up the total, level, progress bar and badges automatically.
 - **`challenges.json`**: daily learning challenges (see below). Answers are NEVER in the repo.
@@ -203,6 +203,40 @@ tools/hebword.py verify "hb1 TX33, hb2 GX40"           # today + yesterday (or -
   Finish code `hb1 TX33` = same scheme as the Maths Garage (sha256 of `<key>|<transliteration>`; secret only in challenge-answers.json → `hebword.secret`, expected codes in `answers[date][hbN]`). Scoring: +10 per valid code, category `challenge`, emoji 🔤, e.g. "Hebrew word hb1 ✅ דג (dag = fish)". `challenges.html` shows `hebword` cards with a "Sound it out in the Hebrew Rally" button and includes the codes in its Send line.
 - **✅ ACTIVE from Mon 5 Oct 2026 (Ron approved 4 Oct 2026), replacing the dc3/dc4 letter MCQs.** Seeded Mon 5 Oct as the main Hebrew challenge: hb1 דג dag = fish 🐟 (code hb1 TX33), hb2 גלגל galgal = wheel 🛞 (code hb2 GX40).
 - Daily: 1-2 words a day; mostly learned-letter words, sometimes a word with the next new letter (then add that letter to `hebrew_tracker.done` once he finishes it; a brand-new letter also needs a `LETTERS` entry in hebrew-engine.js: name + 3 mix-ups with hints, then run the test); don't repeat a word within 2 weeks (`bank` shows used words); grow from 2-letter to 3-4-letter words slowly.
+
+### 💬 Hebrew SENTENCES (added 2026-10-17, ⏳ PENDING Ron's go-ahead for the daily routine)
+Sentence mode of `hebrew.html`: a short, easy sentence (2-4 words, no nikud), read **word by word, each word letter by letter, right to left** with the same 3-option sound steps, hints and pit stops. When a word is finished its box turns green and shows e.g. `ha-dov = the bear`; at the end "What does the whole sentence mean?" (3 English options), then the meaning with a big emoji, a word-by-word recap and a fun fact.
+- **Bank** = `SENTENCES` in `hebrew-engine.js` (21 sentences, built from the mini word list `WB`: each word = letters + `sound:chunk` per letter + meaning). Sound rules used: א = quiet (`silent`, carries a vowel; in אוהב it carries nothing, the ו brings the o); ה at the start = "ha-" (the) and at the END = quiet (`end`: חמה cha-m-a, זה z-e); ו = vowel o/u in the middle (גדול, מאוד, סוס, חול) or v as "and"; י = y (יש yesh) or the vowel ee at the end (לי, שלי); ב = b at the start / as the prefix ba- (בשמש, בחול, בסל), v at the end (דב, אוהב, דבש, לב); every ש = sh; ם only at the end. Every vowel/quiet letter gets a **"Tricky one!"** question (or the 🆕 new-letter intro) with the other sound offered as a wrong answer + explanation.
+- Each sentence uses learned letters + at most ONE new letter (`newLetter`: א, ם or י, introduced once by the game). 3 use only the 12 learned letters (s01-s03), 8 add א, 1 adds final ם, 9 add י.
+- **Tests**: `node tests/hebsentence.test.js` (sound allowed for each letter, final forms, quiet ה only at the end, ב b/v position rules, ≤1 new letter vs `hebrew_tracker.done`, chunks spell the transliteration, 3 distinct options with hints, Tricky explanation on every vowel/quiet letter, the word meaning is shown after each word, meaning step). Add sentences only to the bank + rerun.
+- **Daily** = `hebsentence` entries in `challenges.json`, id **`hs1`**, **+15**, added ONLY with the helper (code = same scheme, sha256 of `<key>|<transliteration>` e.g. `ha-dov ohev dvash`; secret in challenge-answers.json → `hebsentence.secret`):
+```bash
+tools/hebsentence.py bank                                   # OK / NEW1 / LATER + used dates
+tools/hebsentence.py add 2026-10-19 --sentence "זה גל גדול" [--optional]
+tools/hebsentence.py codes 2026-10-19
+tools/hebsentence.py verify "hs1 FZ60"                      # today + yesterday (or --date)
+```
+  Scoring: +15 per valid code, category `challenge`, emoji 💬, e.g. "Hebrew sentence hs1 ✅ הדב אוהב דבש (ha-dov ohev dvash = The bear loves honey)". Practice tab: "💬 Sentences" list + Random sentence. challenges.html shows `hebsentence` cards and includes the codes in its Send line.
+- Seeded as **bonus extras** (`optional: true`): Sat 17 Oct hs1 זה דג גדול (ze dag gadol = This is a big fish), Sun 18 Oct hs1 הדב אוהב דבש (ha-dov ohev dvash = The bear loves honey; introduces א).
+
+## 🕵️ Buzz's Sentence Detective (added 2026-10-17, ⏳ PENDING Ron's go-ahead for the daily routine): `grammar.html` + `grammar-engine.js`
+A short fun sentence with ONE highlighted word (or phrase), "What part of speech is the highlighted word?" (or, level 3, "subject or object?") with 3 options. Wrong tap = shake + a clue that explains what the tapped part means; right tap = confetti, why it's right, and the definition with an example. Cheat sheet of all 9 definitions on the page.
+- **Bank** = `BANK` in `grammar-engine.js` (68 questions `{id gNN, s with *highlight*, a, why}`): level 1 noun/verb/adjective/adverb (38), level 2 pronoun/preposition/conjunction (18), level 3 subject/object (12). Wrong options never include something that could ALSO be right (no subject/object on word-class questions, no noun on subject/object or pronoun questions), and never a part above the chosen level.
+- **Tests**: `node tests/grammar.test.js` (60+, one highlight, no ambiguous words like fast/hard/well/after, pronoun/preposition/conjunction from fixed lists, adverbs end in -ly or are soon/always/never, subjects at the start, objects right after the verb at the end, options/hints).
+- **Daily** = `grammar` entries, ids **`gr1`, `gr2` (`gr3`)**, **+5 each**, `level` = highest level used for the wrong options (start 1). Added ONLY with the helper (code = sha256 of `<key>|<answer>`, answer e.g. `adverb`; secret in challenge-answers.json → `grammar.secret`):
+```bash
+tools/grammar.py bank [--level 1]
+tools/grammar.py add 2026-10-19 --q g05 --q g36 [--q g24] [--level 1]     # or: --auto 2 --level 1
+tools/grammar.py codes 2026-10-19
+tools/grammar.py verify "gr1 FZ61, gr2 FZ97"
+```
+  Scoring: +5 per valid code, category `challenge`, emoji 🕵️, e.g. "Sentence Detective gr1 ✅ dribbled = verb". Practice tab with Level 1/2/3 buttons. localStorage `buzz-grammar-<date>`.
+- Seeded as **bonus extras** (`optional: true`): Sat 17 Oct gr1 g19 (*red* = adjective), gr2 g28 (*quickly* = adverb); Sun 18 Oct gr1 g11 (*dribbled* = verb), gr2 g20 (*huge* = adjective), gr3 g31 (*loudly* = adverb).
+
+### Scoreboard points log (17 Oct 2026)
+The "📜 Wins & points" log on index.html sits in a scrollable box (`.logbox`, max height min(640px, 72vh) ≈ 6-8 entries on a phone, smooth scrolling, "⬆️ Newest" button once scrolled). Newest first, and same-day entries are now newest-appended first. Totals, level, wallet, cash-out, streak and badges stay outside the box.
+
+Phone checks: `node tests/phone-shots.js` (puppeteer-core in /workspace/shotenv + `python3 -m http.server 8765` in the repo) writes 390px screenshots to /workspace/alon/shots/ and checks RTL order, no sideways scrolling and the finish codes.
 
 ## 😂 Buzz's Joke Garage (added 2026-10-04): `jokes.html` + `jokes.json`
 Page: https://buzzhq.github.io/jokes.html. Today's (latest) joke big at the top with a **NEW TODAY** badge, then all older jokes (newest first, with dates and Morning/Afternoon/Bonus tags, topic filter chips). Punchlines are **tap-to-reveal**; a 😂 Funny! button and the revealed state are saved only in the browser (`localStorage` key `buzz-jokes`, no backend).

@@ -62,7 +62,8 @@
     };
     cash.pct = cash.inGoal / cfgC.points * 100;
 
-    const entries = [...wins, ...bonuses, ...spends].sort((a, b) => b.date.localeCompare(a.date) || (a.bonus ? -1 : 0) - (b.bonus ? -1 : 0));
+    // same-day entries: newest (last appended) first
+    const entries = [...[...wins].reverse(), ...bonuses, ...[...spends].reverse()].sort((a, b) => b.date.localeCompare(a.date) || (a.bonus ? -1 : 0) - (b.bonus ? -1 : 0));
     return { total, lifetime, wallet, rewards, pointsPerDollar: ppd, base, bonusTotal, bonuses, entries, level, next, levelPct, streak: { current, best, toNextBonus, every: cfgS.bonusEvery, bonus: cfgS.bonusPoints, activeToday: pos.has(today) }, cash, byDay };
   }
 

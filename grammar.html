@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Buzz's Sentence Detective</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+  <h1>🕵️ Buzz's Sentence Detective</h1>
+  <p class="sub" id="sub">Crack the case: what job is the highlighted word doing?</p>
+  <nav><a href="index.html">🏆 Scoreboard</a><a href="tips.html">🎮 Game Tips</a><a href="challenges.html">🧠 Challenges</a><a href="maths.html">🏎️ Maths Garage</a><a href="hebrew.html">🔤 Hebrew Rally</a><a href="jokes.html">😂 Jokes</a><a class="on" href="grammar.html">🕵️ Sentence Detective</a></nav>
+
+  <div class="mg-tabs" role="tablist">
+    <button type="button" class="on" data-tab="daily">🕵️ Today's cases</button>
+    <button type="button" data-tab="practice">🛠️ Practice</button>
+  </div>
+
+  <div id="play"></div>
+  <section id="daily"><p class="sub">Loading today's cases…</p></section>
+  <section id="practice" hidden></section>
+
+  <div class="card">
+    <h2>📒 Detective's cheat sheet</h2>
+    <dl class="gd-cheat" id="cheat"></dl>
+  </div>
+
+  <div class="card howto">
+    <h2>🔧 How it works</h2>
+    <p>🔦 Read the sentence. One word (or a few words) is <span class="gd-hl">highlighted</span>.</p>
+    <p>👆 Tap what job it's doing in the sentence. Wrong tap? Buzz gives you a clue and you try again (no points lost).</p>
+    <p>🏁 Solve today's cases to get your <b>finish codes</b>, then tap <b>Send to Buzz</b> = <b>+5 pts</b> each.</p>
+  </div>
+
+  <p class="sign">Case closed, detective! — Buzz 🤖</p>
+</div>
+<script src="grammar-engine.js"></script>
+<script>
+const G = window.GrammarEngine;
+const today = new Intl.DateTimeFormat("en-CA", {timeZone: "Australia/Sydney"}).format(new Date());
+const fmtD = d => new Date(d + "T00:00:00").toLocaleDateString("en-AU", {weekday: "short", day: "numeric", month: "short"});
+const esc = s => String(s).replace(/[&<>"]/g, c => ({"&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;"}[c]));
+const $ = id => document.getElementById(id);
+async function sha256(t) { const buf = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(t)); return [...new Uint8Array(buf)].map(b => b.toString(16).padStart(2, "0")).join(""); }
+const getLS = k => { try { return JSON.parse(localStorage.getItem(k)) || {}; } catch (e) { return {}; } };
+const setLS = (k, v) => { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} };
+function confetti(el, n) {
+  const r = el.getBoundingClientRect(), EM = ["🎉", "⭐", "✨", "🔍", "💥", "🕵️", "🏆", "🚀"];
+  for (let i = 0; i < (n || 12); i++) {
+    const s = document.createElement("span"); s.className = "boom"; s.textContent = EM[i % EM.length];
+    s.style.left = (r.left + r.width / 2) + "px"; s.style.top = (r.top + r.height / 2) + "px";
+    const a = Math.random() * Math.PI * 2, d = 50 + Math.random() * (n > 12 ? 160 : 80);
+    s.style.setProperty("--dx", Math.cos(a) * d + "px"); s.style.setProperty("--dy", (Math.sin(a) * d - 40) + "px");
+    document.body.appendChild(s); setTimeout(() => s.remove(), 1100);
+  }
+}
+const CHEERS = ["✅ Case cracked!", "✅ Nailed it!", "✅ Sharp eyes!", "✅ Boom!", "✅ Super sleuth!"];
+const ORDER = ["noun", "verb", "adjective", "adverb", "pronoun", "preposition", "conjunction", "subject", "object"];
+const LEVELS = { 1: "Level 1: noun · verb · adjective · adverb", 2: "Level 2: + pronoun · preposition · conjunction", 3: "Level 3: + subject · object" };
+$("cheat").innerHTML = ORDER.map(k => `<dt>${G.DEF[k].e} ${k[0].toUpperCase() + k.slice(1)}${G.TIER[k] > 1 ? `<span class="gd-new">level ${G.TIER[k]}</span>` : ""}</dt><dd>${esc(G.DEF[k].short)} <i>e.g. "${esc(G.DEF[k].ex)}"</i></dd>`).join("");
+const defHTML = (k) => `<div class="gd-def">${G.DEF[k].e} ${esc(G.DEF[k].short).replace(k.toUpperCase(), `<b>${k.toUpperCase()}</b>`)}<br><i>e.g. "${esc(G.DEF[k].ex)}"</i></div>`;
+
+// ---------- one question ----------
+let P = null; // { q, ctx, wrong:Set, fb, done, mistakes }
+function play(q, ctx, scroll) { P = { q, ctx, wrong: new Set(), fb: "", done: false, mistakes: 0 }; render(); if (scroll) $("play").scrollIntoView({behavior: "smooth", block: "start"}); }
+function render() {
+  const q = P.q, daily = P.ctx.type === "daily";
+  let h = `<div class="card mg-play${P.done ? " mg-done" : ""}"><h2>${daily ? `🕵️ ${esc(P.ctx.label)}<span class="ptag">+${P.ctx.c.points}</span>` : `🛠️ Practice <small>(${esc(LEVELS[PLEVEL].split(":")[0])})</small>`}</h2>` +
+    `<div class="gd-sent">${esc(q.before)}<span class="gd-hl">${esc(q.target)}</span>${esc(q.after)}</div>` +
+    `<div class="mg-ask"><span class="mg-bot">🤖</span><p>${esc(q.ask)}</p></div>`;
+  if (!P.done) h += `<div class="mg-opts">` + q.opts.map((o, i) => `<button type="button" class="mg-opt hw-opt${P.wrong.has(i) ? " wrong" : ""}" data-i="${i}"${P.wrong.has(i) ? " disabled" : ""}>${esc(o.label)}</button>`).join("") + `</div>`;
+  h += `<div class="mg-fb" aria-live="polite">${P.fb}</div><div id="gdfin"></div></div>`;
+  $("play").innerHTML = h;
+  if (P.done) finish();
+}
+async function finish() {
+  const q = P.q, box = $("gdfin");
+  let h = `<div class="mg-finish"><div class="mg-result">"${esc(q.target)}" = <b>${esc(q.a)}</b> ${G.DEF[q.a].e}</div><p class="hw-fact">🔍 ${esc(q.why)}</p>${defHTML(q.a)}`;
+  if (P.ctx.type === "daily") {
+    const c = P.ctx.c, key = "buzz-grammar-" + c.date, st = getLS(key);
+    let code = st[c.id] && st[c.id].code;
+    if (!code) { code = G.codeFromHex(await sha256(`${c.key}|${q.answer}`)); st[c.id] = { done: true, code, mistakes: P.mistakes }; setLS(key, st); }
+    h += `<p>Your finish code:</p><div class="mg-code">${esc(c.id)} ${esc(code)}</div>`;
+    const next = DAILY.find(x => !(st[x.id] && st[x.id].done));
+    h += next ? `<p style="margin-top:14px"><button type="button" class="checkbtn" data-case="${esc(next.id)}">Next case ▶</button></p>` : `<p class="rule">🎉 All of today's cases solved! Send your codes to Buzz 👇</p>`;
+  } else {
+    const ps = getLS("buzz-grammar-practice"); ps.solved = (ps.solved || 0) + 1; if (!P.mistakes) ps.first = (ps.first || 0) + 1; setLS("buzz-grammar-practice", ps);
+    h += `<p class="rule">Practice cases solved: <b>${ps.solved}</b> (first try: ${ps.first || 0}) 🏆 just for fun</p><button type="button" class="checkbtn" id="againG">Next case 🎲</button>`;
+  }
+  box.innerHTML = h + `</div>`;
+  confetti(box, 24);
+  if (P.ctx.type === "daily") renderDaily(); else renderPractice();
+}
+document.addEventListener("click", e => {
+  const b = e.target.closest(".mg-opt");
+  if (b && P && !P.done) {
+    const o = P.q.opts[Number(b.dataset.i)];
+    if (o.ok) { confetti(b, 10); P.done = true; P.fb = `<span class="yes pop">${CHEERS[Math.floor(Math.random() * CHEERS.length)]}</span>`; render(); }
+    else {
+      P.mistakes++; P.wrong.add(Number(b.dataset.i));
+      P.fb = `<span class="no">🤔 Not quite.</span> ${esc(o.hint.replace(/^Not quite! /, ""))}`;
+      render(); const card = document.querySelector(".mg-play"); card.classList.remove("shake"); void card.offsetWidth; card.classList.add("shake");
+    }
+    return;
+  }
+  const t = e.target.closest(".mg-tabs button"); if (t) { setTab(t.dataset.tab); return; }
+  const c = e.target.closest("[data-case]"); if (c) { const x = DAILY.find(y => y.id === c.dataset.case); if (x) openDaily(x, true); return; }
+  if (e.target.closest("#againG") || e.target.closest("#newg")) { randomPractice(true); return; }
+  const lv = e.target.closest("[data-level]"); if (lv) { PLEVEL = Number(lv.dataset.level); setLS("buzz-grammar-level", { l: PLEVEL }); renderPractice(); randomPractice(true); return; }
+});
+function setTab(t) {
+  document.querySelectorAll(".mg-tabs button").forEach(b => b.classList.toggle("on", b.dataset.tab === t));
+  $("daily").hidden = t !== "daily"; $("practice").hidden = t !== "practice"; $("play").innerHTML = ""; P = null;
+  if (t === "practice") { renderPractice(); randomPractice(false); } else { renderDaily(); autoOpen(); }
+}
+// ---------- daily cases (challenges.json type "grammar") ----------
+let DAILY = [], DDATE = null, PEEK = false;
+function openDaily(c, scroll) {
+  const n = DAILY.indexOf(c) + 1;
+  play(G.buildQuestion(c.qid, Math.random, c.level || 1), { type: "daily", c, label: `Case ${n} of ${DAILY.length}` }, scroll);
+}
+function renderDaily() {
+  const el = $("daily");
+  if (!DAILY.length) { el.innerHTML = `<div class="card"><h2>🕵️ No cases yet</h2><p>Buzz is on the trail. Try <b>Practice</b> for now! 🛠️</p></div>`; return; }
+  const st = getLS("buzz-grammar-" + DDATE);
+  const rows = DAILY.map((c, i) => { const s = st[c.id] || {}, q = G.BY[c.qid];
+    return `<div class="mg-race${s.done ? " done" : ""}"><div class="mg-rl"><b>Case ${i + 1}</b> <small>${s.done ? `✅ ${esc(G.parse(q.s).target)} = ${esc(q.a)} · code <code>${esc(c.id)} ${esc(s.code)}</code>` : "🔍 unsolved"}</small></div>` +
+      `<button type="button" class="mg-go" data-case="${esc(c.id)}">${s.done ? "Replay" : "Solve ▶"}</button></div>`; }).join("");
+  const m = DAILY.filter(c => st[c.id] && st[c.id].done).map(c => `${c.id} ${st[c.id].code}`).join(", ");
+  const done = DAILY.filter(c => st[c.id] && st[c.id].done).length;
+  const head = PEEK ? `👀 Sneak peek: these cases go live on ${fmtD(DDATE)}` : (DDATE === today ? `🆕 ${fmtD(today)}` : `Latest cases: ${fmtD(DDATE)}`);
+  el.innerHTML = `<div class="card"><h2>🕵️ Today's cases <small>(+${DAILY.reduce((s, c) => s + (c.points || 0), 0)} pts)</small></h2><p class="rule">${head}</p>${rows}</div>` +
+    `<div class="card sendcard"><h2>🤖 Send your codes to Buzz</h2><p class="rule">${done} of ${DAILY.length} cases solved</p>` +
+    (m ? `<p class="preview"><code>${esc(m)}</code></p><a class="sendbtn" href="https://wa.me/?text=${encodeURIComponent(m)}" target="_blank" rel="noopener">Send to Buzz 🤖</a><p class="pick">👉 Pick <b>Chuchu HQ</b> and hit send!</p>` : `<p>Solve a case to get your code! 🔍</p>`) +
+    `<p class="rule">🧠 The rest of today's challenges are on the <a href="challenges.html" class="mg-link">Challenges page</a> (its Send button includes these codes too).</p></div>`;
+}
+function autoOpen() { const st = getLS("buzz-grammar-" + DDATE), want = location.hash.slice(1);
+  const pick = DAILY.find(c => c.id === want) || DAILY.find(c => !(st[c.id] && st[c.id].done)); if (pick) openDaily(pick, !!want); }
+// ---------- practice ----------
+let PLEVEL = getLS("buzz-grammar-level").l || 1, LAST = [];
+function renderPractice() {
+  const ps = getLS("buzz-grammar-practice");
+  $("practice").innerHTML = `<div class="card"><h2>🛠️ Practice cases</h2><p class="rule">Pick your level (no points, just training):</p>` +
+    `<div class="hw-grid" style="grid-template-columns:1fr">${[1, 2, 3].map(l => `<button type="button" class="hs-pick${l === PLEVEL ? " done" : ""}" data-level="${l}"><b>${esc(LEVELS[l])}</b></button>`).join("")}</div>` +
+    `<p><button type="button" class="checkbtn" id="newg">Random case 🎲</button></p><p class="rule">Solved so far: <b>${ps.solved || 0}</b> (first try: ${ps.first || 0}) 🏆</p></div>`;
+}
+function randomPractice(scroll) {
+  // mostly the newest level's parts, plus some review
+  const pool = G.BANK.filter(q => q.tier <= PLEVEL && !LAST.includes(q.id)), top = pool.filter(q => q.tier === PLEVEL);
+  const list = (PLEVEL > 1 && top.length && Math.random() < 0.6) ? top : pool, q = list[Math.floor(Math.random() * list.length)];
+  LAST = [q.id, ...LAST].slice(0, 12);
+  play(G.buildQuestion(q.id, Math.random, PLEVEL), { type: "practice" }, scroll);
+}
+// ---------- load ----------
+const qd = new URLSearchParams(location.search).get("date");
+fetch("challenges.json?v=" + Date.now()).then(r => r.json()).then(d => {
+  const all = (d.challenges || []).filter(c => c.type === "grammar" && c.key && G.BY[c.qid]);
+  const dates = [...new Set(all.map(c => c.date))].sort(), past = dates.filter(x => x <= today);
+  DDATE = qd && dates.includes(qd) ? qd : (past.length ? past[past.length - 1] : dates[0]);
+  PEEK = !!DDATE && DDATE > today; DAILY = all.filter(c => c.date === DDATE);
+  renderDaily(); autoOpen();
+}).catch(e => { console.error(e); $("daily").innerHTML = `<div class="card"><p>Oops, Buzz couldn't load today's cases. Try <b>Practice</b>! 🛠️</p></div>`; });
+</script>
+</body>
+</html>

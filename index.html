@@ -11,7 +11,7 @@
 <div class="wrap">
   <h1>🏅 Chuchu Scoreboard</h1>
   <p class="sub" id="hello">Loading…</p>
-  <nav><a class="on" href="index.html">🏆 Scoreboard</a><a href="tips.html">🎮 Game Tips</a><a href="challenges.html">🧠 Challenges</a><a href="maths.html">🏎️ Maths Garage</a><a href="hebrew.html">🔤 Hebrew Rally</a><a href="jokes.html">😂 Jokes</a></nav>
+  <nav><a class="on" href="index.html">🏆 Scoreboard</a><a href="tips.html">🎮 Game Tips</a><a href="challenges.html">🧠 Challenges</a><a href="maths.html">🏎️ Maths Garage</a><a href="hebrew.html">🔤 Hebrew Rally</a><a href="jokes.html">😂 Jokes</a><a href="grammar.html">🕵️ Sentence Detective</a></nav>
 
   <div class="card big">
     <div class="ltlabel">🏅 Lifetime</div>
@@ -45,7 +45,7 @@
 
   <div class="card"><h2>🎖️ Badges</h2><div class="badges" id="badges"></div></div>
 
-  <div class="card"><h2>📜 Wins &amp; points</h2><div id="wins"></div></div>
+  <div class="card"><h2>📜 Wins &amp; points</h2><div class="loghead"><span id="logcount">Newest first · scroll for more 👇</span><button type="button" class="logtop" id="logtop" hidden>⬆️ Newest</button></div><div class="logbox" id="wins" tabindex="0" aria-label="Points log, newest first"></div></div>
 
   <div class="card">
     <h2>💡 How to earn points</h2>
@@ -142,6 +142,10 @@ fetch("data.json?v=" + Date.now()).then(r => r.json()).then(data => {
     const cls = "win" + (neg ? " minus" : "") + (w.bonus ? " bonus" : "") + (w.reward ? " reward" : "");
     return `<div class="${cls}" style="border-left-color:${c.color || "transparent"}"><div class="e">${w.emoji}</div><div class="t">${w.text}${tag}<div class="d">${fmt(w.date)} · ${c.emoji} ${c.label}</div></div><div class="p">${w.reward ? "🎁 " + Math.abs(w.points) + " pts" : neg ? "−" + Math.abs(w.points) : "+" + w.points}</div></div>`;
   }).join("") || "<p>No wins yet — go get one! 💪</p>";
+  $("logcount").textContent = `${S.entries.length} entries · newest first · scroll for more 👇`;
+  const lb = $("wins"), lt = $("logtop");
+  lb.addEventListener("scroll", () => { lt.hidden = lb.scrollTop < 120; }, { passive: true });
+  lt.addEventListener("click", () => lb.scrollTo({ top: 0, behavior: "smooth" }));
   $("cats").innerHTML = Object.entries(cats).filter(([k, c]) => !c.deduction && !c.spend && k !== "cashout").map(([k, c]) => `<span class="chip" style="border:2px solid ${c.color || "transparent"}">${c.emoji} ${c.label}</span>`).join("");
   $("sign").textContent = "Keep it up, champ! — " + (data.bot || "Buzz 🤖");
 }).catch(e => { console.error(e); $("hello").textContent = "Oops, Buzz couldn't load the scores. Try again soon!"; });

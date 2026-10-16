@@ -1136,6 +1136,88 @@
       "prompt": "Sound out this Hebrew word letter by letter (right to left!), then find out what it means.",
       "key": "7e54088b10db3e4b",
       "points": 10
+    },
+    {
+      "date": "2026-10-17",
+      "id": "hs1",
+      "type": "hebsentence",
+      "title": "Hebrew sentence rally",
+      "sentence": "זה דג גדול",
+      "prompt": "Read this Hebrew sentence word by word, letter by letter (right to left!), then work out what it means.",
+      "key": "6774a75ae8a38211",
+      "points": 15,
+      "optional": true
+    },
+    {
+      "date": "2026-10-18",
+      "id": "hs1",
+      "type": "hebsentence",
+      "title": "Hebrew sentence rally",
+      "sentence": "הדב אוהב דבש",
+      "prompt": "Read this Hebrew sentence word by word, letter by letter (right to left!), then work out what it means.",
+      "key": "0bba23fa3011992e",
+      "points": 15,
+      "optional": true
+    },
+    {
+      "date": "2026-10-17",
+      "id": "gr1",
+      "type": "grammar",
+      "title": "Sentence Detective",
+      "qid": "g19",
+      "level": 1,
+      "prompt": "What job is the highlighted word doing? Solve it in Buzz's Sentence Detective!",
+      "key": "8aa7030120831e07",
+      "points": 5,
+      "optional": true
+    },
+    {
+      "date": "2026-10-17",
+      "id": "gr2",
+      "type": "grammar",
+      "title": "Sentence Detective",
+      "qid": "g28",
+      "level": 1,
+      "prompt": "What job is the highlighted word doing? Solve it in Buzz's Sentence Detective!",
+      "key": "373fc38037752729",
+      "points": 5,
+      "optional": true
+    },
+    {
+      "date": "2026-10-18",
+      "id": "gr1",
+      "type": "grammar",
+      "title": "Sentence Detective",
+      "qid": "g11",
+      "level": 1,
+      "prompt": "What job is the highlighted word doing? Solve it in Buzz's Sentence Detective!",
+      "key": "67bc92f8206bff83",
+      "points": 5,
+      "optional": true
+    },
+    {
+      "date": "2026-10-18",
+      "id": "gr2",
+      "type": "grammar",
+      "title": "Sentence Detective",
+      "qid": "g20",
+      "level": 1,
+      "prompt": "What job is the highlighted word doing? Solve it in Buzz's Sentence Detective!",
+      "key": "ea92ab31cc5220f2",
+      "points": 5,
+      "optional": true
+    },
+    {
+      "date": "2026-10-18",
+      "id": "gr3",
+      "type": "grammar",
+      "title": "Sentence Detective",
+      "qid": "g31",
+      "level": 1,
+      "prompt": "What job is the highlighted word doing? Solve it in Buzz's Sentence Detective!",
+      "key": "8822f3342c704f93",
+      "points": 5,
+      "optional": true
     }
   ],
   "notes": [

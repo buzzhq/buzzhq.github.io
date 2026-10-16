@@ -246,3 +246,36 @@ button.choice:disabled:not(.right){opacity:.4}
 .jlol{font:inherit;font-weight:900;font-size:1rem;margin-top:10px;min-height:44px;padding:6px 16px;border:0;border-radius:999px;background:rgba(255,255,255,.18);color:#fff;cursor:pointer;touch-action:manipulation}
 .jlol.on{background:#ffd23f;color:#2b1055}
 @media (max-width:420px){nav{gap:6px}nav a{padding:7px 11px;font-size:.92rem}}
+
+/* Hebrew sentences (17 Oct 2026) */
+.hs-sent{display:flex;flex-wrap:wrap;justify-content:center;gap:6px 10px;font-family:"Noto Sans Hebrew","Arial Hebrew","IBM Plex Sans Hebrew",Arial,sans-serif}
+.hs-w{border-radius:14px;padding:2px 2px 4px;border:2px dashed rgba(255,255,255,.25)}
+.hs-w.cur{border-color:#ffd23f;background:rgba(255,210,63,.08)}
+.hs-w.done{border-style:solid;border-color:#3dff9e}
+.hs-w .hw-word{gap:2px}
+.hs-w .hw-l{min-width:1em;padding:1px 3px 2px;border-width:2px}
+.hs-w .hw-ch{font-size:2.6rem}
+.hs-w .hw-tr{font-size:1rem}
+.hs-mean{font-family:"Trebuchet MS",system-ui,sans-serif;font-size:.85rem;min-height:1.2em;color:#fff}
+.hs-box .hw-build{font-size:1.5rem}
+.hs-recap{display:flex;flex-direction:column;gap:4px;margin:6px 0;font-size:1rem}
+.hs-list{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px}
+.hs-pick{font:inherit;border:0;border-radius:14px;min-height:56px;padding:6px;background:rgba(0,0,0,.25);color:#fff;cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:center;touch-action:manipulation}
+.hs-pick span{font-family:"Noto Sans Hebrew","Arial Hebrew","IBM Plex Sans Hebrew",Arial,sans-serif;font-size:1.3rem;font-weight:900}
+.hs-pick.done{background:rgba(61,255,158,.2)}
+.hs-pick small{font-size:.72rem}
+@media (max-width:420px){.hs-w .hw-ch{font-size:2.2rem}}
+/* scrollable points log (17 Oct 2026) */
+.logbox{max-height:min(640px,72vh);overflow-y:auto;scroll-behavior:smooth;-webkit-overflow-scrolling:touch;overscroll-behavior:contain;padding-right:4px;border-radius:14px;
+  mask-image:linear-gradient(to bottom,#000 92%,transparent);-webkit-mask-image:linear-gradient(to bottom,#000 92%,transparent)}
+.logbox::-webkit-scrollbar{width:6px}.logbox::-webkit-scrollbar-thumb{background:rgba(255,255,255,.35);border-radius:6px}
+.loghead{display:flex;justify-content:space-between;align-items:center;gap:8px;font-size:.85rem;opacity:.85;margin:-4px 0 8px}
+.logtop{font:inherit;font-size:.8rem;font-weight:900;border:0;border-radius:10px;padding:4px 10px;background:rgba(255,255,255,.18);color:#fff;cursor:pointer}
+/* grammar detective (17 Oct 2026) */
+.gd-sent{font-size:1.45rem;font-weight:700;line-height:1.5;background:rgba(0,0,0,.28);border-radius:16px;padding:14px 12px;margin:6px 0 10px;text-align:center}
+.gd-hl{background:#ffd23f;color:#2b0f4c;border-radius:8px;padding:0 6px;font-weight:900;box-shadow:0 3px 0 #ff3d7f;white-space:nowrap}
+.gd-def{background:rgba(255,255,255,.12);border-radius:12px;padding:8px 10px;margin:8px 0;font-size:1.02rem}
+.gd-def b{color:#ffd23f}
+.gd-cheat dt{font-weight:900;color:#ffd23f;margin-top:8px}
+.gd-cheat dd{margin:2px 0 0 0;font-size:.98rem}
+.gd-new{font-size:.7rem;background:#ff3d7f;border-radius:6px;padding:1px 6px;margin-left:6px;vertical-align:middle}

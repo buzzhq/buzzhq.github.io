@@ -10,8 +10,8 @@
 <body>
 <div class="wrap">
   <h1>🔤 Buzz's Hebrew Word Rally</h1>
-  <p class="sub" id="sub">Sound out a Hebrew word, one letter at a time</p>
-  <nav><a href="index.html">🏆 Scoreboard</a><a href="tips.html">🎮 Game Tips</a><a href="challenges.html">🧠 Challenges</a><a href="maths.html">🏎️ Maths Garage</a><a class="on" href="hebrew.html">🔤 Hebrew Rally</a><a href="jokes.html">😂 Jokes</a></nav>
+  <p class="sub" id="sub">Sound out Hebrew words and sentences, one letter at a time</p>
+  <nav><a href="index.html">🏆 Scoreboard</a><a href="tips.html">🎮 Game Tips</a><a href="challenges.html">🧠 Challenges</a><a href="maths.html">🏎️ Maths Garage</a><a class="on" href="hebrew.html">🔤 Hebrew Rally</a><a href="jokes.html">😂 Jokes</a><a href="grammar.html">🕵️ Sentence Detective</a></nav>
 
   <div class="mg-tabs" role="tablist">
     <button type="button" class="on" data-tab="daily">🏁 Today's words</button>
@@ -19,7 +19,7 @@
   </div>
 
   <div id="play"></div>
-  <section id="daily"><p class="sub">Loading today's words…</p></section>
+  <section id="daily"><p class="sub">Loading today's Hebrew…</p></section>
   <section id="practice" hidden></section>
 
   <div class="card howto">
@@ -28,6 +28,8 @@
     <p>👆 Tap the sound each glowing letter makes. The word builds up as you go: <i>da… dag!</i></p>
     <p>🤔 Wrong tap? Buzz gives you a hint and you try again.</p>
     <p>🏁 Then guess what the word means! Finish today's word to get a <b>finish code</b> and tap <b>Send to Buzz</b> = <b>+10 pts</b> each.</p>
+    <p>💬 <b>Sentences:</b> read a short sentence word by word (each word right to left), see what each word means, then guess the whole sentence = <b>+15 pts</b>.</p>
+    <p>🤔 <b>Tricky ones:</b> א is quiet, ה at the END of a word is quiet, and ו and י can be vowels (o/u, ee). Buzz warns you when one comes up!</p>
   </div>
 
   <p class="sign">Kol hakavod (well done)! — Buzz 🤖</p>
@@ -71,6 +73,24 @@ function wordHTML(p, idx) {
     `<div class="hw-dir">⬅️ ⬅️ read this way ⬅️ ⬅️</div>` +
     `<div class="hw-build">${sofar ? esc(sofar) + (done ? "!" : "…") : "&nbsp;"}</div></div>`;
 }
+// sentence mode: words side by side (right to left), each word sounded out letter by letter
+function sentHTML(p, idx) {
+  let off = 0; const built = [];
+  const words = p.words.map(w => {
+    const L = [...w.w], start = off; off += L.length;
+    const done = idx >= off, cur = idx >= start && idx < off;
+    const letters = L.map((ch, i) => {
+      const g = start + i, st = g < idx ? " done" : (g === idx ? " cur" : "");
+      return `<span class="hw-l${st}${p.newLetter === ch && g >= idx ? " isnew" : ""}"><span class="hw-ch">${esc(ch)}</span><span class="hw-tr">${g < idx ? esc(w.parts[i][1]) : (g === idx ? "?" : "")}</span></span>`;
+    }).join("");
+    const got = w.parts.slice(0, Math.max(0, Math.min(idx - start, L.length))).map(x => x[1]).join(""); if (got) built.push(got);
+    return `<div class="hs-w${done ? " done" : ""}${cur ? " cur" : ""}"><div class="hw-word">${letters}</div><div class="hs-mean" dir="ltr">${done ? `<b>${esc(w.tr)}</b> = ${esc(w.en)}` : "&nbsp;"}</div></div>`;
+  }).join("");
+  const n = p.parts.length;
+  return `<div class="hw-box hs-box"><div class="hs-sent" dir="rtl" lang="he">${words}</div>` +
+    `<div class="hw-dir">⬅️ ⬅️ read this way ⬅️ ⬅️</div>` +
+    `<div class="hw-build">${built.length ? esc(built.join(" ")) + (idx >= n ? "!" : "…") : "&nbsp;"}</div></div>`;
+}
 function startPlay(prob, ctx, idx, scroll) {
   P = { prob, ctx, idx: idx || 0, mistakes: (ctx.saved && ctx.saved.mistakes) || 0, order: {}, wrong: new Set(), fb: "" };
   renderPlay();
@@ -79,11 +99,11 @@ function startPlay(prob, ctx, idx, scroll) {
 function renderPlay() {
   const p = P.prob, total = p.steps.length, done = P.idx >= total, step = p.steps[P.idx];
   const pct = Math.round(100 * P.idx / total);
-  const title = P.ctx.type === "daily" ? `🏁 ${esc(P.ctx.label)}` : "🛠️ Practice";
+  const title = P.ctx.type === "daily" ? `🏁 ${esc(P.ctx.label)}` : (p.kind === "sentence" ? "🛠️ Practice sentence" : "🛠️ Practice");
   let h = `<div class="card mg-play${done ? " mg-done" : ""}"><h2>${title}${P.ctx.type === "daily" ? `<span class="ptag">+${P.ctx.c.points}${P.ctx.c.optional ? " bonus" : ""}</span>` : ""}</h2>` +
     `<div class="mg-track"><div class="bar"><div class="fill" style="width:${pct}%"></div></div><span class="mg-car" style="left:calc(${pct}% - ${pct / 100 * 1.6}em)">🚙</span><span class="mg-flag">🏁</span></div>` +
     `<p class="mg-stepn">${done ? `All ${total} steps done!` : `Step ${P.idx + 1} of ${total}`}${P.mistakes ? ` · 🔧 pit stops: ${P.mistakes}` : ""}</p>` +
-    wordHTML(p, P.idx);
+    (p.kind === "sentence" ? sentHTML(p, P.idx) : wordHTML(p, P.idx));
   if (!done) {
     if (!P.order[P.idx]) P.order[P.idx] = shuffle(step.opts.map((_, i) => i));
     h += `<div class="mg-ask"><span class="mg-bot">🤖</span><p>${step.kind === "letter" ? esc(step.q).replace(esc(step.ch), `<span class="hw-q" lang="he">${esc(step.ch)}</span>`) : esc(step.q)}</p></div>` +
@@ -99,7 +119,8 @@ function renderPlay() {
 }
 async function finish() {
   const p = P.prob, box = $("mgfin");
-  let h = `<div class="mg-finish"><div class="hw-emoji">${p.emoji}</div><div class="mg-result"><span lang="he" dir="rtl" class="hw-inline">${esc(p.word)}</span> = <b>${esc(p.tr)}</b> = <b>${esc(p.en)}</b></div><p class="hw-fact">💡 ${esc(p.fact)}</p>`;
+  let h = `<div class="mg-finish"><div class="hw-emoji">${p.emoji}</div><div class="mg-result"><span lang="he" dir="rtl" class="hw-inline">${esc(p.word)}</span> = <b>${esc(p.tr)}</b> = <b>${esc(p.en)}</b></div>` +
+    (p.kind === "sentence" ? `<div class="hs-recap">${p.words.map(w => `<span><span lang="he" dir="rtl" class="hw-inline">${esc(w.w)}</span> ${esc(w.tr)} = ${esc(w.en)}</span>`).join("")}</div>` : "") + `<p class="hw-fact">💡 ${esc(p.fact)}</p>`;
   if (p.newLetter) h += `<p class="rule">🆕 You just learned a new letter: <span lang="he" class="hw-inline">${esc(p.newLetter)}</span> (${esc(H.LETTERS[p.newLetter].name)})!</p>`;
   if (P.ctx.type === "daily") {
     const c = P.ctx.c, key = "buzz-hebrew-" + c.date, st = getLS(key);
@@ -108,7 +129,8 @@ async function finish() {
     h += `<p>Your finish code:</p><div class="mg-code">${esc(c.id)} ${esc(code)}</div><p class="rule">Send it to Buzz for <b>+${c.points} pts</b>! 👇</p>`;
   } else {
     const ps = getLS("buzz-hebrew-practice"); ps.finished = (ps.finished || 0) + 1; ps.done = [...new Set([...(ps.done || []), p.word])]; setLS("buzz-hebrew-practice", ps);
-    h += `<p class="rule">Practice words finished: <b>${ps.finished}</b> 🏆 (just for fun, no points)</p><button type="button" class="checkbtn" id="again">Another word 🎲</button>`;
+    h += `<p class="rule">Practice finished: <b>${ps.finished}</b> 🏆 (just for fun, no points)</p>` + (p.kind === "sentence"
+      ? `<button type="button" class="checkbtn" id="againS">Another sentence 🎲</button>` : `<button type="button" class="checkbtn" id="again">Another word 🎲</button>`);
   }
   box.innerHTML = h + `</div>`;
   confetti(box, 28);
@@ -140,6 +162,8 @@ document.addEventListener("click", e => {
   const s = e.target.closest("[data-race]");
   if (s) { const c = DAILY.find(x => x.id === s.dataset.race); if (c) openDaily(c, s.dataset.replay === "1", true); return; }
   if (e.target.closest("#again") || e.target.closest("#newp")) { randomPractice(); return; }
+  if (e.target.closest("#againS") || e.target.closest("#newps")) { randomSentence(); return; }
+  const sb = e.target.closest("[data-sent]"); if (sb) { startPlay(H.buildSentence(sb.dataset.sent), { type: "practice" }, 0, true); return; }
   const w = e.target.closest("[data-word]"); if (w) { startPlay(H.buildWord(w.dataset.word), { type: "practice" }, 0, true); return; }
 });
 
@@ -154,25 +178,27 @@ function setTab(t) {
 // ---------- daily words (challenges.json type "hebword") ----------
 let DAILY = [], DDATE = null, PEEK = false, KNOWN = [];
 function openDaily(c, replay, scroll) {
-  const st = getLS("buzz-hebrew-" + c.date)[c.id] || {}, prob = H.buildWord(c.word);
+  const st = getLS("buzz-hebrew-" + c.date)[c.id] || {}, prob = build(c);
   const fresh = replay || st.done;
-  startPlay(prob, { type: "daily", c, label: `Word ${DAILY.indexOf(c) + 1}`, saved: fresh ? null : st }, fresh ? 0 : Math.min(st.step || 0, prob.steps.length), scroll);
+  startPlay(prob, { type: "daily", c, label: label(c), saved: fresh ? null : st }, fresh ? 0 : Math.min(st.step || 0, prob.steps.length), scroll);
 }
+const build = c => c.type === "hebsentence" ? H.buildSentence(c.sentence) : H.buildWord(c.word);
+const label = c => c.type === "hebsentence" ? `Sentence ${DAILY.filter(x => x.type === "hebsentence").indexOf(c) + 1}` : `Word ${DAILY.filter(x => x.type === "hebword").indexOf(c) + 1}`;
 function renderDaily() {
   const el = $("daily");
   if (!DAILY.length) { el.innerHTML = `<div class="card"><h2>🏁 No words yet</h2><p>Buzz is warming up. Try <b>Practice</b> for now! 🛠️</p></div>`; return; }
   const st = getLS("buzz-hebrew-" + DDATE);
   const cards = DAILY.map((c, i) => {
-    const s = st[c.id] || {}, n = H.buildWord(c.word).steps.length;
-    const status = s.done ? `✅ Finished! Code <code>${esc(c.id)} ${esc(s.code)}</code>` : (s.step ? `⏱️ Step ${s.step + 1} of ${n}` : `${[...c.word].length} letters`);
-    return `<div class="mg-race${s.done ? " done" : ""}"><div class="mg-rl"><b>Word ${i + 1}</b> <span class="hw-inline" lang="he" dir="rtl">${esc(c.word)}</span>${c.optional ? ` <small>(bonus)</small>` : ""}<br><small>${status}</small></div>` +
+    const s = st[c.id] || {}, n = build(c).steps.length, txt = c.sentence || c.word;
+    const status = s.done ? `✅ Finished! Code <code>${esc(c.id)} ${esc(s.code)}</code>` : (s.step ? `⏱️ Step ${s.step + 1} of ${n}` : (c.sentence ? `${txt.split(" ").length} words · ${n} steps · 💬 sentence!` : `${[...c.word].length} letters`));
+    return `<div class="mg-race${s.done ? " done" : ""}"><div class="mg-rl"><b>${label(c)}</b> <span class="hw-inline" lang="he" dir="rtl">${esc(txt)}</span>${c.optional ? ` <small>(bonus)</small>` : ""}<br><small>${status}</small></div>` +
       `<button type="button" class="mg-go" data-race="${esc(c.id)}"${s.done ? ' data-replay="1"' : ""}>${s.done ? "Replay" : (s.step ? "Continue ▶" : "Start ▶")}</button></div>`;
   }).join("");
   const m = DAILY.filter(c => st[c.id] && st[c.id].done).map(c => `${c.id} ${st[c.id].code}`).join(", ");
   const done = DAILY.filter(c => st[c.id] && st[c.id].done).length;
   const head = PEEK ? `👀 Sneak peek: these words go live on ${fmtD(DDATE)}` : (DDATE === today ? `🆕 ${fmtD(today)}` : `Latest words: ${fmtD(DDATE)} · fresh ones land this afternoon! ⏰`);
-  el.innerHTML = `<div class="card"><h2>🏁 Today's words <small>(+${DAILY.reduce((s, c) => s + (c.points || 0), 0)} pts)</small></h2><p class="rule">${head}</p>${cards}</div>` +
-    `<div class="card sendcard"><h2>🤖 Send your codes to Buzz</h2><p class="rule">${done} of ${DAILY.length} words finished</p>` +
+  el.innerHTML = `<div class="card"><h2>🏁 Today's Hebrew <small>(+${DAILY.reduce((s, c) => s + (c.points || 0), 0)} pts)</small></h2><p class="rule">${head}</p>${cards}</div>` +
+    `<div class="card sendcard"><h2>🤖 Send your codes to Buzz</h2><p class="rule">${done} of ${DAILY.length} finished</p>` +
     (m ? `<p class="preview"><code>${esc(m)}</code></p><a class="sendbtn" href="https://wa.me/?text=${encodeURIComponent(m)}" target="_blank" rel="noopener">Send to Buzz 🤖</a><p class="pick">👉 Pick <b>Chuchu HQ</b> and hit send!</p>`
        : `<p>Finish a word to get your code! 🔤</p>`) +
     `<p class="rule">🧠 The rest of today's challenges are on the <a href="challenges.html" class="mg-link">Challenges page</a> (its Send button includes these codes too).</p></div>`;
@@ -193,6 +219,8 @@ function renderPractice() {
     `<button type="button" class="checkbtn" id="newp">Random word 🎲</button>` +
     `<h3 class="hw-h3">⭐ Words with your letters</h3><div class="hw-grid">${ok.map(btn).join("")}</div>` +
     (one.length ? `<h3 class="hw-h3">🆕 One new letter (Buzz introduces it)</h3><div class="hw-grid">${one.map(btn).join("")}</div>` : "") +
+    `<h3 class="hw-h3">💬 Sentences (word by word!)</h3><button type="button" class="checkbtn" id="newps">Random sentence 🎲</button>` +
+    `<div class="hs-list">${H.suitableSentences(KNOWN, 1).map(x => `<button type="button" class="hs-pick${mine.has(x.text) ? " done" : ""}" data-sent="${esc(x.text)}"><span lang="he" dir="rtl">${esc(x.text)}</span>${mine.has(x.text) ? `<small>${x.emoji} ${esc(x.en)}</small>` : ""}</button>`).join("")}</div>` +
     `<p class="rule">Just for fun (no points). Finished so far: <b>${ps.finished || 0}</b> 🏆</p></div>`;
 }
 function randomPractice() {
@@ -201,14 +229,20 @@ function randomPractice() {
   startPlay(H.buildWord(x.w), { type: "practice" }, 0, false);
 }
 
+function randomSentence() {
+  const pool = H.suitableSentences(KNOWN, 1), ps = getLS("buzz-hebrew-practice"), fresh = pool.filter(x => !(ps.done || []).includes(x.text));
+  const list = fresh.length ? fresh : pool, x = list[Math.floor(Math.random() * list.length)];
+  startPlay(H.buildSentence(x.text), { type: "practice" }, 0, true);
+}
 // ---------- load ----------
 const qd = new URLSearchParams(location.search).get("date");
 fetch("challenges.json?v=" + Date.now()).then(r => r.json()).then(d => {
   const ch = d.challenges || [];
   // letters he has learned = letters from the daily Hebrew letter challenges so far (+ new letters from finished words)
   KNOWN = [...new Set(ch.filter(c => c.type === "hebrew" && c.letter && c.date <= today).map(c => c.letter)
-    .concat(ch.filter(c => c.type === "hebword" && c.word && c.date < today).flatMap(c => [...c.word])))];
-  const all = ch.filter(c => c.type === "hebword" && c.key && H.BY[c.word]);
+    .concat(ch.filter(c => c.type === "hebword" && c.word && c.date < today).flatMap(c => [...c.word]))
+    .concat(ch.filter(c => c.type === "hebsentence" && c.sentence && c.date < today).flatMap(c => [...c.sentence.replace(/ /g, "")])))];
+  const all = ch.filter(c => c.key && ((c.type === "hebword" && H.BY[c.word]) || (c.type === "hebsentence" && H.SBY[c.sentence])));
   const dates = [...new Set(all.map(c => c.date))].sort(), past = dates.filter(x => x <= today);
   DDATE = qd && dates.includes(qd) ? qd : (past.length ? past[past.length - 1] : dates[0]);
   PEEK = !!DDATE && DDATE > today;
