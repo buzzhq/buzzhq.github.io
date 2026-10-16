@@ -1,7 +1,7 @@
 {
   "name": "Alon",
   "bot": "Buzz 🤖",
-  "updated": "2026-10-06",
+  "updated": "2026-10-16",
   "levels": [
     {
       "name": "Rookie",
@@ -352,6 +352,48 @@
       "category": "challenge",
       "points": 10,
       "text": "Read aloud dc5 🎤 Maths Garage / Hebrew snow & salt / free throws / Descenders"
+    },
+    {
+      "date": "2026-10-15",
+      "emoji": "🏎️",
+      "category": "challenge",
+      "points": 10,
+      "text": "Maths Garage mg1 ✅ 476 × 28"
+    },
+    {
+      "date": "2026-10-15",
+      "emoji": "🏎️",
+      "category": "challenge",
+      "points": 10,
+      "text": "Maths Garage mg2 ✅ 758 ÷ 6"
+    },
+    {
+      "date": "2026-10-15",
+      "emoji": "🔤",
+      "category": "challenge",
+      "points": 10,
+      "text": "Hebrew word hb1 ✅ גל (gal = wave)"
+    },
+    {
+      "date": "2026-10-15",
+      "emoji": "🔤",
+      "category": "challenge",
+      "points": 10,
+      "text": "Hebrew word hb2 ✅ דוד (dod = uncle)"
+    },
+    {
+      "date": "2026-10-15",
+      "emoji": "📚",
+      "category": "school",
+      "points": 10,
+      "text": "Uploaded homework: Maths (division, multiplication, tank problem, 5 times table)"
+    },
+    {
+      "date": "2026-10-15",
+      "emoji": "📚",
+      "category": "school",
+      "points": 10,
+      "text": "Uploaded homework: English (puppy story)"
     }
   ],
   "cashout": {
