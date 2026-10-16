@@ -135,6 +135,14 @@
       "emoji": "🍪",
       "setup": "Why did the cookie go to the doctor?",
       "punchline": "Because it felt crummy!"
+    },
+    {
+      "date": "2026-10-16",
+      "slot": "pm",
+      "topic": "Animals",
+      "emoji": "🦕",
+      "setup": "What do you call a sleeping dinosaur?",
+      "punchline": "A dino-snore!"
     }
   ]
 }
