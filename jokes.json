@@ -143,6 +143,14 @@
       "emoji": "🦕",
       "setup": "What do you call a sleeping dinosaur?",
       "punchline": "A dino-snore!"
+    },
+    {
+      "date": "2026-10-17",
+      "slot": "am",
+      "topic": "Animals",
+      "emoji": "🐶",
+      "setup": "Why did the puppy sit in the shade?",
+      "punchline": "He didn't want to be a hot dog!"
     }
   ]
 }
