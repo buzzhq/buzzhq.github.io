@@ -159,6 +159,14 @@
       "emoji": "🐑",
       "setup": "What kind of car does a sheep drive?",
       "punchline": "A Lamb-borghini!"
+    },
+    {
+      "date": "2026-10-18",
+      "slot": "am",
+      "topic": "Animals",
+      "emoji": "🪄",
+      "setup": "What do you call a dog that does magic tricks?",
+      "punchline": "A labracadabrador!"
     }
   ]
 }
