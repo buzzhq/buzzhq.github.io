@@ -467,6 +467,24 @@
       "game": "Fortnite",
       "title": "See sounds on screen 👀",
       "tip": "In Settings > Audio, turn on Visualize Sound Effects. Little icons show where footsteps and chests are, so you can find loot even when it's noisy at home."
+    },
+    {
+      "date": "2026-10-18",
+      "game": "Descenders",
+      "title": "Look at the gap, not the tree 🌳",
+      "tip": "Your bike goes where your eyes go. Look at the open trail between the trees, not at the tree you're scared of hitting, and you'll steer through much more smoothly."
+    },
+    {
+      "date": "2026-10-18",
+      "game": "GTA",
+      "title": "Learn the track, then go fast 🏁",
+      "tip": "Do a slow first lap of a new race just to learn the turns. Once you know where every corner is, you can speed up and still stay on the road."
+    },
+    {
+      "date": "2026-10-18",
+      "game": "Roblox",
+      "title": "Check the game page first 📄",
+      "tip": "Before you play a new game, tap it and read the page: the description, the thumbs-up rating and the maturity label tell you what it's like before you jump in."
     }
   ]
 }

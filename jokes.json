@@ -167,6 +167,14 @@
       "emoji": "🪄",
       "setup": "What do you call a dog that does magic tricks?",
       "punchline": "A labracadabrador!"
+    },
+    {
+      "date": "2026-10-18",
+      "slot": "pm",
+      "topic": "Animals",
+      "emoji": "🐝",
+      "setup": "Why do bees have sticky hair?",
+      "punchline": "Because they use honeycombs!"
     }
   ]
 }

@@ -1247,6 +1247,42 @@
       "prompt": "Sound out this Hebrew word letter by letter (right to left!), then find out what it means.",
       "key": "f8a38356051e752f",
       "points": 10
+    },
+    {
+      "date": "2026-10-18",
+      "id": "mg1",
+      "type": "stepgame",
+      "title": "Maths Garage: long multiplication",
+      "mode": "mult",
+      "a": 647,
+      "b": 23,
+      "sum": "647 × 23",
+      "prompt": "Solve it step by step in Buzz's Maths Garage, then send Buzz your finish code!",
+      "key": "ffabfaf75a8fe86b",
+      "points": 10
+    },
+    {
+      "date": "2026-10-18",
+      "id": "mg2",
+      "type": "stepgame",
+      "title": "Maths Garage: long division",
+      "mode": "div",
+      "a": 695,
+      "b": 4,
+      "sum": "695 ÷ 4",
+      "prompt": "Solve it step by step in Buzz's Maths Garage, then send Buzz your finish code!",
+      "key": "175c134916bc321d",
+      "points": 10
+    },
+    {
+      "date": "2026-10-18",
+      "id": "hb1",
+      "type": "hebword",
+      "title": "Hebrew word rally",
+      "word": "סבא",
+      "prompt": "Sound out this Hebrew word letter by letter (right to left!), then find out what it means.",
+      "key": "ea0b5da65a0c0772",
+      "points": 10
     }
   ],
   "notes": [
@@ -1430,6 +1466,15 @@
         "name": "Hit the Button (Topmarks)",
         "url": "https://www.topmarks.co.uk/maths-games/hit-the-button",
         "why": "Speedy times tables and division facts ⚡ — perfect warm-up for today's 838 ÷ 6!",
+        "ads": true
+      }
+    },
+    {
+      "date": "2026-10-18",
+      "game": {
+        "name": "Just Divide (Math Playground)",
+        "url": "https://www.mathplayground.com/just_divide.html",
+        "why": "A clever division puzzle ➗ — perfect warm-up for today's 695 ÷ 4!",
         "ads": true
       }
     }
