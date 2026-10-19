@@ -175,6 +175,14 @@
       "emoji": "🐝",
       "setup": "Why do bees have sticky hair?",
       "punchline": "Because they use honeycombs!"
+    },
+    {
+      "date": "2026-10-19",
+      "slot": "pm",
+      "topic": "Ocean",
+      "emoji": "🌊",
+      "setup": "What did the ocean say to the beach?",
+      "punchline": "Nothing, it just waved!"
     }
   ]
 }

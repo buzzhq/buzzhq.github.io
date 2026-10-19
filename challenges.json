@@ -1283,6 +1283,74 @@
       "prompt": "Sound out this Hebrew word letter by letter (right to left!), then find out what it means.",
       "key": "ea0b5da65a0c0772",
       "points": 10
+    },
+    {
+      "date": "2026-10-19",
+      "id": "mg1",
+      "type": "stepgame",
+      "title": "Maths Garage: long multiplication",
+      "mode": "mult",
+      "a": 572,
+      "b": 34,
+      "sum": "572 × 34",
+      "prompt": "Solve it step by step in Buzz's Maths Garage, then send Buzz your finish code!",
+      "key": "edfa6630e5efadcc",
+      "points": 10
+    },
+    {
+      "date": "2026-10-19",
+      "id": "mg2",
+      "type": "stepgame",
+      "title": "Maths Garage: long division",
+      "mode": "div",
+      "a": 859,
+      "b": 7,
+      "sum": "859 ÷ 7",
+      "prompt": "Solve it step by step in Buzz's Maths Garage, then send Buzz your finish code!",
+      "key": "6c173bd8c5594b83",
+      "points": 10
+    },
+    {
+      "date": "2026-10-19",
+      "id": "hb1",
+      "type": "hebword",
+      "title": "Hebrew word rally",
+      "word": "אמא",
+      "prompt": "Sound out this Hebrew word letter by letter (right to left!), then find out what it means.",
+      "key": "50eb1be16207b6eb",
+      "points": 10
+    },
+    {
+      "date": "2026-10-19",
+      "id": "hs1",
+      "type": "hebsentence",
+      "title": "Hebrew sentence rally",
+      "sentence": "זה גל גדול",
+      "prompt": "Read this Hebrew sentence word by word, letter by letter (right to left!), then work out what it means.",
+      "key": "637e243bccaaada3",
+      "points": 15
+    },
+    {
+      "date": "2026-10-19",
+      "id": "gr1",
+      "type": "grammar",
+      "title": "Sentence Detective",
+      "qid": "g10",
+      "level": 1,
+      "prompt": "What job is the highlighted word doing? Solve it in Buzz's Sentence Detective!",
+      "key": "7e08e15512cc8a65",
+      "points": 5
+    },
+    {
+      "date": "2026-10-19",
+      "id": "gr2",
+      "type": "grammar",
+      "title": "Sentence Detective",
+      "qid": "g09",
+      "level": 1,
+      "prompt": "What job is the highlighted word doing? Solve it in Buzz's Sentence Detective!",
+      "key": "3d9c4ba94ce925ef",
+      "points": 5
     }
   ],
   "notes": [
@@ -1475,6 +1543,15 @@
         "name": "Just Divide (Math Playground)",
         "url": "https://www.mathplayground.com/just_divide.html",
         "why": "A clever division puzzle ➗ — perfect warm-up for today's 695 ÷ 4!",
+        "ads": true
+      }
+    },
+    {
+      "date": "2026-10-19",
+      "game": {
+        "name": "Canoe Penguins (Coolmath4Kids)",
+        "url": "https://www.coolmath4kids.com/math-games/canoe-penguins",
+        "why": "Paddle the penguins with two-digit multiplying 🐧, a perfect warm-up for today's 572 × 34!",
         "ads": true
       }
     }
