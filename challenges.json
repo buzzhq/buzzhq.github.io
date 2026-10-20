@@ -501,7 +501,8 @@
       "sum": "318 × 24",
       "prompt": "Solve it step by step in Buzz's Maths Garage, then send Buzz your finish code!",
       "key": "8e900900c2425e34",
-      "points": 10
+      "points": 10,
+      "check": "06f2783d578bd57f95d32e21d3ad0f36c7272249190fcf040df4831fe7dfcf93"
     },
     {
       "date": "2026-10-05",
@@ -514,7 +515,8 @@
       "sum": "852 ÷ 4",
       "prompt": "Solve it step by step in Buzz's Maths Garage, then send Buzz your finish code!",
       "key": "077782b96db1adc0",
-      "points": 10
+      "points": 10,
+      "check": "282cddddc7a1624e109e4546ffde7921ca21fffb7b7c402d430218fe0eba9b10"
     },
     {
       "date": "2026-10-05",
@@ -524,7 +526,8 @@
       "word": "דג",
       "prompt": "Sound out this Hebrew word letter by letter (right to left!), then find out what it means.",
       "key": "8ab46d5ea481c208",
-      "points": 10
+      "points": 10,
+      "check": "f855a06c210906fca32c26d172a2fefbcf0f7e14bb8e7d90b48940e39067d82b"
     },
     {
       "date": "2026-10-05",
@@ -534,7 +537,8 @@
       "word": "גלגל",
       "prompt": "Sound out this Hebrew word letter by letter (right to left!), then find out what it means.",
       "key": "9392860eb72b9959",
-      "points": 10
+      "points": 10,
+      "check": "f7ec6bf82c37f954554ab81530eb35639e0a4ebad9d15c0b98c78e2d41be4032"
     },
     {
       "date": "2026-10-05",
@@ -556,7 +560,8 @@
       "sum": "214 × 13",
       "prompt": "Solve it step by step in Buzz's Maths Garage, then send Buzz your finish code!",
       "key": "b1ec2b4e40cb261f",
-      "points": 10
+      "points": 10,
+      "check": "a8ed4e24f14f7ddf0c06015280e567726e37f8ece617a559aff4eb4cd4b78b69"
     },
     {
       "date": "2026-10-06",
@@ -569,7 +574,8 @@
       "sum": "936 ÷ 3",
       "prompt": "Solve it step by step in Buzz's Maths Garage, then send Buzz your finish code!",
       "key": "475523e2650ed30a",
-      "points": 10
+      "points": 10,
+      "check": "237973ad50caafdfe41b6a8f54a3dc8007f9c817b91697f02fa39b3169b6f52a"
     },
     {
       "date": "2026-10-06",
@@ -579,7 +585,8 @@
       "word": "סל",
       "prompt": "Sound out this Hebrew word letter by letter (right to left!), then find out what it means.",
       "key": "6396fd50a5eb5a95",
-      "points": 10
+      "points": 10,
+      "check": "c1fbe7f7b62937bd52fc90ba45a91c2228ad6c8f168cfc8b976cd400c8319d8d"
     },
     {
       "date": "2026-10-06",
@@ -601,7 +608,8 @@
       "sum": "326 × 14",
       "prompt": "Solve it step by step in Buzz's Maths Garage, then send Buzz your finish code!",
       "key": "5ad31a1453d67cc1",
-      "points": 10
+      "points": 10,
+      "check": "5bf71048da5c9773bc95a7a6b2c3f4083afd097b40deb33036a2409324004373"
     },
     {
       "date": "2026-10-07",
@@ -614,7 +622,8 @@
       "sum": "735 ÷ 5",
       "prompt": "Solve it step by step in Buzz's Maths Garage, then send Buzz your finish code!",
       "key": "3c0dce4e88992622",
-      "points": 10
+      "points": 10,
+      "check": "ac44d2a8a97cdc7627ec7330f049f624727fc8f785ef1fcb53c4d4615967f7e9"
     },
     {
       "date": "2026-10-07",
@@ -624,7 +633,8 @@
       "word": "דב",
       "prompt": "Sound out this Hebrew word letter by letter (right to left!), then find out what it means.",
       "key": "a5b79b0604cc5763",
-      "points": 10
+      "points": 10,
+      "check": "f54606de49ea6d55a78a6388a3d793e2457b8c4bdcf2f3822f5d5164714c0042"
     },
     {
       "date": "2026-10-07",
@@ -646,7 +656,8 @@
       "sum": "247 × 23",
       "prompt": "Solve it step by step in Buzz's Maths Garage, then send Buzz your finish code!",
       "key": "a716f988e6fbc03b",
-      "points": 10
+      "points": 10,
+      "check": "004f6403e7f9142310ffe83c0001afd2654ca45af0859f988143ece8a5b9bee8"
     },
     {
       "date": "2026-10-08",
@@ -659,7 +670,8 @@
       "sum": "714 ÷ 6",
       "prompt": "Solve it step by step in Buzz's Maths Garage, then send Buzz your finish code!",
       "key": "60392407cd7858ee",
-      "points": 10
+      "points": 10,
+      "check": "9484124d16d12ffebe65621bc338598e70fea06abe3f71356d9c6b7c3bfaed9e"
     },
     {
       "date": "2026-10-08",
@@ -669,7 +681,8 @@
       "word": "לב",
       "prompt": "Sound out this Hebrew word letter by letter (right to left!), then find out what it means.",
       "key": "5bb370cc435c3604",
-      "points": 10
+      "points": 10,
+      "check": "cb0852c51f21ecb11790574512849eb186a7e7fb1e81946d0198624cb1ce73a0"
     },
     {
       "date": "2026-10-08",
@@ -679,7 +692,8 @@
       "word": "דגל",
       "prompt": "Sound out this Hebrew word letter by letter (right to left!), then find out what it means.",
       "key": "d9dfadb303c853a1",
-      "points": 10
+      "points": 10,
+      "check": "1cf5b2e7ec83aa58309f5a47f04adad2570e7dd370a098d3524d547aabd32d3b"
     },
     {
       "date": "2026-10-08",
@@ -701,7 +715,8 @@
       "sum": "352 × 15",
       "prompt": "Solve it step by step in Buzz's Maths Garage, then send Buzz your finish code!",
       "key": "033744ae49a44389",
-      "points": 10
+      "points": 10,
+      "check": "fe2d37cc9830efca201d2c6cbe44f0d9de726fd0dc44c98a9c08dcee767563ba"
     },
     {
       "date": "2026-10-09",
@@ -714,7 +729,8 @@
       "sum": "864 ÷ 4",
       "prompt": "Solve it step by step in Buzz's Maths Garage, then send Buzz your finish code!",
       "key": "ca5127edadc44231",
-      "points": 10
+      "points": 10,
+      "check": "e33121c8f1266cacd48f588083dd23255365e0cc11dff754df07d85e5c3c8ea6"
     },
     {
       "date": "2026-10-09",
@@ -724,7 +740,8 @@
       "word": "זהב",
       "prompt": "Sound out this Hebrew word letter by letter (right to left!), then find out what it means.",
       "key": "f90a665a58d3be3c",
-      "points": 10
+      "points": 10,
+      "check": "e18f6f813d73204d056677a5fdbce43d9b9b71ec6fffa7635cfd644b9409bb12"
     },
     {
       "date": "2026-10-09",
@@ -734,7 +751,8 @@
       "word": "סוס",
       "prompt": "Sound out this Hebrew word letter by letter (right to left!), then find out what it means.",
       "key": "16232b064a9539f6",
-      "points": 10
+      "points": 10,
+      "check": "ec327728e785ec0f5c21dd38e69860cc1db237f60ec40e6abd35181efb1a7539"
     },
     {
       "date": "2026-10-09",
@@ -756,7 +774,8 @@
       "sum": "263 × 16",
       "prompt": "Solve it step by step in Buzz's Maths Garage, then send Buzz your finish code!",
       "key": "8967c71611476790",
-      "points": 10
+      "points": 10,
+      "check": "5118627b2aa260b1aabc7e4c3d04340cc35854f7bbd33efd8ab831f73d213520"
     },
     {
       "date": "2026-10-10",
@@ -769,7 +788,8 @@
       "sum": "945 ÷ 5",
       "prompt": "Solve it step by step in Buzz's Maths Garage, then send Buzz your finish code!",
       "key": "a1e75e3fc4861f50",
-      "points": 10
+      "points": 10,
+      "check": "3d7e8a08f3aa25091dbd8988296efae26bcf23dc20aa8e60bfd6d1e5a3b5a7e4"
     },
     {
       "date": "2026-10-10",
@@ -779,7 +799,8 @@
       "word": "שמש",
       "prompt": "Sound out this Hebrew word letter by letter (right to left!), then find out what it means.",
       "key": "6b4f081fa47a7633",
-      "points": 10
+      "points": 10,
+      "check": "dddca0afafa1565454a03231f1e736c67edfd5ef48a0013e20434a358b46ac94"
     },
     {
       "date": "2026-10-10",
@@ -789,7 +810,8 @@
       "word": "חול",
       "prompt": "Sound out this Hebrew word letter by letter (right to left!), then find out what it means.",
       "key": "65d3651bcb7829ea",
-      "points": 10
+      "points": 10,
+      "check": "9c9e436d48ff5ab41030a87f6fe721f917b9369a1017caf6f2bd9fa54be704ae"
     },
     {
       "date": "2026-10-10",
@@ -811,7 +833,8 @@
       "sum": "285 × 17",
       "prompt": "Solve it step by step in Buzz's Maths Garage, then send Buzz your finish code!",
       "key": "46aababf79e4c24d",
-      "points": 10
+      "points": 10,
+      "check": "545424e2c0c2dbb22aad3bd9bfe4a5c711a371cf40142d1c407fab9bab6bdd53"
     },
     {
       "date": "2026-10-11",
@@ -824,7 +847,8 @@
       "sum": "828 ÷ 6",
       "prompt": "Solve it step by step in Buzz's Maths Garage, then send Buzz your finish code!",
       "key": "bae92c9da195e4a8",
-      "points": 10
+      "points": 10,
+      "check": "72a4d6462907b5c448e27099723ac5ca8fa90dc089172127cb097a538105ca83"
     },
     {
       "date": "2026-10-11",
@@ -834,7 +858,8 @@
       "word": "דבש",
       "prompt": "Sound out this Hebrew word letter by letter (right to left!), then find out what it means.",
       "key": "c52e20ee91c86888",
-      "points": 10
+      "points": 10,
+      "check": "a017cb0b1db3d99cb61c6fb00fce032c70811c6215d831c242eb9c67e41d5d8d"
     },
     {
       "date": "2026-10-11",
@@ -844,7 +869,8 @@
       "word": "גמל",
       "prompt": "Sound out this Hebrew word letter by letter (right to left!), then find out what it means.",
       "key": "e45f1210c6370cd7",
-      "points": 10
+      "points": 10,
+      "check": "f318eed1e02f00305782eac56796cab73937bf999ffe1641ff67fd947b08592a"
     },
     {
       "date": "2026-10-11",
@@ -876,7 +902,8 @@
       "sum": "294 × 18",
       "prompt": "Solve it step by step in Buzz's Maths Garage, then send Buzz your finish code!",
       "key": "42fda24005a7cf00",
-      "points": 10
+      "points": 10,
+      "check": "10b2dd0f32e11efca19e2e575c11be270b6f2b189b045aa14f61e50495f81c9f"
     },
     {
       "date": "2026-10-12",
@@ -889,7 +916,8 @@
       "sum": "861 ÷ 7",
       "prompt": "Solve it step by step in Buzz's Maths Garage, then send Buzz your finish code!",
       "key": "f01d732dc05904b5",
-      "points": 10
+      "points": 10,
+      "check": "a79a595429f62b0fcd0e1e4d0b646e6f75464609fe8f6346977856158d277138"
     },
     {
       "date": "2026-10-12",
@@ -899,7 +927,8 @@
       "word": "חלב",
       "prompt": "Sound out this Hebrew word letter by letter (right to left!), then find out what it means.",
       "key": "1dc4591b0176fd59",
-      "points": 10
+      "points": 10,
+      "check": "75028bbacd63264359f81eeb044b2bdc2caa05459ed0fc0787b0951120ba2ebe"
     },
     {
       "date": "2026-10-12",
@@ -909,7 +938,8 @@
       "word": "מזל",
       "prompt": "Sound out this Hebrew word letter by letter (right to left!), then find out what it means.",
       "key": "840f6dcd800ed610",
-      "points": 10
+      "points": 10,
+      "check": "1a520f96dca95a58d8614a7b7e760934e7d6cf88327091e45ca693970cbf0e11"
     },
     {
       "date": "2026-10-12",
@@ -930,7 +960,8 @@
       "sum": "367 × 19",
       "prompt": "Solve it step by step in Buzz's Maths Garage, then send Buzz your finish code!",
       "key": "f2dbcbc8218f1ca7",
-      "points": 10
+      "points": 10,
+      "check": "b7cc55d3c0f9d92fd2f6e0ff6c2508fdf898d3ff8a6a99a5e7b04de96323f627"
     },
     {
       "date": "2026-10-13",
@@ -943,7 +974,8 @@
       "sum": "924 ÷ 6",
       "prompt": "Solve it step by step in Buzz's Maths Garage, then send Buzz your finish code!",
       "key": "572e0cb2949106ec",
-      "points": 10
+      "points": 10,
+      "check": "a8049409056f4f418a90c7ef5aa3f4f3646c58f44874c0d9d035dbb54d5fd71a"
     },
     {
       "date": "2026-10-13",
@@ -953,7 +985,8 @@
       "word": "שלג",
       "prompt": "Sound out this Hebrew word letter by letter (right to left!), then find out what it means.",
       "key": "0d100d00f74595a6",
-      "points": 10
+      "points": 10,
+      "check": "9e03de50bac28ac129cec2223fe3653c60d861a5fa5ea4045403ba8144c60620"
     },
     {
       "date": "2026-10-13",
@@ -963,7 +996,8 @@
       "word": "מלח",
       "prompt": "Sound out this Hebrew word letter by letter (right to left!), then find out what it means.",
       "key": "fe46779a510690f4",
-      "points": 10
+      "points": 10,
+      "check": "28c018ad97774e965e0e83c2f1f44ba274fc13654dbd81af316eab26ceda5e91"
     },
     {
       "date": "2026-10-13",
@@ -984,7 +1018,8 @@
       "sum": "458 × 27",
       "prompt": "Solve it step by step in Buzz's Maths Garage, then send Buzz your finish code!",
       "key": "772cc1db3bc8a180",
-      "points": 10
+      "points": 10,
+      "check": "19401fa6e66e71c626fa20339f51ef531102b57887bd974b484f9b5641c6eebb"
     },
     {
       "date": "2026-10-14",
@@ -997,7 +1032,8 @@
       "sum": "643 ÷ 5",
       "prompt": "Solve it step by step in Buzz's Maths Garage, then send Buzz your finish code!",
       "key": "a0594f43f927b019",
-      "points": 10
+      "points": 10,
+      "check": "2b0ff4bbcaa9672b5a2ff679b1e6e37d294fed532df35f5c57780054da055880"
     },
     {
       "date": "2026-10-14",
@@ -1007,7 +1043,8 @@
       "word": "נחש",
       "prompt": "Sound out this Hebrew word letter by letter (right to left!), then find out what it means.",
       "key": "7c2f441f06eabcd3",
-      "points": 10
+      "points": 10,
+      "check": "7971eed2edd70ae9b3188698617591cddc65cd33b6d5e78044e80f7b9a83fa04"
     },
     {
       "date": "2026-10-14",
@@ -1017,7 +1054,8 @@
       "word": "אבא",
       "prompt": "Sound out this Hebrew word letter by letter (right to left!), then find out what it means.",
       "key": "57e7a09fd7c423a2",
-      "points": 10
+      "points": 10,
+      "check": "d1c4116533924817bf82b8af28f6ca4c740b12cc767644e79e9fa8cf2ad50a95"
     },
     {
       "date": "2026-10-14",
@@ -1038,7 +1076,8 @@
       "sum": "476 × 28",
       "prompt": "Solve it step by step in Buzz's Maths Garage, then send Buzz your finish code!",
       "key": "5fe44004a4ea6b8c",
-      "points": 10
+      "points": 10,
+      "check": "b111c2b0d330a9e5c23df89bdf49d9a65e08f95959e8c9ae3d7b5f4d9c102e37"
     },
     {
       "date": "2026-10-15",
@@ -1051,7 +1090,8 @@
       "sum": "758 ÷ 6",
       "prompt": "Solve it step by step in Buzz's Maths Garage, then send Buzz your finish code!",
       "key": "49d5efac2075f378",
-      "points": 10
+      "points": 10,
+      "check": "80243bb63b61841a60b09b909d3a56229074f3d8707f1ffa27bd2119442a9c77"
     },
     {
       "date": "2026-10-15",
@@ -1061,7 +1101,8 @@
       "word": "גל",
       "prompt": "Sound out this Hebrew word letter by letter (right to left!), then find out what it means.",
       "key": "9145efea34c2b6bd",
-      "points": 10
+      "points": 10,
+      "check": "2df3f88ae7b7d733b570aae53a54f0cc0a26e608d4f1a340d3e6c56ba0c13730"
     },
     {
       "date": "2026-10-15",
@@ -1071,7 +1112,8 @@
       "word": "דוד",
       "prompt": "Sound out this Hebrew word letter by letter (right to left!), then find out what it means.",
       "key": "97818bbf94d6898b",
-      "points": 10
+      "points": 10,
+      "check": "8a5b4964b689afc80ec9e46c38e0089afda5eb938e46eb1212859879b725fb60"
     },
     {
       "date": "2026-10-15",
@@ -1102,7 +1144,8 @@
       "sum": "489 × 26",
       "prompt": "Solve it step by step in Buzz's Maths Garage, then send Buzz your finish code!",
       "key": "60edbd75bb42f544",
-      "points": 10
+      "points": 10,
+      "check": "140f359cf53896636e69eded755bdc9e40bb8df7c372ff39f660b3a01adfb1c2"
     },
     {
       "date": "2026-10-16",
@@ -1115,7 +1158,8 @@
       "sum": "917 ÷ 4",
       "prompt": "Solve it step by step in Buzz's Maths Garage, then send Buzz your finish code!",
       "key": "6f016235ae41c4a4",
-      "points": 10
+      "points": 10,
+      "check": "10d4464d9c5428c055569eb8724c74c211a3f424300de0e2f9a3288527b9f8d5"
     },
     {
       "date": "2026-10-16",
@@ -1125,7 +1169,8 @@
       "word": "מגדל",
       "prompt": "Sound out this Hebrew word letter by letter (right to left!), then find out what it means.",
       "key": "9cf1423a997c2a2c",
-      "points": 10
+      "points": 10,
+      "check": "9fa74a0411eb076da8d0369b4085e89d040fcf650cc17e0401a0d66cbba1608b"
     },
     {
       "date": "2026-10-16",
@@ -1135,7 +1180,8 @@
       "word": "חמש",
       "prompt": "Sound out this Hebrew word letter by letter (right to left!), then find out what it means.",
       "key": "7e54088b10db3e4b",
-      "points": 10
+      "points": 10,
+      "check": "732e5223250a6bf358a664f34f108d6473cd779064741ff797bf2f1a6e9563c4"
     },
     {
       "date": "2026-10-17",
@@ -1145,7 +1191,8 @@
       "sentence": "זה דג גדול",
       "prompt": "Read this Hebrew sentence word by word, letter by letter (right to left!), then work out what it means.",
       "key": "6774a75ae8a38211",
-      "points": 15
+      "points": 15,
+      "check": "d3b4e66b9da19a421586cf2478a92bfdae00996c597ce2dd513520a53cdf6039"
     },
     {
       "date": "2026-10-18",
@@ -1155,7 +1202,8 @@
       "sentence": "הדב אוהב דבש",
       "prompt": "Read this Hebrew sentence word by word, letter by letter (right to left!), then work out what it means.",
       "key": "0bba23fa3011992e",
-      "points": 15
+      "points": 15,
+      "check": "7d072a6257ff8930889f0015d0339cc6a5825fb736ee8b10f7b6b6c37176b66d"
     },
     {
       "date": "2026-10-17",
@@ -1166,7 +1214,8 @@
       "level": 1,
       "prompt": "What job is the highlighted word doing? Solve it in Buzz's Sentence Detective!",
       "key": "8aa7030120831e07",
-      "points": 5
+      "points": 5,
+      "check": "435bdc6c9df8065be168ce5a26e940e05f72bdf9345f34d6f5a723f420f1ea81"
     },
     {
       "date": "2026-10-17",
@@ -1177,7 +1226,8 @@
       "level": 1,
       "prompt": "What job is the highlighted word doing? Solve it in Buzz's Sentence Detective!",
       "key": "373fc38037752729",
-      "points": 5
+      "points": 5,
+      "check": "d859244d2dd3cc49d0011ca4d836769afeeea96ef457a9d89f32904106450066"
     },
     {
       "date": "2026-10-18",
@@ -1188,7 +1238,8 @@
       "level": 1,
       "prompt": "What job is the highlighted word doing? Solve it in Buzz's Sentence Detective!",
       "key": "67bc92f8206bff83",
-      "points": 5
+      "points": 5,
+      "check": "af6002f4a6fcdeb36fde6249cab675c2b7b7de7dd247a01c5510bd6485b7cfcc"
     },
     {
       "date": "2026-10-18",
@@ -1199,7 +1250,8 @@
       "level": 1,
       "prompt": "What job is the highlighted word doing? Solve it in Buzz's Sentence Detective!",
       "key": "ea92ab31cc5220f2",
-      "points": 5
+      "points": 5,
+      "check": "7b96cfead5c7e215be4b6a568e6664a64548542b5c3f07d3ae40d8b197cb891e"
     },
     {
       "date": "2026-10-18",
@@ -1210,7 +1262,8 @@
       "level": 1,
       "prompt": "What job is the highlighted word doing? Solve it in Buzz's Sentence Detective!",
       "key": "8822f3342c704f93",
-      "points": 5
+      "points": 5,
+      "check": "37cbdb41dc747d280445424ce0f4f2c8ab4acc2c6b81b4a9109d87bc21829a77"
     },
     {
       "date": "2026-10-17",
@@ -1223,7 +1276,8 @@
       "sum": "563 × 24",
       "prompt": "Solve it step by step in Buzz's Maths Garage, then send Buzz your finish code!",
       "key": "852dcd8598c27853",
-      "points": 10
+      "points": 10,
+      "check": "46c1c73d107dc8996df7118073b5741f90380783edd871d58049c044adf650fb"
     },
     {
       "date": "2026-10-17",
@@ -1236,7 +1290,8 @@
       "sum": "838 ÷ 6",
       "prompt": "Solve it step by step in Buzz's Maths Garage, then send Buzz your finish code!",
       "key": "c01f6c59c8574dcb",
-      "points": 10
+      "points": 10,
+      "check": "b6a55fb34206b752656fce441e8fbb7e9fa9618b604e3b9643f02528c81715e3"
     },
     {
       "date": "2026-10-17",
@@ -1246,7 +1301,8 @@
       "word": "שש",
       "prompt": "Sound out this Hebrew word letter by letter (right to left!), then find out what it means.",
       "key": "f8a38356051e752f",
-      "points": 10
+      "points": 10,
+      "check": "51321c047e133612a2c2df6c481180030b50f8da65321174a178d84d71e90119"
     },
     {
       "date": "2026-10-18",
@@ -1259,7 +1315,8 @@
       "sum": "647 × 23",
       "prompt": "Solve it step by step in Buzz's Maths Garage, then send Buzz your finish code!",
       "key": "ffabfaf75a8fe86b",
-      "points": 10
+      "points": 10,
+      "check": "344528c5731a515cb97d740991044f5564ff7b9083ea337ba6cfe54cbf50e5b7"
     },
     {
       "date": "2026-10-18",
@@ -1272,7 +1329,8 @@
       "sum": "695 ÷ 4",
       "prompt": "Solve it step by step in Buzz's Maths Garage, then send Buzz your finish code!",
       "key": "175c134916bc321d",
-      "points": 10
+      "points": 10,
+      "check": "6a3b14486315f1a95c6bbe8173467e15eaee136d4448046d49ebf912cde6f37e"
     },
     {
       "date": "2026-10-18",
@@ -1282,7 +1340,8 @@
       "word": "סבא",
       "prompt": "Sound out this Hebrew word letter by letter (right to left!), then find out what it means.",
       "key": "ea0b5da65a0c0772",
-      "points": 10
+      "points": 10,
+      "check": "3f5bea56146167a577345d7ce96105e18a78d31f55569946d68832b3ba0d3221"
     },
     {
       "date": "2026-10-19",
@@ -1295,7 +1354,8 @@
       "sum": "572 × 34",
       "prompt": "Solve it step by step in Buzz's Maths Garage, then send Buzz your finish code!",
       "key": "edfa6630e5efadcc",
-      "points": 10
+      "points": 10,
+      "check": "52e3d6ce32301dd8d04f801f476d812d6eb26cd01fea600a5e32705c7f8e2af9"
     },
     {
       "date": "2026-10-19",
@@ -1308,7 +1368,8 @@
       "sum": "859 ÷ 7",
       "prompt": "Solve it step by step in Buzz's Maths Garage, then send Buzz your finish code!",
       "key": "6c173bd8c5594b83",
-      "points": 10
+      "points": 10,
+      "check": "17cb84bf2aefdd7601edbc058202436e5e885a7a7f6303d376a05d92ac8d24a6"
     },
     {
       "date": "2026-10-19",
@@ -1318,7 +1379,8 @@
       "word": "אמא",
       "prompt": "Sound out this Hebrew word letter by letter (right to left!), then find out what it means.",
       "key": "50eb1be16207b6eb",
-      "points": 10
+      "points": 10,
+      "check": "bd4be063c915dd53d6f0d8d69ef739f0533ccca9096032dba1f6402ebe99e821"
     },
     {
       "date": "2026-10-19",
@@ -1328,7 +1390,8 @@
       "sentence": "זה גל גדול",
       "prompt": "Read this Hebrew sentence word by word, letter by letter (right to left!), then work out what it means.",
       "key": "637e243bccaaada3",
-      "points": 15
+      "points": 15,
+      "check": "760f5b0e579d8bbb07e79f4d1d9f36ece19cad81cf4ef8dedeaba98770ea7c25"
     },
     {
       "date": "2026-10-19",
@@ -1339,7 +1402,8 @@
       "level": 1,
       "prompt": "What job is the highlighted word doing? Solve it in Buzz's Sentence Detective!",
       "key": "7e08e15512cc8a65",
-      "points": 5
+      "points": 5,
+      "check": "dd55e23707a7728f16628d015a5c5e11fa3ffbdbe0b5e9b97f7b14088555f163"
     },
     {
       "date": "2026-10-19",
@@ -1350,7 +1414,82 @@
       "level": 1,
       "prompt": "What job is the highlighted word doing? Solve it in Buzz's Sentence Detective!",
       "key": "3d9c4ba94ce925ef",
-      "points": 5
+      "points": 5,
+      "check": "cdacff14297a102b64a461ed3ccf49e9484d0bf363ef1a5bf1b573e19062abb2"
+    },
+    {
+      "date": "2026-10-20",
+      "id": "mg1",
+      "type": "stepgame",
+      "title": "Maths Garage: long multiplication",
+      "mode": "mult",
+      "a": 638,
+      "b": 29,
+      "sum": "638 × 29",
+      "prompt": "Solve it step by step in Buzz's Maths Garage, then send Buzz your finish code!",
+      "key": "64445b5ab79eece4",
+      "points": 10,
+      "check": "c961c4a8a3b14abdeec5c282819f76abb95351940d55b7196310be654655f699"
+    },
+    {
+      "date": "2026-10-20",
+      "id": "mg2",
+      "type": "stepgame",
+      "title": "Maths Garage: long division",
+      "mode": "div",
+      "a": 947,
+      "b": 6,
+      "sum": "947 ÷ 6",
+      "prompt": "Solve it step by step in Buzz's Maths Garage, then send Buzz your finish code!",
+      "key": "dd8692eb0b53a266",
+      "points": 10,
+      "check": "e7622358cbf67d7a449b617941ded61917e5193339977ea3443c5557c31e0ad8"
+    },
+    {
+      "date": "2026-10-20",
+      "id": "hs1",
+      "type": "hebsentence",
+      "title": "Hebrew sentence rally",
+      "sentence": "זה מגדל גדול",
+      "prompt": "Read this Hebrew sentence word by word, letter by letter (right to left!), then work out what it means.",
+      "key": "1fa5114ea086d888",
+      "points": 15,
+      "check": "35bb57ae2e5cfcbb7e5bba50dcf6ee0d59eaf59543820ea852d624382a40c789"
+    },
+    {
+      "date": "2026-10-20",
+      "id": "gr1",
+      "type": "grammar",
+      "title": "Sentence Detective",
+      "qid": "g26",
+      "level": 1,
+      "prompt": "What job is the highlighted word doing? Solve it in Buzz's Sentence Detective!",
+      "key": "b973aa9c1f520841",
+      "points": 5,
+      "check": "353fec1c91c799db0ea5aed096e7823d36cc71b712e1da2471e0d15a7fff54ee"
+    },
+    {
+      "date": "2026-10-20",
+      "id": "gr2",
+      "type": "grammar",
+      "title": "Sentence Detective",
+      "qid": "g17",
+      "level": 1,
+      "prompt": "What job is the highlighted word doing? Solve it in Buzz's Sentence Detective!",
+      "key": "2cb4a72c73655cf0",
+      "points": 5,
+      "check": "5b0b28184808487d0df3a594d700c584fd5da63a7299fcdc810a90b8c56755bf"
+    },
+    {
+      "date": "2026-10-20",
+      "id": "hb1",
+      "type": "hebword",
+      "title": "Hebrew word rally",
+      "word": "גלגל",
+      "prompt": "Sound out this Hebrew word letter by letter (right to left!), then find out what it means.",
+      "key": "74307f3b36e5776b",
+      "points": 10,
+      "check": "4a59b9f4d7fffa06aed9f2d97ee92c578183af0efc0f6f8d460ea67f23da522a"
     }
   ],
   "notes": [
@@ -1552,6 +1691,15 @@
         "name": "Canoe Penguins (Coolmath4Kids)",
         "url": "https://www.coolmath4kids.com/math-games/canoe-penguins",
         "why": "Paddle the penguins with two-digit multiplying 🐧, a perfect warm-up for today's 572 × 34!",
+        "ads": true
+      }
+    },
+    {
+      "date": "2026-10-20",
+      "game": {
+        "name": "Math Racer Multiplication (Math Playground)",
+        "url": "https://www.mathplayground.com/math_racer_multiplication.html",
+        "why": "Race your car to the right answer 🏎️, a speedy warm-up for today's 638 × 29!",
         "ads": true
       }
     }

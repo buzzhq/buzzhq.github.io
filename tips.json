@@ -503,6 +503,24 @@
       "game": "Fortnite",
       "title": "Fresh brain, better aim 💧",
       "tip": "Between matches, stand up, stretch and have a drink of water. Your reactions and aim are sharper when you take little breaks instead of playing match after match without stopping."
+    },
+    {
+      "date": "2026-10-20",
+      "game": "Descenders",
+      "title": "Brake before the corner, not in it 🛑",
+      "tip": "Slow down BEFORE a sharp turn, then let go of the brakes and lean through it. Braking in the middle of the corner is what makes you slide off the trail."
+    },
+    {
+      "date": "2026-10-20",
+      "game": "GTA",
+      "title": "Try a different camera view 🎥",
+      "tip": "Press the camera/view button while driving to switch between the views behind the car and the bonnet view. Some views make tight corners and parking way easier, so find your favourite."
+    },
+    {
+      "date": "2026-10-20",
+      "game": "Roblox",
+      "title": "Game laggy? Lower the graphics 🐢",
+      "tip": "Open the Roblox menu, go to Settings and turn Graphics Quality down. The game looks a bit simpler but runs smoother, which helps in obbies and races."
     }
   ]
 }

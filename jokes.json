@@ -183,6 +183,14 @@
       "emoji": "🌊",
       "setup": "What did the ocean say to the beach?",
       "punchline": "Nothing, it just waved!"
+    },
+    {
+      "date": "2026-10-20",
+      "slot": "pm",
+      "topic": "Basketball",
+      "emoji": "🏀",
+      "setup": "Why did the basketball player bring string to the game?",
+      "punchline": "So he could tie the score!"
     }
   ]
 }
