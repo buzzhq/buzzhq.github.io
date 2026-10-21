@@ -191,6 +191,14 @@
       "emoji": "🏀",
       "setup": "Why did the basketball player bring string to the game?",
       "punchline": "So he could tie the score!"
+    },
+    {
+      "date": "2026-10-21",
+      "slot": "pm",
+      "topic": "School",
+      "emoji": "🍰",
+      "setup": "Why did the student eat his homework?",
+      "punchline": "Because the teacher said it was a piece of cake!"
     }
   ]
 }

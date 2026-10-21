@@ -1419,6 +1419,74 @@
       "prompt": "Sound out this Hebrew word letter by letter (right to left!), then find out what it means.",
       "key": "74307f3b36e5776b",
       "points": 10
+    },
+    {
+      "date": "2026-10-21",
+      "id": "mg1",
+      "type": "stepgame",
+      "title": "Maths Garage: long multiplication",
+      "mode": "mult",
+      "a": 526,
+      "b": 18,
+      "sum": "526 × 18",
+      "prompt": "Solve it step by step in Buzz's Maths Garage, then send Buzz your finish code!",
+      "key": "11308f4f93c3cafa",
+      "points": 10
+    },
+    {
+      "date": "2026-10-21",
+      "id": "mg2",
+      "type": "stepgame",
+      "title": "Maths Garage: long division",
+      "mode": "div",
+      "a": 742,
+      "b": 5,
+      "sum": "742 ÷ 5",
+      "prompt": "Solve it step by step in Buzz's Maths Garage, then send Buzz your finish code!",
+      "key": "de4499c98d87a281",
+      "points": 10
+    },
+    {
+      "date": "2026-10-21",
+      "id": "hb1",
+      "type": "hebword",
+      "title": "Hebrew word rally",
+      "word": "דב",
+      "prompt": "Sound out this Hebrew word letter by letter (right to left!), then find out what it means.",
+      "key": "601b9626b4c7419b",
+      "points": 10
+    },
+    {
+      "date": "2026-10-21",
+      "id": "hs1",
+      "type": "hebsentence",
+      "title": "Hebrew sentence rally",
+      "sentence": "הסוס גדול מאוד",
+      "prompt": "Read this Hebrew sentence word by word, letter by letter (right to left!), then work out what it means.",
+      "key": "70d03cbaa148345d",
+      "points": 15
+    },
+    {
+      "date": "2026-10-21",
+      "id": "gr1",
+      "type": "grammar",
+      "title": "Sentence Detective",
+      "qid": "g29",
+      "level": 1,
+      "prompt": "What job is the highlighted word doing? Solve it in Buzz's Sentence Detective!",
+      "key": "93578022df0ddfdc",
+      "points": 5
+    },
+    {
+      "date": "2026-10-21",
+      "id": "gr2",
+      "type": "grammar",
+      "title": "Sentence Detective",
+      "qid": "g21",
+      "level": 1,
+      "prompt": "What job is the highlighted word doing? Solve it in Buzz's Sentence Detective!",
+      "key": "6b67176d86f6109d",
+      "points": 5
     }
   ],
   "notes": [
@@ -1629,6 +1697,15 @@
         "name": "Math Racer Multiplication (Math Playground)",
         "url": "https://www.mathplayground.com/math_racer_multiplication.html",
         "why": "Race your car to the right answer 🏎️, a speedy warm-up for today's 638 × 29!",
+        "ads": true
+      }
+    },
+    {
+      "date": "2026-10-21",
+      "game": {
+        "name": "Meteor Multiplication (Coolmath4Kids)",
+        "url": "https://www.coolmath4kids.com/math-games/meteor-multiplication",
+        "why": "Blast the meteors with the right answer ☄️, a quick times-tables warm-up for today's 526 × 18!",
         "ads": true
       }
     }
