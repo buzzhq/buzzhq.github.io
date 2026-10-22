@@ -1487,6 +1487,74 @@
       "prompt": "What job is the highlighted word doing? Solve it in Buzz's Sentence Detective!",
       "key": "6b67176d86f6109d",
       "points": 5
+    },
+    {
+      "date": "2026-10-22",
+      "id": "mg1",
+      "type": "stepgame",
+      "title": "Maths Garage: long multiplication",
+      "mode": "mult",
+      "a": 437,
+      "b": 26,
+      "sum": "437 × 26",
+      "prompt": "Solve it step by step in Buzz's Maths Garage, then send Buzz your finish code!",
+      "key": "2a246541756a1319",
+      "points": 10
+    },
+    {
+      "date": "2026-10-22",
+      "id": "mg2",
+      "type": "stepgame",
+      "title": "Maths Garage: long division",
+      "mode": "div",
+      "a": 853,
+      "b": 6,
+      "sum": "853 ÷ 6",
+      "prompt": "Solve it step by step in Buzz's Maths Garage, then send Buzz your finish code!",
+      "key": "ea53eace10bc1616",
+      "points": 10
+    },
+    {
+      "date": "2026-10-22",
+      "id": "hb1",
+      "type": "hebword",
+      "title": "Hebrew word rally",
+      "word": "סל",
+      "prompt": "Sound out this Hebrew word letter by letter (right to left!), then find out what it means.",
+      "key": "cec0dfb5af1facb9",
+      "points": 10
+    },
+    {
+      "date": "2026-10-22",
+      "id": "hs1",
+      "type": "hebsentence",
+      "title": "Hebrew sentence rally",
+      "sentence": "השמש חמה מאוד",
+      "prompt": "Read this Hebrew sentence word by word, letter by letter (right to left!), then work out what it means.",
+      "key": "697d6356b6c0d4f2",
+      "points": 15
+    },
+    {
+      "date": "2026-10-22",
+      "id": "gr1",
+      "type": "grammar",
+      "title": "Sentence Detective",
+      "qid": "g34",
+      "level": 1,
+      "prompt": "What job is the highlighted word doing? Solve it in Buzz's Sentence Detective!",
+      "key": "3d5216e2304a865e",
+      "points": 5
+    },
+    {
+      "date": "2026-10-22",
+      "id": "gr2",
+      "type": "grammar",
+      "title": "Sentence Detective",
+      "qid": "g24",
+      "level": 1,
+      "prompt": "What job is the highlighted word doing? Solve it in Buzz's Sentence Detective!",
+      "key": "a1d8d72d8bb5fecc",
+      "points": 5
     }
   ],
   "notes": [
@@ -1706,6 +1774,15 @@
         "name": "Meteor Multiplication (Coolmath4Kids)",
         "url": "https://www.coolmath4kids.com/math-games/meteor-multiplication",
         "why": "Blast the meteors with the right answer ☄️, a quick times-tables warm-up for today's 526 × 18!",
+        "ads": true
+      }
+    },
+    {
+      "date": "2026-10-22",
+      "game": {
+        "name": "Math Trainer – Divide (Maths is Fun)",
+        "url": "https://www.mathsisfun.com/numbers/math-trainer-divide.html",
+        "why": "Quick-fire division facts ⚡ a speedy warm-up for today's 853 ÷ 6 race!",
         "ads": true
       }
     }

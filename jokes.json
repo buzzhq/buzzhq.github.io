@@ -199,6 +199,14 @@
       "emoji": "🍰",
       "setup": "Why did the student eat his homework?",
       "punchline": "Because the teacher said it was a piece of cake!"
+    },
+    {
+      "date": "2026-10-22",
+      "slot": "pm",
+      "topic": "Space",
+      "emoji": "☀️",
+      "setup": "Why did the sun go to school?",
+      "punchline": "To get brighter!"
     }
   ]
 }
