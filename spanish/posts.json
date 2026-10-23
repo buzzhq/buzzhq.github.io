@@ -2,50 +2,51 @@
   {
     "id": "2026-10-24",
     "date": "Sábado, 24 de octubre de 2026",
-    "topic": "Noticias de Australia",
     "items": [
       {
-        "title": "Nueva Gales del Sur dice adiós a muchos plásticos",
-        "paragraphs": [
-          "El gobierno de Nueva Gales del Sur tiene un nuevo plan contra la basura de plástico. Cada año, más de 800.000 toneladas de plástico terminan en la basura en ese estado. Ya no está permitido soltar globos de helio al aire libre, porque el plástico cae al suelo y puede dañar a los animales.",
-          "Los cambios van a llegar poco a poco. El próximo año, las bolsas de plástico con asas van a desaparecer. En 2028, los vasos de café tienen que ser reciclables, y los cafés deben aceptar las tazas reutilizables de los clientes. Algunas personas dicen que los cambios cuestan mucho dinero a los negocios, pero muchas otras apoyan el plan."
-        ],
-        "glossary": [
-          {"es": "la basura", "en": "rubbish / waste"},
-          {"es": "soltar", "en": "to release, let go"},
-          {"es": "dañar", "en": "to harm"},
-          {"es": "reutilizable", "en": "reusable"}
-        ],
-        "source": {"name": "ABC BTN Newsbreak", "url": "https://www.abc.net.au/btn/newsbreak/btn-newsbreak-20261023/107300600"}
-      },
-      {
+        "section": "Noticias de Australia",
         "title": "Nace el Gran Parque Nacional de los Koalas",
         "paragraphs": [
           "El parlamento de Nueva Gales del Sur aprobó una ley para crear el Gran Parque Nacional de los Koalas. El parque está en la costa norte del estado, entre Kempsey y Grafton, y es muy grande: tiene 478.000 hectáreas.",
-          "La ley pasó después de un debate de más de 14 horas. Según el gobierno, el parque va a proteger más de 100 especies de plantas y animales. Muchas personas trabajaron más de diez años para conseguirlo."
-        ],
-        "glossary": [
-          {"es": "aprobar", "en": "to pass, approve"},
-          {"es": "la ley", "en": "law"},
-          {"es": "proteger", "en": "to protect"},
-          {"es": "conseguir", "en": "to achieve, get"}
+          "La ley pasó después de un debate de más de 14 horas. Según el gobierno, el parque va a proteger más de 100 especies de plantas y animales."
         ],
         "source": {"name": "ABC News", "url": "https://www.abc.net.au/news/2026-10-23/great-koala-national-park-legislation-passed/107296314"}
       },
       {
-        "title": "Mucha lluvia e inundaciones en Queensland",
+        "section": "Noticias de Israel",
+        "title": "Un nuevo centro educativo para los niños de Kiryat Shmona",
         "paragraphs": [
-          "En el sureste de Queensland llovió muchísimo: desde el miércoles, en algunas zonas cayeron casi 300 milímetros de lluvia. Hubo inundaciones repentinas, muchas escuelas cerraron y cientos de personas pidieron ayuda.",
-          "Las autoridades piden no conducir por calles con agua. El viernes todavía había ocho escuelas cerradas, y se espera más lluvia durante el fin de semana."
+          "En Kiryat Shmona, una ciudad del norte de Israel, pusieron la primera piedra de un nuevo centro educativo. Se va a llamar «Casa de la Excelencia» y lo construye la organización KKL-JNF.",
+          "Allí, niños y adolescentes van a tener clases extra de ciencia y tecnología, cursos especiales y programas de liderazgo. Comunidades judías de varios países, también de Australia, ayudan a pagar el centro."
         ],
-        "glossary": [
-          {"es": "la lluvia", "en": "rain"},
-          {"es": "la inundación", "en": "flood"},
-          {"es": "pedir ayuda", "en": "to ask for help"},
-          {"es": "conducir", "en": "to drive"}
+        "source": {"name": "JNS", "url": "https://www.jns.org/news/israel-news/kkl-jnf-breaks-ground-on-educational-center-in-kiryat-shmona"}
+      },
+      {
+        "section": "Noticias del mundo",
+        "title": "Primera mujer que salta desde un iceberg",
+        "paragraphs": [
+          "En Canadá, la saltadora profesional Molly Carlson hizo historia: es la primera mujer que salta al agua desde un iceberg.",
+          "Fue también su salto hacia atrás más alto de su vida. ¡Y el agua seguramente estaba helada!"
         ],
         "source": {"name": "ABC BTN Newsbreak", "url": "https://www.abc.net.au/btn/newsbreak/btn-newsbreak-20261023/107300600"}
+      },
+      {
+        "section": "Noticias de Victoria",
+        "title": "Las Western Bulldogs vuelven a las finales de la AFLW",
+        "paragraphs": [
+          "El equipo femenino de fútbol australiano de los Western Bulldogs, de Melbourne, va a jugar las finales de la AFLW. Es la primera vez desde 2022.",
+          "En 2023 el equipo terminó último. Después cambió mucho y mejoró poco a poco. Ahora muchos piensan que puede ganar partidos en las finales."
+        ],
+        "source": {"name": "ABC News", "url": "https://www.abc.net.au/news/2026-10-23/how-the-western-bulldogs-engineered-a-return-to-aflw-finals/107301312"}
       }
-    ]
+    ],
+    "weather": {
+      "day": "Domingo, 25 de octubre",
+      "summary": "Lluvia. Cielo nublado. Es muy probable que llueva, sobre todo por la mañana y por la tarde. Puede haber tormenta temprano por la mañana. Viento del suroeste, a veces fuerte.",
+      "min": 14,
+      "max": 19,
+      "rainChance": 100,
+      "source": {"name": "Bureau of Meteorology", "url": "https://www.bom.gov.au/location/australia/victoria/central/bvic_pt042-melbourne"}
+    }
   }
 ]
