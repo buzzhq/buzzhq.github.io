@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Lecturas diarias de Noam</title>
+<link rel="stylesheet" href="../style.css">
+<style>
+.post p{line-height:1.6}
+.post h3{margin:.2em 0 .6em}
+.meta{opacity:.8;font-size:.9em}
+.gl{width:100%;border-collapse:collapse;margin:.8em 0}
+.gl th,.gl td{text-align:left;padding:6px 8px;border-bottom:1px solid rgba(255,255,255,.15)}
+details.post{margin:.6em 0}
+details.post summary{cursor:pointer;font-weight:bold;padding:6px 0}
+.src a{color:#ffd23f;word-break:break-all}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>📖 Lecturas diarias de Noam</h1>
+  <p class="sub">Una lectura corta en español cada día, con noticias reales y un pequeño glosario.</p>
+  <nav><a href="../index.html">🏆 Scoreboard</a><a class="on" href="./">📖 Lecturas en español</a></nav>
+  <div class="card"><p class="rule">🕓 Esta página se actualiza todos los días alrededor de las 4 de la tarde (hora de Melbourne). La lectura más nueva está arriba; las anteriores están en el archivo.</p></div>
+  <div id="latest"><p class="sub">Cargando…</p></div>
+  <div class="card" id="archwrap" hidden><h2>🗂️ Archivo</h2><div id="archive"></div></div>
+  <p class="sign">¡Buena lectura! — Buzz 🤖</p>
+</div>
+<script>
+const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const body = p => `<h3>${esc(p.title)}</h3>` + p.paragraphs.map(t => `<p>${esc(t)}</p>`).join("")
+  + `<table class="gl"><tr><th>Palabra</th><th>English</th></tr>` + (p.glossary||[]).map(g => `<tr><td>${esc(g.es)}</td><td>${esc(g.en)}</td></tr>`).join("") + `</table>`
+  + `<p class="src meta">Fuente: <a href="${esc(p.source.url)}" target="_blank" rel="noopener">${esc(p.source.name)}</a></p>`;
+fetch("posts.json?v=" + Date.now()).then(r => r.json()).then(posts => {
+  const [latest, ...older] = posts;
+  document.getElementById("latest").innerHTML = latest
+    ? `<div class="card post"><div class="meta">${esc(latest.topic)} · ${esc(latest.date)}</div>${body(latest)}</div>`
+    : `<p class="sub">Todavía no hay lecturas.</p>`;
+  if (older.length) {
+    document.getElementById("archwrap").hidden = false;
+    document.getElementById("archive").innerHTML = older.map(p =>
+      `<details class="post"><summary>${esc(p.date)} — ${esc(p.title)} <span class="meta">(${esc(p.topic)})</span></summary>${body(p)}</details>`).join("");
+  }
+}).catch(e => { console.error(e); document.getElementById("latest").innerHTML = '<p class="sub">No se pudieron cargar las lecturas. Intenta más tarde.</p>'; });
+</script>
+</body>
+</html>
