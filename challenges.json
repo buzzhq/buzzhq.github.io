@@ -1555,6 +1555,74 @@
       "prompt": "What job is the highlighted word doing? Solve it in Buzz's Sentence Detective!",
       "key": "a1d8d72d8bb5fecc",
       "points": 5
+    },
+    {
+      "date": "2026-10-23",
+      "id": "mg1",
+      "type": "stepgame",
+      "title": "Maths Garage: long multiplication",
+      "mode": "mult",
+      "a": 384,
+      "b": 27,
+      "sum": "384 × 27",
+      "prompt": "Solve it step by step in Buzz's Maths Garage, then send Buzz your finish code!",
+      "key": "e7746573406deda1",
+      "points": 10
+    },
+    {
+      "date": "2026-10-23",
+      "id": "mg2",
+      "type": "stepgame",
+      "title": "Maths Garage: long division",
+      "mode": "div",
+      "a": 917,
+      "b": 4,
+      "sum": "917 ÷ 4",
+      "prompt": "Solve it step by step in Buzz's Maths Garage, then send Buzz your finish code!",
+      "key": "903261c53653541a",
+      "points": 10
+    },
+    {
+      "date": "2026-10-23",
+      "id": "hb1",
+      "type": "hebword",
+      "title": "Hebrew word rally",
+      "word": "דגל",
+      "prompt": "Sound out this Hebrew word letter by letter (right to left!), then find out what it means.",
+      "key": "fa4dae8b5f87fec7",
+      "points": 10
+    },
+    {
+      "date": "2026-10-23",
+      "id": "hs1",
+      "type": "hebsentence",
+      "title": "Hebrew sentence rally",
+      "sentence": "אבא אוהב חלב",
+      "prompt": "Read this Hebrew sentence word by word, letter by letter (right to left!), then work out what it means.",
+      "key": "b712abb994441e45",
+      "points": 15
+    },
+    {
+      "date": "2026-10-23",
+      "id": "gr1",
+      "type": "grammar",
+      "title": "Sentence Detective",
+      "qid": "g12",
+      "level": 1,
+      "prompt": "What job is the highlighted word doing? Solve it in Buzz's Sentence Detective!",
+      "key": "7b7fb988b68f1635",
+      "points": 5
+    },
+    {
+      "date": "2026-10-23",
+      "id": "gr2",
+      "type": "grammar",
+      "title": "Sentence Detective",
+      "qid": "g23",
+      "level": 1,
+      "prompt": "What job is the highlighted word doing? Solve it in Buzz's Sentence Detective!",
+      "key": "71a8fa1824ab73b9",
+      "points": 5
     }
   ],
   "notes": [
@@ -1783,6 +1851,15 @@
         "name": "Math Trainer – Divide (Maths is Fun)",
         "url": "https://www.mathsisfun.com/numbers/math-trainer-divide.html",
         "why": "Quick-fire division facts ⚡ a speedy warm-up for today's 853 ÷ 6 race!",
+        "ads": true
+      }
+    },
+    {
+      "date": "2026-10-23",
+      "game": {
+        "name": "Multiply Race (Toy Theater)",
+        "url": "https://toytheater.com/multiply-race/",
+        "why": "Race your car to the finish by picking the right answers 🏎️, a speedy warm-up for today's 384 × 27!",
         "ads": true
       }
     }

@@ -207,6 +207,14 @@
       "emoji": "☀️",
       "setup": "Why did the sun go to school?",
       "punchline": "To get brighter!"
+    },
+    {
+      "date": "2026-10-23",
+      "slot": "pm",
+      "topic": "Animals",
+      "emoji": "🐟",
+      "setup": "What do you call a fish with no eyes?",
+      "punchline": "A fsh!"
     }
   ]
 }
