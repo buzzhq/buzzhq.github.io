@@ -215,6 +215,14 @@
       "emoji": "🐟",
       "setup": "What do you call a fish with no eyes?",
       "punchline": "A fsh!"
+    },
+    {
+      "date": "2026-10-24",
+      "slot": "am",
+      "topic": "Animals",
+      "emoji": "🐄",
+      "setup": "Why do cows wear bells?",
+      "punchline": "Because their horns don't work!"
     }
   ]
 }
