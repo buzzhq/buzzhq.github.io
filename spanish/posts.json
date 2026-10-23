@@ -3,19 +3,49 @@
     "id": "2026-10-24",
     "date": "Sábado, 24 de octubre de 2026",
     "topic": "Noticias de Australia",
-    "title": "Nueva Gales del Sur dice adiós a muchos plásticos",
-    "paragraphs": [
-      "El gobierno de Nueva Gales del Sur tiene un nuevo plan contra la basura de plástico. Cada año, más de 800.000 toneladas de plástico terminan en la basura en ese estado. Por eso, el gobierno va a cambiar muchas reglas. Ya no está permitido soltar globos de helio al aire libre. Cuando un globo explota, el plástico cae al suelo y puede dañar a los animales, a los peces y a los pájaros.",
-      "Los cambios van a llegar poco a poco. El próximo año, las bolsas de plástico con asas van a desaparecer. Después, los palitos de plástico de los chupetines. En 2028, los vasos de café tienen que ser reciclables, y los cafés deben aceptar las tazas reutilizables de los clientes, si están limpias. En 2030, las etiquetas de las frutas tienen que ser compostables. Algunas personas no están contentas, porque dicen que los cambios cuestan mucho dinero a los negocios. Pero muchas otras personas apoyan el plan."
-    ],
-    "glossary": [
-      {"es": "la basura", "en": "rubbish / waste"},
-      {"es": "soltar", "en": "to release, let go"},
-      {"es": "dañar", "en": "to harm"},
-      {"es": "las asas", "en": "handles"},
-      {"es": "reutilizable", "en": "reusable"},
-      {"es": "apoyar", "en": "to support"}
-    ],
-    "source": {"name": "ABC BTN", "url": "https://www.abc.net.au/btn/newsbreak/btn-newsbreak-20261023/107300600"}
+    "items": [
+      {
+        "title": "Nueva Gales del Sur dice adiós a muchos plásticos",
+        "paragraphs": [
+          "El gobierno de Nueva Gales del Sur tiene un nuevo plan contra la basura de plástico. Cada año, más de 800.000 toneladas de plástico terminan en la basura en ese estado. Ya no está permitido soltar globos de helio al aire libre, porque el plástico cae al suelo y puede dañar a los animales.",
+          "Los cambios van a llegar poco a poco. El próximo año, las bolsas de plástico con asas van a desaparecer. En 2028, los vasos de café tienen que ser reciclables, y los cafés deben aceptar las tazas reutilizables de los clientes. Algunas personas dicen que los cambios cuestan mucho dinero a los negocios, pero muchas otras apoyan el plan."
+        ],
+        "glossary": [
+          {"es": "la basura", "en": "rubbish / waste"},
+          {"es": "soltar", "en": "to release, let go"},
+          {"es": "dañar", "en": "to harm"},
+          {"es": "reutilizable", "en": "reusable"}
+        ],
+        "source": {"name": "ABC BTN Newsbreak", "url": "https://www.abc.net.au/btn/newsbreak/btn-newsbreak-20261023/107300600"}
+      },
+      {
+        "title": "Nace el Gran Parque Nacional de los Koalas",
+        "paragraphs": [
+          "El parlamento de Nueva Gales del Sur aprobó una ley para crear el Gran Parque Nacional de los Koalas. El parque está en la costa norte del estado, entre Kempsey y Grafton, y es muy grande: tiene 478.000 hectáreas.",
+          "La ley pasó después de un debate de más de 14 horas. Según el gobierno, el parque va a proteger más de 100 especies de plantas y animales. Muchas personas trabajaron más de diez años para conseguirlo."
+        ],
+        "glossary": [
+          {"es": "aprobar", "en": "to pass, approve"},
+          {"es": "la ley", "en": "law"},
+          {"es": "proteger", "en": "to protect"},
+          {"es": "conseguir", "en": "to achieve, get"}
+        ],
+        "source": {"name": "ABC News", "url": "https://www.abc.net.au/news/2026-10-23/great-koala-national-park-legislation-passed/107296314"}
+      },
+      {
+        "title": "Mucha lluvia e inundaciones en Queensland",
+        "paragraphs": [
+          "En el sureste de Queensland llovió muchísimo: desde el miércoles, en algunas zonas cayeron casi 300 milímetros de lluvia. Hubo inundaciones repentinas, muchas escuelas cerraron y cientos de personas pidieron ayuda.",
+          "Las autoridades piden no conducir por calles con agua. El viernes todavía había ocho escuelas cerradas, y se espera más lluvia durante el fin de semana."
+        ],
+        "glossary": [
+          {"es": "la lluvia", "en": "rain"},
+          {"es": "la inundación", "en": "flood"},
+          {"es": "pedir ayuda", "en": "to ask for help"},
+          {"es": "conducir", "en": "to drive"}
+        ],
+        "source": {"name": "ABC BTN Newsbreak", "url": "https://www.abc.net.au/btn/newsbreak/btn-newsbreak-20261023/107300600"}
+      }
+    ]
   }
 ]
