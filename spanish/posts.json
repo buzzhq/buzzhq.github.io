@@ -1,0 +1,21 @@
+[
+  {
+    "id": "2026-10-24",
+    "date": "Sábado, 24 de octubre de 2026",
+    "topic": "Noticias de Australia",
+    "title": "Nueva Gales del Sur dice adiós a muchos plásticos",
+    "paragraphs": [
+      "El gobierno de Nueva Gales del Sur tiene un nuevo plan contra la basura de plástico. Cada año, más de 800.000 toneladas de plástico terminan en la basura en ese estado. Por eso, el gobierno va a cambiar muchas reglas. Ya no está permitido soltar globos de helio al aire libre. Cuando un globo explota, el plástico cae al suelo y puede dañar a los animales, a los peces y a los pájaros.",
+      "Los cambios van a llegar poco a poco. El próximo año, las bolsas de plástico con asas van a desaparecer. Después, los palitos de plástico de los chupetines. En 2028, los vasos de café tienen que ser reciclables, y los cafés deben aceptar las tazas reutilizables de los clientes, si están limpias. En 2030, las etiquetas de las frutas tienen que ser compostables. Algunas personas no están contentas, porque dicen que los cambios cuestan mucho dinero a los negocios. Pero muchas otras personas apoyan el plan."
+    ],
+    "glossary": [
+      {"es": "la basura", "en": "rubbish / waste"},
+      {"es": "soltar", "en": "to release, let go"},
+      {"es": "dañar", "en": "to harm"},
+      {"es": "las asas", "en": "handles"},
+      {"es": "reutilizable", "en": "reusable"},
+      {"es": "apoyar", "en": "to support"}
+    ],
+    "source": {"name": "ABC BTN", "url": "https://www.abc.net.au/btn/newsbreak/btn-newsbreak-20261023/107300600"}
+  }
+]
