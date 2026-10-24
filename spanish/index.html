@@ -52,7 +52,7 @@ summary small{display:block;font:600 .75rem/1.4 system-ui,sans-serif;text-transf
     <hr class="dbl">
     <div class="ed" style="justify-content:center"><span id="edate">—</span></div>
     <hr class="thin">
-    <p class="note">Lecturas diarias en español. Nueva edición cada día alrededor de las 4 de la tarde (hora de Melbourne).</p>
+    <p class="note">Lecturas diarias en español. Nueva edición cada mañana alrededor de las 6 (hora de Melbourne).</p>
   </header>
   <section id="today"><p>Cargando…</p></section>
   <section class="arch" id="archwrap" hidden><hr class="dbl"><h2>Ediciones anteriores</h2><div id="archive"></div></section>
@@ -64,7 +64,7 @@ const item = (it, e) => `<article><div class="kicker">${esc(it.section || e.topi
   + (it.paragraphs||[]).map(t => `<p>${esc(t)}</p>`).join("")
   + (it.source ? `<p class="src">Fuente: <a href="${esc(it.source.url)}" target="_blank" rel="noopener">${esc(it.source.name)}</a></p>` : "")
   + `</article>`;
-const wx = w => !w ? "" : `<aside class="wx"><div class="kicker">El tiempo</div><h2>El tiempo en Melbourne mañana</h2><div class="date">${esc(w.day)}</div>`
+const wx = w => !w ? "" : `<aside class="wx"><div class="kicker">El tiempo</div><h2>${esc(w.heading || (w.place ? "El tiempo hoy en " + w.place : "El tiempo en Melbourne mañana"))}</h2><div class="date">${esc(w.day)}</div>`
   + `<div class="t"><span>Mín. ${esc(w.min)}°C</span><span>Máx. ${esc(w.max)}°C</span><span>Lluvia: ${esc(w.rainChance)}%</span></div>`
   + `<p>${esc(w.summary)}</p>` + (w.source ? `<p class="src">Fuente: <a href="${esc(w.source.url)}" target="_blank" rel="noopener">${esc(w.source.name)}</a></p>` : "") + `</aside>`;
 const edition = e => `<div class="items">${e.items.map(it => item(it, e)).join("")}</div>${wx(e.weather)}`;
