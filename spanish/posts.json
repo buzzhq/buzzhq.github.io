@@ -1,5 +1,83 @@
 [
   {
+    "id": "2026-10-25",
+    "date": "Domingo, 25 de octubre de 2026",
+    "items": [
+      {
+        "section": "Noticias de Australia",
+        "title": "Una escuela para perros pastores",
+        "paragraphs": [
+          "Neil McDonald, uno de los entrenadores del programa de televisión Muster Dogs de la ABC, hizo una escuela de una semana en Condobolin, en Nueva Gales del Sur. Allí enseñó a granjeros a trabajar con sus perros y sus animales, como ovejas y vacas.",
+          "Había 25 lugares y se llenaron muy rápido. Llegaron personas de Nueva Gales del Sur, Victoria y Queensland, con perros de todas las edades: desde cachorros hasta perros mayores."
+        ],
+        "source": {
+          "name": "ABC News",
+          "url": "https://www.abc.net.au/news/2026-10-25/muster-dogs-trainer-lures-farmers-across-country-for-school/107291488"
+        }
+      },
+      {
+        "section": "Noticias de Israel",
+        "title": "Medalla de bronce para Artem Dolgopyat",
+        "paragraphs": [
+          "El gimnasta israelí Artem Dolgopyat ganó la medalla de bronce en el ejercicio de suelo en el Campeonato Mundial de Gimnasia en Rotterdam, Países Bajos. Sacó 14,466 puntos. El oro fue para el estadounidense Frederick Richard.",
+          "Es su cuarta medalla en un Campeonato Mundial. Otro israelí, que se llama Noam Berkovich, también estuvo en la final y terminó séptimo. ¡Es la primera vez que dos israelíes compiten juntos en esta final!"
+        ],
+        "source": {
+          "name": "Ynet News",
+          "url": "https://www.ynetnews.com/sport/article/syl7am5nfg"
+        }
+      },
+      {
+        "section": "Noticias del mundo",
+        "title": "Molly Picklum gana en las olas de Portugal",
+        "paragraphs": [
+          "La surfista australiana Molly Picklum, de 23 años, ganó la competición Rip Curl Pro Portugal, en las famosas olas de Supertubos. En la final ganó a la estadounidense Caitlin Simmers.",
+          "Ahora Picklum es otra vez la número uno de la Liga Mundial de Surf. «¡Estoy en la cima del mundo!», dijo. Solo quedan dos competiciones: en Filipinas y en Pipeline, Hawái."
+        ],
+        "source": {
+          "name": "ABC News",
+          "url": "https://www.abc.net.au/news/2026-10-24/aussie-picklum-back-on-top-wsl-standings-portugal-win/107304474"
+        }
+      },
+      {
+        "section": "Noticias de Victoria",
+        "title": "Empieza la Semana de los Niños en el Museo de Melbourne",
+        "paragraphs": [
+          "El Museo de Melbourne celebra la Semana de los Niños desde el 24 de octubre hasta el 1 de noviembre. Este año el tema es «la fiesta de la selva».",
+          "El sábado la cantante Emma Memma dio un concierto para las familias. También hubo actividades para niños de 0 a 12 años: bailes, disfraces, animales y mucho más."
+        ],
+        "source": {
+          "name": "Museums Victoria",
+          "url": "https://museumsvictoria.com.au/media-releases/emma-memma-returns-to-melbourne-museum-for-children-s-week/"
+        }
+      },
+      {
+        "section": "Tecnología e IA",
+        "title": "Un centro de datos que unió a los jugadores",
+        "paragraphs": [
+          "Antes, los australianos que jugaban al videojuego en línea Final Fantasy XIV tenían que usar servidores en Asia, Estados Unidos o Europa. Muchas veces el juego iba lento o había pocos jugadores que hablaban inglés.",
+          "En enero de 2022 la empresa Square Enix abrió servidores en Oceanía. Entonces los jugadores descubrieron que había miles de personas cerca, y ahora la comunidad está mucho más unida."
+        ],
+        "source": {
+          "name": "ABC News",
+          "url": "https://www.abc.net.au/news/2026-10-24/final-fantasy-xiv-australian-oceania-server/107301548"
+        }
+      }
+    ],
+    "weather": {
+      "day": "Domingo, 25 de octubre",
+      "place": "Bentleigh East",
+      "summary": "Lluvia. Cielo nublado y es casi seguro que llueva, unos 20 a 40 milímetros. Puede haber tormenta por la mañana. Por la noche la lluvia es menos probable. Viento del suroeste, de 25 a 35 km/h.",
+      "min": 13,
+      "max": 19,
+      "rainChance": 100,
+      "source": {
+        "name": "Bureau of Meteorology",
+        "url": "https://www.bom.gov.au/location/australia/victoria/central/bvic_pt042-melbourne"
+      }
+    }
+  },
+  {
     "id": "2026-10-24",
     "date": "Sábado, 24 de octubre de 2026",
     "items": [
