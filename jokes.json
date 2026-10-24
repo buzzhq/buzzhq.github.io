@@ -223,6 +223,14 @@
       "emoji": "🐄",
       "setup": "Why do cows wear bells?",
       "punchline": "Because their horns don't work!"
+    },
+    {
+      "date": "2026-10-24",
+      "slot": "pm",
+      "topic": "Nature",
+      "emoji": "🌴",
+      "setup": "What kind of tree fits in your hand?",
+      "punchline": "A palm tree!"
     }
   ]
 }

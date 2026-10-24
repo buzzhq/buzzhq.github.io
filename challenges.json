@@ -1623,6 +1623,74 @@
       "prompt": "What job is the highlighted word doing? Solve it in Buzz's Sentence Detective!",
       "key": "71a8fa1824ab73b9",
       "points": 5
+    },
+    {
+      "date": "2026-10-24",
+      "id": "mg1",
+      "type": "stepgame",
+      "title": "Maths Garage: long multiplication",
+      "mode": "mult",
+      "a": 452,
+      "b": 17,
+      "sum": "452 × 17",
+      "prompt": "Solve it step by step in Buzz's Maths Garage, then send Buzz your finish code!",
+      "key": "bd6a244452322cff",
+      "points": 10
+    },
+    {
+      "date": "2026-10-24",
+      "id": "mg2",
+      "type": "stepgame",
+      "title": "Maths Garage: long division",
+      "mode": "div",
+      "a": 748,
+      "b": 6,
+      "sum": "748 ÷ 6",
+      "prompt": "Solve it step by step in Buzz's Maths Garage, then send Buzz your finish code!",
+      "key": "2def289cc8dc7166",
+      "points": 10
+    },
+    {
+      "date": "2026-10-24",
+      "id": "hs1",
+      "type": "hebsentence",
+      "title": "Hebrew sentence rally",
+      "sentence": "הגמל אוהב חול",
+      "prompt": "Read this Hebrew sentence word by word, letter by letter (right to left!), then work out what it means.",
+      "key": "2deec733a7dcd505",
+      "points": 15
+    },
+    {
+      "date": "2026-10-24",
+      "id": "gr1",
+      "type": "grammar",
+      "title": "Sentence Detective",
+      "qid": "g04",
+      "level": 1,
+      "prompt": "What job is the highlighted word doing? Solve it in Buzz's Sentence Detective!",
+      "key": "443477d735c4b858",
+      "points": 5
+    },
+    {
+      "date": "2026-10-24",
+      "id": "gr2",
+      "type": "grammar",
+      "title": "Sentence Detective",
+      "qid": "g18",
+      "level": 1,
+      "prompt": "What job is the highlighted word doing? Solve it in Buzz's Sentence Detective!",
+      "key": "ef44d22fb582cfe3",
+      "points": 5
+    },
+    {
+      "date": "2026-10-24",
+      "id": "hb1",
+      "type": "hebword",
+      "title": "Hebrew word rally",
+      "word": "לב",
+      "prompt": "Sound out this Hebrew word letter by letter (right to left!), then find out what it means.",
+      "key": "b2dee125cdca43d7",
+      "points": 10
     }
   ],
   "notes": [
@@ -1776,7 +1844,7 @@
     {
       "date": "2026-10-14",
       "game": {
-        "name": "Toy Theater: Math Mine Multiply Divide",
+        "name": "Math Mine Multiply Divide (Toy Theater)",
         "url": "https://toytheater.com/math-mine-multiply-divide/",
         "why": "Dig up missing numbers in × and ÷ facts, perfect warm-up for today's race with a leftover remainder!",
         "ads": true
@@ -1860,6 +1928,15 @@
         "name": "Multiply Race (Toy Theater)",
         "url": "https://toytheater.com/multiply-race/",
         "why": "Race your car to the finish by picking the right answers 🏎️, a speedy warm-up for today's 384 × 27!",
+        "ads": true
+      }
+    },
+    {
+      "date": "2026-10-24",
+      "game": {
+        "name": "Math Mine Multiply Divide (Toy Theater)",
+        "url": "https://toytheater.com/math-mine-multiply-divide/",
+        "why": "Dig up the missing numbers — perfect warm-up for 748 ÷ 6!",
         "ads": true
       }
     }
