@@ -239,6 +239,14 @@
       "emoji": "🐼",
       "setup": "Why do pandas like old movies?",
       "punchline": "Because they're in black and white!"
+    },
+    {
+      "date": "2026-10-25",
+      "slot": "pm",
+      "topic": "Basketball",
+      "emoji": "🏀",
+      "setup": "Why did the basketball player bring a ladder?",
+      "punchline": "To reach the high score!"
     }
   ]
 }
