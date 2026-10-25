@@ -1,5 +1,71 @@
 [
   {
+    "id": "2026-10-26",
+    "date": "Lunes, 26 de octubre de 2026",
+    "items": [
+      {
+        "section": "Noticias de Australia",
+        "title": "Niños plantan un pequeño bosque en su escuela",
+        "paragraphs": [
+          "Los alumnos de 4.º curso de la escuela St Peter's Anglican College, en Broulee (Nueva Gales del Sur), plantaron unas 1.000 plantas nativas en una parte vacía de su patio. Quieren hacer un «microbosque», con más sombra y más animales y plantas.",
+          "Usan un método japonés: ponen muchas plantas muy juntas y así crecen hasta 10 veces más rápido. En dos o tres años, el bosque puede tener unos 7 metros de alto. «Es muy relajante plantar», dijo el alumno Zale Neal."
+        ],
+        "source": {
+          "name": "ABC News",
+          "url": "https://www.abc.net.au/news/2026-10-25/microforest-planted-with-1000-native-trees-at-broulee-school/107292384"
+        }
+      },
+      {
+        "section": "Noticias de Israel",
+        "title": "Israel vota este martes",
+        "paragraphs": [
+          "El martes 27 de octubre hay elecciones generales en Israel. Los israelíes van a votar para elegir a sus líderes. Es la primera elección después de los años de guerra, y mucha gente dice que es muy importante.",
+          "Los dos candidatos principales son el primer ministro Benjamin Netanyahu y Gadi Eisenkot, que antes era el jefe del ejército. En Israel no se puede votar desde otro país, por eso decenas de miles de israelíes que viven fuera van a volar a casa para votar."
+        ],
+        "source": {
+          "name": "NPR",
+          "url": "https://www.npr.org/2026/10/25/g-s1-149563/israel-election-war-netanyahu"
+        }
+      },
+      {
+        "section": "Noticias del mundo",
+        "title": "El espinosaurio vivía casi siempre bajo el agua",
+        "paragraphs": [
+          "Científicos de la Universidad de Yale, en Estados Unidos, estudiaron cientos de fósiles y animales de hoy. Hicieron más de 11.000 medidas y usaron ordenadores inteligentes para analizarlas.",
+          "Descubrieron que el dinosaurio Spinosaurus (espinosaurio) pasaba la mayor parte de su vida debajo del agua. Y algunos reptiles marinos antiguos, que se creía que vivían solo en el mar, en realidad pasaban mucho tiempo en tierra."
+        ],
+        "source": {
+          "name": "ScienceDaily",
+          "url": "http://www.sciencedaily.com/releases/2026/10/261024221956.htm"
+        }
+      },
+      {
+        "section": "Tecnología e IA",
+        "title": "Un robot pequeñito aprende a caminar con ayuda de la IA",
+        "paragraphs": [
+          "La empresa NVIDIA mostró cómo enseñar a Microduck, un robot pequeño con dos piernas de la empresa francesa Pollen Robotics. Unos agentes de inteligencia artificial preparan solos el entrenamiento en un mundo virtual, dentro del ordenador.",
+          "En ese mundo, Microduck pasó por un circuito con rampas, suelo irregular y plataformas, sin perder el equilibrio. Todavía no se sabe si lo hará igual de bien en el mundo real."
+        ],
+        "source": {
+          "name": "Robot24",
+          "url": "https://robot24.com/nvidia-uses-ai-agents-to-teach-tiny-walking-robot-to-navigate-obstacles"
+        }
+      }
+    ],
+    "weather": {
+      "day": "Lunes, 26 de octubre",
+      "place": "Bentleigh East",
+      "summary": "Parcialmente nublado. Puede haber algún chubasco, sobre todo por la tarde y al principio de la noche. Viento del oeste, de 15 a 25 km/h, que por la noche se calma. El sol es muy fuerte (UV muy alto): ¡usa sombrero y crema!",
+      "min": 8,
+      "max": 17,
+      "rainChance": 50,
+      "source": {
+        "name": "Bureau of Meteorology",
+        "url": "https://www.bom.gov.au/location/australia/victoria/central/bvic_pt042-melbourne"
+      }
+    }
+  },
+  {
     "id": "2026-10-25",
     "date": "Domingo, 25 de octubre de 2026",
     "items": [
