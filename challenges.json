@@ -1759,6 +1759,74 @@
       "prompt": "Sound out this Hebrew word letter by letter (right to left!), then find out what it means.",
       "key": "14304d78aadbe0f8",
       "points": 10
+    },
+    {
+      "date": "2026-10-26",
+      "id": "mg1",
+      "type": "stepgame",
+      "title": "Maths Garage: long multiplication",
+      "mode": "mult",
+      "a": 274,
+      "b": 19,
+      "sum": "274 × 19",
+      "prompt": "Solve it step by step in Buzz's Maths Garage, then send Buzz your finish code!",
+      "key": "20b2de0a45d4db80",
+      "points": 10
+    },
+    {
+      "date": "2026-10-26",
+      "id": "mg2",
+      "type": "stepgame",
+      "title": "Maths Garage: long division",
+      "mode": "div",
+      "a": 649,
+      "b": 4,
+      "sum": "649 ÷ 4",
+      "prompt": "Solve it step by step in Buzz's Maths Garage, then send Buzz your finish code!",
+      "key": "3ebff56070479b90",
+      "points": 10
+    },
+    {
+      "date": "2026-10-26",
+      "id": "hs1",
+      "type": "hebsentence",
+      "title": "Hebrew sentence rally",
+      "sentence": "אבא אוהב שלג",
+      "prompt": "Read this Hebrew sentence word by word, letter by letter (right to left!), then work out what it means.",
+      "key": "cc132069fe0599d2",
+      "points": 15
+    },
+    {
+      "date": "2026-10-26",
+      "id": "gr1",
+      "type": "grammar",
+      "title": "Sentence Detective",
+      "qid": "g15",
+      "level": 1,
+      "prompt": "What job is the highlighted word doing? Solve it in Buzz's Sentence Detective!",
+      "key": "bd1ca44777a172a8",
+      "points": 5
+    },
+    {
+      "date": "2026-10-26",
+      "id": "gr2",
+      "type": "grammar",
+      "title": "Sentence Detective",
+      "qid": "g07",
+      "level": 1,
+      "prompt": "What job is the highlighted word doing? Solve it in Buzz's Sentence Detective!",
+      "key": "d814de49a5bf572b",
+      "points": 5
+    },
+    {
+      "date": "2026-10-26",
+      "id": "hb1",
+      "type": "hebword",
+      "title": "Hebrew word rally",
+      "word": "סוס",
+      "prompt": "Sound out this Hebrew word letter by letter (right to left!), then find out what it means.",
+      "key": "9bf0848e9d5a6428",
+      "points": 10
     }
   ],
   "notes": [
@@ -2014,6 +2082,15 @@
         "name": "Hit the Button (Topmarks)",
         "url": "https://www.topmarks.co.uk/maths-games/hit-the-button",
         "why": "Speedy times tables — perfect warm-up for 365 × 23!",
+        "ads": true
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "game": {
+        "name": "Just Divide (Math Playground)",
+        "url": "https://www.mathplayground.com/just_divide.html",
+        "why": "A division puzzle to warm up your brain for today's 649 ÷ 4 race!",
         "ads": true
       }
     }

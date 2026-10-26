@@ -247,6 +247,14 @@
       "emoji": "🏀",
       "setup": "Why did the basketball player bring a ladder?",
       "punchline": "To reach the high score!"
+    },
+    {
+      "date": "2026-10-26",
+      "slot": "pm",
+      "topic": "Cars",
+      "emoji": "🦖",
+      "setup": "What do you call a dinosaur that crashes his car?",
+      "punchline": "Tyrannosaurus Wrecks!"
     }
   ]
 }
