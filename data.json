@@ -1,7 +1,7 @@
 {
   "name": "Alon",
   "bot": "Buzz 🤖",
-  "updated": "2026-10-16",
+  "updated": "2026-10-26",
   "levels": [
     {
       "name": "Rookie",
@@ -457,6 +457,63 @@
       "category": "home",
       "points": 10,
       "text": "Extra points for a cute drawing (shared by Dad)"
+    },
+    {
+      "date": "2026-10-26",
+      "emoji": "🏎️",
+      "category": "challenge",
+      "points": 10,
+      "text": "Maths Garage mg1 ✅ 274 × 19"
+    },
+    {
+      "date": "2026-10-26",
+      "emoji": "🏎️",
+      "category": "challenge",
+      "points": 10,
+      "text": "Maths Garage mg2 ✅ 649 ÷ 4"
+    },
+    {
+      "date": "2026-10-26",
+      "emoji": "💬",
+      "category": "challenge",
+      "points": 15,
+      "text": "Hebrew sentence hs1 ✅ אבא אוהב שלג (abba ohev sheleg = Dad loves snow)"
+    },
+    {
+      "date": "2026-10-26",
+      "emoji": "🔤",
+      "category": "challenge",
+      "points": 10,
+      "text": "Hebrew word hb1 ✅ סוס (sus = horse)"
+    },
+    {
+      "date": "2026-10-26",
+      "emoji": "🕵️",
+      "category": "challenge",
+      "points": 5,
+      "text": "Sentence Detective gr1 ✅ float = verb"
+    },
+    {
+      "date": "2026-10-26",
+      "emoji": "🕵️",
+      "category": "challenge",
+      "points": 5,
+      "text": "Sentence Detective gr2 ✅ tower = noun"
+    },
+    {
+      "date": "2026-10-26",
+      "emoji": "🧠",
+      "category": "challenge",
+      "points": 10,
+      "text": "Read aloud dc5 🎤 Franklin long shots"
+    },
+    {
+      "date": "2026-10-26",
+      "emoji": "🌯",
+      "category": "cashout",
+      "points": -400,
+      "text": "Cashed in: burrito delivery ($20)",
+      "dollars": 20
     }
   ],
   "cashout": {
