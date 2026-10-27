@@ -1827,6 +1827,74 @@
       "prompt": "Sound out this Hebrew word letter by letter (right to left!), then find out what it means.",
       "key": "9bf0848e9d5a6428",
       "points": 10
+    },
+    {
+      "date": "2026-10-27",
+      "id": "mg1",
+      "type": "stepgame",
+      "title": "Maths Garage: long multiplication",
+      "mode": "mult",
+      "a": 1358,
+      "b": 6,
+      "sum": "1358 × 6",
+      "prompt": "Solve it step by step in Buzz's Maths Garage, then send Buzz your finish code!",
+      "key": "d8ccf3c5044331ee",
+      "points": 10
+    },
+    {
+      "date": "2026-10-27",
+      "id": "mg2",
+      "type": "stepgame",
+      "title": "Maths Garage: long division",
+      "mode": "div",
+      "a": 3624,
+      "b": 3,
+      "sum": "3624 ÷ 3",
+      "prompt": "Solve it step by step in Buzz's Maths Garage, then send Buzz your finish code!",
+      "key": "100d811e5221b79e",
+      "points": 10
+    },
+    {
+      "date": "2026-10-27",
+      "id": "hs1",
+      "type": "hebsentence",
+      "title": "Hebrew sentence rally",
+      "sentence": "הנחש גדול מאוד",
+      "prompt": "Read this Hebrew sentence word by word, letter by letter (right to left!), then work out what it means.",
+      "key": "41c39ac7d5ba864e",
+      "points": 15
+    },
+    {
+      "date": "2026-10-27",
+      "id": "hb1",
+      "type": "hebword",
+      "title": "Hebrew word rally",
+      "word": "חם",
+      "prompt": "Sound out this Hebrew word letter by letter (right to left!), then find out what it means.",
+      "key": "b69a3c3fe9a67a5b",
+      "points": 10
+    },
+    {
+      "date": "2026-10-27",
+      "id": "gr1",
+      "type": "grammar",
+      "title": "Sentence Detective",
+      "qid": "g08",
+      "level": 1,
+      "prompt": "What job is the highlighted word doing? Solve it in Buzz's Sentence Detective!",
+      "key": "f77f3ccac70e9120",
+      "points": 5
+    },
+    {
+      "date": "2026-10-27",
+      "id": "gr2",
+      "type": "grammar",
+      "title": "Sentence Detective",
+      "qid": "g36",
+      "level": 1,
+      "prompt": "What job is the highlighted word doing? Solve it in Buzz's Sentence Detective!",
+      "key": "c73d249447cd20e3",
+      "points": 5
     }
   ],
   "notes": [
@@ -2091,6 +2159,15 @@
         "name": "Just Divide (Math Playground)",
         "url": "https://www.mathplayground.com/just_divide.html",
         "why": "A division puzzle to warm up your brain for today's 649 ÷ 4 race!",
+        "ads": true
+      }
+    },
+    {
+      "date": "2026-10-27",
+      "game": {
+        "name": "Daily 10 (Topmarks)",
+        "url": "https://www.topmarks.co.uk/maths-games/daily10",
+        "why": "Pick Multiplication for 10 quick sums to warm up for today's big 1358 × 6 race!",
         "ads": true
       }
     }

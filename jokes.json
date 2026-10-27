@@ -255,6 +255,14 @@
       "emoji": "🦖",
       "setup": "What do you call a dinosaur that crashes his car?",
       "punchline": "Tyrannosaurus Wrecks!"
+    },
+    {
+      "date": "2026-10-27",
+      "slot": "pm",
+      "topic": "Animals",
+      "emoji": "🐍",
+      "setup": "What do you call a snake that builds things?",
+      "punchline": "A boa constructor!"
     }
   ]
 }
