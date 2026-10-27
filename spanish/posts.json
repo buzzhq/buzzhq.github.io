@@ -1,5 +1,71 @@
 [
   {
+    "id": "2026-10-28",
+    "date": "Miércoles, 28 de octubre de 2026",
+    "items": [
+      {
+        "section": "Noticias de Australia",
+        "title": "Un terremoto se siente en Adelaida",
+        "paragraphs": [
+          "El martes por la mañana, poco antes de las 8, hubo un terremoto de magnitud 4,9 cerca de Adelaida, la capital de Australia del Sur. El centro del terremoto estaba en el mar, al sur de Victor Harbor.",
+          "Muchas personas en Adelaida sintieron el movimiento. Por suerte, no hay noticias de daños ni de personas heridas."
+        ],
+        "source": {
+          "name": "SBS News",
+          "url": "https://www.sbs.com.au/news/podcast-episode/sbs-news-in-easy-english-27-october-2026/7gx7v6icw"
+        }
+      },
+      {
+        "section": "Noticias de Israel",
+        "title": "Muchísimos israelíes fueron a votar",
+        "paragraphs": [
+          "El martes hubo elecciones en Israel, y fue mucha gente a votar. A las 6 de la tarde ya había votado el 66,7 % de las personas. Es el número más alto a esa hora desde 1973. En algunos lugares había filas largas.",
+          "Los colegios electorales cerraron a las 10 de la noche y empezó el conteo de los votos. Probablemente no vamos a saber enseguida quién gana. Después, los partidos tienen que hablar varias semanas para formar un gobierno."
+        ],
+        "source": {
+          "name": "NBC News",
+          "url": "https://www.nbcnews.com/world/israel/live-blog/israel-election-live-updates-netanyahu-eisenkot-voters-war-iran-gaza-rcna604979"
+        }
+      },
+      {
+        "section": "Noticias del mundo",
+        "title": "¿Las arañas sueñan?",
+        "paragraphs": [
+          "Unos científicos grabaron con vídeo a una araña saltadora de Australia mientras dormía. Descubrieron que su sueño tiene dos fases. En una fase, la araña mueve los ojos, encoge las patas y da pequeños saltitos, como cuando las personas sueñan.",
+          "Cuando los científicos no dejaban dormir a las arañas, después ellas dormían más para recuperar el sueño perdido. Pero el estudio no prueba que las arañas sueñen de verdad: eso todavía es un misterio."
+        ],
+        "source": {
+          "name": "ABC News",
+          "url": "https://www.abc.net.au/news/science/2026-10-27/jumping-spider-rem-sleep/107309370"
+        }
+      },
+      {
+        "section": "Tecnología e IA",
+        "title": "Genie 4: mundos virtuales creados por la IA",
+        "paragraphs": [
+          "Google DeepMind presentó Genie 4, una inteligencia artificial que crea mundos virtuales muy realistas. Puedes moverte por esos mundos y escribir instrucciones para cambiar lo que pasa mientras juegas.",
+          "La novedad es que ahora también crea sonidos al momento: música, ruidos y hasta conversaciones. Por ahora solo lo pueden probar algunas personas, pero en las próximas semanas va a llegar a más usuarios."
+        ],
+        "source": {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/10/27/googles-genie-4-world-model-adds-audio-more-realistic-worlds-and-real-time-steering/"
+        }
+      }
+    ],
+    "weather": {
+      "day": "Miércoles, 28 de octubre",
+      "place": "Bentleigh East",
+      "summary": "Nublado. Por la tarde y por la noche puede haber algún chubasco. Viento del oeste y del noroeste, de 15 a 25 km/h, que cambia al suroeste al final de la mañana. El sol es muy fuerte (UV muy alto): ¡usa sombrero y crema!",
+      "min": 9,
+      "max": 19,
+      "rainChance": 40,
+      "source": {
+        "name": "Bureau of Meteorology",
+        "url": "https://www.bom.gov.au/location/australia/victoria/central/bvic_pt042-melbourne"
+      }
+    }
+  },
+  {
     "id": "2026-10-27",
     "date": "Martes, 27 de octubre de 2026",
     "items": [
