@@ -279,3 +279,66 @@ button.choice:disabled:not(.right){opacity:.4}
 .gd-cheat dt{font-weight:900;color:#ffd23f;margin-top:8px}
 .gd-cheat dd{margin:2px 0 0 0;font-size:.98rem}
 .gd-new{font-size:.7rem;background:#ff3d7f;border-radius:6px;padding:1px 6px;margin-left:6px;vertical-align:middle}
+
+/* ---------- 🏁 Today's run (challenges.html, one challenge at a time) ---------- */
+.fl-run{margin-bottom:10px}
+.fl-prog .bar{height:18px}
+.fl-count{text-align:center;margin:6px 0 0;font-size:1.1rem}
+.fl-step{background:rgba(255,255,255,.12);border:2px solid rgba(255,255,255,.25);border-radius:18px;margin-bottom:10px;overflow:hidden;scroll-margin-top:10px}
+.fl-step.open{border-color:#ffd23f;box-shadow:0 0 0 3px rgba(255,210,63,.25)}
+.fl-step.done:not(.open){background:rgba(61,255,158,.16);border-color:rgba(61,255,158,.55)}
+.fl-step.skipped:not(.open){border-style:dashed}
+.fl-head{all:unset;box-sizing:border-box;display:flex;align-items:center;gap:10px;width:100%;padding:12px 14px;min-height:60px;cursor:pointer;-webkit-tap-highlight-color:transparent}
+.fl-head:focus-visible{outline:3px solid #ffd23f}
+.fl-ic{font-size:1.7rem}
+.fl-t{flex:1;display:flex;flex-direction:column;min-width:0}
+.fl-t b{font-size:1.05rem}
+.fl-t small{opacity:.85;font-size:.85rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.fl-bonus{background:#ff3d7f;border-radius:999px;padding:1px 6px;font-size:.65rem;vertical-align:middle}
+.fl-tag{font-weight:900;font-size:.85rem;background:rgba(0,0,0,.25);border-radius:999px;padding:4px 10px;white-space:nowrap}
+.fl-tag.up{opacity:.7}
+.fl-tag.now{background:#ffd23f;color:#2b1055}
+.fl-code{font-weight:900;white-space:nowrap}
+.fl-code code{background:#ffd23f;color:#2b1055;border-radius:8px;padding:2px 6px;font-size:.95rem}
+.fl-body{padding:0 10px}
+.fl-body .mg-play{background:transparent;border:0;padding:4px 2px;margin:0}
+.fl-body .card{background:transparent;border:0;padding:4px 2px;margin:0}
+.fl-foot{display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;padding:8px 10px 14px}
+.fl-btn{font:inherit;font-weight:900;font-size:1.1rem;border:0;border-radius:14px;min-height:52px;padding:8px 18px;background:#ffd23f;color:#2b1055;box-shadow:0 4px 0 #c99a00;cursor:pointer;touch-action:manipulation}
+.fl-btn.ghost{background:rgba(255,255,255,.16);color:#fff;box-shadow:none;font-size:1rem}
+.fl-auto{font-size:.85rem;opacity:.8}
+.fl-replay{font:inherit;font-weight:bold;border:0;border-radius:12px;padding:8px 14px;background:rgba(255,255,255,.18);color:#fff;cursor:pointer}
+.sendcard.ready{border-color:#3dff9e;box-shadow:0 0 0 3px rgba(61,255,158,.3)}
+details.howto summary{cursor:pointer;font-size:1.1rem}
+
+/* ---------- ✖️ Times-tables warm-up ---------- */
+.tt-q{text-align:center;margin:4px 0}
+.tt-sum{display:inline-block;font-size:2.4rem;font-weight:900;letter-spacing:1px;text-shadow:0 3px 0 #ff3d7f}
+.tt-sum b{color:#ffd23f}
+.tt-toggle{display:grid;grid-template-columns:1fr 1fr;gap:6px;max-width:300px;margin:6px auto}
+.tt-toggle button{font:inherit;font-weight:900;border:0;border-radius:999px;min-height:40px;background:rgba(255,255,255,.16);color:#fff;cursor:pointer}
+.tt-toggle button.on{background:#ffd23f;color:#2b1055}
+.tt-say{text-align:center;margin:4px 0 8px;font-size:1.05rem;opacity:.95}
+.tt-vis{background:rgba(0,0,0,.22);border-radius:16px;padding:10px 8px;margin:0 0 12px}
+.tt-array{display:flex;flex-direction:column;align-items:center;gap:3px}
+.tt-row{display:flex;align-items:center;gap:8px;border-radius:10px;padding:1px 6px;transition:background .25s}
+.tt-items{display:flex;gap:2px;font-size:var(--tt,1.6rem);line-height:1.15}
+.tt-count{min-width:2.2em;font-weight:900;color:#ffd23f;font-size:1.1rem;text-align:left}
+.tt-row.lit,.tt-group.lit{background:rgba(255,210,63,.28)}
+.tt-row.lit .tt-count,.tt-group.lit .tt-count{animation:popin .35s}
+.tt-groups{display:flex;flex-wrap:wrap;justify-content:center;gap:8px}
+.tt-group{display:flex;flex-direction:column;align-items:center;border:2px dashed rgba(255,255,255,.5);border-radius:14px;padding:5px 6px 2px;transition:background .25s}
+.tt-gi{display:grid;gap:1px;font-size:var(--tt,1.3rem);line-height:1.15}
+.tt-group .tt-count{text-align:center;min-height:1.2em;font-size:1rem}
+.tt-opt{font-size:1.8rem}
+.tt-recap{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:10px 0}
+.tt-table{background:rgba(0,0,0,.22);border-radius:14px;padding:8px 14px}
+.tt-table h3{margin:0 0 4px;font-size:1rem;text-align:center}
+.tt-table ol{list-style:none;padding:0;margin:0;font-family:ui-monospace,Menlo,Consolas,monospace}
+.tt-table li{display:grid;grid-template-columns:auto 2.4em 1.4em;gap:8px;align-items:center;margin:1px 0;padding:0 4px;border-radius:6px;opacity:.85}
+.tt-table li b{text-align:right}.tt-table li i{font-style:normal;text-align:center}
+.tt-table li.asked{background:rgba(255,210,63,.3);opacity:1}
+.tt-pick{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}
+.tt-pick button{font:inherit;font-weight:900;font-size:1.3rem;border:0;border-radius:14px;min-height:56px;background:rgba(255,255,255,.18);color:#fff;cursor:pointer}
+.tt-pick button.on{background:#ffd23f;color:#2b1055;box-shadow:0 4px 0 #c99a00}
+.tt-pick button.wide{grid-column:span 5}

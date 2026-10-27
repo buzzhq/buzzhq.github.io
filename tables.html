@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Times Tables</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+  <h1>✖️ Times Tables</h1>
+  <p class="sub" id="sub">Quick warm-ups up to 10 × 10, with pictures</p>
+  <nav><a href="index.html">🏆 Scoreboard</a><a href="tips.html">🎮 Game Tips</a><a href="challenges.html">🧠 Challenges</a><a class="on" href="tables.html">✖️ Times Tables</a><a href="maths.html">🏎️ Maths Garage</a><a href="hebrew.html">🔤 Hebrew Rally</a><a href="jokes.html">😂 Jokes</a><a href="grammar.html">🕵️ Sentence Detective</a></nav>
+
+  <div class="mg-tabs" role="tablist">
+    <button type="button" class="on" data-tab="daily">🏁 Today's warm-up</button>
+    <button type="button" data-tab="practice">🛠️ Practice</button>
+  </div>
+
+  <section id="daily"><p class="sub">Loading today's warm-up…</p></section>
+  <section id="practice" hidden></section>
+
+  <div class="card howto">
+    <h2>✍️ How it works</h2>
+    <p>👀 Look at the picture: <b>groups</b> (4 groups of 3 cars) or an <b>array</b> (3 rows of 4 balls). Tap the toggle to switch.</p>
+    <p>👆 Tap the answer. Wrong? Buzz counts by rows for you ("4, 8, 12…") so you can see it.</p>
+    <p>🏁 At the end you see the whole table filled in, plus a <b>finish code</b> worth <b>+10 pts</b>. Today's warm-up is also the first step on the <a class="mg-link" href="challenges.html">🧠 Challenges</a> page.</p>
+  </div>
+  <p class="sign">Tables are a superpower! — Buzz 🤖</p>
+</div>
+<script src="timestables-engine.js"></script>
+<script src="flow-games.js"></script>
+<script>
+const T = window.TablesEngine, $ = id => document.getElementById(id), esc = FlowGames.esc;
+const today = new Intl.DateTimeFormat("en-CA", {timeZone: "Australia/Sydney"}).format(new Date());
+const fmtD = d => new Date(d + "T00:00:00").toLocaleDateString("en-AU", {weekday: "short", day: "numeric", month: "short"});
+let DAILY = [], DDATE = null, PT = null;
+function renderDaily() {
+  const el = $("daily");
+  if (!DAILY.length) { el.innerHTML = '<div class="card"><h2>✖️ No warm-up yet</h2><p>Try <b>Practice</b> and pick a table! 🛠️</p></div>'; return; }
+  el.innerHTML = DAILY.map(c => `<div class="card"><h2>✖️ ${esc(c.id)} · ${esc(T.label(c.tables))}<span class="ptag">+${c.points}${c.optional ? " bonus" : ""}</span></h2><p class="rule">${DDATE === today ? "🆕 " + fmtD(today) : (DDATE > today ? "👀 Sneak peek: " + fmtD(DDATE) : "Latest: " + fmtD(DDATE))}</p><div id="tt-${esc(c.id)}"></div><div id="send-${esc(c.id)}"></div></div>`).join("");
+  DAILY.forEach(c => {
+    const show = () => { const p = FlowGames.progress(c), box = $("send-" + c.id); box.innerHTML = p && p.done ? `<a class="sendbtn" href="https://wa.me/?text=${encodeURIComponent(c.id + " " + p.code)}" target="_blank" rel="noopener">Send to Buzz 🤖</a><p class="pick">👉 Pick <b>Chuchu HQ</b> and hit send! (or send everything at once from the <a class="mg-link" href="challenges.html">🧠 Challenges</a> page)</p>` : ""; };
+    FlowGames.make(c, $("tt-" + c.id), { onDone: show }); show();
+  });
+}
+function renderPractice() {
+  const ps = JSON.parse(localStorage.getItem("buzz-tables-practice") || "{}");
+  const pick = [2, 3, 4, 5, 6, 7, 8, 9, 10].map(t => `<button type="button" data-t="${t}" class="${PT && PT[0] === t ? "on" : ""}">${t}×</button>`).join("") +
+    `<button type="button" class="wide${PT && PT[0] === "mixed" ? " on" : ""}" data-t="mixed">🎲 Mixed (2-10)</button>`;
+  $("practice").innerHTML = `<div class="card"><h2>🛠️ Pick a table</h2><div class="tt-pick">${pick}</div><p class="rule">Practice is just for fun (no points). Rounds finished: <b>${ps.finished || 0}</b></p></div><div class="card" id="pplay"${PT ? "" : " hidden"}></div>`;
+  if (PT) FlowGames.make({ id: "practice", type: "timestables", tables: PT, points: 0, date: "practice" }, $("pplay"), { again: () => renderPractice() }, { seed: String(Math.random()) });
+}
+document.addEventListener("click", e => {
+  const t = e.target.closest(".mg-tabs button");
+  if (t) { document.querySelectorAll(".mg-tabs button").forEach(b => b.classList.toggle("on", b === t)); $("daily").hidden = t.dataset.tab !== "daily"; $("practice").hidden = t.dataset.tab !== "practice"; if (t.dataset.tab === "practice") renderPractice(); return; }
+  const p = e.target.closest("[data-t]");
+  if (p) { PT = [p.dataset.t === "mixed" ? "mixed" : Number(p.dataset.t)]; renderPractice(); $("pplay").scrollIntoView({behavior: "smooth", block: "start"}); }
+});
+const qd = new URLSearchParams(location.search).get("date");
+fetch("challenges.json?v=" + Date.now()).then(r => r.json()).then(d => {
+  const all = (d.challenges || []).filter(c => c.type === "timestables" && c.key && Array.isArray(c.tables));
+  const dates = [...new Set(all.map(c => c.date))].sort(), past = dates.filter(x => x <= today);
+  DDATE = qd && dates.includes(qd) ? qd : (past.length ? past[past.length - 1] : null);
+  DAILY = all.filter(c => c.date === DDATE);
+  if (location.hash === "#practice") document.querySelector('[data-tab="practice"]').click();
+  renderDaily();
+}).catch(e => { console.error(e); $("daily").innerHTML = '<div class="card"><p>Oops, Buzz couldn\'t load today\'s warm-up. Try <b>Practice</b>! 🛠️</p></div>'; });
+</script>
+</body>
+</html>

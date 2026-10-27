@@ -11,33 +11,36 @@
 <div class="wrap">
   <h1>🧠 Daily Challenge</h1>
   <p class="sub" id="sub">Loading today's challenges…</p>
-  <nav><a href="index.html">🏆 Scoreboard</a><a href="tips.html">🎮 Game Tips</a><a class="on" href="challenges.html">🧠 Challenges</a><a href="maths.html">🏎️ Maths Garage</a><a href="hebrew.html">🔤 Hebrew Rally</a><a href="jokes.html">😂 Jokes</a><a href="grammar.html">🕵️ Sentence Detective</a></nav>
+  <nav><a href="index.html">🏆 Scoreboard</a><a href="tips.html">🎮 Game Tips</a><a class="on" href="challenges.html">🧠 Challenges</a><a href="tables.html">✖️ Times Tables</a><a href="maths.html">🏎️ Maths Garage</a><a href="hebrew.html">🔤 Hebrew Rally</a><a href="jokes.html">😂 Jokes</a><a href="grammar.html">🕵️ Sentence Detective</a></nav>
 
-  <div class="card howto">
-    <h2>✍️ How to answer</h2>
-    <p>🏎️ <b>Maths:</b> tap <b>Solve it in the Maths Garage</b>, pick the right next step each time, and you'll get a <b>finish code</b>.</p>
-    <p>🔤 <b>Hebrew words:</b> tap <b>Sound it out in the Hebrew Rally</b>, tap each letter's sound (right to left!), and get a finish code.</p>
-    <p>💬 <b>Hebrew sentences:</b> tap <b>Read it in the Hebrew Rally</b>: word by word, letter by letter, then guess what the sentence means.</p>
-    <p>🕵️ <b>Sentence Detective:</b> tap <b>Solve it in Sentence Detective</b> and work out what job the highlighted word is doing (noun, verb, adjective, adverb…).</p>
-    <p>👆 <b>Tap your answer</b> (or type the number and tap <b>Check</b>). You'll know straight away if it's right, and you can try again!</p>
-    <p>🤖 When you're done, tap <b>Send to Buzz</b> at the bottom, then <b>pick Chuchu HQ and hit send!</b></p>
-    <p>📖 Reading: record a <b>voice note</b> in Chuchu HQ reading the passage aloud.</p>
-    <p class="rule">🏎️ Each finished Maths Garage race = <b>+10 pts</b> · 🔤 Each finished Hebrew word = <b>+10 pts</b> · 💬 Hebrew sentence = <b>+15 pts</b> · 🕵️ Each detective case = <b>+5 pts</b> · ✅ Each correct answer = <b>+5 pts</b> · 🎤 A good reading = <b>+10 pts</b> · 📝 Paper bonus = <b>+10 pts</b><br>🤖 Buzz adds your points every evening. You can still type codes like <code>dc1 b</code> in Chuchu HQ if you like.</p>
-  </div>
-
-  <div id="game"></div>
-  <div id="today"></div>
+  <div id="run"></div>
   <div id="sendbox"></div>
+
+  <details class="card howto">
+    <summary><b>✍️ How it works</b></summary>
+    <p>🏁 <b>Today's run:</b> do the challenges one at a time. Finish one and it folds up into a ✅ with its <b>finish code</b>, and the next one opens by itself.</p>
+    <p>⏭️ Stuck? Tap <b>Skip for now</b> and come back to it later. Tap any ✅ row to look at it again.</p>
+    <p>✖️ <b>Times tables:</b> look at the picture (groups or rows), count by rows if you need to, and tap the answer.</p>
+    <p>🏎️ <b>Maths Garage:</b> pick the right next step each time. 🔤 <b>Hebrew:</b> tap each letter's sound (right to left!). 🕵️ <b>Sentence Detective:</b> what job is the highlighted word doing?</p>
+    <p>🤖 At the end, tap <b>Send all codes to Buzz</b>, then <b>pick Chuchu HQ and hit send!</b></p>
+    <p>📖 Reading: it's in today's WhatsApp message. Record a <b>voice note</b> in Chuchu HQ reading it aloud.</p>
+    <p class="rule">✖️ Times-tables warm-up = <b>+10 pts</b> · 🏎️ Each finished Maths Garage race = <b>+10 pts</b> · 🔤 Each finished Hebrew word = <b>+10 pts</b> · 💬 Hebrew sentence = <b>+15 pts</b> · 🕵️ Each detective case = <b>+5 pts</b> · 🎤 A good reading = <b>+10 pts</b><br>🤖 Buzz adds your points every evening. Your progress is saved on this device, so you can stop and come back.</p>
+  </details>
+  <div id="game"></div>
   <div id="past"></div>
 
   <p class="sign">You've got this, brainiac! — Buzz 🤖</p>
 </div>
+<script src="maths-engine.js"></script>
+<script src="hebrew-engine.js"></script>
 <script src="grammar-engine.js"></script>
+<script src="timestables-engine.js"></script>
+<script src="flow-games.js"></script>
 <script>
 const today = new Intl.DateTimeFormat("en-CA", {timeZone: "Australia/Sydney"}).format(new Date());
 const fmt = d => new Date(d + "T00:00:00").toLocaleDateString("en-AU", {weekday:"short", day:"numeric", month:"short", year:"numeric"});
 const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
-const icon = { grammar: "🕵️", hebsentence: "💬", hebword: "🔤", stepgame: "🏎️", mult: "✖️", div: "➗", mcq: "🔢", paper: "📝", hebrew: "🔤", reading: "📖" };
+const icon = { timestables: "✖️", grammar: "🕵️", hebsentence: "💬", hebword: "🔤", stepgame: "🏎️", mult: "✖️", div: "➗", mcq: "🔢", paper: "📝", hebrew: "🔤", reading: "📖" };
 // one grid cell per character; A/B = blanks to fill in
 const cell = ch => /[A-Z]/.test(ch) ? `<span class="c blank">${ch}</span>` : `<span class="c">${ch === " " ? "&nbsp;" : esc(ch)}</span>`;
 const row = (s, w, cls = "") => `<div class="mrow ${cls}">${s.padStart(w, " ").split("").map(cell).join("")}</div>`;
@@ -87,7 +90,7 @@ const inputs = (c, names) => `<div class="blanks" data-id="${esc(c.id)}">` + nam
 const fb = c => `<div class="fb" id="fb-${esc(c.id)}" aria-live="polite"></div>`;
 
 // game pages that save their own progress (localStorage key prefix, page name)
-const GAMES = { stepgame: ["buzz-garage-", "Maths Garage"], hebword: ["buzz-hebrew-", "Hebrew Rally"], hebsentence: ["buzz-hebrew-", "Hebrew Rally"], grammar: ["buzz-grammar-", "Sentence Detective"] };
+const GAMES = { timestables: ["buzz-tables-", "Times Tables"], stepgame: ["buzz-garage-", "Maths Garage"], hebword: ["buzz-hebrew-", "Hebrew Rally"], hebsentence: ["buzz-hebrew-", "Hebrew Rally"], grammar: ["buzz-grammar-", "Sentence Detective"] };
 let NOTES = [];
 function card(c, live) {
   let body = "";
@@ -114,6 +117,7 @@ function card(c, live) {
     body = (P ? `<div class="gd-sent">${esc(P.before)}<span class="gd-hl">${esc(P.target)}</span>${esc(P.after)}</div>` : "") +
     (live ? `<a class="play" href="grammar.html#${esc(c.id)}">🕵️ Solve it in Sentence Detective</a>` + fb(c)
       : `<p class="ans">Solved in <a class="mg-link" href="grammar.html">🕵️ Sentence Detective</a> (finish code like <code>${esc(c.id)} GT47</code>)</p>`); }
+  else if (c.type === "timestables") body = `<p class="ans">${c.tables ? `Warm-up on the <b>${esc(TablesEngine.label(c.tables))}</b> ` : ""}in the <a class="mg-link" href="tables.html">✖️ Times Tables</a> page (finish code like <code>${esc(c.id)} GT47</code>)</p>`;
   else if (c.type === "reading") body = `<p class="readnote">🎤 Read this in the WhatsApp message and send a <b>voice note</b> in Chuchu HQ = <b>+${c.points} pts</b></p><p class="read">${esc(c.text)}</p>`;
   return `<div class="card chal ${c.type}" id="card-${esc(c.id)}"><h2>${icon[c.type] || "🧠"} <span class="id">${esc(c.id)}</span> ${esc(c.title || "")}<span class="ptag">+${c.points}${c.optional ? " bonus" : ""}</span></h2>` +
     note + `<p class="prompt">${esc(c.prompt)}</p>${body}</div>`;
@@ -151,13 +155,13 @@ async function answer(c, ans, el, vals) {
   if (s.ok) return;
   s.tries++; s.ans = ans; if (vals) s.vals = vals;
   const box = document.getElementById("fb-" + c.id);
-  if (!c.check) { s.ok = null; save(); showState(c); return; }
+  if (!c.check) { s.ok = null; save(); showState(c); legacyDone(c); return; }
   const ok = await isRight(c, vals || ans);
   if (s.first === undefined) s.first = ok;
   if (ok) {
     s.ok = true; save(); confetti(el);
     box.innerHTML = `<span class="yes pop">${CHEERS[Math.floor(Math.random() * CHEERS.length)]}</span>`;
-    setTimeout(() => showState(c), 1400); renderSend();
+    setTimeout(() => { showState(c); legacyDone(c); }, 1400); renderSend();
   } else {
     s.ok = false; save();
     el.classList.remove("shake"); void el.offsetWidth; el.classList.add("shake");
@@ -167,64 +171,146 @@ async function answer(c, ans, el, vals) {
   }
 }
 
-// ---- Send to Buzz ----
+// =====================================================================================
+// 🏁 TODAY'S RUN (27 Oct 2026): every challenge of the day plays inline, one at a time.
+// Order: ✖️ times tables (tt) → 🏎️ Maths Garage (mg) → 🔤 Hebrew word(s) (hb) → 💬 Hebrew sentence (hs) → 🕵️ grammar (gr),
+// then any older-style tap/type questions. Reading is NOT on the page (it's in the WhatsApp message as a voice note).
+// Each step saves into the same localStorage keys as its standalone page (see flow-games.js), so codes and resume match.
+// Flow-only state (which steps were skipped, which one is open) lives in "buzz-flow-<date>".
+// =====================================================================================
+const RANK = { timestables: 0, stepgame: 1, hebword: 2, hebsentence: 3, grammar: 4, mcq: 5, hebrew: 5, mult: 5, div: 5, paper: 6 };
+const LEGACY = ["mcq", "hebrew", "mult", "div", "paper"];
+let STEPS = [], FL = { skipped: [], open: null }, CUR = null, ADV = null;
+const FKEY = () => "buzz-flow-" + SHOW;
+const saveFlow = () => { try { localStorage.setItem(FKEY(), JSON.stringify({ skipped: FL.skipped, open: FL.open })); } catch (e) {} };
+const idNum = id => Number((id.match(/\d+/) || [0])[0]);
+function stepDone(c) {
+  if (FlowGames.supports(c.type)) { const p = FlowGames.progress(c); return !!(p && p.done); }
+  const s = ST[c.id]; return !!(s && (s.ok || (s.ok === null && s.ans !== undefined)));
+}
+function stepCode(c) {
+  if (FlowGames.supports(c.type)) { const p = FlowGames.progress(c); return p && p.done ? p.code : ""; }
+  const s = ST[c.id]; return s && s.ans !== undefined ? (s.vals ? norm(s.vals) : s.ans) : "";
+}
+const NAMES = { timestables: "Times-tables warm-up", stepgame: "Maths Garage race", hebword: "Hebrew word", hebsentence: "Hebrew sentence", grammar: "Sentence Detective" };
+function stepWhat(c) { // short HTML description for the collapsed row
+  if (c.type === "timestables") return esc(TablesEngine.label(c.tables || []));
+  if (c.type === "stepgame") return esc(c.sum || `${c.a} ${c.mode === "div" ? "÷" : "×"} ${c.b}`);
+  if (c.type === "hebword") return `<span lang="he" dir="rtl">${esc(c.word)}</span>`;
+  if (c.type === "hebsentence") return `<span lang="he" dir="rtl">${esc(c.sentence)}</span>`;
+  if (c.type === "grammar") { const q = GrammarEngine.BY[c.qid]; return q ? `"${esc(GrammarEngine.parse(q.s).target)}"` : ""; }
+  return esc(c.title || c.prompt || "");
+}
+const what = stepWhat;
+function nextOpen(fromId) { // the next unfinished, not-skipped step after fromId; else any unfinished one (skipped ones come back)
+  const i = STEPS.findIndex(c => c.id === fromId), after = STEPS.slice(i + 1).concat(STEPS.slice(0, Math.max(0, i)));
+  return (after.find(c => !stepDone(c) && !FL.skipped.includes(c.id)) || after.find(c => !stepDone(c)) || null);
+}
+function renderRun(scrollTo) {
+  const box = document.getElementById("run");
+  if (!STEPS.length) { box.innerHTML = ""; CUR = null; return; }
+  const n = STEPS.filter(stepDone).length, pct = Math.round(100 * n / STEPS.length);
+  let h = `<div class="card fl-run"><h2>🏁 Today's run <small>(${STEPS.length} challenges)</small></h2>` +
+    `<div class="fl-prog"><div class="bar"><div class="fill" style="width:${pct}%"></div></div><p class="fl-count" id="flcount"><b>${n} of ${STEPS.length}</b> done${n === STEPS.length ? " 🎉" : ""}</p></div></div>`;
+  STEPS.forEach((c, i) => {
+    const done = stepDone(c), open = FL.open === c.id, sk = !done && FL.skipped.includes(c.id);
+    const p = FlowGames.supports(c.type) ? FlowGames.progress(c) : null, started = !done && p && p.step;
+    const st = done ? `<span class="fl-code">✅ <code>${esc(c.id)} ${esc(stepCode(c))}</code></span>` : sk ? `<span class="fl-tag sk">⏭️ skipped</span>` : open ? `<span class="fl-tag now">▶ now</span>` : started ? `<span class="fl-tag">⏱️ started</span>` : `<span class="fl-tag up">${i + 1}</span>`;
+    h += `<section class="fl-step${done ? " done" : ""}${open ? " open" : ""}${sk ? " skipped" : ""}" id="step-${esc(c.id)}" data-id="${esc(c.id)}">` +
+      `<button type="button" class="fl-head" data-step="${esc(c.id)}" aria-expanded="${open}"><span class="fl-ic">${icon[c.type] || "🧠"}</span>` +
+      `<span class="fl-t"><b>${esc(NAMES[c.type] || c.title || c.id)}${c.optional ? ` <small class="fl-bonus">bonus</small>` : ""}</b><small>${what(c)} · +${c.points}</small></span>${st}</button>` +
+      (open ? `<div class="fl-body" id="body-${esc(c.id)}"></div><div class="fl-foot">${done ? `<button type="button" class="fl-btn" data-next="${esc(c.id)}">Next ▶</button>` : `<button type="button" class="fl-btn ghost" data-skip="${esc(c.id)}">⏭️ Skip for now</button>`}</div>` : "") + `</section>`;
+  });
+  box.innerHTML = h;
+  CUR = null;
+  const c = STEPS.find(x => x.id === FL.open);
+  if (c) {
+    const host = document.getElementById("body-" + c.id);
+    if (FlowGames.supports(c.type)) CUR = FlowGames.make(c, host, { onDone: () => stepFinished(c), onChange: () => updateCount() });
+    else { host.innerHTML = card(c, true); showState(c); CUR = { done: () => stepDone(c), legacy: true }; }
+  }
+  window.FLOW = { steps: STEPS, open: FL.open, cur: CUR, message, skipped: FL.skipped };
+  renderSend();
+  if (scrollTo) { const el = document.getElementById("step-" + scrollTo) || document.getElementById("sendbox"); if (el) el.scrollIntoView({ behavior: "smooth", block: "start" }); }
+}
+function updateCount() { const n = STEPS.filter(stepDone).length, el = document.getElementById("flcount"); if (el) el.innerHTML = `<b>${n} of ${STEPS.length}</b> done${n === STEPS.length ? " 🎉" : ""}`; }
+function stepFinished(c) { // a step was just completed: show its finish screen for a moment, then fold it up and open the next one
+  FL.skipped = FL.skipped.filter(x => x !== c.id); saveFlow();
+  const sec = document.getElementById("step-" + c.id);
+  if (sec) { const tag = sec.querySelector(".fl-head .fl-tag, .fl-head .fl-code"); if (tag) tag.outerHTML = `<span class="fl-code">✅ <code>${esc(c.id)} ${esc(stepCode(c))}</code></span>`; sec.classList.add("done"); }
+  updateCount(); renderSend();
+  const foot = sec && sec.querySelector(".fl-foot"); const nx = nextOpen(c.id);
+  if (foot) foot.innerHTML = `<button type="button" class="fl-btn" data-next="${esc(c.id)}">${nx ? "Next challenge ▶" : "See my codes ▶"}</button><span class="fl-auto">Moving on in a sec…</span>`;
+  clearTimeout(ADV); ADV = setTimeout(() => goNext(c.id), 2600);
+}
+function goNext(fromId) {
+  clearTimeout(ADV); ADV = null;
+  const nx = nextOpen(fromId);
+  FL.open = nx ? nx.id : null; saveFlow();
+  renderRun(nx ? nx.id : "send");
+  if (!nx) { const sb = document.getElementById("sendbox"); confetti(sb.querySelector(".sendbtn") || sb); }
+}
+function legacyDone(c) { if (FL.open === c.id && stepDone(c)) stepFinished(c); }
+document.addEventListener("click", e => {
+  const h = e.target.closest("[data-step]");
+  if (h) { clearTimeout(ADV); ADV = null; const id = h.dataset.step; FL.open = FL.open === id ? null : id; saveFlow(); renderRun(FL.open); return; }
+  const go = e.target.closest("[data-goto]");
+  if (go) { e.preventDefault(); clearTimeout(ADV); ADV = null; FL.open = go.dataset.goto; saveFlow(); renderRun(FL.open); return; }
+  const sk = e.target.closest("[data-skip]");
+  if (sk) { const id = sk.dataset.skip; if (!FL.skipped.includes(id)) FL.skipped.push(id); const nx = nextOpen(id); FL.open = nx && nx.id !== id ? nx.id : null; saveFlow(); renderRun(FL.open || "send"); return; }
+  const nb = e.target.closest("[data-next]");
+  if (nb) { goNext(nb.dataset.next); return; }
+});
+
+// ---- Send all to Buzz: ONE WhatsApp message with every code, in the same "id CODE" format the reply checks verify ----
 function message() {
-  const parts = [], checked = SET.filter(c => c.check && ST[c.id] && ST[c.id].first !== undefined);
-  SET.forEach(c => { const s = ST[c.id]; if (s && s.ans !== undefined) parts.push(`${c.id} ${s.vals ? norm(s.vals) : s.ans}`); });
+  const parts = [], checked = STEPS.filter(c => c.check && ST[c.id] && ST[c.id].first !== undefined);
+  STEPS.forEach(c => { const code = stepDone(c) || LEGACY.includes(c.type) ? stepCode(c) : ""; if (code) parts.push(`${c.id} ${code}`); });
   if (!parts.length) return "";
   return parts.join(", ") + (checked.length ? ` (first try: ${checked.filter(c => ST[c.id].first).length}/${checked.length})` : "");
 }
 function renderSend() {
   const box = document.getElementById("sendbox");
-  const answerable = SET.filter(c => c.type !== "reading");
-  if (!answerable.length) { box.innerHTML = ""; return; }
-  const m = message(), done = answerable.filter(c => ST[c.id] && ST[c.id].ok).length;
+  if (!STEPS.length) { box.innerHTML = ""; return; }
+  const m = message(), done = STEPS.filter(stepDone).length, need = STEPS.filter(c => !c.optional), all = need.every(stepDone);
+  const left = STEPS.filter(c => !stepDone(c));
   const reading = SET.find(c => c.type === "reading");
-  box.innerHTML = `<div class="card sendcard"><h2>🤖 Send your answers to Buzz</h2>` +
-    `<p class="rule">${done} of ${answerable.length} solved${answerable.some(c => c.optional) ? " (bonus ones are optional)" : ""}</p>` +
+  box.innerHTML = `<div class="card sendcard${all ? " ready" : ""}" id="send-card"><h2>${all ? "🎉 All done! Send all your codes to Buzz" : "🤖 Send all your codes to Buzz"}</h2>` +
+    `<p class="rule">${done} of ${STEPS.length} finished${STEPS.some(c => c.optional) ? " (bonus ones are optional)" : ""}${left.length ? ` · still to do: ${left.map(c => `<a href="#step-${esc(c.id)}" data-goto="${esc(c.id)}" class="mg-link">${esc(c.id)}</a>`).join(", ")}` : ""}</p>` +
     (m ? `<p class="preview"><code id="msg">${esc(m)}</code></p>` +
-      `<a class="sendbtn" id="send" href="https://wa.me/?text=${encodeURIComponent(m)}" target="_blank" rel="noopener">Send to Buzz 🤖</a>` +
+      `<a class="sendbtn" id="send" href="https://wa.me/?text=${encodeURIComponent(m)}" target="_blank" rel="noopener">${all ? "Send all codes to Buzz 🤖" : "Send my codes so far 🤖"}</a>` +
       `<p class="pick">👉 Pick <b>Chuchu HQ</b> and hit send!</p>`
-      : `<p>Tap some answers above first! 👆</p>`) +
-    (reading ? `<p class="rule">🎤 Don't forget your ${esc(reading.id)} voice note (+${reading.points})!</p>` : "") + `</div>`;
+      : `<p>Finish a challenge above to get your first code! 👆</p>`) +
+    `<p class="rule">🎤 Don't forget: record a <b>voice note</b> of today's reading (it's in the WhatsApp message)${reading ? ` = +${reading.points} pts` : ""}!</p></div>`;
 }
 
-document.addEventListener("click", e => {
-  const b = e.target.closest(".tap");
-  if (b) { const c = SET.find(x => x.id === b.dataset.id); if (c) answer(c, b.dataset.k, b); return; }
-  const k = e.target.closest(".checkbtn");
-  if (k) {
-    const c = SET.find(x => x.id === k.dataset.id); if (!c) return;
-    const ins = [...k.parentNode.querySelectorAll("input")];
-    if (ins.some(i => !i.value.trim())) { document.getElementById("fb-" + c.id).innerHTML = `<span class="no">✏️ Fill in ${ins.length > 1 ? "every box" : "the box"} first!</span>`; return; }
-    if (ins.length === 1 && !ins[0].dataset.n) answer(c, ins[0].value.replace(/[\s,]/g, ""), k);
-    else { const v = {}; ins.forEach(i => v[i.dataset.n] = i.value.replace(/\s+/g, "")); answer(c, norm(v), k, v); }
-  }
-});
-document.addEventListener("keydown", e => { if (e.key === "Enter" && e.target.matches(".blanks input")) e.target.closest(".blanks").querySelector(".checkbtn").click(); });
-
+const qd = new URLSearchParams(location.search).get("date");
 fetch("challenges.json?v=" + Date.now()).then(r => r.json()).then(d => {
   const all = d.challenges || [];
   NOTES = d.notes || [];
   const dates = [...new Set(all.map(c => c.date))].filter(x => x <= today).sort().reverse();
-  const showDate = dates.includes(today) ? today : dates[0];
+  // a day only "goes live" once the afternoon set is there: a day that so far only has a pre-seeded tt warm-up
+  // (tools/timestables.py can seed ahead) keeps showing the previous set, whose codes still count today.
+  const live = x => all.some(c => c.date === x && c.type !== "timestables");
+  const showDate = qd && all.some(c => c.date === qd) ? qd : (dates.find(live) || dates[0]);
   const todays = all.filter(c => c.date === showDate);
   SHOW = showDate; SET = todays; ST = showDate ? load(showDate) : {};
-  // Maths Garage (maths.html) progress for this day: finished races give a code like "mg1 GT47"
-  const G = {}; for (const [t, [k]] of Object.entries(GAMES)) { let g = {}; try { g = JSON.parse(localStorage.getItem(k + showDate)) || {}; } catch (e) {} todays.filter(c => c.type === t).forEach(c => { if (g[c.id]) G[c.id] = g[c.id]; }); }
-  todays.filter(c => GAMES[c.type]).forEach(c => { const g = G[c.id]; ST[c.id] = g && g.done ? { ok: true, ans: g.code } : (g ? { step: g.step } : undefined); if (!ST[c.id]) delete ST[c.id]; });
+  STEPS = todays.filter(c => c.type !== "reading" && (FlowGames.supports(c.type) || LEGACY.includes(c.type)) && (c.type !== "grammar" || GrammarEngine.BY[c.qid]))
+    .map((c, i) => [c, i]).sort((x, y) => (RANK[x[0].type] - RANK[y[0].type]) || (idNum(x[0].id) - idNum(y[0].id)) || (x[1] - y[1])).map(x => x[0]);
+  try { const f = JSON.parse(localStorage.getItem(FKEY())) || {}; FL = { skipped: Array.isArray(f.skipped) ? f.skipped : [], open: f.open || null }; } catch (e) {}
+  // resume: reopen the step he was on; if that's finished, the next unfinished one
+  if (!STEPS.some(c => c.id === FL.open) || stepDone(STEPS.find(c => c.id === FL.open))) { const first = STEPS.find(c => !stepDone(c) && !FL.skipped.includes(c.id)) || STEPS.find(c => !stepDone(c)); FL.open = first ? first.id : null; }
   const total = todays.filter(c => !c.optional).reduce((s, c) => s + (c.points || 0), 0);
   const bonus = todays.filter(c => c.optional).reduce((s, c) => s + (c.points || 0), 0);
-  document.getElementById("sub").innerHTML = showDate === today
-    ? `🆕 ${fmt(today)} · ${todays.length} challenges · up to <b>+${total} pts</b>${bonus ? ` (+${bonus} bonus)` : ""}!`
+  document.getElementById("sub").innerHTML = showDate > today ? `👀 Sneak peek: ${fmt(showDate)}`
+    : showDate === today ? `🆕 ${fmt(today)} · ${STEPS.length} challenges · up to <b>+${total} pts</b>${bonus ? ` (+${bonus} bonus)` : ""}!`
     : (showDate ? `Latest set: ${fmt(showDate)} · a fresh set lands this afternoon! ⏰` : "No challenges yet — check back soon!");
   const g = (d.games || []).filter(x => x.date <= today && x.game && /^https:\/\//.test(x.game.url)).sort((a, b) => a.date < b.date ? -1 : 1).pop();
   if (g) document.getElementById("game").innerHTML = `<div class="card gamebox"><h2>🎮 Maths game of the day${g.date === today ? "" : ` <small>(${fmt(g.date)})</small>`}</h2>` +
     `<p class="gname">${esc(g.game.name)}</p>${g.game.why ? `<p>${esc(g.game.why)}</p>` : ""}` +
     `<a class="play" href="${esc(g.game.url)}" target="_blank" rel="noopener noreferrer">▶ Play now</a>` +
     `<p class="rule">Free, no sign-up needed.${g.game.ads ? " This site shows ads: don't tap them, just play the game! 🙂" : ""} Tell Buzz your best score in Chuchu HQ!</p></div>`;
-  document.getElementById("today").innerHTML = todays.map(c => card(c, true)).join("");
-  todays.forEach(showState); renderSend();
+  renderRun(null);
   document.getElementById("past").innerHTML = dates.filter(x => x !== showDate).map(x =>
     `<details class="card past"><summary>📅 ${fmt(x)} · ${all.filter(c => c.date === x).length} challenges</summary>` +
     all.filter(c => c.date === x).map(c => card(c, false)).join("") + `</details>`).join("");

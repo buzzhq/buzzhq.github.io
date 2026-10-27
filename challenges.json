@@ -1895,6 +1895,46 @@
       "prompt": "What job is the highlighted word doing? Solve it in Buzz's Sentence Detective!",
       "key": "c73d249447cd20e3",
       "points": 5
+    },
+    {
+      "date": "2026-10-27",
+      "id": "tt1",
+      "type": "timestables",
+      "title": "Times-tables warm-up",
+      "tables": [
+        2
+      ],
+      "n": 8,
+      "prompt": "Quick times-tables warm-up with pictures: tap the answer, then send Buzz your finish code!",
+      "key": "410432721cb92301",
+      "points": 10,
+      "optional": true
+    },
+    {
+      "date": "2026-10-28",
+      "id": "tt1",
+      "type": "timestables",
+      "title": "Times-tables warm-up",
+      "tables": [
+        5
+      ],
+      "n": 8,
+      "prompt": "Quick times-tables warm-up with pictures: tap the answer, then send Buzz your finish code!",
+      "key": "9ffb8e1e3762e52c",
+      "points": 10
+    },
+    {
+      "date": "2026-10-29",
+      "id": "tt1",
+      "type": "timestables",
+      "title": "Times-tables warm-up",
+      "tables": [
+        10
+      ],
+      "n": 8,
+      "prompt": "Quick times-tables warm-up with pictures: tap the answer, then send Buzz your finish code!",
+      "key": "8122c396eb4d0b1c",
+      "points": 10
     }
   ],
   "notes": [

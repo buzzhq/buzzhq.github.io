@@ -187,6 +187,31 @@ Usually 1 multiplication (`mg1`) + 1 division (`mg2`) a day. Step up one notch o
 5. Later: 4-digit ÷ 2-digit (e.g. 7,245 ÷ 23 = 315), remainders with 2-digit divisors.
 The old 📝 paper bonus (`dc6`, optional +10) can still be added once a week for the same race sum, but it's no longer needed.
 
+## 🏁 Today's run on `challenges.html` (added 2026-10-27)
+The challenges page now plays the day **one challenge at a time**, inline, in this order: ✖️ `tt1` times-tables warm-up → 🏎️ `mg1`/`mg2` Maths Garage races → 🔤 Hebrew word(s) `hb` → 💬 Hebrew sentence `hs` → 🕵️ Sentence Detective `gr` (any other answerable types follow; **reading `dc5` is NOT in the flow**: the passage + voice-note ask live in the WhatsApp message).
+- Only the current step is open. A finished step shows its finish screen + code for ~2.6 s, then **collapses into a ✅ row with its code** and the next unfinished one opens and scrolls into view ("Next challenge ▶" skips the wait). Progress bar "N of M done". Tap any ✅ row to review it (replay doesn't change the saved code), **⏭️ Skip for now** moves on and the skipped one comes back after the last step.
+- ONE **"Send all codes to Buzz 🤖"** wa.me button at the end with the same `id CODE` list as before, in flow order, e.g. `tt1 FZ39, mg1 NX53, mg2 VX38, hb1 ZR25, hs1 BX34, gr1 JX54, gr2 ZR98` (it says "Send my codes so far" until every non-bonus step is done).
+- Same engines + the same localStorage records as the standalone pages (`buzz-garage-<date>`, `buzz-hebrew-<date>`, `buzz-grammar-<date>`, `buzz-tables-<date>`), so a race finished on maths.html shows ✅ here and vice versa; scoring/codes/reset are unchanged. Flow state (open step, skipped list) = `buzz-flow-<date>`. Resumes where he left off. Past days still render below. `?date=YYYY-MM-DD` previews a day.
+- Code: `flow-games.js` (inline components that mirror the UI of maths.html / hebrew.html / grammar.html / tables.html; the standalone pages are unchanged, so a UI change there must be mirrored here).
+- Tests: `node tests/flow-run.js [date]` (390px headless run-through: plays every step, checks collapse/auto-open/scroll, skip + come back, reload resume, review tap, and that the send message equals the `tools/*.py codes` output; screenshots in /workspace/alon/shots/).
+
+## ✖️ Buzz's Times Tables (added 2026-10-27): `tables.html` + `timestables-engine.js`
+A SEPARATE, extra warm-up (it does not change the mg1/mg2 races). Goal: fluent facts up to 10 × 10. Each round = **8 questions on 1-2 tables** (≥6 on the focus tables, up to 2 review facts from earlier stages), every one with a picture: **🧺 equal groups** or **🔲 an emoji array** (toggle, preference saved), the sum `4 × 2 = ?` and **3 options** (the answer, a one-row slip `±b`, and another typical mix-up: `±a`, swapped digits, `a + b`). A wrong tap gives a hint and **Buzz counts the picture by rows** ("2, 4, 6, 8"). The end shows the **whole table filled in** (⭐ = asked) and the finish code `tt1 XX00`, **+10**.
+- Progression (`STAGES`): 2 → 5 → 10 → 3 → 4 → 3+4 → 6 → 7 → 6+7 → 8 → 9 → 8+9 → mixed (2-10). Tracked privately in challenge-answers.json `timestables.rounds`.
+- `tables.html`: "🏁 Today's warm-up" (latest round, own Send button) and "🛠️ Practice" (pick 2×-10× or 🎲 Mixed; no codes or points). Today's warm-up is also step 1 of the challenges page.
+- Entry in challenges.json: `{date, id:"tt1", type:"timestables", title, tables:[5], n:8, prompt, key, points:10, optional?}`. Code = same salted scheme as mg/hb/hs/gr: `key = sha256(secret|date|id)[:16]`, answer = the 8 products joined by `-` (the round is rebuilt from the key, so python asks node).
+- Helper (never write entries by hand):
+```bash
+tools/timestables.py next                      # what the progression picks next
+tools/timestables.py add 2026-10-30            # one round, tables chosen by the progression (refuses a seeded day)
+tools/timestables.py add 2026-10-30 --tables 3,4 [--optional]
+tools/timestables.py codes 2026-10-30
+tools/timestables.py verify "tt1 RX98" [--date 2026-10-28]   # +10 each, category challenge, emoji ✖️; marks the round finished
+tools/timestables.py list
+node tests/timestables.test.js
+```
+- Seeded: 27 Oct 2× (bonus), 28 Oct 5×, 29 Oct 10×. Do NOT run the old check-hash script on it.
+
 ## 🔤 Buzz's Hebrew Word Rally (added 2026-10-04): `hebrew.html` + `hebrew-engine.js`
 Page: https://buzzhq.github.io/hebrew.html. Alon sounds out a short Hebrew word (2-4 letters, no nikud) **letter by letter, right to left**: the current letter glows, he taps its sound from 3 options (lookalike/sound mix-ups such as ד/ר, ה/ח, ו/ז, ב/כ, ג/נ, ס/ם, each with a gentle hint), and the sounded-out word builds up underneath (`da… dag!`). Then "What do you think it means?" with a clue and 3 English options, then the meaning with a big emoji and a fun fact. Same car progress bar, confetti, pit-stop counter and Send to Buzz as the Maths Garage.
 - **Word bank** = `WORDS` in `hebrew-engine.js` (29 words, each: spelling, per-letter sound + transliteration chunk, meaning, emoji, clue, fact, `newLetter`). Words use only learned letters, or at most ONE new letter, which the game introduces (`א` in אבא/סבא/אמא, final `ם` in חם/גשם/לחם/שלום). ב is v at the end/after a vowel (לב lev, חלב chalav, זהב zahav, דבש dvash) and b in אבא/סבא; ו is a vowel in סוס sus, חול chol, דוד dod, שלום shalom; every ש is sh. The game never offers a letter's other real sound as a "wrong" answer.
@@ -251,4 +276,4 @@ git add jokes.json   # together with the run's other files
 ```
 - Schema `jokes[]` (append-only, file order = oldest first): `{ "date": "YYYY-MM-DD", "slot": "am"|"pm"|"extra", "topic": "Basketball", "emoji": "🏀", "setup": "...?", "punchline": "...!" }`. Jokes dated in the future stay hidden until their day.
 - Seeded 4 Oct 2026 with the 4 jokes already sent in Chuchu HQ (27 Sep pm, 30 Sep pm, 2 Oct am, 2 Oct pm; the 24 Sep Minecraft joke is left out on purpose) + one bonus 4 Oct joke.
-- Every daily message ends with SIX links; the 6th is "😂 Jokes: https://buzzhq.github.io/jokes.html".
+- ~~Every daily message ends with SIX links; the 6th is "😂 Jokes: …"~~ **From 27 Oct 2026 every daily message ends with ONE link only: "🧠 Today's challenges: https://buzzhq.github.io/challenges.html"** (the joke itself stays in the message).

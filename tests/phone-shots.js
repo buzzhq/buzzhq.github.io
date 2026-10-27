@@ -54,7 +54,8 @@ let fails = 0; const check = (ok, m) => { console.log(ok ? "ok  " : "FAIL", m); 
   await pg.evaluate(() => document.getElementById("cheat").scrollIntoView()); await pg.screenshot({ path: OUT + "phone-grammar-cheatsheet.png" });
   // 4. challenges page shows the new cards
   await pg.goto(BASE + "challenges.html", { waitUntil: "networkidle0" }); await noOverflow("challenges");
-  console.log("challenges cards:", await pg.evaluate(() => [...document.querySelectorAll("#today .chal")].map(c => c.id).join(",")));
+  const steps = await pg.evaluate(() => [...document.querySelectorAll("#run .fl-step")].map(c => c.dataset.id).join(","));
+  console.log("today's run steps:", steps); check(steps.length > 0, "challenges.html shows Today's run (full run-through: tests/flow-run.js)");
   check(errs.length === 0, "no page errors " + errs.join(" | "));
   await b.close(); console.log(fails ? `${fails} FAILED` : "all phone checks passed"); process.exit(fails ? 1 : 0);
 })();
