@@ -514,6 +514,55 @@
       "points": -400,
       "text": "Cashed in: burrito delivery ($20)",
       "dollars": 20
+    },
+    {
+      "date": "2026-10-27",
+      "emoji": "🏎️",
+      "category": "challenge",
+      "points": 10,
+      "text": "Maths Garage mg1 ✅ 1358 × 6"
+    },
+    {
+      "date": "2026-10-27",
+      "emoji": "🏎️",
+      "category": "challenge",
+      "points": 10,
+      "text": "Maths Garage mg2 ✅ 3624 ÷ 3"
+    },
+    {
+      "date": "2026-10-27",
+      "emoji": "💬",
+      "category": "challenge",
+      "points": 15,
+      "text": "Hebrew sentence hs1 ✅ הנחש גדול מאוד (ha-nachash gadol meod = The snake is very big)"
+    },
+    {
+      "date": "2026-10-27",
+      "emoji": "🔤",
+      "category": "challenge",
+      "points": 10,
+      "text": "Hebrew word hb1 ✅ חם (cham = hot)"
+    },
+    {
+      "date": "2026-10-27",
+      "emoji": "🕵️",
+      "category": "challenge",
+      "points": 5,
+      "text": "Sentence Detective gr1 ✅ beach = noun"
+    },
+    {
+      "date": "2026-10-27",
+      "emoji": "🕵️",
+      "category": "challenge",
+      "points": 5,
+      "text": "Sentence Detective gr2 ✅ happily = adverb"
+    },
+    {
+      "date": "2026-10-27",
+      "emoji": "🧠",
+      "category": "challenge",
+      "points": 10,
+      "text": "Read aloud dc5 🎤 Franklin rainy day"
     }
   ],
   "cashout": {
