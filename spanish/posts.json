@@ -1,5 +1,71 @@
 [
   {
+    "id": "2026-10-29",
+    "date": "Jueves, 29 de octubre de 2026",
+    "items": [
+      {
+        "section": "Noticias de Victoria",
+        "title": "Empieza la temporada de incendios en el norte de Victoria",
+        "paragraphs": [
+          "Los bomberos voluntarios de Victoria (la CFA) dicen que empieza el periodo de peligro de incendios en tres zonas del norte del estado: Gannawarra, Loddon y Campaspe. Desde el 9 de noviembre, la gente necesita un permiso para quemar hierba y hojas.",
+          "Los bomberos piden cortar el césped y limpiar los canalones de las casas. Y la RSPCA recuerda algo importante: en el plan para un incendio también hay que pensar en las mascotas."
+        ],
+        "source": {
+          "name": "ABC News",
+          "url": "https://www.abc.net.au/news/2026-10-28/central-victoria-local-news-briefing/107317170"
+        }
+      },
+      {
+        "section": "Noticias de Israel",
+        "title": "Elecciones en Israel: nadie tiene mayoría",
+        "paragraphs": [
+          "Ya se contaron casi todos los votos de las elecciones del martes. El grupo de partidos de Netanyahu tiene unos 53 asientos y el grupo de Gadi Eisenkot tiene unos 48. Los partidos árabes tienen 19, más que nunca. Para gobernar se necesitan 61 de los 120 asientos del Knéset, el parlamento.",
+          "Todavía faltan unos 600.000 votos, por ejemplo de soldados y diplomáticos. Ahora el presidente Isaac Herzog va a hablar con los partidos. Mientras tanto, el gobierno de antes sigue trabajando."
+        ],
+        "source": {
+          "name": "The Times of Israel",
+          "url": "https://www.timesofisrael.com/as-change-bloc-falls-far-short-of-majority-democrats-golan-urges-coalition-with-arabs/"
+        }
+      },
+      {
+        "section": "Noticias del mundo",
+        "title": "Un misterio con las ballenas bebé en Argentina",
+        "paragraphs": [
+          "Cada año, las ballenas francas australes viajan a las aguas tranquilas de la Península Valdés, en Argentina, para tener a sus bebés. Pero este año murieron cientos de ballenas bebé, muchas más de lo normal.",
+          "Los científicos encontraron una bacteria en las ballenas. Creen que las gaviotas la pasan cuando picotean a las ballenas pequeñas que suben a respirar. Ahora estudian por qué este año es tan grave."
+        ],
+        "source": {
+          "name": "Smithsonian Magazine",
+          "url": "https://www.smithsonianmag.com/smart-news/hundreds-of-baby-whales-have-died-in-argentina-this-year-and-scientists-are-scrambling-to-understand-why-180989762/"
+        }
+      },
+      {
+        "section": "Tecnología e IA",
+        "title": "La IA revisa una demostración gigante de matemáticas",
+        "paragraphs": [
+          "Hay un resultado muy famoso de las matemáticas cuya demostración ocupa unas 15.000 páginas, en cientos de artículos. La empresa Axiom dice que unos agentes de inteligencia artificial ayudaron a comprobarla con un programa de ordenador en solo 24 días.",
+          "El programa se llama Lean y revisa cada paso de la lógica, uno por uno. El trabajo tiene unos 43 millones de líneas de código. Aun así, los matemáticos todavía pueden revisarlo."
+        ],
+        "source": {
+          "name": "The Neuron",
+          "url": "https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-wednesday-october-28-2026/"
+        }
+      }
+    ],
+    "weather": {
+      "day": "Jueves, 29 de octubre",
+      "place": "Bentleigh East",
+      "summary": "Nublado. Por la mañana puede caer algún chubasco, pero es poco probable. Viento del sur y del suroeste, de 15 a 20 km/h, más suave por la noche. El sol es muy fuerte (UV muy alto): ¡usa sombrero y crema!",
+      "min": 12,
+      "max": 20,
+      "rainChance": 20,
+      "source": {
+        "name": "Bureau of Meteorology",
+        "url": "https://www.bom.gov.au/location/australia/victoria/central/bvic_pt042-melbourne"
+      }
+    }
+  },
+  {
     "id": "2026-10-28",
     "date": "Miércoles, 28 de octubre de 2026",
     "items": [
