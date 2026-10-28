@@ -647,6 +647,24 @@
       "game": "Roblox",
       "title": "Take a stretch break ⏰",
       "tip": "After a few rounds, stand up, stretch and grab some water. Your eyes and hands get a rest, and you'll often play better when you come back."
+    },
+    {
+      "date": "2026-10-28",
+      "game": "Descenders",
+      "title": "Land with both wheels 🛬",
+      "tip": "When you land a jump, try to touch down with both wheels at the same time on a downhill slope. Flat or nose-heavy landings are where most crashes happen."
+    },
+    {
+      "date": "2026-10-28",
+      "game": "Fortnite",
+      "title": "Listen for footsteps 👂",
+      "tip": "Footsteps and chests make sounds, and the game can show sound arrows on screen if you turn on Visualize Sound Effects in the audio settings. Great for spotting where things are."
+    },
+    {
+      "date": "2026-10-28",
+      "game": "GTA",
+      "title": "Drive in the rain carefully 🌧️",
+      "tip": "When it rains in GTA the roads get slippery, so cars slide more in corners. Brake earlier and turn more gently, just like real drivers do."
     }
   ]
 }

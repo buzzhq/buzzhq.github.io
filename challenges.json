@@ -1935,6 +1935,74 @@
       "prompt": "Quick times-tables warm-up with pictures: tap the answer, then send Buzz your finish code!",
       "key": "8122c396eb4d0b1c",
       "points": 10
+    },
+    {
+      "date": "2026-10-28",
+      "id": "mg1",
+      "type": "stepgame",
+      "title": "Maths Garage: long multiplication",
+      "mode": "mult",
+      "a": 2316,
+      "b": 4,
+      "sum": "2316 × 4",
+      "prompt": "Solve it step by step in Buzz's Maths Garage, then send Buzz your finish code!",
+      "key": "7a0a0b8c897a69e1",
+      "points": 10
+    },
+    {
+      "date": "2026-10-28",
+      "id": "mg2",
+      "type": "stepgame",
+      "title": "Maths Garage: long division",
+      "mode": "div",
+      "a": 4836,
+      "b": 4,
+      "sum": "4836 ÷ 4",
+      "prompt": "Solve it step by step in Buzz's Maths Garage, then send Buzz your finish code!",
+      "key": "f3b02e99e52e9c97",
+      "points": 10
+    },
+    {
+      "date": "2026-10-28",
+      "id": "hs1",
+      "type": "hebsentence",
+      "title": "Hebrew sentence rally",
+      "sentence": "החול חם בשמש",
+      "prompt": "Read this Hebrew sentence word by word, letter by letter (right to left!), then work out what it means.",
+      "key": "84920eb7e08d3c09",
+      "points": 15
+    },
+    {
+      "date": "2026-10-28",
+      "id": "hb1",
+      "type": "hebword",
+      "title": "Hebrew word rally",
+      "word": "גשם",
+      "prompt": "Sound out this Hebrew word letter by letter (right to left!), then find out what it means.",
+      "key": "6222620d8bb62fa0",
+      "points": 10
+    },
+    {
+      "date": "2026-10-28",
+      "id": "gr1",
+      "type": "grammar",
+      "title": "Sentence Detective",
+      "qid": "g38",
+      "level": 1,
+      "prompt": "What job is the highlighted word doing? Solve it in Buzz's Sentence Detective!",
+      "key": "4852b22ea4051047",
+      "points": 5
+    },
+    {
+      "date": "2026-10-28",
+      "id": "gr2",
+      "type": "grammar",
+      "title": "Sentence Detective",
+      "qid": "g14",
+      "level": 1,
+      "prompt": "What job is the highlighted word doing? Solve it in Buzz's Sentence Detective!",
+      "key": "c0401906319212dd",
+      "points": 5
     }
   ],
   "notes": [
@@ -2208,6 +2276,15 @@
         "name": "Daily 10 (Topmarks)",
         "url": "https://www.topmarks.co.uk/maths-games/daily10",
         "why": "Pick Multiplication for 10 quick sums to warm up for today's big 1358 × 6 race!",
+        "ads": true
+      }
+    },
+    {
+      "date": "2026-10-28",
+      "game": {
+        "name": "Meteor Multiplication (Coolmath4Kids)",
+        "url": "https://www.coolmath4kids.com/math-games/meteor-multiplication",
+        "why": "Blast the meteors ☄️ a speedy warm-up for today's 5× table and 2316 × 4!",
         "ads": true
       }
     }
