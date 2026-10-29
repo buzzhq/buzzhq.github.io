@@ -271,6 +271,14 @@
       "emoji": "🤖",
       "setup": "Why did the robot go on holiday?",
       "punchline": "To recharge its batteries!"
+    },
+    {
+      "date": "2026-10-29",
+      "slot": "pm",
+      "topic": "Basketball",
+      "emoji": "🐟",
+      "setup": "Why don't fish play basketball?",
+      "punchline": "They're scared of the net!"
     }
   ]
 }

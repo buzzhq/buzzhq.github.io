@@ -2003,6 +2003,74 @@
       "prompt": "What job is the highlighted word doing? Solve it in Buzz's Sentence Detective!",
       "key": "c0401906319212dd",
       "points": 5
+    },
+    {
+      "date": "2026-10-29",
+      "id": "mg1",
+      "type": "stepgame",
+      "title": "Maths Garage: long multiplication",
+      "mode": "mult",
+      "a": 2473,
+      "b": 6,
+      "sum": "2473 × 6",
+      "prompt": "Solve it step by step in Buzz's Maths Garage, then send Buzz your finish code!",
+      "key": "3a2cc271c39e8bc1",
+      "points": 10
+    },
+    {
+      "date": "2026-10-29",
+      "id": "mg2",
+      "type": "stepgame",
+      "title": "Maths Garage: long division",
+      "mode": "div",
+      "a": 5172,
+      "b": 4,
+      "sum": "5172 ÷ 4",
+      "prompt": "Solve it step by step in Buzz's Maths Garage, then send Buzz your finish code!",
+      "key": "69d6a38f59d4d55c",
+      "points": 10
+    },
+    {
+      "date": "2026-10-29",
+      "id": "hb1",
+      "type": "hebword",
+      "title": "Hebrew word rally",
+      "word": "לחם",
+      "prompt": "Sound out this Hebrew word letter by letter (right to left!), then find out what it means.",
+      "key": "fc6bdeffbbd2da2f",
+      "points": 10
+    },
+    {
+      "date": "2026-10-29",
+      "id": "hs1",
+      "type": "hebsentence",
+      "title": "Hebrew sentence rally",
+      "sentence": "יש לי דג",
+      "prompt": "Read this Hebrew sentence word by word, letter by letter (right to left!), then work out what it means.",
+      "key": "9e637b283fc817bd",
+      "points": 15
+    },
+    {
+      "date": "2026-10-29",
+      "id": "gr1",
+      "type": "grammar",
+      "title": "Sentence Detective",
+      "qid": "g02",
+      "level": 1,
+      "prompt": "What job is the highlighted word doing? Solve it in Buzz's Sentence Detective!",
+      "key": "ee8ba944759a70b2",
+      "points": 5
+    },
+    {
+      "date": "2026-10-29",
+      "id": "gr2",
+      "type": "grammar",
+      "title": "Sentence Detective",
+      "qid": "g33",
+      "level": 1,
+      "prompt": "What job is the highlighted word doing? Solve it in Buzz's Sentence Detective!",
+      "key": "b1ccb13c83d58bf3",
+      "points": 5
     }
   ],
   "notes": [
@@ -2285,6 +2353,15 @@
         "name": "Meteor Multiplication (Coolmath4Kids)",
         "url": "https://www.coolmath4kids.com/math-games/meteor-multiplication",
         "why": "Blast the meteors ☄️ a speedy warm-up for today's 5× table and 2316 × 4!",
+        "ads": true
+      }
+    },
+    {
+      "date": "2026-10-29",
+      "game": {
+        "name": "Math Trainer – Divide (Maths is Fun)",
+        "url": "https://www.mathsisfun.com/numbers/math-trainer-divide.html",
+        "why": "Quick-fire division facts ⚡ a speedy warm-up for today's 5172 ÷ 4 race!",
         "ads": true
       }
     }
