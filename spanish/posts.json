@@ -1,5 +1,71 @@
 [
   {
+    "id": "2026-10-30",
+    "date": "Viernes, 30 de octubre de 2026",
+    "items": [
+      {
+        "section": "Noticias de Australia",
+        "title": "No habrá centros de datos de IA cerca de las casas",
+        "paragraphs": [
+          "El gobierno de Australia dice que no va a permitir construir centros de datos de inteligencia artificial cerca de casas ni de lugares para hacer deporte o jugar. Un centro de datos es un edificio enorme lleno de ordenadores.",
+          "Muchos vecinos de Sídney y Melbourne están enfadados porque estos edificios gigantes aparecen en sus barrios. Por eso el gobierno cambió las reglas."
+        ],
+        "source": {
+          "name": "Australian Financial Review",
+          "url": "https://www.afr.com/politics/federal/labor-to-ban-ai-data-centres-in-suburban-australia-20261029-p618xn"
+        }
+      },
+      {
+        "section": "Noticias de Israel",
+        "title": "Elecciones: ¿qué pasa ahora?",
+        "paragraphs": [
+          "Ya terminaron de contar todos los votos de las elecciones del martes. Ningún grupo tiene los 61 asientos que necesita en el Knéset, el parlamento de 120 asientos.",
+          "Ahora el presidente Isaac Herzog va a hablar con cada partido. Los partidos le dicen quién debe ser el próximo primer ministro, y él elige a una persona para intentar formar un gobierno. El nuevo Knéset empieza el 10 de noviembre."
+        ],
+        "source": {
+          "name": "Ynetnews",
+          "url": "https://www.ynetnews.com/article/byqsqwzpmg"
+        }
+      },
+      {
+        "section": "Noticias del mundo",
+        "title": "¿Un nuevo planeta enano más allá de Plutón?",
+        "paragraphs": [
+          "Unos científicos con un telescopio en Chile encontraron un objeto de hielo que gira alrededor del Sol, más lejos que Plutón. Se llama 2026 ED138 y puede ser un nuevo planeta enano.",
+          "Mide entre 600 y 1.500 kilómetros de ancho. Está unas 46 veces más lejos del Sol que la Tierra. Plutón está unas 40 veces más lejos."
+        ],
+        "source": {
+          "name": "Reuters (vía Devdiscourse)",
+          "url": "https://www.devdiscourse.com/article/international/3998962-reuters-science-news-summary"
+        }
+      },
+      {
+        "section": "Tecnología e IA",
+        "title": "Una IA gratis que escribe lo que oye en 40 idiomas",
+        "paragraphs": [
+          "La empresa NVIDIA presentó una nueva inteligencia artificial gratis que escucha grabaciones y escribe las palabras. Funciona en hasta 40 idiomas.",
+          "También sabe cuándo habla otra persona: puede separar hasta ocho voces. Además, traduce 31 idiomas al inglés o del inglés. Pero no funciona en directo, solo con grabaciones."
+        ],
+        "source": {
+          "name": "The Neuron",
+          "url": "https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-thursday-october-29-2026/"
+        }
+      }
+    ],
+    "weather": {
+      "day": "Viernes, 30 de octubre",
+      "place": "Bentleigh East",
+      "summary": "Parcialmente nublado y mucho calor por la tarde. Puede haber niebla temprano por la mañana. Al mediodía, viento del norte de 15 a 25 km/h. Casi seguro que no llueve. El sol es muy fuerte (UV muy alto): ¡usa sombrero y crema!",
+      "min": 8,
+      "max": 28,
+      "rainChance": 5,
+      "source": {
+        "name": "Bureau of Meteorology",
+        "url": "https://www.bom.gov.au/location/australia/victoria/central/bvic_pt042-melbourne"
+      }
+    }
+  },
+  {
     "id": "2026-10-29",
     "date": "Jueves, 29 de octubre de 2026",
     "items": [
