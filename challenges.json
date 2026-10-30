@@ -2071,6 +2071,95 @@
       "prompt": "What job is the highlighted word doing? Solve it in Buzz's Sentence Detective!",
       "key": "b1ccb13c83d58bf3",
       "points": 5
+    },
+    {
+      "date": "2026-10-30",
+      "id": "tt1",
+      "type": "timestables",
+      "title": "Times-tables warm-up",
+      "tables": [
+        2
+      ],
+      "n": 8,
+      "prompt": "Quick times-tables warm-up with pictures: tap the answer, then send Buzz your finish code!",
+      "key": "a86d1a780c23e69e",
+      "points": 10
+    },
+    {
+      "date": "2026-10-30",
+      "id": "mg1",
+      "type": "stepgame",
+      "title": "Maths Garage: long multiplication",
+      "mode": "mult",
+      "a": 1427,
+      "b": 5,
+      "sum": "1427 × 5",
+      "prompt": "Solve it step by step in Buzz's Maths Garage, then send Buzz your finish code!",
+      "key": "381632b75d26feba",
+      "points": 10
+    },
+    {
+      "date": "2026-10-30",
+      "id": "mg2",
+      "type": "stepgame",
+      "title": "Maths Garage: long division",
+      "mode": "div",
+      "a": 3906,
+      "b": 3,
+      "sum": "3906 ÷ 3",
+      "prompt": "Solve it step by step in Buzz's Maths Garage, then send Buzz your finish code!",
+      "key": "a954374906c37245",
+      "points": 10
+    },
+    {
+      "date": "2026-10-30",
+      "id": "hb1",
+      "type": "hebword",
+      "title": "Hebrew word rally",
+      "word": "שלום",
+      "prompt": "Sound out this Hebrew word letter by letter (right to left!), then find out what it means.",
+      "key": "aa24d81263426655",
+      "points": 10
+    },
+    {
+      "date": "2026-10-30",
+      "id": "hs1",
+      "type": "hebsentence",
+      "title": "Hebrew sentence rally",
+      "sentence": "יש לי סוס",
+      "prompt": "Read this Hebrew sentence word by word, letter by letter (right to left!), then work out what it means.",
+      "key": "32c178d5017bba2f",
+      "points": 15
+    },
+    {
+      "date": "2026-10-30",
+      "id": "gr1",
+      "type": "grammar",
+      "title": "Sentence Detective",
+      "qid": "g13",
+      "level": 1,
+      "prompt": "What job is the highlighted word doing? Solve it in Buzz's Sentence Detective!",
+      "key": "8f9bf8193cff5e51",
+      "points": 5
+    },
+    {
+      "date": "2026-10-30",
+      "id": "gr2",
+      "type": "grammar",
+      "title": "Sentence Detective",
+      "qid": "g37",
+      "level": 1,
+      "prompt": "What job is the highlighted word doing? Solve it in Buzz's Sentence Detective!",
+      "key": "322c47218eee0dca",
+      "points": 5
+    },
+    {
+      "date": "2026-10-30",
+      "id": "dc5",
+      "type": "reading",
+      "title": "Read aloud",
+      "text": "On Friday, Franklin drove the red GT to the park to meet his friend Lamar at the court. They warmed up with ten passes each. After that, they played a game of one-on-one. Franklin missed his first three shots because he was rushing. Then he slowed down, bent his knees and made five shots in a row! They high-fived and drove home at the speed limit for pizza night.",
+      "points": 10
     }
   ],
   "notes": [
@@ -2362,6 +2451,15 @@
         "name": "Math Trainer – Divide (Maths is Fun)",
         "url": "https://www.mathsisfun.com/numbers/math-trainer-divide.html",
         "why": "Quick-fire division facts ⚡ a speedy warm-up for today's 5172 ÷ 4 race!",
+        "ads": true
+      }
+    },
+    {
+      "date": "2026-10-30",
+      "game": {
+        "name": "Canoe Penguins (Coolmath4Kids)",
+        "url": "https://www.coolmath4kids.com/math-games/canoe-penguins",
+        "why": "Race the penguins 🐧 a fun multiplying warm-up for today's 1427 × 5 race!",
         "ads": true
       }
     }
