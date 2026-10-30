@@ -287,6 +287,14 @@
       "emoji": "🐴",
       "setup": "What do you call a horse that lives next door?",
       "punchline": "Your neigh-bour!"
+    },
+    {
+      "date": "2026-10-31",
+      "slot": "am",
+      "topic": "Halloween",
+      "emoji": "💀",
+      "setup": "Why didn't the skeleton go to the Halloween party?",
+      "punchline": "He had no body to go with!"
     }
   ]
 }
