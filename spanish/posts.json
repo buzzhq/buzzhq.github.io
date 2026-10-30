@@ -1,5 +1,71 @@
 [
   {
+    "id": "2026-10-31",
+    "date": "Sábado, 31 de octubre de 2026",
+    "items": [
+      {
+        "section": "Noticias de Victoria",
+        "title": "Donó sangre en los 85 centros de Australia",
+        "paragraphs": [
+          "Trevor Bergman es un policía de Melbourne. Él tenía un objetivo especial: donar sangre en todos los centros de donación de Australia.",
+          "Ahora lo consiguió. Su última donación fue en Canberra, y así completó los 85 centros del país. Donar sangre ayuda a personas enfermas o heridas."
+        ],
+        "source": {
+          "name": "ABC News",
+          "url": "https://www.abc.net.au/news/2026-10-30/melbourne-man-donates-blood-across-australia/107319322"
+        }
+      },
+      {
+        "section": "Noticias de Israel",
+        "title": "Resultados finales: nadie llega a 61",
+        "paragraphs": [
+          "Ya están los resultados finales de las elecciones. El grupo de Netanyahu tiene 53 asientos, el grupo de Gadi Eisenkot tiene 48 y los partidos árabes tienen 19. Nadie tiene los 61 que necesita.",
+          "Votó casi el 78% de la gente, el número más alto en muchos años. Ahora los partidos hablan entre ellos para intentar formar un gobierno. Hasta entonces, Netanyahu sigue como primer ministro."
+        ],
+        "source": {
+          "name": "AP News",
+          "url": "https://apnews.com/article/israel-elections-netanyahu-results-eisenkot-arabs-3a793c0d07fdfe515390524b849d8674"
+        }
+      },
+      {
+        "section": "Noticias del mundo",
+        "title": "Los cuervos deciden más rápido que nosotros",
+        "paragraphs": [
+          "En Alemania, dos cuervos llamados Iggy y Lemmy miraron una pantalla con puntos que se movían. Tenían que tocar la izquierda o la derecha para decir hacia dónde iban los puntos. Si acertaban, ¡comían un gusano!",
+          "Los cuervos respondieron en solo 235 milisegundos, más o menos un quinto de segundo. Es casi el doble de rápido que las personas y los monos."
+        ],
+        "source": {
+          "name": "Smithsonian Magazine",
+          "url": "https://www.smithsonianmag.com/smart-news/crows-can-make-decisions-based-on-visual-information-at-lightning-speed-roughly-twice-as-fast-as-humans-can-study-suggests-180989779/"
+        }
+      },
+      {
+        "section": "Tecnología e IA",
+        "title": "La IA escucha a los murciélagos",
+        "paragraphs": [
+          "En Gran Bretaña, unos científicos pusieron aparatos en 310 bosques para grabar los sonidos de los murciélagos durante tres años. Grabaron 98 millones de llamadas.",
+          "Para una persona, escuchar todo eso tomaría más de 30 años. Pero una inteligencia artificial lo hizo mucho más rápido y encontró dónde viven murciélagos muy raros, como el barbastela."
+        ],
+        "source": {
+          "name": "BBC News",
+          "url": "https://www.bbc.co.uk/news/articles/cqm24kgr1jz4o"
+        }
+      }
+    ],
+    "weather": {
+      "day": "Sábado, 31 de octubre",
+      "place": "Bentleigh East",
+      "summary": "Nublado, con lluvia casi segura (entre 9 y 15 mm). Por la mañana y por la tarde puede haber tormenta, quizás fuerte, con vientos peligrosos. Viento del norte de 25 a 40 km/h, que cambia al oeste a primera hora de la tarde. La lluvia para un poco al final de la tarde. ¡Lleva paraguas!",
+      "min": 17,
+      "max": 23,
+      "rainChance": 95,
+      "source": {
+        "name": "Bureau of Meteorology",
+        "url": "https://www.bom.gov.au/location/australia/victoria/central/bvic_pt042-melbourne"
+      }
+    }
+  },
+  {
     "id": "2026-10-30",
     "date": "Viernes, 30 de octubre de 2026",
     "items": [
