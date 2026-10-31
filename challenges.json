@@ -2160,6 +2160,95 @@
       "title": "Read aloud",
       "text": "On Friday, Franklin drove the red GT to the park to meet his friend Lamar at the court. They warmed up with ten passes each. After that, they played a game of one-on-one. Franklin missed his first three shots because he was rushing. Then he slowed down, bent his knees and made five shots in a row! They high-fived and drove home at the speed limit for pizza night.",
       "points": 10
+    },
+    {
+      "date": "2026-10-31",
+      "id": "tt1",
+      "type": "timestables",
+      "title": "Times-tables warm-up",
+      "tables": [
+        2
+      ],
+      "n": 8,
+      "prompt": "Quick times-tables warm-up with pictures: tap the answer, then send Buzz your finish code!",
+      "key": "ec28dc4e2dcbfe0f",
+      "points": 10
+    },
+    {
+      "date": "2026-10-31",
+      "id": "mg1",
+      "type": "stepgame",
+      "title": "Maths Garage: long multiplication",
+      "mode": "mult",
+      "a": 2143,
+      "b": 6,
+      "sum": "2143 × 6",
+      "prompt": "Solve it step by step in Buzz's Maths Garage, then send Buzz your finish code!",
+      "key": "c51d7377a621f17c",
+      "points": 10
+    },
+    {
+      "date": "2026-10-31",
+      "id": "mg2",
+      "type": "stepgame",
+      "title": "Maths Garage: long division",
+      "mode": "div",
+      "a": 2436,
+      "b": 4,
+      "sum": "2436 ÷ 4",
+      "prompt": "Solve it step by step in Buzz's Maths Garage, then send Buzz your finish code!",
+      "key": "4851d90d89d3494b",
+      "points": 10
+    },
+    {
+      "date": "2026-10-31",
+      "id": "hb1",
+      "type": "hebword",
+      "title": "Hebrew word rally",
+      "word": "מזל",
+      "prompt": "Sound out this Hebrew word letter by letter (right to left!), then find out what it means.",
+      "key": "58bf6d4989702f22",
+      "points": 10
+    },
+    {
+      "date": "2026-10-31",
+      "id": "hs1",
+      "type": "hebsentence",
+      "title": "Hebrew sentence rally",
+      "sentence": "זה הדגל שלי",
+      "prompt": "Read this Hebrew sentence word by word, letter by letter (right to left!), then work out what it means.",
+      "key": "88c18c98085cf567",
+      "points": 15
+    },
+    {
+      "date": "2026-10-31",
+      "id": "gr1",
+      "type": "grammar",
+      "title": "Sentence Detective",
+      "qid": "g06",
+      "level": 1,
+      "prompt": "What job is the highlighted word doing? Solve it in Buzz's Sentence Detective!",
+      "key": "e2549683e246ba5b",
+      "points": 5
+    },
+    {
+      "date": "2026-10-31",
+      "id": "gr2",
+      "type": "grammar",
+      "title": "Sentence Detective",
+      "qid": "g35",
+      "level": 1,
+      "prompt": "What job is the highlighted word doing? Solve it in Buzz's Sentence Detective!",
+      "key": "e618b24a98571c40",
+      "points": 5
+    },
+    {
+      "date": "2026-10-31",
+      "id": "dc5",
+      "type": "reading",
+      "title": "Read aloud",
+      "text": "On Halloween night, Franklin dressed up as a race-car driver with a shiny silver helmet. Meanwhile, his dad carved a pumpkin that looked like a basketball. They walked down the street and knocked on ten doors. Franklin said thank you at every house. As a result, the neighbours gave him extra treats! Back home, he shared his lollies with Dad and saved the rest for tomorrow.",
+      "points": 10
     }
   ],
   "notes": [
@@ -2460,6 +2549,15 @@
         "name": "Canoe Penguins (Coolmath4Kids)",
         "url": "https://www.coolmath4kids.com/math-games/canoe-penguins",
         "why": "Race the penguins 🐧 a fun multiplying warm-up for today's 1427 × 5 race!",
+        "ads": true
+      }
+    },
+    {
+      "date": "2026-10-31",
+      "game": {
+        "name": "Multiply Race (Toy Theater)",
+        "url": "https://toytheater.com/multiply-race/",
+        "why": "Race your car to the finish by picking the right answers 🏎️, a speedy warm-up for today's 2143 × 6!",
         "ads": true
       }
     }

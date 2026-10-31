@@ -695,6 +695,18 @@
       "game": "Descenders",
       "title": "Scout a tricky jump first 🔍",
       "tip": "If one jump keeps beating you, ride up to it slowly once and look where the take-off and landing are. Next time, go faster now that you know what's coming."
+    },
+    {
+      "date": "2026-10-31",
+      "game": "Descenders",
+      "title": "Land first, then brake 🛬",
+      "tip": "Try not to squeeze the brakes while you're in the air. Land the jump smoothly first, then slow down if you need to."
+    },
+    {
+      "date": "2026-10-31",
+      "game": "GTA",
+      "title": "Peek at the mini-map 🗺️",
+      "tip": "The mini-map in the corner shows the road ahead. A quick glance helps you spot a bend before you get there, so you can slow down in time."
     }
   ]
 }

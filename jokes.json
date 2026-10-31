@@ -295,6 +295,14 @@
       "emoji": "💀",
       "setup": "Why didn't the skeleton go to the Halloween party?",
       "punchline": "He had no body to go with!"
+    },
+    {
+      "date": "2026-10-31",
+      "slot": "pm",
+      "topic": "Halloween",
+      "emoji": "🧙",
+      "setup": "What do you call a witch at the beach?",
+      "punchline": "A sand-witch!"
     }
   ]
 }
