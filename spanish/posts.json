@@ -1,5 +1,71 @@
 [
   {
+    "id": "2026-11-01",
+    "date": "Domingo, 1 de noviembre de 2026",
+    "items": [
+      {
+        "section": "Noticias de Victoria",
+        "title": "Stormy Marco gana el Victoria Derby",
+        "paragraphs": [
+          "El sábado fue el Derby Day en el hipódromo de Flemington, en Melbourne. Hubo mucha gente y también lluvia. La carrera más importante del día fue el Victoria Derby.",
+          "El caballo Stormy Marco ganó la carrera. Su jinete, James McDonald, esperó un espacio y luego corrió muy rápido hasta el final. El martes es otro gran día: ¡la Melbourne Cup!"
+        ],
+        "source": {
+          "name": "The Sydney Morning Herald",
+          "url": "https://www.smh.com.au/national/victoria/derby-day-live-punters-descend-on-flemington-for-big-day-of-racing-cormier-stormy-marco-favoured-in-4-20pm-main-race-20261031-p61a3e.html"
+        }
+      },
+      {
+        "section": "Noticias de Israel",
+        "title": "Eisenkot pone cuatro reglas para su gobierno",
+        "paragraphs": [
+          "Después de las elecciones, nadie tiene 61 asientos para formar gobierno. Gadi Eisenkot, líder del partido Yashar, quiere formar un gobierno muy grande.",
+          "El sábado dijo que cualquier diputado puede unirse si acepta cuatro principios. Por ejemplo, que Israel es un Estado judío y democrático, y que todos los ciudadanos deben hacer un servicio al país, militar o civil."
+        ],
+        "source": {
+          "name": "The Jerusalem Post",
+          "url": "https://www.jpost.com/israel-election-2026/article-913413"
+        }
+      },
+      {
+        "section": "Noticias del mundo",
+        "title": "El \"pollo del infierno\" comía fruta",
+        "paragraphs": [
+          "Unos científicos encontraron un dinosaurio nuevo en Estados Unidos. Se llama Infernogallus, que significa \"pollo del infierno\". Vivió hace millones de años, al mismo tiempo que el T. rex.",
+          "Su cráneo muestra que masticaba moviendo el pico hacia adelante y hacia atrás, como algunos loros de hoy. Por eso los científicos creen que es el primer dinosaurio conocido que comía fruta."
+        ],
+        "source": {
+          "name": "Phys.org",
+          "url": "https://phys.org/news/2026-10-rare-fossil-discovery-reveals-dinosaur.html"
+        }
+      },
+      {
+        "section": "Tecnología e IA",
+        "title": "Un satélite de Google escribe un poema",
+        "paragraphs": [
+          "Google tiene un satélite en el espacio con chips especiales para inteligencia artificial. Desde la Tierra le pidieron a la IA del satélite que escribiera un haiku, un poema muy corto, sobre estar en el espacio.",
+          "La IA respondió: \"Blue marble below / Data streams in silent grace / Starlight feeds my core\". Es la primera respuesta de un chip de IA de Google en órbita. En 2027 quieren lanzar dos satélites más."
+        ],
+        "source": {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/10/30/googles-first-data-center-satellite-is-online-and-writing-poetry/"
+        }
+      }
+    ],
+    "weather": {
+      "day": "Domingo, 1 de noviembre",
+      "place": "Bentleigh East",
+      "summary": "Parcialmente nublado. Puede caer una lluvia ligera por la mañana o por la tarde, pero no es muy probable. Viento suave del oeste y del suroeste, de 15 a 20 km/h. El sol es muy fuerte hoy: ¡usa gorra y protector solar!",
+      "min": 12,
+      "max": 20,
+      "rainChance": 30,
+      "source": {
+        "name": "Bureau of Meteorology",
+        "url": "https://www.bom.gov.au/location/australia/victoria/central/bvic_pt042-melbourne"
+      }
+    }
+  },
+  {
     "id": "2026-10-31",
     "date": "Sábado, 31 de octubre de 2026",
     "items": [
