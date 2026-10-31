@@ -303,6 +303,14 @@
       "emoji": "🧙",
       "setup": "What do you call a witch at the beach?",
       "punchline": "A sand-witch!"
+    },
+    {
+      "date": "2026-11-01",
+      "slot": "am",
+      "topic": "Animals",
+      "emoji": "🐆",
+      "setup": "Why can't a cheetah play hide and seek?",
+      "punchline": "Because he's always spotted!"
     }
   ]
 }
