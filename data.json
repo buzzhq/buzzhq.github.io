@@ -1,7 +1,7 @@
 {
   "name": "Alon",
   "bot": "Buzz 🤖",
-  "updated": "2026-11-01",
+  "updated": "2026-11-02",
   "levels": [
     {
       "name": "Rookie",
@@ -619,6 +619,13 @@
       "category": "school",
       "points": 10,
       "text": "Uploaded homework: 7 handwritten pages"
+    },
+    {
+      "date": "2026-11-02",
+      "emoji": "🎮",
+      "category": "cashout",
+      "points": -279,
+      "text": "Cashed in: PEAK for PS5 ($13.95)"
     }
   ],
   "cashout": {
