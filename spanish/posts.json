@@ -1,5 +1,71 @@
 [
   {
+    "id": "2026-11-02",
+    "date": "Lunes, 2 de noviembre de 2026",
+    "items": [
+      {
+        "section": "Noticias de Australia",
+        "title": "Albanese viaja al Caribe para una gran reunión",
+        "paragraphs": [
+          "El primer ministro de Australia, Anthony Albanese, está en Antigua y Barbuda, un país pequeño en el mar Caribe. Allí hay una reunión de los líderes de la Commonwealth, un grupo de 56 países. El rey Carlos también va a estar.",
+          "Los líderes van a hablar del cambio climático, de los océanos, del comercio y de la inteligencia artificial. Albanese también quiere ayuda para que Australia tenga un lugar en el Consejo de Seguridad de la ONU en 2029."
+        ],
+        "source": {
+          "name": "ABC News",
+          "url": "https://www.abc.net.au/news/2026-11-01/anthony-albanese-flies-to-caribbean-for-chogm-summit/107330040"
+        }
+      },
+      {
+        "section": "Noticias de Israel",
+        "title": "Herzog pide hablar \"con el corazón abierto\"",
+        "paragraphs": [
+          "Después de las elecciones, ningún grupo tiene los 61 asientos necesarios en la Knéset. El bloque de Netanyahu tiene 53 y el bloque de Eisenkot tiene 48. Los partidos árabes tienen 19.",
+          "El presidente Isaac Herzog pidió a los partidos hablar con la mente y el corazón abiertos, para no repetir las elecciones. El miércoles va a empezar a reunirse con ellos para decidir quién intenta formar el gobierno primero."
+        ],
+        "source": {
+          "name": "NBC News",
+          "url": "https://www.nbcnews.com/world/israel/israel-president-open-heart-fresh-election-rcna606785"
+        }
+      },
+      {
+        "section": "Noticias del mundo",
+        "title": "Empiezan los Juegos Olímpicos de la Juventud en Dakar",
+        "paragraphs": [
+          "En Dakar, la capital de Senegal, en África, empezaron los cuartos Juegos Olímpicos de la Juventud de verano. Participan unos 2.700 jóvenes deportistas de 204 equipos, en 25 deportes.",
+          "Hay algo especial: seis jóvenes refugiados forman el primer Equipo Olímpico de Refugiados en unos Juegos de la Juventud. ¡Es un momento histórico!"
+        ],
+        "source": {
+          "name": "SBS News",
+          "url": "https://www.sbs.com.au/news/podcast-episode/ukrainians-evacuated-from-russian-occupied-oleshky-midday-news-bulletin-1-november-2026/h6yd8uz9g"
+        }
+      },
+      {
+        "section": "Tecnología e IA",
+        "title": "La IA de Apple llega a China",
+        "paragraphs": [
+          "Apple dice que su inteligencia artificial, Apple Intelligence, va a llegar a los iPhone en China en diciembre. Las pruebas empiezan el 4 de noviembre.",
+          "Apple trabaja con la empresa china Alibaba y su IA, que se llama Qwen. Con Siri y otras herramientas, la gente va a poder hacer preguntas sobre fotos y documentos, traducir mensajes y escribir textos."
+        ],
+        "source": {
+          "name": "9to5Mac",
+          "url": "https://9to5mac.com/2026/10/30/apple-confirms-ios-27-3-beta-is-coming-next-week-with-apple-intelligence-in-china/"
+        }
+      }
+    ],
+    "weather": {
+      "day": "Lunes, 2 de noviembre",
+      "place": "Bentleigh East",
+      "summary": "Parcialmente nublado, con mucha probabilidad de chubascos. Puede haber niebla temprano y una tormenta fuerte, sobre todo en los suburbios del noroeste. Viento suave del norte, de 15 a 20 km/h por la mañana. El sol es muy fuerte: ¡lleva paraguas, gorra y protector solar!",
+      "min": 11,
+      "max": 21,
+      "rainChance": 90,
+      "source": {
+        "name": "Bureau of Meteorology",
+        "url": "https://www.bom.gov.au/location/australia/victoria/central/bvic_pt042-melbourne"
+      }
+    }
+  },
+  {
     "id": "2026-11-01",
     "date": "Domingo, 1 de noviembre de 2026",
     "items": [
