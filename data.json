@@ -625,7 +625,8 @@
       "emoji": "🎮",
       "category": "cashout",
       "points": -279,
-      "text": "Cashed in: PEAK for PS5 ($13.95)"
+      "text": "Cashed in: PEAK for PS5 ($13.95)",
+      "dollars": 13.95
     }
   ],
   "cashout": {
