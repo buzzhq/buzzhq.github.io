@@ -707,6 +707,18 @@
       "game": "GTA",
       "title": "Peek at the mini-map 🗺️",
       "tip": "The mini-map in the corner shows the road ahead. A quick glance helps you spot a bend before you get there, so you can slow down in time."
+    },
+    {
+      "date": "2026-11-01",
+      "game": "Descenders",
+      "title": "Stay loose on bumpy trails 🌀",
+      "tip": "On rough, bumpy bits, don't fight every bump. Keep your line simple and steer gently, and the bike stays steadier than if you jerk the stick left and right."
+    },
+    {
+      "date": "2026-11-01",
+      "game": "Fortnite",
+      "title": "Check the map before you drop 🗺️",
+      "tip": "While you're on the Battle Bus, open the map and look where the bus is flying. Pick a landing spot a little off the bus path so it's less crowded."
     }
   ]
 }

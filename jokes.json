@@ -311,6 +311,14 @@
       "emoji": "🐆",
       "setup": "Why can't a cheetah play hide and seek?",
       "punchline": "Because he's always spotted!"
+    },
+    {
+      "date": "2026-11-01",
+      "slot": "pm",
+      "topic": "Animals",
+      "emoji": "🐻",
+      "setup": "What do you call a bear caught in the rain?",
+      "punchline": "A drizzly bear!"
     }
   ]
 }

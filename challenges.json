@@ -2249,6 +2249,95 @@
       "title": "Read aloud",
       "text": "On Halloween night, Franklin dressed up as a race-car driver with a shiny silver helmet. Meanwhile, his dad carved a pumpkin that looked like a basketball. They walked down the street and knocked on ten doors. Franklin said thank you at every house. As a result, the neighbours gave him extra treats! Back home, he shared his lollies with Dad and saved the rest for tomorrow.",
       "points": 10
+    },
+    {
+      "date": "2026-11-01",
+      "id": "tt1",
+      "type": "timestables",
+      "title": "Times-tables warm-up",
+      "tables": [
+        2
+      ],
+      "n": 8,
+      "prompt": "Quick times-tables warm-up with pictures: tap the answer, then send Buzz your finish code!",
+      "key": "f063ea293c807c28",
+      "points": 10
+    },
+    {
+      "date": "2026-11-01",
+      "id": "mg1",
+      "type": "stepgame",
+      "title": "Maths Garage: long multiplication",
+      "mode": "mult",
+      "a": 3152,
+      "b": 7,
+      "sum": "3152 × 7",
+      "prompt": "Solve it step by step in Buzz's Maths Garage, then send Buzz your finish code!",
+      "key": "c29e2adbd9fe3183",
+      "points": 10
+    },
+    {
+      "date": "2026-11-01",
+      "id": "mg2",
+      "type": "stepgame",
+      "title": "Maths Garage: long division",
+      "mode": "div",
+      "a": 2814,
+      "b": 6,
+      "sum": "2814 ÷ 6",
+      "prompt": "Solve it step by step in Buzz's Maths Garage, then send Buzz your finish code!",
+      "key": "29937b1336f4e421",
+      "points": 10
+    },
+    {
+      "date": "2026-11-01",
+      "id": "hb1",
+      "type": "hebword",
+      "title": "Hebrew word rally",
+      "word": "דבש",
+      "prompt": "Sound out this Hebrew word letter by letter (right to left!), then find out what it means.",
+      "key": "8b1c98bbe0502a93",
+      "points": 10
+    },
+    {
+      "date": "2026-11-01",
+      "id": "hs1",
+      "type": "hebsentence",
+      "title": "Hebrew sentence rally",
+      "sentence": "לדב יש דבש",
+      "prompt": "Read this Hebrew sentence word by word, letter by letter (right to left!), then work out what it means.",
+      "key": "13f3a4c97cdb7ea4",
+      "points": 15
+    },
+    {
+      "date": "2026-11-01",
+      "id": "gr1",
+      "type": "grammar",
+      "title": "Sentence Detective",
+      "qid": "g22",
+      "level": 1,
+      "prompt": "What job is the highlighted word doing? Solve it in Buzz's Sentence Detective!",
+      "key": "a52b4191bf49be6d",
+      "points": 5
+    },
+    {
+      "date": "2026-11-01",
+      "id": "gr2",
+      "type": "grammar",
+      "title": "Sentence Detective",
+      "qid": "g01",
+      "level": 1,
+      "prompt": "What job is the highlighted word doing? Solve it in Buzz's Sentence Detective!",
+      "key": "451226a0eb12a7a0",
+      "points": 5
+    },
+    {
+      "date": "2026-11-01",
+      "id": "dc5",
+      "type": "reading",
+      "title": "Read aloud",
+      "text": "On Sunday afternoon, Franklin drove the red GT to the park for a quick shoot-around. Before he started, he stretched his legs and did ten fast dribbles. A light rain began to fall, so he practised under the covered court. He kept his elbow straight on every shot. By the end, he had made nine free throws in a row! Then he drove home at the speed limit and helped Dad clear the dinner table.",
+      "points": 10
     }
   ],
   "notes": [
@@ -2558,6 +2647,15 @@
         "name": "Multiply Race (Toy Theater)",
         "url": "https://toytheater.com/multiply-race/",
         "why": "Race your car to the finish by picking the right answers 🏎️, a speedy warm-up for today's 2143 × 6!",
+        "ads": true
+      }
+    },
+    {
+      "date": "2026-11-01",
+      "game": {
+        "name": "Math Racer Multiplication (Math Playground)",
+        "url": "https://www.mathplayground.com/math_racer_multiplication.html",
+        "why": "Drive your car to the right answer 🏎️, a speedy warm-up for today's 3152 × 7 race!",
         "ads": true
       }
     }
