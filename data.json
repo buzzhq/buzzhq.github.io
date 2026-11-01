@@ -1,7 +1,7 @@
 {
   "name": "Alon",
   "bot": "Buzz 🤖",
-  "updated": "2026-10-26",
+  "updated": "2026-11-01",
   "levels": [
     {
       "name": "Rookie",
@@ -563,6 +563,62 @@
       "category": "challenge",
       "points": 10,
       "text": "Read aloud dc5 🎤 Franklin rainy day"
+    },
+    {
+      "date": "2026-10-31",
+      "emoji": "✖️",
+      "category": "challenge",
+      "points": 10,
+      "text": "Times tables tt1 ✅ 2× table"
+    },
+    {
+      "date": "2026-10-31",
+      "emoji": "🏎️",
+      "category": "challenge",
+      "points": 10,
+      "text": "Maths Garage mg1 ✅ 2143 × 6"
+    },
+    {
+      "date": "2026-10-31",
+      "emoji": "🏎️",
+      "category": "challenge",
+      "points": 10,
+      "text": "Maths Garage mg2 ✅ 2436 ÷ 4"
+    },
+    {
+      "date": "2026-10-31",
+      "emoji": "🔤",
+      "category": "challenge",
+      "points": 10,
+      "text": "Hebrew word hb1 ✅ מזל (mazal = luck)"
+    },
+    {
+      "date": "2026-10-31",
+      "emoji": "💬",
+      "category": "challenge",
+      "points": 15,
+      "text": "Hebrew sentence hs1 ✅ זה הדגל שלי (ze ha-degel sheli = This is my flag)"
+    },
+    {
+      "date": "2026-10-31",
+      "emoji": "🕵️",
+      "category": "challenge",
+      "points": 5,
+      "text": "Sentence Detective gr1 ✅ team = noun"
+    },
+    {
+      "date": "2026-10-31",
+      "emoji": "🕵️",
+      "category": "challenge",
+      "points": 5,
+      "text": "Sentence Detective gr2 ✅ always = adverb"
+    },
+    {
+      "date": "2026-11-01",
+      "emoji": "📚",
+      "category": "school",
+      "points": 10,
+      "text": "Uploaded homework: 7 handwritten pages"
     }
   ],
   "cashout": {
