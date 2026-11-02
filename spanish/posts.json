@@ -1,5 +1,71 @@
 [
   {
+    "id": "2026-11-03",
+    "date": "Martes, 3 de noviembre de 2026",
+    "items": [
+      {
+        "section": "Noticias de Victoria",
+        "title": "Hoy es el día de la Melbourne Cup",
+        "paragraphs": [
+          "Hoy, martes, es la Melbourne Cup, la carrera de caballos más famosa de Australia. La llaman «la carrera que detiene a la nación». Empieza a las tres de la tarde en el hipódromo de Flemington, en Melbourne.",
+          "Este año corren 24 caballos. La carrera es muy larga: 3.200 metros. Muchos caballos vienen de otros países, como Irlanda e Inglaterra. El tiempo va a estar suave, con unos 18 grados."
+        ],
+        "source": {
+          "name": "Fox Sports",
+          "url": "https://www.foxsports.com.au/horse-racing/melbourne-cup/melbourne-cup-2026-start-time-date-horses-prizemoney-field-favourites-weather-when-is-it-on/news-story/d56545612825c722541537729cf4c9d6"
+        }
+      },
+      {
+        "section": "Noticias de Israel",
+        "title": "Los partidos árabes apoyan a Eisenkot",
+        "paragraphs": [
+          "Los partidos árabes de Israel ganaron 19 asientos en la Knéset, más que nunca. Ahora dicen que van a apoyar a Gadi Eisenkot, el líder de la oposición, y no a Netanyahu.",
+          "El miércoles van a confirmar los resultados oficiales. Después, el presidente Herzog va a hablar con los 11 partidos y va a elegir a la persona que intenta formar el nuevo gobierno. Esa persona va a tener 28 días."
+        ],
+        "source": {
+          "name": "Al Jazeera",
+          "url": "https://www.aljazeera.com/news/2026/11/2/arab-parties-back-eisenkot-whats-the-latest-in-israels-coalition-talks"
+        }
+      },
+      {
+        "section": "Noticias del mundo",
+        "title": "Rescatan a un joven en la nieve de los Alpes",
+        "paragraphs": [
+          "Un joven alemán de 20 años se quedó solo en una montaña de Austria, a 2.600 metros de altura, con mucha nieve y viento. Sus dos compañeros bajaron sin él. Por la noche llamó para pedir ayuda.",
+          "Once rescatadores subieron y lo encontraron antes de la medianoche. Bajar fue muy difícil y peligroso por la nieve profunda. ¡El rescate duró 14 horas! Por la mañana, todos llegaron bien a un refugio."
+        ],
+        "source": {
+          "name": "Euronews",
+          "url": "https://www.euronews.com/2026/11/02/german-climber-stranded-at-2600-metres-in-austrian-alps-rescued-after-14-hour-operation"
+        }
+      },
+      {
+        "section": "Tecnología e IA",
+        "title": "Una IA que sabe cuándo ayudar",
+        "paragraphs": [
+          "Investigadores de Google y de varias universidades crearon StreamVibe, una IA que mira un video mientras una persona cocina o arma un mueble. La idea es que hable solo cuando la persona necesita ayuda, sin interrumpir todo el tiempo.",
+          "Por ejemplo, en una receta de pan con mermelada, otras IA solo dicen lo que pasa en la pantalla, pero StreamVibe da el próximo paso: cortar la corteza. Pero todavía es difícil: en videos de más de cinco minutos, la IA muchas veces no elige el momento correcto."
+        ],
+        "source": {
+          "name": "The Decoder",
+          "url": "https://the-decoder.com/google-wants-video-ai-to-understand-what-people-need-as-they-workgoogle-researchers-are-teaching-a-video-assistant-when-to-offer-help/"
+        }
+      }
+    ],
+    "weather": {
+      "day": "Martes, 3 de noviembre",
+      "place": "Bentleigh East",
+      "summary": "Nublado. Puede haber chubascos por la mañana. Viento del sur, de 15 a 25 km/h, más suave por la noche. El sol es muy fuerte: ¡lleva gorra y protector solar!",
+      "min": 13,
+      "max": 19,
+      "rainChance": 40,
+      "source": {
+        "name": "Bureau of Meteorology",
+        "url": "https://www.bom.gov.au/location/australia/victoria/central/bvic_pt042-melbourne"
+      }
+    }
+  },
+  {
     "id": "2026-11-02",
     "date": "Lunes, 2 de noviembre de 2026",
     "items": [
