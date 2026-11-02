@@ -319,6 +319,14 @@
       "emoji": "🐻",
       "setup": "What do you call a bear caught in the rain?",
       "punchline": "A drizzly bear!"
+    },
+    {
+      "date": "2026-11-02",
+      "slot": "pm",
+      "topic": "Animals",
+      "emoji": "🐍",
+      "setup": "Why are snakes so hard to fool?",
+      "punchline": "You can't pull their leg!"
     }
   ]
 }

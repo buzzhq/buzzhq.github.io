@@ -2338,6 +2338,95 @@
       "title": "Read aloud",
       "text": "On Sunday afternoon, Franklin drove the red GT to the park for a quick shoot-around. Before he started, he stretched his legs and did ten fast dribbles. A light rain began to fall, so he practised under the covered court. He kept his elbow straight on every shot. By the end, he had made nine free throws in a row! Then he drove home at the speed limit and helped Dad clear the dinner table.",
       "points": 10
+    },
+    {
+      "date": "2026-11-02",
+      "id": "tt1",
+      "type": "timestables",
+      "title": "Times-tables warm-up",
+      "tables": [
+        5
+      ],
+      "n": 8,
+      "prompt": "Quick times-tables warm-up with pictures: tap the answer, then send Buzz your finish code!",
+      "key": "1947dcc114d387ed",
+      "points": 10
+    },
+    {
+      "date": "2026-11-02",
+      "id": "mg1",
+      "type": "stepgame",
+      "title": "Maths Garage: long multiplication",
+      "mode": "mult",
+      "a": 2635,
+      "b": 4,
+      "sum": "2635 × 4",
+      "prompt": "Solve it step by step in Buzz's Maths Garage, then send Buzz your finish code!",
+      "key": "5f8447dda9b94842",
+      "points": 10
+    },
+    {
+      "date": "2026-11-02",
+      "id": "mg2",
+      "type": "stepgame",
+      "title": "Maths Garage: long division",
+      "mode": "div",
+      "a": 4208,
+      "b": 4,
+      "sum": "4208 ÷ 4",
+      "prompt": "Solve it step by step in Buzz's Maths Garage, then send Buzz your finish code!",
+      "key": "7a9bd80e95dd51bc",
+      "points": 10
+    },
+    {
+      "date": "2026-11-02",
+      "id": "hs1",
+      "type": "hebsentence",
+      "title": "Hebrew sentence rally",
+      "sentence": "יש נחש בסל",
+      "prompt": "Read this Hebrew sentence word by word, letter by letter (right to left!), then work out what it means.",
+      "key": "94e9b14267363774",
+      "points": 15
+    },
+    {
+      "date": "2026-11-02",
+      "id": "hb1",
+      "type": "hebword",
+      "title": "Hebrew word rally",
+      "word": "גמל",
+      "prompt": "Sound out this Hebrew word letter by letter (right to left!), then find out what it means.",
+      "key": "045c896685c4cc74",
+      "points": 10
+    },
+    {
+      "date": "2026-11-02",
+      "id": "gr1",
+      "type": "grammar",
+      "title": "Sentence Detective",
+      "qid": "g25",
+      "level": 1,
+      "prompt": "What job is the highlighted word doing? Solve it in Buzz's Sentence Detective!",
+      "key": "6b8f100545cba867",
+      "points": 5
+    },
+    {
+      "date": "2026-11-02",
+      "id": "gr2",
+      "type": "grammar",
+      "title": "Sentence Detective",
+      "qid": "g03",
+      "level": 1,
+      "prompt": "What job is the highlighted word doing? Solve it in Buzz's Sentence Detective!",
+      "key": "3447a4e2f40d71b9",
+      "points": 5
+    },
+    {
+      "date": "2026-11-02",
+      "id": "dc5",
+      "type": "reading",
+      "title": "Read aloud",
+      "text": "On Monday, Franklin took the red GT to a racetrack open day. Even though the GT was super fast, he drove slowly at first to learn every corner. His friend Lamar raced a little blue go-kart. The GT was quicker on the long straight. On the other hand, the go-kart zipped around the twisty bends. Before long, they crossed the finish line side by side and laughed all the way to the pit lane.",
+      "points": 10
     }
   ],
   "notes": [
@@ -2656,6 +2745,15 @@
         "name": "Math Racer Multiplication (Math Playground)",
         "url": "https://www.mathplayground.com/math_racer_multiplication.html",
         "why": "Drive your car to the right answer 🏎️, a speedy warm-up for today's 3152 × 7 race!",
+        "ads": true
+      }
+    },
+    {
+      "date": "2026-11-02",
+      "game": {
+        "name": "Just Divide (Math Playground)",
+        "url": "https://www.mathplayground.com/just_divide.html",
+        "why": "Warm up your dividing brain before today's 4208 ÷ 4 race!",
         "ads": true
       }
     }
