@@ -327,6 +327,14 @@
       "emoji": "🐍",
       "setup": "Why are snakes so hard to fool?",
       "punchline": "You can't pull their leg!"
+    },
+    {
+      "date": "2026-11-03",
+      "slot": "am",
+      "topic": "Animals",
+      "emoji": "🐎",
+      "setup": "What does a horse say when it falls over?",
+      "punchline": "Help, I've fallen and I can't giddy-up!"
     }
   ]
 }
