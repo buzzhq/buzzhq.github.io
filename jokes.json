@@ -335,6 +335,14 @@
       "emoji": "🐎",
       "setup": "What does a horse say when it falls over?",
       "punchline": "Help, I've fallen and I can't giddy-up!"
+    },
+    {
+      "date": "2026-11-03",
+      "slot": "pm",
+      "topic": "Animals",
+      "emoji": "🐴",
+      "setup": "What's a horse's favourite sport?",
+      "punchline": "Stable tennis!"
     }
   ]
 }
