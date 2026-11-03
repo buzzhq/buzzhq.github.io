@@ -1,5 +1,71 @@
 [
   {
+    "id": "2026-11-04",
+    "date": "Miércoles, 4 de noviembre de 2026",
+    "items": [
+      {
+        "section": "Noticias de Australia",
+        "title": "La prohibición de redes sociales llega al Tribunal Supremo",
+        "paragraphs": [
+          "Desde el año pasado, en Australia los niños menores de 16 años no pueden tener cuentas en diez redes sociales, como TikTok, Instagram, Snapchat y YouTube. Es una ley única en el mundo.",
+          "Ahora el Tribunal Superior, el más importante del país, está escuchando a dos grupos que quieren eliminar la ley: Digital Freedom Project y la empresa Reddit. Dicen que la ley es demasiado grande. Siete jueces van a decidir."
+        ],
+        "source": {
+          "name": "AP News",
+          "url": "https://apnews.com/article/australia-social-media-ban-children-court-challenge-3c53b7be4447877fc00b6fc0300605a1"
+        }
+      },
+      {
+        "section": "Noticias de Israel",
+        "title": "Herzog empieza a hablar con los partidos",
+        "paragraphs": [
+          "Hoy, miércoles, Israel confirma los resultados oficiales de las elecciones. Ningún grupo tiene mayoría: el grupo de Netanyahu tiene 53 asientos y el de Eisenkot tiene 48. Para gobernar se necesitan 61 de los 120 asientos.",
+          "Después, el presidente Isaac Herzog va a hablar con los partidos, y las reuniones van a salir en vivo por televisión. El 10 de noviembre, los nuevos miembros de la Knéset van a jurar su cargo."
+        ],
+        "source": {
+          "name": "Al Jazeera",
+          "url": "https://www.aljazeera.com/news/2026/11/3/israel-political-deadlock-leaves-netanyahus-future-hanging-in-the-balance"
+        }
+      },
+      {
+        "section": "Noticias del mundo",
+        "title": "¿Sangre de dinosaurio en un hueso muy viejo?",
+        "paragraphs": [
+          "Científicos de varios países estudiaron los huesos de una pierna de un dinosaurio con plumas de Brasil. Se llama Aratasaurus y murió hace 115 millones de años.",
+          "Dentro de los huesos encontraron restos de hemo, una molécula de los glóbulos rojos de la sangre. «Nadie encontró hemo dentro de una célula de sangre fósil antes», dice la profesora Kliti Grice, de una universidad de Australia. Otros expertos dicen que todavía hay que estudiarlo más."
+        ],
+        "source": {
+          "name": "ABC News",
+          "url": "https://www.abc.net.au/news/science/2026-11-03/signs-of-mineralised-molecules-from-dinosaurs-red-blood-cell/107335770"
+        }
+      },
+      {
+        "section": "Tecnología e IA",
+        "title": "Un examen de tareas de la vida real para la IA",
+        "paragraphs": [
+          "La empresa OpenAI creó LifeVal, un examen para ver si la IA ayuda bien en tareas de todos los días. Por ejemplo: buscar un jardín de infantes después de una mudanza, o hacer un plan de comidas para una persona con diabetes.",
+          "Su nuevo modelo, GPT-6 Astra, sacó un 80 %. Un modelo de diciembre de 2025 sacó solo un 49 %. Pero hay un problema: OpenAI hizo el examen, eligió las tareas y puso la nota a su propia IA."
+        ],
+        "source": {
+          "name": "Artificially Intimidating",
+          "url": "https://artificiallyintimidating.com/p/ai-brief-november-3-2026"
+        }
+      }
+    ],
+    "weather": {
+      "day": "Miércoles, 4 de noviembre",
+      "place": "Bentleigh East",
+      "summary": "Primero nublado, con un poco de niebla temprano. Es casi seguro que llueve, sobre todo por la tarde, y puede haber una tormenta. Viento del norte, después del oeste, de 20 a 30 km/h. El sol es muy fuerte: ¡lleva gorra, protector solar y paraguas!",
+      "min": 9,
+      "max": 23,
+      "rainChance": 95,
+      "source": {
+        "name": "Bureau of Meteorology",
+        "url": "https://www.bom.gov.au/location/australia/victoria/central/bvic_pt042-melbourne"
+      }
+    }
+  },
+  {
     "id": "2026-11-03",
     "date": "Martes, 3 de noviembre de 2026",
     "items": [
