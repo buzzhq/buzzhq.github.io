@@ -2516,6 +2516,95 @@
       "title": "Read aloud",
       "text": "On Cup Day, Franklin and Dad watched the big race on TV. During the race, Franklin cheered for a horse with a shiny red saddle, just like his red GT. It won by a nose! Afterwards, he grabbed his basketball and raced to the park. He made eight free throws in a row. Then he drove home at the speed limit and helped clear the dinner table.",
       "points": 10
+    },
+    {
+      "date": "2026-11-04",
+      "id": "tt1",
+      "type": "timestables",
+      "title": "Times-tables warm-up",
+      "tables": [
+        5
+      ],
+      "n": 8,
+      "prompt": "Quick times-tables warm-up with pictures: tap the answer, then send Buzz your finish code!",
+      "key": "3ce6cf0c3bde6cb4",
+      "points": 10
+    },
+    {
+      "date": "2026-11-04",
+      "id": "mg1",
+      "type": "stepgame",
+      "title": "Maths Garage: long multiplication",
+      "mode": "mult",
+      "a": 2517,
+      "b": 8,
+      "sum": "2517 × 8",
+      "prompt": "Solve it step by step in Buzz's Maths Garage, then send Buzz your finish code!",
+      "key": "fbf50ba209bead09",
+      "points": 10
+    },
+    {
+      "date": "2026-11-04",
+      "id": "mg2",
+      "type": "stepgame",
+      "title": "Maths Garage: long division",
+      "mode": "div",
+      "a": 3608,
+      "b": 8,
+      "sum": "3608 ÷ 8",
+      "prompt": "Solve it step by step in Buzz's Maths Garage, then send Buzz your finish code!",
+      "key": "db84446f2028298b",
+      "points": 10
+    },
+    {
+      "date": "2026-11-04",
+      "id": "hb1",
+      "type": "hebword",
+      "title": "Hebrew word rally",
+      "word": "חול",
+      "prompt": "Sound out this Hebrew word letter by letter (right to left!), then find out what it means.",
+      "key": "91307e3408b534e9",
+      "points": 10
+    },
+    {
+      "date": "2026-11-04",
+      "id": "hs1",
+      "type": "hebsentence",
+      "title": "Hebrew sentence rally",
+      "sentence": "יש לי לב גדול",
+      "prompt": "Read this Hebrew sentence word by word, letter by letter (right to left!), then work out what it means.",
+      "key": "a4a811183be54f7b",
+      "points": 15
+    },
+    {
+      "date": "2026-11-04",
+      "id": "gr1",
+      "type": "grammar",
+      "title": "Sentence Detective",
+      "qid": "g05",
+      "level": 1,
+      "prompt": "What job is the highlighted word doing? Solve it in Buzz's Sentence Detective!",
+      "key": "67172b96568de7c3",
+      "points": 5
+    },
+    {
+      "date": "2026-11-04",
+      "id": "gr2",
+      "type": "grammar",
+      "title": "Sentence Detective",
+      "qid": "g11",
+      "level": 1,
+      "prompt": "What job is the highlighted word doing? Solve it in Buzz's Sentence Detective!",
+      "key": "1cc99817a7678106",
+      "points": 5
+    },
+    {
+      "date": "2026-11-04",
+      "id": "dc5",
+      "type": "reading",
+      "title": "Read aloud",
+      "text": "On Wednesday, Franklin drove the red GT to the beach court after school. Since the wind was blowing hard, sand kept sliding across the court. His first three shots curled away in the wind. Even so, he kept his elbow straight and used soft backspin. A little boy lost his ball in the sand, so Franklin helped him dig it out. \"You've got a big heart!\" said the boy's mum. Then Franklin made six free throws in a row and drove home at the speed limit.",
+      "points": 10
     }
   ],
   "notes": [
@@ -2852,6 +2941,15 @@
         "name": "Math Mine Multiply Divide (Toy Theater)",
         "url": "https://toytheater.com/math-mine-multiply-divide/",
         "why": "Dig up the missing numbers, a great warm-up for 5106 ÷ 3!",
+        "ads": true
+      }
+    },
+    {
+      "date": "2026-11-04",
+      "game": {
+        "name": "Hit the Button (Topmarks)",
+        "url": "https://www.topmarks.co.uk/maths-games/hit-the-button",
+        "why": "Zap the 5× and 8× facts super fast, then today's 2517 × 8 race will feel easy!",
         "ads": true
       }
     }
