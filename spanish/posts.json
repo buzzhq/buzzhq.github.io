@@ -1,5 +1,71 @@
 [
   {
+    "id": "2026-11-05",
+    "date": "Jueves, 5 de noviembre de 2026",
+    "items": [
+      {
+        "section": "Noticias de Victoria",
+        "title": "¿Qué prometen los partidos para las familias?",
+        "paragraphs": [
+          "El 28 de noviembre hay elecciones en Victoria. Los partidos políticos están haciendo muchas promesas para ganar votos.",
+          "Algunas son para niños y escuelas. Labor promete uniformes y desayunos gratis en la escuela para familias con problemas de dinero. La Coalición quiere construir 10 escuelas técnicas nuevas. Los Verdes quieren el transporte público gratis para siempre, y One Nation promete 150 dólares para que cada niño haga deporte."
+        ],
+        "source": {
+          "name": "ABC News",
+          "url": "https://www.abc.net.au/news/2026-11-04/victoria-2026-election-policy-promise-tracker/107247200"
+        }
+      },
+      {
+        "section": "Noticias de Israel",
+        "title": "Herzog pide a los partidos ser flexibles",
+        "paragraphs": [
+          "El presidente Isaac Herzog empezó a reunirse con los partidos el miércoles. Cada partido le dice quién quiere como primer ministro: Benjamín Netanyahu o Gadi Eisenkot. Hoy, jueves, termina las reuniones con los partidos más grandes.",
+          "Ningún grupo ganó la mayoría. Por eso Herzog dice que «no se puede cumplir cada promesa» y pide valor y buena voluntad para no tener otras elecciones. Después, la persona elegida va a tener 28 días para formar un gobierno."
+        ],
+        "source": {
+          "name": "AFP",
+          "url": "https://www.afp.com/en/israel-president-urges-compromise-after-divisive-election"
+        }
+      },
+      {
+        "section": "Noticias del mundo",
+        "title": "Dos monos aulladores nuevos en el Amazonas",
+        "paragraphs": [
+          "Científicos de la Universidad de Salford, en Inglaterra, y de otros países estudiaron el ADN de 11 especies de monos aulladores. Así descubrieron dos especies nuevas en la selva del Amazonas: Alouatta iroi y Alouatta matogrossensis.",
+          "Es la primera especie nueva de mono aullador en 84 años. Pero hay un problema: el bosque donde vive Alouatta matogrossensis está desapareciendo muy rápido, porque cortan los árboles para hacer campos de cultivo."
+        ],
+        "source": {
+          "name": "University of Salford",
+          "url": "https://www.salford.ac.uk/news/scientists-discover-two-new-species-of-howler-monkey"
+        }
+      },
+      {
+        "section": "Tecnología e IA",
+        "title": "Google: sin IA, tampoco hay buscador",
+        "paragraphs": [
+          "Google tiene nuevas reglas para las escuelas. Si una escuela apaga todas las herramientas de inteligencia artificial de Google, los estudiantes también pierden el buscador, Google Search.",
+          "Google dice que ahora la IA es parte del buscador. También tiene una función nueva, Guided Learning, que ayuda a los estudiantes a pensar las preguntas paso a paso. Pero las escuelas que quieren un buscador normal, sin IA, no pueden tenerlo."
+        ],
+        "source": {
+          "name": "The Neuron",
+          "url": "https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-wednesday-november-4-2026/"
+        }
+      }
+    ],
+    "weather": {
+      "day": "Jueves, 5 de noviembre",
+      "place": "Bentleigh East",
+      "summary": "Parcialmente nublado. Puede caer un poco de lluvia por la mañana. Viento del suroeste de 15 a 25 km/h, más suave por la noche. El sol es muy fuerte: ¡lleva gorra y protector solar!",
+      "min": 10,
+      "max": 18,
+      "rainChance": 40,
+      "source": {
+        "name": "Bureau of Meteorology",
+        "url": "https://www.bom.gov.au/location/australia/victoria/central/bvic_pt042-melbourne"
+      }
+    }
+  },
+  {
     "id": "2026-11-04",
     "date": "Miércoles, 4 de noviembre de 2026",
     "items": [
