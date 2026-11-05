@@ -2605,6 +2605,95 @@
       "title": "Read aloud",
       "text": "On Wednesday, Franklin drove the red GT to the beach court after school. Since the wind was blowing hard, sand kept sliding across the court. His first three shots curled away in the wind. Even so, he kept his elbow straight and used soft backspin. A little boy lost his ball in the sand, so Franklin helped him dig it out. \"You've got a big heart!\" said the boy's mum. Then Franklin made six free throws in a row and drove home at the speed limit.",
       "points": 10
+    },
+    {
+      "date": "2026-11-05",
+      "id": "tt1",
+      "type": "timestables",
+      "title": "Times-tables warm-up",
+      "tables": [
+        5
+      ],
+      "n": 8,
+      "prompt": "Quick times-tables warm-up with pictures: tap the answer, then send Buzz your finish code!",
+      "key": "85d600d18321fee8",
+      "points": 10
+    },
+    {
+      "date": "2026-11-05",
+      "id": "mg1",
+      "type": "stepgame",
+      "title": "Maths Garage: long multiplication",
+      "mode": "mult",
+      "a": 2734,
+      "b": 6,
+      "sum": "2734 × 6",
+      "prompt": "Solve it step by step in Buzz's Maths Garage, then send Buzz your finish code!",
+      "key": "58ca3871707c5db4",
+      "points": 10
+    },
+    {
+      "date": "2026-11-05",
+      "id": "mg2",
+      "type": "stepgame",
+      "title": "Maths Garage: long division",
+      "mode": "div",
+      "a": 4524,
+      "b": 6,
+      "sum": "4524 ÷ 6",
+      "prompt": "Solve it step by step in Buzz's Maths Garage, then send Buzz your finish code!",
+      "key": "e710f9b949251f22",
+      "points": 10
+    },
+    {
+      "date": "2026-11-05",
+      "id": "hs1",
+      "type": "hebsentence",
+      "title": "Hebrew sentence rally",
+      "sentence": "הדגל שלי גדול",
+      "prompt": "Read this Hebrew sentence word by word, letter by letter (right to left!), then work out what it means.",
+      "key": "efa7417be593972b",
+      "points": 15
+    },
+    {
+      "date": "2026-11-05",
+      "id": "hb1",
+      "type": "hebword",
+      "title": "Hebrew word rally",
+      "word": "דג",
+      "prompt": "Sound out this Hebrew word letter by letter (right to left!), then find out what it means.",
+      "key": "6e76aada1429ba95",
+      "points": 10
+    },
+    {
+      "date": "2026-11-05",
+      "id": "gr1",
+      "type": "grammar",
+      "title": "Sentence Detective",
+      "qid": "g54",
+      "level": 2,
+      "prompt": "What job is the highlighted word doing? Solve it in Buzz's Sentence Detective!",
+      "key": "0befd30d0d965ed6",
+      "points": 5
+    },
+    {
+      "date": "2026-11-05",
+      "id": "gr2",
+      "type": "grammar",
+      "title": "Sentence Detective",
+      "qid": "g48",
+      "level": 2,
+      "prompt": "What job is the highlighted word doing? Solve it in Buzz's Sentence Detective!",
+      "key": "4b848eb6c806936e",
+      "points": 5
+    },
+    {
+      "date": "2026-11-05",
+      "id": "dc5",
+      "type": "reading",
+      "title": "Read aloud",
+      "text": "On Thursday after school, Franklin drove the red GT to the park court. A fluffy puppy sat by the fence and watched every shot. Meanwhile, a little flag on the fence fluttered like it was cheering too. His first free throws bounced off the rim. Therefore, he bent his knees, used soft backspin and tried again. Swish! He made five free throws in a row, gave the puppy a gentle nose high-five, and drove home at the speed limit.",
+      "points": 10
     }
   ],
   "notes": [
@@ -2950,6 +3039,15 @@
         "name": "Hit the Button (Topmarks)",
         "url": "https://www.topmarks.co.uk/maths-games/hit-the-button",
         "why": "Zap the 5× and 8× facts super fast, then today's 2517 × 8 race will feel easy!",
+        "ads": true
+      }
+    },
+    {
+      "date": "2026-11-05",
+      "game": {
+        "name": "Daily 10 (Topmarks)",
+        "url": "https://www.topmarks.co.uk/maths-games/daily10",
+        "why": "Ten quick mental × and ÷ facts — perfect warm-up before today's 2734 × 6 and 4524 ÷ 6 garage races!",
         "ads": true
       }
     }

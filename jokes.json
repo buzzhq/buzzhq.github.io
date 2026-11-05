@@ -351,6 +351,14 @@
       "emoji": "🐷",
       "setup": "What do you call a pig that does karate?",
       "punchline": "A pork chop!"
+    },
+    {
+      "date": "2026-11-05",
+      "slot": "pm",
+      "topic": "Animals",
+      "emoji": "🐟",
+      "setup": "What do you call a fish that wears a bowtie?",
+      "punchline": "So-fish-ticated!"
     }
   ]
 }
