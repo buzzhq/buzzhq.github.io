@@ -1,5 +1,71 @@
 [
   {
+    "id": "2026-11-06",
+    "date": "Viernes, 6 de noviembre de 2026",
+    "items": [
+      {
+        "section": "Noticias de Australia",
+        "title": "¡Hay más equidnas en la isla Clarke!",
+        "paragraphs": [
+          "En la isla Lungtalanana (Clarke), en Tasmania, los guardabosques encontraron equidnas otra vez. Después de un gran incendio en 2014, casi no quedaban. Ahora cámaras y una trampa para gatos mostraron varios equidnas en distintos lugares.",
+          "Un experto dice que puede haber más de 20. La comunidad aborigen de Tasmania trabaja para cuidar la isla y traer de vuelta otros animales que vivían allí antes."
+        ],
+        "source": {
+          "name": "ABC News",
+          "url": "https://www.abc.net.au/news/2026-11-05/tas-lonely-echidna-on-lungtalanana-clarke-island-has-buddies/107344584"
+        }
+      },
+      {
+        "section": "Noticias de Israel",
+        "title": "Puentes para que las gacelas crucen sin peligro",
+        "paragraphs": [
+          "En el sur de Israel van a construir puentes especiales para animales. Así las gacelas en peligro pueden cruzar una autopista y una vía de tren sin riesgo.",
+          "El Consejo Nacional de Planificación avanzó esta semana el plan del primer puente sobre una parte nueva de la carretera 6. Será la primera serie de pasos elevados unidos para la fauna del país."
+        ],
+        "source": {
+          "name": "Haaretz",
+          "url": "https://www.haaretz.com/science-and-health/nature-environment/2026-11-05/ty-article/.premium/series-of-wildlife-bridges-in-israel-will-allow-animals-to-cross-major-roads/000001a1-ab95-df0e-a9a3-bfdda0750000"
+        }
+      },
+      {
+        "section": "Noticias del mundo",
+        "title": "Pocas animales no significan el fin",
+        "paragraphs": [
+          "Científicos de Monash University y de Londres estudiaron 141 especies de aves y mamíferos que tuvieron menos de 50 animales en la naturaleza. Cuando las personas ayudan de verdad, muchas especies se recuperan.",
+          "De las 51 especies con ayuda (como criar animales o cuidar su hábitat), el 61% llegó otra vez a 100 o más. Sin ayuda, muchas se extinguieron. Un ejemplo: el woodhen de Lord Howe pasó de 23 aves a más de 1.600."
+        ],
+        "source": {
+          "name": "phys.org / Monash University",
+          "url": "https://phys.org/news/2026-11-tiny-animal-populations-recover-assumptions.html"
+        }
+      },
+      {
+        "section": "Tecnología e IA",
+        "title": "Niños crean videojuegos hablando con la IA",
+        "paragraphs": [
+          "En Bundaberg, Queensland, niños de 8 a 13 años crearon sus propios videojuegos con inteligencia artificial. No necesitaban saber programar: le explicaban la idea a la IA y la máquina ayudaba a hacer el juego.",
+          "Hicieron juegos de carreras, de aventuras y de preguntas. También imprimieron una consola en 3D y aprendieron a conectar un mando. Los organizadores quieren un centro de juegos en la región para que los jóvenes no tengan que irse a otra ciudad."
+        ],
+        "source": {
+          "name": "ABC News",
+          "url": "https://www.abc.net.au/news/2026-11-04/children-use-ai-to-speak-video-games-into-existence/107339886"
+        }
+      }
+    ],
+    "weather": {
+      "day": "Viernes, 6 de noviembre",
+      "place": "Bentleigh East",
+      "summary": "Parcialmente nublado. Alta probabilidad de lluvias, sobre todo por la noche. Viento del oeste al noroeste de 15 a 25 km/h, luego del suroeste. El sol es muy fuerte: ¡lleva gorra y protector solar!",
+      "min": 10,
+      "max": 22,
+      "rainChance": 80,
+      "source": {
+        "name": "Bureau of Meteorology",
+        "url": "https://www.bom.gov.au/location/australia/victoria/central/bvic_pt042-melbourne"
+      }
+    }
+  },
+  {
     "id": "2026-11-05",
     "date": "Jueves, 5 de noviembre de 2026",
     "items": [
