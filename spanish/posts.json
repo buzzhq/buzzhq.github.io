@@ -1,5 +1,71 @@
 [
   {
+    "id": "2026-11-07",
+    "date": "Sábado, 7 de noviembre de 2026",
+    "items": [
+      {
+        "section": "Noticias de Victoria",
+        "title": "Kaniva vuelve a tener mesa de votación",
+        "paragraphs": [
+          "Kaniva es un pueblo pequeño del oeste de Victoria. La Comisión Electoral dijo que no habría mesa de votación el 28 de noviembre. La gente tendría que viajar unos 80 kilómetros de ida y vuelta hasta Nhill.",
+          "Los vecinos se quejaron mucho. Ahora la Comisión cambió de opinión: sí habrá mesa en el Centro de Personas Mayores. El alcalde y los vecinos están muy contentos."
+        ],
+        "source": {
+          "name": "ABC News",
+          "url": "https://www.abc.net.au/news/2026-11-06/kaniva-polling-booth-victoria-election/107349622"
+        }
+      },
+      {
+        "section": "Noticias de Israel",
+        "title": "Herzog elige el domingo quién forma gobierno",
+        "paragraphs": [
+          "El presidente Isaac Herzog habló con los partidos de la Knéset. 67 diputados apoyaron a Gadi Eisenkot y 46 a Benjamín Netanyahu.",
+          "Herzog dice que el domingo va a nombrar a la persona que intentará formar el nuevo gobierno. Esa persona tendrá 28 días para conseguir una mayoría. Mientras tanto, Netanyahu sigue como primer ministro interino."
+        ],
+        "source": {
+          "name": "Al Jazeera",
+          "url": "https://www.aljazeera.com/news/2026/11/6/israels-herzog-to-name-a-candidate-to-form-government-on-sunday"
+        }
+      },
+      {
+        "section": "Noticias del mundo",
+        "title": "Una chica hace plástico con plátanos",
+        "paragraphs": [
+          "Rye Lynn Rost tiene 13 años y vive en Montana, en Estados Unidos. Hizo un plástico que se descompone solo, con almidón de bananas y plátanos. El de plátano fue el más fuerte.",
+          "En un concurso de inventos para niños en Washington, quedó segunda en tecnología. Solo 30 finalistas de casi 2.000 estudiantes. Ganó 2.500 dólares y su escuela recibió 1.000 dólares para ciencia."
+        ],
+        "source": {
+          "name": "KFYR",
+          "url": "https://www.kfyrtv.com/2026/11/05/montana-teen-wins-award-making-biodegradable-plastics-out-bananas/"
+        }
+      },
+      {
+        "section": "Tecnología e IA",
+        "title": "ChatGPT ahora hace GIFs animados",
+        "paragraphs": [
+          "OpenAI presentó Images 2.6 en ChatGPT. Ahora puedes pedir un GIF en movimiento con palabras, o subir una foto y pedir que se anime. También puedes cambiar la velocidad y editar los fotogramas.",
+          "Las imágenes salen un 50% más rápido que antes. La función llega a la web, al móvil y al ordenador para todos los usuarios de ChatGPT."
+        ],
+        "source": {
+          "name": "OpenAI",
+          "url": "https://openai.com/index/introducing-images-2-6/"
+        }
+      }
+    ],
+    "weather": {
+      "day": "Sábado, 7 de noviembre",
+      "place": "Bentleigh East",
+      "summary": "Nublado con lluvias. Alta probabilidad de chaparrones. Viento del oeste al suroeste de 15 a 35 km/h. El sol es muy fuerte: ¡lleva gorra y protector solar!",
+      "min": 9,
+      "max": 15,
+      "rainChance": 90,
+      "source": {
+        "name": "Bureau of Meteorology",
+        "url": "https://www.bom.gov.au/location/australia/victoria/central/bvic_pt042-melbourne"
+      }
+    }
+  },
+  {
     "id": "2026-11-06",
     "date": "Viernes, 6 de noviembre de 2026",
     "items": [
