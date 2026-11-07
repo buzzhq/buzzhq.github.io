@@ -367,6 +367,14 @@
       "emoji": "🚗",
       "setup": "What do you call a car that tells jokes?",
       "punchline": "A car-toon!"
+    },
+    {
+      "date": "2026-11-08",
+      "slot": "am",
+      "topic": "Space",
+      "emoji": "🌕",
+      "setup": "Why did the Moon break up with the Sun?",
+      "punchline": "It needed some space!"
     }
   ]
 }
