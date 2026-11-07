@@ -2694,6 +2694,95 @@
       "title": "Read aloud",
       "text": "On Thursday after school, Franklin drove the red GT to the park court. A fluffy puppy sat by the fence and watched every shot. Meanwhile, a little flag on the fence fluttered like it was cheering too. His first free throws bounced off the rim. Therefore, he bent his knees, used soft backspin and tried again. Swish! He made five free throws in a row, gave the puppy a gentle nose high-five, and drove home at the speed limit.",
       "points": 10
+    },
+    {
+      "date": "2026-11-07",
+      "id": "tt1",
+      "type": "timestables",
+      "title": "Times-tables warm-up",
+      "tables": [
+        5
+      ],
+      "n": 8,
+      "prompt": "Quick times-tables warm-up with pictures: tap the answer, then send Buzz your finish code!",
+      "key": "6bc17d1e9f470950",
+      "points": 10
+    },
+    {
+      "date": "2026-11-07",
+      "id": "mg1",
+      "type": "stepgame",
+      "title": "Maths Garage: long multiplication",
+      "mode": "mult",
+      "a": 3065,
+      "b": 7,
+      "sum": "3065 × 7",
+      "prompt": "Solve it step by step in Buzz's Maths Garage, then send Buzz your finish code!",
+      "key": "3809fc20a4d5bc81",
+      "points": 10
+    },
+    {
+      "date": "2026-11-07",
+      "id": "mg2",
+      "type": "stepgame",
+      "title": "Maths Garage: long division",
+      "mode": "div",
+      "a": 3612,
+      "b": 4,
+      "sum": "3612 ÷ 4",
+      "prompt": "Solve it step by step in Buzz's Maths Garage, then send Buzz your finish code!",
+      "key": "71d8fd58d4d4f8e8",
+      "points": 10
+    },
+    {
+      "date": "2026-11-07",
+      "id": "hs1",
+      "type": "hebsentence",
+      "title": "Hebrew sentence rally",
+      "sentence": "יש נחש בחול",
+      "prompt": "Read this Hebrew sentence word by word, letter by letter (right to left!), then work out what it means.",
+      "key": "57d5fd454a3133de",
+      "points": 15
+    },
+    {
+      "date": "2026-11-07",
+      "id": "gr1",
+      "type": "grammar",
+      "title": "Sentence Detective",
+      "qid": "g51",
+      "level": 2,
+      "prompt": "What job is the highlighted word doing? Solve it in Buzz's Sentence Detective!",
+      "key": "48dbd83a84533c25",
+      "points": 5
+    },
+    {
+      "date": "2026-11-07",
+      "id": "gr2",
+      "type": "grammar",
+      "title": "Sentence Detective",
+      "qid": "g40",
+      "level": 2,
+      "prompt": "What job is the highlighted word doing? Solve it in Buzz's Sentence Detective!",
+      "key": "6b9fe4d169639925",
+      "points": 5
+    },
+    {
+      "date": "2026-11-07",
+      "id": "hb1",
+      "type": "hebword",
+      "title": "Hebrew word rally",
+      "word": "גל",
+      "prompt": "Sound out this Hebrew word letter by letter (right to left!), then find out what it means.",
+      "key": "58e57e1be62deb10",
+      "points": 10
+    },
+    {
+      "date": "2026-11-07",
+      "id": "dc5",
+      "type": "reading",
+      "title": "Read aloud",
+      "text": "On Saturday morning, Franklin drove the red GT to the beach with his basketball. Although the wind was strong, he still wanted to practise dribbling on the hard sand. Suddenly, a big wave rushed up and soaked his sneakers! Franklin laughed and moved further up the beach. In addition to dribbling, he drew a hoop in the sand and practised his jump shots while a seagull watched like a coach. When the sun went down, he shook the sand out of his shoes and drove home at the speed limit.",
+      "points": 10
     }
   ],
   "notes": [
@@ -3048,6 +3137,15 @@
         "name": "Daily 10 (Topmarks)",
         "url": "https://www.topmarks.co.uk/maths-games/daily10",
         "why": "Ten quick mental × and ÷ facts — perfect warm-up before today's 2734 × 6 and 4524 ÷ 6 garage races!",
+        "ads": true
+      }
+    },
+    {
+      "date": "2026-11-07",
+      "game": {
+        "name": "Meteor Multiplication (Coolmath4Kids)",
+        "url": "https://www.coolmath4kids.com/math-games/meteor-multiplication",
+        "why": "Blast the meteors with quick times-tables answers — a space warm-up for today's 3065 × 7 and 3612 ÷ 4 garage races!",
         "ads": true
       }
     }

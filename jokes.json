@@ -359,6 +359,14 @@
       "emoji": "🐟",
       "setup": "What do you call a fish that wears a bowtie?",
       "punchline": "So-fish-ticated!"
+    },
+    {
+      "date": "2026-11-07",
+      "slot": "pm",
+      "topic": "Cars",
+      "emoji": "🚗",
+      "setup": "What do you call a car that tells jokes?",
+      "punchline": "A car-toon!"
     }
   ]
 }
