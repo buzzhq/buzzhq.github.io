@@ -1,5 +1,71 @@
 [
   {
+    "id": "2026-11-08",
+    "date": "Domingo, 8 de noviembre de 2026",
+    "items": [
+      {
+        "section": "Noticias de Australia",
+        "title": "Abre el nuevo museo Powerhouse en Parramatta",
+        "paragraphs": [
+          "El sábado abrió Powerhouse Parramatta, el museo más nuevo de Australia, en Sídney. Lo prepararon durante casi 15 años. Es el museo más grande del estado de Nueva Gales del Sur.",
+          "Tiene unos 3.000 objetos en 18.000 metros cuadrados. Para este primer fin de semana se inscribieron 25.000 visitantes."
+        ],
+        "source": {
+          "name": "SBS News",
+          "url": "https://www.sbs.com.au/news/article/powerhouse-parramatta-opening-weekend-sydney-november-2026/qfjn3d7kd"
+        }
+      },
+      {
+        "section": "Noticias de Israel",
+        "title": "Eisenkot recibirá hoy la tarea de formar gobierno",
+        "paragraphs": [
+          "Hoy domingo, el presidente Isaac Herzog va a elegir quién intentará formar el nuevo gobierno. Se espera que elija a Gadi Eisenkot, del partido Yashar!.",
+          "Eisenkot tendrá 28 días, y quizás 14 días más, para conseguir una mayoría. Pero no será fácil: los partidos que lo apoyan no están de acuerdo en todo."
+        ],
+        "source": {
+          "name": "Ynetnews",
+          "url": "https://www.ynetnews.com/article/sjtfef26mx"
+        }
+      },
+      {
+        "section": "Noticias del mundo",
+        "title": "Una medusa nueva en la costa de Alicante",
+        "paragraphs": [
+          "Científicos de la Universidad de Alicante, en España, descubrieron una especie nueva de medusa en El Campello. Se llama Copula lucentia, por el nombre antiguo de la ciudad.",
+          "Es muy pequeña: mide entre 1 y 7 milímetros. No es peligrosa para las personas. Es solo la segunda especie de cubomedusa encontrada en el mar Mediterráneo."
+        ],
+        "source": {
+          "name": "Universidad de Alicante",
+          "url": "https://web.ua.es/en/actualidad-universitaria/2026/noviembre2026/02-08/university-of-alicante-scientists-discover-new-jellyfish-species-in-waters-off-alicante-naming-it-copula-lucentia-after-the-city-s-ancient-name.html"
+        }
+      },
+      {
+        "section": "Tecnología e IA",
+        "title": "Un reloj inteligente que detecta la presión alta",
+        "paragraphs": [
+          "Google creó una inteligencia artificial que busca señales de presión arterial alta. Usa solo los sensores de un reloj inteligente, sin el brazalete del médico.",
+          "En un estudio con 196 personas, el reloj encontró unos dos de cada tres casos. Google dice que no reemplaza al médico, pero puede avisar a la gente para que vaya a revisarse."
+        ],
+        "source": {
+          "name": "Google Research",
+          "url": "https://research.google/blog/detecting-signs-of-hypertension-using-wearable-sensors/"
+        }
+      }
+    ],
+    "weather": {
+      "day": "Domingo, 8 de noviembre",
+      "place": "Bentleigh East",
+      "summary": "Parcialmente nublado y sin lluvia. Viento suave del sur, de 15 a 25 km/h. El sol es muy fuerte: ¡lleva gorra y protector solar!",
+      "min": 9,
+      "max": 18,
+      "rainChance": 10,
+      "source": {
+        "name": "Bureau of Meteorology",
+        "url": "https://www.bom.gov.au/location/australia/victoria/central/bvic_pt042-melbourne"
+      }
+    }
+  },
+  {
     "id": "2026-11-07",
     "date": "Sábado, 7 de noviembre de 2026",
     "items": [
