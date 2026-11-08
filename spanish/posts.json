@@ -1,5 +1,71 @@
 [
   {
+    "id": "2026-11-09",
+    "date": "Lunes, 9 de noviembre de 2026",
+    "items": [
+      {
+        "section": "Noticias de Victoria",
+        "title": "La cueva Princess Margaret Rose sigue cerrada",
+        "paragraphs": [
+          "La cueva Princess Margaret Rose está en el oeste de Victoria, cerca de la frontera con Australia del Sur. Es una cueva muy bonita, con estalactitas y estalagmitas. Pero está cerrada a los turistas desde 2021.",
+          "El gobierno gasta más de 2 millones de dólares en arreglos: luces nuevas, pasamanos y baños. Ahora Parks Victoria espera abrirla a finales de 2027. Algunos vecinos están tristes, porque la fecha cambia una y otra vez."
+        ],
+        "source": {
+          "name": "ABC News",
+          "url": "https://www.abc.net.au/news/2026-11-08/princess-margaret-rose-cave/107348986"
+        }
+      },
+      {
+        "section": "Noticias de Israel",
+        "title": "Eisenkot recibe la tarea de formar gobierno",
+        "paragraphs": [
+          "El domingo, el presidente Isaac Herzog le dio a Gadi Eisenkot la tarea de formar el nuevo gobierno de Israel. La ceremonia fue en Jerusalén.",
+          "Ningún grupo tiene mayoría: el bloque de Netanyahu tiene 53 asientos y el de Eisenkot tiene 48. Para gobernar hacen falta 61. Eisenkot tiene hasta seis semanas para conseguir apoyo."
+        ],
+        "source": {
+          "name": "Al Jazeera",
+          "url": "https://www.aljazeera.com/news/2026/11/8/israels-president-tasks-eisenkot-to-form-new-coalition-government"
+        }
+      },
+      {
+        "section": "Noticias del mundo",
+        "title": "Un telescopio nuevo encuentra dos vecinos de nuestra galaxia",
+        "paragraphs": [
+          "El Observatorio Rubin, en Chile, descubrió dos compañeros escondidos de la Vía Láctea. Uno es una galaxia muy pequeña, Aquarius IV, a unos 355.000 años luz. El otro es un grupo de estrellas, Rubin-GC1, escondido detrás de polvo.",
+          "Lo encontraron con datos de prueba, antes del inicio oficial del telescopio. Los científicos creen que puede haber cientos de galaxias pequeñas más alrededor de la nuestra."
+        ],
+        "source": {
+          "name": "UW News",
+          "url": "https://www.washington.edu/news/2026/11/05/rubin-observatory-milky-way-satellites/"
+        }
+      },
+      {
+        "section": "Tecnología e IA",
+        "title": "Una voz artificial que funciona sin internet",
+        "paragraphs": [
+          "La empresa Underdog presentó Woof, un modelo de IA que convierte texto en voz. Es muy pequeño: ocupa solo 32 MB, menos que muchas fotos o canciones juntas.",
+          "Funciona en el navegador de casi cualquier aparato, y no necesita internet. Cualquier persona puede descargarlo y probarlo."
+        ],
+        "source": {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/11/06/underdog-shows-off-a-32mb-speech-model-in-new-demo/"
+        }
+      }
+    ],
+    "weather": {
+      "day": "Lunes, 9 de noviembre",
+      "place": "Bentleigh East",
+      "summary": "Día soleado y sin lluvia. Por la mañana temprano hace frío y puede haber escarcha en algunos barrios. Por la tarde, viento suave del noreste al sureste. El sol es muy fuerte: ¡lleva gorra y protector solar!",
+      "min": 7,
+      "max": 23,
+      "rainChance": 0,
+      "source": {
+        "name": "Bureau of Meteorology",
+        "url": "https://www.bom.gov.au/location/australia/victoria/central/bvic_pt042-melbourne"
+      }
+    }
+  },
+  {
     "id": "2026-11-08",
     "date": "Domingo, 8 de noviembre de 2026",
     "items": [
