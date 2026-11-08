@@ -1,7 +1,7 @@
 {
   "name": "Alon",
   "bot": "Buzz 🤖",
-  "updated": "2026-11-02",
+  "updated": "2026-11-08",
   "levels": [
     {
       "name": "Rookie",
@@ -511,9 +511,10 @@
       "date": "2026-10-26",
       "emoji": "🌯",
       "category": "cashout",
-      "points": -400,
-      "text": "Cashed in: burrito delivery ($20)",
-      "dollars": 20
+      "points": 0,
+      "text": "Burrito delivery ($20): refunded by Dad 🎉 food doesn't come out of earnings",
+      "dollars": 0,
+      "refundedPoints": 400
     },
     {
       "date": "2026-10-27",
@@ -627,6 +628,62 @@
       "points": -279,
       "text": "Cashed in: PEAK for PS5 ($13.95)",
       "dollars": 13.95
+    },
+    {
+      "date": "2026-11-08",
+      "emoji": "✖️",
+      "category": "challenge",
+      "points": 10,
+      "text": "Times-tables warm-up tt1 ✅ 5× table"
+    },
+    {
+      "date": "2026-11-08",
+      "emoji": "🏎️",
+      "category": "challenge",
+      "points": 10,
+      "text": "Maths Garage mg1 ✅ 4318 × 6 = 25908"
+    },
+    {
+      "date": "2026-11-08",
+      "emoji": "🏎️",
+      "category": "challenge",
+      "points": 10,
+      "text": "Maths Garage mg2 ✅ 2856 ÷ 7 = 408"
+    },
+    {
+      "date": "2026-11-08",
+      "emoji": "🔤",
+      "category": "challenge",
+      "points": 10,
+      "text": "Hebrew word hb1 ✅ חלב (chalav = milk)"
+    },
+    {
+      "date": "2026-11-08",
+      "emoji": "💬",
+      "category": "challenge",
+      "points": 15,
+      "text": "Hebrew sentence hs1 ✅ אבא אוהב חלב (abba ohev chalav = Dad loves milk)"
+    },
+    {
+      "date": "2026-11-08",
+      "emoji": "🕵️",
+      "category": "challenge",
+      "points": 5,
+      "text": "Sentence Detective gr1 ✅ behind = preposition"
+    },
+    {
+      "date": "2026-11-08",
+      "emoji": "🕵️",
+      "category": "challenge",
+      "points": 5,
+      "text": "Sentence Detective gr2 ✅ it = pronoun"
+    },
+    {
+      "date": "2026-11-08",
+      "emoji": "🏀",
+      "category": "hoops",
+      "points": 15,
+      "text": "Basketball training: 50 hoops in!"
     }
   ],
   "cashout": {
