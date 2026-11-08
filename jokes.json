@@ -375,6 +375,14 @@
       "emoji": "🌕",
       "setup": "Why did the Moon break up with the Sun?",
       "punchline": "It needed some space!"
+    },
+    {
+      "date": "2026-11-08",
+      "slot": "pm",
+      "topic": "Animals",
+      "emoji": "🐄",
+      "setup": "Where do cows go on a Saturday night?",
+      "punchline": "To the moo-vies!"
     }
   ]
 }
