@@ -1,7 +1,7 @@
 {
   "name": "Alon",
   "bot": "Buzz 🤖",
-  "updated": "2026-11-08",
+  "updated": "2026-11-09",
   "levels": [
     {
       "name": "Rookie",
@@ -684,6 +684,70 @@
       "category": "hoops",
       "points": 15,
       "text": "Basketball training: 50 hoops in!"
+    },
+    {
+      "date": "2026-11-09",
+      "emoji": "✖️",
+      "category": "challenge",
+      "points": 10,
+      "text": "Times-tables warm-up tt1 ✅ 10× table"
+    },
+    {
+      "date": "2026-11-09",
+      "emoji": "🏎️",
+      "category": "challenge",
+      "points": 10,
+      "text": "Maths Garage mg1 ✅ 3427 × 8 = 27416"
+    },
+    {
+      "date": "2026-11-09",
+      "emoji": "🏎️",
+      "category": "challenge",
+      "points": 10,
+      "text": "Maths Garage mg2 ✅ 5832 ÷ 6 = 972"
+    },
+    {
+      "date": "2026-11-09",
+      "emoji": "🔤",
+      "category": "challenge",
+      "points": 10,
+      "text": "Hebrew word hb1 ✅ סל (sal = basket)"
+    },
+    {
+      "date": "2026-11-09",
+      "emoji": "💬",
+      "category": "challenge",
+      "points": 15,
+      "text": "Hebrew sentence hs1 ✅ הסוס גדול מאוד (ha-sus gadol meod = The horse is very big)"
+    },
+    {
+      "date": "2026-11-09",
+      "emoji": "🕵️",
+      "category": "challenge",
+      "points": 5,
+      "text": "Sentence Detective gr1 ✅ across = preposition"
+    },
+    {
+      "date": "2026-11-09",
+      "emoji": "🕵️",
+      "category": "challenge",
+      "points": 5,
+      "text": "Sentence Detective gr2 ✅ he = pronoun"
+    },
+    {
+      "date": "2026-11-09",
+      "emoji": "🏀",
+      "category": "hoops",
+      "points": 15,
+      "text": "Basketball: 70 hoops in! New record 🔥"
+    },
+    {
+      "date": "2026-11-09",
+      "emoji": "🎮",
+      "category": "cashout",
+      "points": -239,
+      "text": "Cashed in: GTA cash card ($11.95)",
+      "dollars": 11.95
     }
   ],
   "cashout": {
