@@ -2872,6 +2872,95 @@
       "title": "Read aloud",
       "text": "On Sunday afternoon, Franklin drove the red GT to the corner shop to buy milk for Dad. First, he parked carefully between the white lines. Then he grabbed the biggest bottle, because Dad loves milk in his tea. On the way home, he stopped at the park court for a quick shoot-around. Although his shoes were untied, he made seven free throws in a row! Afterwards, he tied his laces, drove home at the speed limit and put the milk straight in the fridge.",
       "points": 10
+    },
+    {
+      "date": "2026-11-09",
+      "id": "tt1",
+      "type": "timestables",
+      "title": "Times-tables warm-up",
+      "tables": [
+        10
+      ],
+      "n": 8,
+      "prompt": "Quick times-tables warm-up with pictures: tap the answer, then send Buzz your finish code!",
+      "key": "f974ed3cb992fee0",
+      "points": 10
+    },
+    {
+      "date": "2026-11-09",
+      "id": "mg1",
+      "type": "stepgame",
+      "title": "Maths Garage: long multiplication",
+      "mode": "mult",
+      "a": 3427,
+      "b": 8,
+      "sum": "3427 × 8",
+      "prompt": "Solve it step by step in Buzz's Maths Garage, then send Buzz your finish code!",
+      "key": "ceeb3b59850a5333",
+      "points": 10
+    },
+    {
+      "date": "2026-11-09",
+      "id": "mg2",
+      "type": "stepgame",
+      "title": "Maths Garage: long division",
+      "mode": "div",
+      "a": 5832,
+      "b": 6,
+      "sum": "5832 ÷ 6",
+      "prompt": "Solve it step by step in Buzz's Maths Garage, then send Buzz your finish code!",
+      "key": "e6eb1cc61fa2b742",
+      "points": 10
+    },
+    {
+      "date": "2026-11-09",
+      "id": "hs1",
+      "type": "hebsentence",
+      "title": "Hebrew sentence rally",
+      "sentence": "הסוס גדול מאוד",
+      "prompt": "Read this Hebrew sentence word by word, letter by letter (right to left!), then work out what it means.",
+      "key": "f51e3c8d7d1766f4",
+      "points": 15
+    },
+    {
+      "date": "2026-11-09",
+      "id": "gr1",
+      "type": "grammar",
+      "title": "Sentence Detective",
+      "qid": "g50",
+      "level": 2,
+      "prompt": "What job is the highlighted word doing? Solve it in Buzz's Sentence Detective!",
+      "key": "3bd138fb093b347f",
+      "points": 5
+    },
+    {
+      "date": "2026-11-09",
+      "id": "gr2",
+      "type": "grammar",
+      "title": "Sentence Detective",
+      "qid": "g39",
+      "level": 2,
+      "prompt": "What job is the highlighted word doing? Solve it in Buzz's Sentence Detective!",
+      "key": "ad69881027246d45",
+      "points": 5
+    },
+    {
+      "date": "2026-11-09",
+      "id": "hb1",
+      "type": "hebword",
+      "title": "Hebrew word rally",
+      "word": "סל",
+      "prompt": "Sound out this Hebrew word letter by letter (right to left!), then find out what it means.",
+      "key": "8af36d92fc9aec5f",
+      "points": 10
+    },
+    {
+      "date": "2026-11-09",
+      "id": "dc5",
+      "type": "reading",
+      "title": "Read aloud",
+      "text": "On Monday after school, Franklin drove the red GT to basketball training. Before practice started, he stretched his legs and tied his laces tight. Coach set up a shooting race, and Franklin wanted to beat his record of 50 hoops. However, his first few shots rolled off the rim. He took a deep breath and bent his knees. As soon as he found his rhythm, the ball kept dropping in. Swish! He finished with 55 hoops and drove home at the speed limit.",
+      "points": 10
     }
   ],
   "notes": [
@@ -3244,6 +3333,15 @@
         "name": "Math Trainer – Divide (Maths is Fun)",
         "url": "https://www.mathsisfun.com/numbers/math-trainer-divide.html",
         "why": "Quick division facts — perfect warm-up for today's 2856 ÷ 7 race!",
+        "ads": true
+      }
+    },
+    {
+      "date": "2026-11-09",
+      "game": {
+        "name": "Canoe Penguins (Coolmath4Kids)",
+        "url": "https://www.coolmath4kids.com/math-games/canoe-penguins",
+        "why": "Paddle the penguins 🐧 to warm up your multiplying for today's 3427 × 8 race!",
         "ads": true
       }
     }

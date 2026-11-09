@@ -383,6 +383,14 @@
       "emoji": "🐄",
       "setup": "Where do cows go on a Saturday night?",
       "punchline": "To the moo-vies!"
+    },
+    {
+      "date": "2026-11-09",
+      "slot": "pm",
+      "topic": "Animals",
+      "emoji": "🐴",
+      "setup": "What do you call a pony with a sore throat?",
+      "punchline": "A little hoarse!"
     }
   ]
 }
