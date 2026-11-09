@@ -1,5 +1,71 @@
 [
   {
+    "id": "2026-11-10",
+    "date": "Martes, 10 de noviembre de 2026",
+    "items": [
+      {
+        "section": "Noticias de Australia",
+        "title": "Marnus Labuschagne sale del equipo de críquet",
+        "paragraphs": [
+          "Marnus Labuschagne es un bateador famoso de Australia. Pero ahora no juega bien, y los seleccionadores lo sacaron del equipo de críquet de pruebas (Test).",
+          "No va a jugar en la serie de cuatro partidos contra Nueva Zelanda. La serie empieza el mes que viene en Perth. George Bailey, el jefe de los seleccionadores, dice que Marnus puede volver más tarde, para los viajes a India e Inglaterra."
+        ],
+        "source": {
+          "name": "SBS News",
+          "url": "https://www.sbs.com.au/news/podcast-episode/15-year-old-serious-condition-after-high-school-stabbing-evening-news-bulletin-9-november-2026/lm2258iqj"
+        }
+      },
+      {
+        "section": "Noticias de Israel",
+        "title": "Científicos israelíes enseñan a moverse a materiales con ADN",
+        "paragraphs": [
+          "En el Instituto Weizmann, en Israel, científicas del laboratorio de la doctora Alexandra Tayar usan ADN para controlar el movimiento de materiales muy pequeños. Estos materiales tienen motores diminutos que los hacen moverse solos.",
+          "Cuando pusieron hebras largas de ADN, las hebras se enredaron y formaron una red. ¡La red hizo que el material se moviera de un lado a otro, como un ritmo! En el futuro, esto puede ayudar a crear robots blandos o medicinas nuevas."
+        ],
+        "source": {
+          "name": "Weizmann Institute of Science",
+          "url": "https://www.weizmann.ac.il/pages/news/chemistry/dna-teaches-matter-some-new-moves"
+        }
+      },
+      {
+        "section": "Noticias del mundo",
+        "title": "Un tratamiento nuevo ayuda a reparar el corazón",
+        "paragraphs": [
+          "Las células del corazón de un adulto no se pueden reparar solas. Por eso, un ataque al corazón deja daños. Científicos de la Universidad de Cambridge, en Inglaterra, crearon un tratamiento que «despierta» esas células para que se dividan y reparen el músculo.",
+          "Lo probaron en ratones. Después del tratamiento, su corazón latía más fuerte y bombeaba un 10 % más de sangre. Todavía hacen falta más pruebas antes de usarlo en personas."
+        ],
+        "source": {
+          "name": "University of Cambridge",
+          "url": "https://www.cam.ac.uk/stories/treatment-promotes-repair-after-heart-attack"
+        }
+      },
+      {
+        "section": "Tecnología e IA",
+        "title": "Una IA que imita la arena, los líquidos y las proteínas",
+        "paragraphs": [
+          "Investigadores del MIT, en Estados Unidos, crearon WorldParticle, un sistema de inteligencia artificial. Imagina cada cosa como muchas partículas pequeñas y predice paso a paso adónde se van a mover.",
+          "Así puede simular cosas muy diferentes: arena que cae, líquidos que se mueven y proteínas que se doblan. Con las proteínas, es unas 100 veces más rápido que otros simuladores."
+        ],
+        "source": {
+          "name": "MIT News",
+          "url": "https://news.mit.edu/2026/single-ai-model-simulates-many-substances-behavior-1109"
+        }
+      }
+    ],
+    "weather": {
+      "day": "Martes, 10 de noviembre",
+      "place": "Bentleigh East",
+      "summary": "Día casi todo soleado y caluroso. Por la tarde y la noche puede haber chubascos, y quizás una tormenta en las colinas cercanas. Viento del norte por el día, más suave por la noche. El sol es muy fuerte: ¡lleva gorra y protector solar!",
+      "min": 10,
+      "max": 28,
+      "rainChance": 50,
+      "source": {
+        "name": "Bureau of Meteorology",
+        "url": "https://www.bom.gov.au/location/australia/victoria/central/bvic_pt042-melbourne"
+      }
+    }
+  },
+  {
     "id": "2026-11-09",
     "date": "Lunes, 9 de noviembre de 2026",
     "items": [
