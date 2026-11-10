@@ -391,6 +391,14 @@
       "emoji": "🐴",
       "setup": "What do you call a pony with a sore throat?",
       "punchline": "A little hoarse!"
+    },
+    {
+      "date": "2026-11-10",
+      "slot": "pm",
+      "topic": "Animals",
+      "emoji": "🐻",
+      "setup": "Why don't bears wear shoes?",
+      "punchline": "They like having bear feet!"
     }
   ]
 }

@@ -2961,6 +2961,95 @@
       "title": "Read aloud",
       "text": "On Monday after school, Franklin drove the red GT to basketball training. Before practice started, he stretched his legs and tied his laces tight. Coach set up a shooting race, and Franklin wanted to beat his record of 50 hoops. However, his first few shots rolled off the rim. He took a deep breath and bent his knees. As soon as he found his rhythm, the ball kept dropping in. Swish! He finished with 55 hoops and drove home at the speed limit.",
       "points": 10
+    },
+    {
+      "date": "2026-11-10",
+      "id": "tt1",
+      "type": "timestables",
+      "title": "Times-tables warm-up",
+      "tables": [
+        3
+      ],
+      "n": 8,
+      "prompt": "Quick times-tables warm-up with pictures: tap the answer, then send Buzz your finish code!",
+      "key": "5929de73c63240d0",
+      "points": 10
+    },
+    {
+      "date": "2026-11-10",
+      "id": "mg1",
+      "type": "stepgame",
+      "title": "Maths Garage: long multiplication",
+      "mode": "mult",
+      "a": 2608,
+      "b": 9,
+      "sum": "2608 × 9",
+      "prompt": "Solve it step by step in Buzz's Maths Garage, then send Buzz your finish code!",
+      "key": "611d69381fcd5d32",
+      "points": 10
+    },
+    {
+      "date": "2026-11-10",
+      "id": "mg2",
+      "type": "stepgame",
+      "title": "Maths Garage: long division",
+      "mode": "div",
+      "a": 4235,
+      "b": 5,
+      "sum": "4235 ÷ 5",
+      "prompt": "Solve it step by step in Buzz's Maths Garage, then send Buzz your finish code!",
+      "key": "62973434822de59b",
+      "points": 10
+    },
+    {
+      "date": "2026-11-10",
+      "id": "hb1",
+      "type": "hebword",
+      "title": "Hebrew word rally",
+      "word": "דב",
+      "prompt": "Sound out this Hebrew word letter by letter (right to left!), then find out what it means.",
+      "key": "456aba7a15038f4c",
+      "points": 10
+    },
+    {
+      "date": "2026-11-10",
+      "id": "hs1",
+      "type": "hebsentence",
+      "title": "Hebrew sentence rally",
+      "sentence": "הדב אוהב דבש",
+      "prompt": "Read this Hebrew sentence word by word, letter by letter (right to left!), then work out what it means.",
+      "key": "9d2c82364f4081a4",
+      "points": 15
+    },
+    {
+      "date": "2026-11-10",
+      "id": "gr1",
+      "type": "grammar",
+      "title": "Sentence Detective",
+      "qid": "g55",
+      "level": 2,
+      "prompt": "What job is the highlighted word doing? Solve it in Buzz's Sentence Detective!",
+      "key": "06cfd890dc4637f5",
+      "points": 5
+    },
+    {
+      "date": "2026-11-10",
+      "id": "gr2",
+      "type": "grammar",
+      "title": "Sentence Detective",
+      "qid": "g49",
+      "level": 2,
+      "prompt": "What job is the highlighted word doing? Solve it in Buzz's Sentence Detective!",
+      "key": "d5aada7858f59431",
+      "points": 5
+    },
+    {
+      "date": "2026-11-10",
+      "id": "dc5",
+      "type": "reading",
+      "title": "Read aloud",
+      "text": "On Tuesday after school, Franklin drove the red GT to the zoo with Dad. During the drive, he counted seven red cars on the road. At the bear enclosure, a big brown bear was licking honey off a log. Meanwhile, two little cubs tumbled in the grass like players diving for a rebound. Franklin laughed so hard that Dad had to take the photos. Finally, they waved goodbye to the bears and drove home at the speed limit.",
+      "points": 10
     }
   ],
   "notes": [
@@ -3342,6 +3431,15 @@
         "name": "Canoe Penguins (Coolmath4Kids)",
         "url": "https://www.coolmath4kids.com/math-games/canoe-penguins",
         "why": "Paddle the penguins 🐧 to warm up your multiplying for today's 3427 × 8 race!",
+        "ads": true
+      }
+    },
+    {
+      "date": "2026-11-10",
+      "game": {
+        "name": "Multiply Race (Toy Theater)",
+        "url": "https://toytheater.com/multiply-race/",
+        "why": "Race your car 🏎️ with quick 3× facts to warm up for today's 2608 × 9 race!",
         "ads": true
       }
     }
