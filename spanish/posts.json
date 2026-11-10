@@ -1,5 +1,71 @@
 [
   {
+    "id": "2026-11-11",
+    "date": "Miércoles, 11 de noviembre de 2026",
+    "items": [
+      {
+        "section": "Noticias de Victoria",
+        "title": "Once soldados desconocidos de la Primera Guerra Mundial ya tienen nombre",
+        "paragraphs": [
+          "Hoy es el Día del Recuerdo (Remembrance Day). Por eso, el gobierno anunció que identificó a 11 soldados australianos que murieron en la Primera Guerra Mundial. Durante más de cien años, sus tumbas en Francia y Bélgica decían «soldado desconocido».",
+          "Cinco de ellos eran de Victoria: de Ballarat, Lilydale, Melbourne, Preston y Brunswick. Los investigadores usaron documentos antiguos, arqueología y pruebas de ADN. Ahora sus tumbas van a tener su nombre."
+        ],
+        "source": {
+          "name": "ABC News",
+          "url": "https://www.abc.net.au/news/2026-11-10/eleven-australian-soldiers-killed-wwi-formally-idenified/107370258"
+        }
+      },
+      {
+        "section": "Noticias de Israel",
+        "title": "Electricidad del lugar donde el río se encuentra con el mar",
+        "paragraphs": [
+          "Cuando el agua dulce de un río se mezcla con el agua salada del mar, se puede producir electricidad. Se llama «energía azul». Pero las máquinas de energía azul siempre producían mucha menos electricidad de lo esperado.",
+          "Investigadores de la Universidad Ben-Gurión, en Beerseba, descubrieron por qué. Encontraron tres problemas que los científicos no vieron durante muchos años. Este descubrimiento puede ayudar a producir más electricidad y a mejorar la desalinización del agua."
+        ],
+        "source": {
+          "name": "Ynet",
+          "url": "https://www.ynet.co.il/environment-science/article/bjy8zok0zg"
+        }
+      },
+      {
+        "section": "Noticias del mundo",
+        "title": "Un insecto diminuto que vive en la telaraña",
+        "paragraphs": [
+          "En China, unos científicos descubrieron una especie nueva de insecto. Se llama Heissophila sinica. ¡Mide solo un milímetro, casi como un grano de sal!",
+          "Este insecto vive en las telarañas de unas arañas, y quizás pasa allí toda su vida. Los científicos encontraron huevos, insectos jóvenes y adultos en la misma telaraña. Probablemente la araña no lo ataca porque es demasiado pequeño. Sus patas especiales lo ayudan a caminar sin quedarse pegado."
+        ],
+        "source": {
+          "name": "New Scientist",
+          "url": "https://www.newscientist.com/article/2598153-newly-described-bug-lives-its-whole-life-on-a-spider-web/"
+        }
+      },
+      {
+        "section": "Tecnología e IA",
+        "title": "Mil agentes de IA construyen un sistema operativo",
+        "paragraphs": [
+          "La empresa Anthropic presentó nuevos modelos de inteligencia artificial: Claude Fable 5.2 y Claude Mythos 5.2. Son para trabajos difíciles de programación y de ciencia, y responden hasta un 30 % más rápido.",
+          "En una prueba, un ingeniero le pidió a la IA crear un sistema operativo desde cero. La IA organizó a más de mil agentes durante ocho días. ¡El resultado funcionó en un portátil, con ventanas, archivos y pantalla de inicio de sesión!"
+        ],
+        "source": {
+          "name": "The Neuron",
+          "url": "https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-tuesday-november-10-2026/"
+        }
+      }
+    ],
+    "weather": {
+      "day": "Miércoles, 11 de noviembre",
+      "place": "Bentleigh East",
+      "summary": "Día parcialmente nublado y fresco. Casi seguro que no va a llover. Viento del sur, de 15 a 25 km/h. El sol es muy fuerte (índice UV 9): ¡lleva gorra y protector solar!",
+      "min": 13,
+      "max": 20,
+      "rainChance": 10,
+      "source": {
+        "name": "Bureau of Meteorology",
+        "url": "https://www.bom.gov.au/location/australia/victoria/central/bvic_pt042-melbourne"
+      }
+    }
+  },
+  {
     "id": "2026-11-10",
     "date": "Martes, 10 de noviembre de 2026",
     "items": [
