@@ -399,6 +399,14 @@
       "emoji": "🐻",
       "setup": "Why don't bears wear shoes?",
       "punchline": "They like having bear feet!"
+    },
+    {
+      "date": "2026-11-11",
+      "slot": "pm",
+      "topic": "Snow",
+      "emoji": "⛄",
+      "setup": "What do snowmen eat for breakfast?",
+      "punchline": "Frosted Flakes!"
     }
   ]
 }

@@ -3050,6 +3050,95 @@
       "title": "Read aloud",
       "text": "On Tuesday after school, Franklin drove the red GT to the zoo with Dad. During the drive, he counted seven red cars on the road. At the bear enclosure, a big brown bear was licking honey off a log. Meanwhile, two little cubs tumbled in the grass like players diving for a rebound. Franklin laughed so hard that Dad had to take the photos. Finally, they waved goodbye to the bears and drove home at the speed limit.",
       "points": 10
+    },
+    {
+      "date": "2026-11-11",
+      "id": "tt1",
+      "type": "timestables",
+      "title": "Times-tables warm-up",
+      "tables": [
+        4
+      ],
+      "n": 8,
+      "prompt": "Quick times-tables warm-up with pictures: tap the answer, then send Buzz your finish code!",
+      "key": "b2f7dd6fe6c2d312",
+      "points": 10
+    },
+    {
+      "date": "2026-11-11",
+      "id": "mg1",
+      "type": "stepgame",
+      "title": "Maths Garage: long multiplication",
+      "mode": "mult",
+      "a": 1324,
+      "b": 21,
+      "sum": "1324 × 21",
+      "prompt": "Solve it step by step in Buzz's Maths Garage, then send Buzz your finish code!",
+      "key": "5ec24171ef0d29f5",
+      "points": 10
+    },
+    {
+      "date": "2026-11-11",
+      "id": "mg2",
+      "type": "stepgame",
+      "title": "Maths Garage: long division",
+      "mode": "div",
+      "a": 756,
+      "b": 12,
+      "sum": "756 ÷ 12",
+      "prompt": "Solve it step by step in Buzz's Maths Garage, then send Buzz your finish code!",
+      "key": "07a670cddb175197",
+      "points": 10
+    },
+    {
+      "date": "2026-11-11",
+      "id": "hb1",
+      "type": "hebword",
+      "title": "Hebrew word rally",
+      "word": "שלג",
+      "prompt": "Sound out this Hebrew word letter by letter (right to left!), then find out what it means.",
+      "key": "9974f05245252468",
+      "points": 10
+    },
+    {
+      "date": "2026-11-11",
+      "id": "hs1",
+      "type": "hebsentence",
+      "title": "Hebrew sentence rally",
+      "sentence": "אבא אוהב שלג",
+      "prompt": "Read this Hebrew sentence word by word, letter by letter (right to left!), then work out what it means.",
+      "key": "11ff85766d2c7b8d",
+      "points": 15
+    },
+    {
+      "date": "2026-11-11",
+      "id": "gr1",
+      "type": "grammar",
+      "title": "Sentence Detective",
+      "qid": "g41",
+      "level": 2,
+      "prompt": "What job is the highlighted word doing? Solve it in Buzz's Sentence Detective!",
+      "key": "b4bc3b2a0c7d6b95",
+      "points": 5
+    },
+    {
+      "date": "2026-11-11",
+      "id": "gr2",
+      "type": "grammar",
+      "title": "Sentence Detective",
+      "qid": "g45",
+      "level": 2,
+      "prompt": "What job is the highlighted word doing? Solve it in Buzz's Sentence Detective!",
+      "key": "79adeb0c51988082",
+      "points": 5
+    },
+    {
+      "date": "2026-11-11",
+      "id": "dc5",
+      "type": "reading",
+      "title": "Read aloud",
+      "text": "On Wednesday after school, Franklin drove the red GT up to the snowy mountains with Dad. Even though it was freezing, he still brought his basketball. He found an old hoop next to the ski lodge and started shooting. The ball kept getting stuck in the soft snow. Because of this, he dribbled on the icy path instead. Eventually, Dad joined in, and they built a snowman wearing Franklin's cap. Then they drove home slowly and carefully on the slippery road.",
+      "points": 10
     }
   ],
   "notes": [
@@ -3440,6 +3529,15 @@
         "name": "Multiply Race (Toy Theater)",
         "url": "https://toytheater.com/multiply-race/",
         "why": "Race your car 🏎️ with quick 3× facts to warm up for today's 2608 × 9 race!",
+        "ads": true
+      }
+    },
+    {
+      "date": "2026-11-11",
+      "game": {
+        "name": "Just Divide (Math Playground)",
+        "url": "https://www.mathplayground.com/just_divide.html",
+        "why": "Warm up your dividing brain 🧠 for today's 756 ÷ 12 race!",
         "ads": true
       }
     }
