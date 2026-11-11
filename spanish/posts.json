@@ -1,5 +1,71 @@
 [
   {
+    "id": "2026-11-12",
+    "date": "Jueves, 12 de noviembre de 2026",
+    "items": [
+      {
+        "section": "Noticias de Australia",
+        "title": "Un coral gigante de más de un kilómetro",
+        "paragraphs": [
+          "En el mar, cerca de las Islas Cocos (Keeling), unos investigadores encontraron una colonia de coral enorme. Mide 1,56 kilómetros. ¡Es como cien autobuses en fila! Ocupa un área tres veces más grande que el MCG.",
+          "Los buceadores locales vieron partes del coral durante muchos años, pero nadie sabía que era tan grande. Ahora los científicos van a estudiar su ADN para saber si es un solo ser vivo o muchos."
+        ],
+        "source": {
+          "name": "ABC News",
+          "url": "https://www.abc.net.au/news/2026-11-11/massive-coral-colony-found-off-the-cocos-keeling-islands/107367586"
+        }
+      },
+      {
+        "section": "Noticias de Israel",
+        "title": "Una calculadora que funciona con agua",
+        "paragraphs": [
+          "Investigadores de la Universidad de Tel Aviv crearon un sistema muy especial. Un líquido corre por canales muy pequeños dentro de un material blando.",
+          "Cuando alguien aprieta el material, el camino del líquido cambia. Así, el sistema puede hacer cálculos, como sumar números con ceros y unos, igual que un ordenador. ¡Y no necesita bombas ni electricidad!"
+        ],
+        "source": {
+          "name": "Ynet",
+          "url": "https://www.ynet.co.il/environment-science/article/r1tpzkz0fl"
+        }
+      },
+      {
+        "section": "Noticias del mundo",
+        "title": "Plástico en la sangre de los osos hormigueros",
+        "paragraphs": [
+          "En Brasil, unos científicos estudiaron la sangre de 47 animales: tapires y osos hormigueros gigantes. Encontraron microplásticos, que son trocitos de plástico muy pequeños.",
+          "Los animales que viven cerca de las ciudades y de la basura tenían más plástico. Pero también los animales que viven muy lejos, a más de 100 kilómetros, tenían un poco. Por eso es importante usar menos plástico."
+        ],
+        "source": {
+          "name": "Nature",
+          "url": "https://www.nature.com/articles/d41586-026-03660-5"
+        }
+      },
+      {
+        "section": "Tecnología e IA",
+        "title": "Robots que doblan la ropa",
+        "paragraphs": [
+          "Google DeepMind presentó Gemini Robotics 2.5, una inteligencia artificial que controla robots. En sus vídeos, los robots doblan ropa, sirven pasteles y ordenan piezas de coches en una fábrica.",
+          "El robot aprende con ejemplos, así que no necesita un programa nuevo para cada tarea. Por ahora solo lo pueden usar algunas empresas de robótica, no el público."
+        ],
+        "source": {
+          "name": "Leverage AI",
+          "url": "https://news.leverageai.io/reports/2026-11-11-daily"
+        }
+      }
+    ],
+    "weather": {
+      "day": "Jueves, 12 de noviembre",
+      "place": "Bentleigh East",
+      "summary": "Día casi todo soleado y agradable. Puede haber niebla en las colinas temprano por la mañana. No va a llover. Por la tarde, viento del sur de 15 a 25 km/h. El sol es muy fuerte (índice UV 9): ¡lleva gorra y protector solar!",
+      "min": 9,
+      "max": 22,
+      "rainChance": 0,
+      "source": {
+        "name": "Bureau of Meteorology",
+        "url": "https://www.bom.gov.au/location/australia/victoria/central/bvic_pt042-melbourne"
+      }
+    }
+  },
+  {
     "id": "2026-11-11",
     "date": "Miércoles, 11 de noviembre de 2026",
     "items": [
