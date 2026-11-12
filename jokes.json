@@ -407,6 +407,14 @@
       "emoji": "⛄",
       "setup": "What do snowmen eat for breakfast?",
       "punchline": "Frosted Flakes!"
+    },
+    {
+      "date": "2026-11-12",
+      "slot": "pm",
+      "topic": "School",
+      "emoji": "📚",
+      "setup": "What's the tallest building in the world?",
+      "punchline": "The library, because it has the most stories!"
     }
   ]
 }

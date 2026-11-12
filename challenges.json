@@ -3139,6 +3139,95 @@
       "title": "Read aloud",
       "text": "On Wednesday after school, Franklin drove the red GT up to the snowy mountains with Dad. Even though it was freezing, he still brought his basketball. He found an old hoop next to the ski lodge and started shooting. The ball kept getting stuck in the soft snow. Because of this, he dribbled on the icy path instead. Eventually, Dad joined in, and they built a snowman wearing Franklin's cap. Then they drove home slowly and carefully on the slippery road.",
       "points": 10
+    },
+    {
+      "date": "2026-11-12",
+      "id": "tt1",
+      "type": "timestables",
+      "title": "Times-tables warm-up",
+      "tables": [
+        4
+      ],
+      "n": 8,
+      "prompt": "Quick times-tables warm-up with pictures: tap the answer, then send Buzz your finish code!",
+      "key": "f4e1b2155cd1f22b",
+      "points": 10
+    },
+    {
+      "date": "2026-11-12",
+      "id": "mg1",
+      "type": "stepgame",
+      "title": "Maths Garage: long multiplication",
+      "mode": "mult",
+      "a": 2136,
+      "b": 14,
+      "sum": "2136 × 14",
+      "prompt": "Solve it step by step in Buzz's Maths Garage, then send Buzz your finish code!",
+      "key": "36e0eca9b5995044",
+      "points": 10
+    },
+    {
+      "date": "2026-11-12",
+      "id": "mg2",
+      "type": "stepgame",
+      "title": "Maths Garage: long division",
+      "mode": "div",
+      "a": 975,
+      "b": 15,
+      "sum": "975 ÷ 15",
+      "prompt": "Solve it step by step in Buzz's Maths Garage, then send Buzz your finish code!",
+      "key": "2eb11331807ac3e6",
+      "points": 10
+    },
+    {
+      "date": "2026-11-12",
+      "id": "hb1",
+      "type": "hebword",
+      "title": "Hebrew word rally",
+      "word": "גלגל",
+      "prompt": "Sound out this Hebrew word letter by letter (right to left!), then find out what it means.",
+      "key": "5c268d5d3cdb62a2",
+      "points": 10
+    },
+    {
+      "date": "2026-11-12",
+      "id": "hs1",
+      "type": "hebsentence",
+      "title": "Hebrew sentence rally",
+      "sentence": "זה מגדל גדול",
+      "prompt": "Read this Hebrew sentence word by word, letter by letter (right to left!), then work out what it means.",
+      "key": "6f017006d8835543",
+      "points": 15
+    },
+    {
+      "date": "2026-11-12",
+      "id": "gr1",
+      "type": "grammar",
+      "title": "Sentence Detective",
+      "qid": "g42",
+      "level": 2,
+      "prompt": "What job is the highlighted word doing? Solve it in Buzz's Sentence Detective!",
+      "key": "d9d720045b7bd329",
+      "points": 5
+    },
+    {
+      "date": "2026-11-12",
+      "id": "gr2",
+      "type": "grammar",
+      "title": "Sentence Detective",
+      "qid": "g53",
+      "level": 2,
+      "prompt": "What job is the highlighted word doing? Solve it in Buzz's Sentence Detective!",
+      "key": "bd21f43972e97924",
+      "points": 5
+    },
+    {
+      "date": "2026-11-12",
+      "id": "dc5",
+      "type": "reading",
+      "title": "Read aloud",
+      "text": "On Thursday after school, Franklin drove the red GT into the city with Dad. They parked next to the tallest tower and rode the lift all the way to the top. Although his ears popped, Franklin pressed his nose against the glass. The cars below looked as small as toy wheels. He spotted a basketball court on a rooftop and really wanted to play there. Therefore, Dad promised they would find it on the way down. Afterwards, they shot hoops on the rooftop court until the sun went down.",
+      "points": 10
     }
   ],
   "notes": [
@@ -3538,6 +3627,15 @@
         "name": "Just Divide (Math Playground)",
         "url": "https://www.mathplayground.com/just_divide.html",
         "why": "Warm up your dividing brain 🧠 for today's 756 ÷ 12 race!",
+        "ads": true
+      }
+    },
+    {
+      "date": "2026-11-12",
+      "game": {
+        "name": "Hit the Button (Topmarks)",
+        "url": "https://www.topmarks.co.uk/maths-games/hit-the-button",
+        "why": "Pick Times Tables, then the 4s, to warm up for today's 4× run! 🎯",
         "ads": true
       }
     }
