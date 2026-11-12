@@ -1,5 +1,71 @@
 [
   {
+    "id": "2026-11-13",
+    "date": "Viernes, 13 de noviembre de 2026",
+    "items": [
+      {
+        "section": "Noticias de Victoria",
+        "title": "Más trenes para el campo de Victoria",
+        "paragraphs": [
+          "Faltan dos semanas para las elecciones en Victoria, el 28 de noviembre. El Partido Laborista promete 420 millones de dólares para tener más trenes V/Line en las ciudades del campo.",
+          "Si gana, habrá 550 viajes más cada semana. Por ejemplo, en Melton los trenes van a pasar cada 20 minutos, y los trenes rápidos a Geelong van a tardar 10 minutos menos."
+        ],
+        "source": {
+          "name": "ABC News",
+          "url": "https://www.abc.net.au/news/2026-11-12/vic-labor-pledges-to-expand-regional-train-services/107375862"
+        }
+      },
+      {
+        "section": "Noticias de Israel",
+        "title": "Un hielo súper fuerte para construir en Marte",
+        "paragraphs": [
+          "Científicos de la Universidad Hebrea de Jerusalén crearon un hielo especial que se llama BioPykrete. Es diez veces más fuerte que el hielo normal. Lo hacen con agua, fibras de plantas y una proteína.",
+          "Se puede usar para construir casas o caminos en lugares muy fríos, como la Antártida, y quizás un día en la Luna o en Marte. Y cuando ya no se necesita, ¡se derrite y no deja basura!"
+        ],
+        "source": {
+          "name": "The Times of Israel",
+          "url": "https://www.timesofisrael.com/its-eco-friendly-and-freakishly-strong-meet-israels-mars-ready-super-ice/"
+        }
+      },
+      {
+        "section": "Noticias del mundo",
+        "title": "Cinco ranas nuevas en el Himalaya",
+        "paragraphs": [
+          "Científicos de la India y de Estados Unidos descubrieron cinco especies nuevas de ranas pequeñas con «cuernos» en las montañas del Himalaya, en el este de la India. Trabajaron cinco años en el bosque para encontrarlas.",
+          "Una de ellas come caracoles. Es la primera rana de la India que come caracoles. Algunas ranas son muy tímidas y solo salen unas pocas semanas al año."
+        ],
+        "source": {
+          "name": "BBC News",
+          "url": "https://www.bbc.com/news/articles/c8kgkw7dr5rko"
+        }
+      },
+      {
+        "section": "Tecnología e IA",
+        "title": "Una aerolínea dice «no» a los robots que compran billetes",
+        "paragraphs": [
+          "Hoy hay asistentes de inteligencia artificial que pueden hacer tareas por nosotros, como buscar vuelos. Pero la aerolínea United Airlines no deja que estos asistentes compren los billetes.",
+          "La IA puede mostrar los vuelos, pero la persona tiene que comprar el billete ella misma. United dice que así protege los datos personales y evita compras por error."
+        ],
+        "source": {
+          "name": "The Neuron",
+          "url": "https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-thursday-november-12-2026/"
+        }
+      }
+    ],
+    "weather": {
+      "day": "Viernes, 13 de noviembre",
+      "place": "Bentleigh East",
+      "summary": "Día nublado. Es muy probable que llueva, sobre todo al final de la tarde y por la noche. Poco viento, pero por la tarde viento del sur de 15 a 20 km/h. El sol es muy fuerte (índice UV 9): ¡lleva gorra y protector solar, y también un paraguas!",
+      "min": 13,
+      "max": 18,
+      "rainChance": 80,
+      "source": {
+        "name": "Bureau of Meteorology",
+        "url": "https://www.bom.gov.au/location/australia/victoria/central/bvic_pt042-melbourne"
+      }
+    }
+  },
+  {
     "id": "2026-11-12",
     "date": "Jueves, 12 de noviembre de 2026",
     "items": [
