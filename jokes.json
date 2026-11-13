@@ -415,6 +415,14 @@
       "emoji": "📚",
       "setup": "What's the tallest building in the world?",
       "punchline": "The library, because it has the most stories!"
+    },
+    {
+      "date": "2026-11-13",
+      "slot": "pm",
+      "topic": "Space",
+      "emoji": "☀️",
+      "setup": "Why didn't the Sun go to university?",
+      "punchline": "It already had millions of degrees!"
     }
   ]
 }
