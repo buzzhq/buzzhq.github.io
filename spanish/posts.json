@@ -1,5 +1,71 @@
 [
   {
+    "id": "2026-11-14",
+    "date": "Sábado, 14 de noviembre de 2026",
+    "items": [
+      {
+        "section": "Noticias de Australia",
+        "title": "Millones de langostas en Australia del Sur",
+        "paragraphs": [
+          "En el norte de Australia del Sur, en la zona de los montes Flinders, hay muchísimas langostas este año. Las langostas son insectos parecidos a los saltamontes. Viajan en grupos enormes y se comen la hierba y las plantas del campo.",
+          "Los granjeros dicen que este año hay más langostas que otros años. El gobierno usa aviones para echar un producto contra ellas y ya roció más de 115.000 hectáreas de tierra."
+        ],
+        "source": {
+          "name": "ABC News",
+          "url": "https://www.abc.net.au/news/2026-11-13/locusts-wreak-havoc-across-south-australia-pastoral-land/107381398"
+        }
+      },
+      {
+        "section": "Noticias de Israel",
+        "title": "Un concurso de la NASA en Haifa",
+        "paragraphs": [
+          "Este fin de semana, el 14 y el 15 de noviembre, el Technion de Haifa organiza por primera vez el concurso Space Apps de la NASA. Es un «hackatón»: equipos de estudiantes e ingenieros trabajan dos días para inventar soluciones a problemas de la Tierra y del espacio, con datos de la NASA.",
+          "El concurso pasa al mismo tiempo en cientos de lugares del mundo. Los mejores proyectos de Haifa van a competir con proyectos de otros países, y al final solo 10 equipos ganan en todo el mundo."
+        ],
+        "source": {
+          "name": "Ynet News",
+          "url": "https://www.ynetnews.com/health_science/article/rybaodkagl"
+        }
+      },
+      {
+        "section": "Noticias del mundo",
+        "title": "Los pájaros también tienen «jet lag»",
+        "paragraphs": [
+          "Cuando una persona viaja en avión muy lejos, a veces se siente cansada y confundida. Eso se llama «jet lag». Científicos del Reino Unido descubrieron que unas aves marinas, las pardelas, también lo sufren cuando vuelan muy rápido sobre el océano Atlántico.",
+          "Estas aves usan el sol como una brújula, pero necesitan su reloj interno para saber dónde está el sol. Si el reloj se desordena, ¡se pierden un poco! Los científicos estudiaron los viajes de más de 1.000 pájaros durante 20 años."
+        ],
+        "source": {
+          "name": "University of Liverpool",
+          "url": "https://news.liverpool.ac.uk/2026/11/13/seabirds-suffer-jet-lag-that-can-send-them-off-course-study-finds/"
+        }
+      },
+      {
+        "section": "Tecnología e IA",
+        "title": "Gafas inteligentes que traducen",
+        "paragraphs": [
+          "Google y Samsung presentaron unas gafas inteligentes con Gemini, su inteligencia artificial. Una de sus funciones más interesantes es la traducción en vivo: te ayudan a entender a una persona que habla otro idioma.",
+          "Ya se pueden reservar y cuestan desde 395 dólares estadounidenses. Las van a enviar a partir del 10 de diciembre. ¿Te gustaría tener unas gafas que traducen el español?"
+        ],
+        "source": {
+          "name": "The Neuron",
+          "url": "https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-friday-november-13-2026/"
+        }
+      }
+    ],
+    "weather": {
+      "day": "Sábado, 14 de noviembre",
+      "place": "Bentleigh East",
+      "summary": "Día nublado. Es muy probable que llueva por la mañana, pero a partir del principio de la tarde va a llover menos. Viento del sur y suroeste de 15 a 25 km/h, más suave por la noche. El sol es muy fuerte (índice UV 9): ¡lleva paraguas, pero también gorra y protector solar!",
+      "min": 12,
+      "max": 19,
+      "rainChance": 95,
+      "source": {
+        "name": "Bureau of Meteorology",
+        "url": "https://www.bom.gov.au/location/australia/victoria/central/bvic_pt042-melbourne"
+      }
+    }
+  },
+  {
     "id": "2026-11-13",
     "date": "Viernes, 13 de noviembre de 2026",
     "items": [
