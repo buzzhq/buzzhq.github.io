@@ -423,6 +423,14 @@
       "emoji": "☀️",
       "setup": "Why didn't the Sun go to university?",
       "punchline": "It already had millions of degrees!"
+    },
+    {
+      "date": "2026-11-14",
+      "slot": "am",
+      "topic": "Animals",
+      "emoji": "🦈",
+      "setup": "What do sharks eat for lunch?",
+      "punchline": "Fish and ships!"
     }
   ]
 }
