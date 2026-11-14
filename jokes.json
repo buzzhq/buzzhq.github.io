@@ -431,6 +431,14 @@
       "emoji": "🦈",
       "setup": "What do sharks eat for lunch?",
       "punchline": "Fish and ships!"
+    },
+    {
+      "date": "2026-11-14",
+      "slot": "pm",
+      "topic": "Cars",
+      "emoji": "🚗",
+      "setup": "What part of a car is the laziest?",
+      "punchline": "The wheels, because they are always tired!"
     }
   ]
 }

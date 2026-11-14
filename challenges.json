@@ -3317,6 +3317,95 @@
       "title": "Read aloud",
       "text": "On Friday after school, Franklin drove the red GT to the beach court with Dad. The sun was so hot that the sand burned his toes. Even though he was sweating, he kept practising his free throws. Meanwhile, Dad set up a big umbrella and handed out cold water. Franklin bent his knees and followed through on every shot. Finally, he made twelve in a row and cheered so loudly that the seagulls flew away! Then he drove home at the speed limit, ready for a fun weekend.",
       "points": 10
+    },
+    {
+      "date": "2026-11-14",
+      "id": "tt1",
+      "type": "timestables",
+      "title": "Times-tables warm-up",
+      "tables": [
+        4
+      ],
+      "n": 8,
+      "prompt": "Quick times-tables warm-up with pictures: tap the answer, then send Buzz your finish code!",
+      "key": "eb63c8483f109193",
+      "points": 10
+    },
+    {
+      "date": "2026-11-14",
+      "id": "mg1",
+      "type": "stepgame",
+      "title": "Maths Garage: long multiplication",
+      "mode": "mult",
+      "a": 2517,
+      "b": 8,
+      "sum": "2517 × 8",
+      "prompt": "Solve it step by step in Buzz's Maths Garage, then send Buzz your finish code!",
+      "key": "de3f4a4a76311597",
+      "points": 10
+    },
+    {
+      "date": "2026-11-14",
+      "id": "mg2",
+      "type": "stepgame",
+      "title": "Maths Garage: long division",
+      "mode": "div",
+      "a": 4728,
+      "b": 6,
+      "sum": "4728 ÷ 6",
+      "prompt": "Solve it step by step in Buzz's Maths Garage, then send Buzz your finish code!",
+      "key": "cfb6708e0decf9a3",
+      "points": 10
+    },
+    {
+      "date": "2026-11-14",
+      "id": "hb1",
+      "type": "hebword",
+      "title": "Hebrew word rally",
+      "word": "זהב",
+      "prompt": "Sound out this Hebrew word letter by letter (right to left!), then find out what it means.",
+      "key": "12d6223877a7eb8d",
+      "points": 10
+    },
+    {
+      "date": "2026-11-14",
+      "id": "hs1",
+      "type": "hebsentence",
+      "title": "Hebrew sentence rally",
+      "sentence": "יש לי דג",
+      "prompt": "Read this Hebrew sentence word by word, letter by letter (right to left!), then work out what it means.",
+      "key": "a1c1ba7c464e9a2c",
+      "points": 15
+    },
+    {
+      "date": "2026-11-14",
+      "id": "gr1",
+      "type": "grammar",
+      "title": "Sentence Detective",
+      "qid": "g52",
+      "level": 2,
+      "prompt": "What job is the highlighted word doing? Solve it in Buzz's Sentence Detective!",
+      "key": "0e602b62666a67f3",
+      "points": 5
+    },
+    {
+      "date": "2026-11-14",
+      "id": "gr2",
+      "type": "grammar",
+      "title": "Sentence Detective",
+      "qid": "g18",
+      "level": 2,
+      "prompt": "What job is the highlighted word doing? Solve it in Buzz's Sentence Detective!",
+      "key": "1573a20c5cf1577c",
+      "points": 5
+    },
+    {
+      "date": "2026-11-14",
+      "id": "dc5",
+      "type": "reading",
+      "title": "Read aloud",
+      "text": "On Saturday afternoon, Franklin drove the red GT to the aquarium with Dad. A shiny gold fish swam up to the glass and blew bubbles at him. While Dad read about the sharks, Franklin counted eight fish swimming in a row. Then they went to the park court to practise. His first shots bounced off the rim. Because of this, he bent his knees and used backspin. Eventually, he swished five in a row and Dad gave him a gold-medal high five! They drove home at the speed limit, ready for dinner.",
+      "points": 10
     }
   ],
   "notes": [
