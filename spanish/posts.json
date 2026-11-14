@@ -1,5 +1,71 @@
 [
   {
+    "id": "2026-11-15",
+    "date": "Domingo, 15 de noviembre de 2026",
+    "items": [
+      {
+        "section": "Noticias de Victoria",
+        "title": "Un chico perdido en el bosque canta y sobrevive",
+        "paragraphs": [
+          "William, un chico de 17 años, estuvo perdido seis días en el bosque de Walhalla East, a casi 200 kilómetros de Melbourne. Era su primera acampada sin adultos. No tenía mucha comida: solo un paquete de patatas fritas de pollo.",
+          "William tomó buenas decisiones: comió poco a poco, bebió agua, se tapó con mantas por la noche y se quedó en un solo lugar, donde podían verlo. Para estar alegre, cantaba canciones. Un helicóptero de la policía lo encontró junto a un arroyo, ¡y su familia está muy feliz!"
+        ],
+        "source": {
+          "name": "ABC News",
+          "url": "https://www.abc.net.au/news/2026-11-14/found-teenager-william-survival-instincts/107385646"
+        }
+      },
+      {
+        "section": "Noticias de Israel",
+        "title": "Casi 20.000 grullas en el lago Agamon Hula",
+        "paragraphs": [
+          "En otoño, miles de grullas viajan desde Europa hasta África y paran en el norte de Israel para descansar y comer. Esta semana contaron 19.600 grullas en el lago Agamon Hula. Algunas se quedan allí todo el invierno.",
+          "Las grullas vuelan de día y también de noche. Viajan en familia y usan su voz para encontrar a sus parientes en el grupo. El sábado, miles de personas fueron al lago para verlas."
+        ],
+        "source": {
+          "name": "WireIsrael",
+          "url": "https://www.wireisrael.com/news/agamon-hula-cranes-migration-14"
+        }
+      },
+      {
+        "section": "Noticias del mundo",
+        "title": "Drones que recogen los «mocos» de las ballenas",
+        "paragraphs": [
+          "Cuando una ballena sale a respirar, echa un chorro de agua y aire por la nariz. Científicos de Escocia usaron pequeños drones con platos para recoger estas gotas, que la gente llama «mocos de ballena». Así no tienen que tocar ni molestar a los animales.",
+          "En las gotas hay ADN, la «receta» de cada ballena. Los científicos estudiaron 26 ballenas jorobadas cerca de Canadá. Ahora pueden saber si cada ballena es macho o hembra y quiénes son familia."
+        ],
+        "source": {
+          "name": "Laboratory News",
+          "url": "https://labnews.co.uk/whale-snot-collected-by-drones-yields-whole-genomes-in-conservation-first/"
+        }
+      },
+      {
+        "section": "Tecnología e IA",
+        "title": "Un robot construye algo en el espacio",
+        "paragraphs": [
+          "Por primera vez, un robot construyó una estructura en el espacio sin ayuda de astronautas. El robot se llama ASTRA y está en órbita alrededor de la Tierra. Su trabajo es construir una antena redonda de 1,4 metros.",
+          "El robot tiene un brazo que coge piezas y las une, una por una. Los ingenieros dicen que es como jugar con un juego de construcción, ¡pero en el espacio! En el futuro, robots así pueden construir cosas muy grandes allí arriba."
+        ],
+        "source": {
+          "name": "IFLScience",
+          "url": "https://www.iflscience.com/a-robot-has-built-a-structure-in-space-for-the-first-time-ever-85189"
+        }
+      }
+    ],
+    "weather": {
+      "day": "Domingo, 15 de noviembre",
+      "place": "Bentleigh East",
+      "summary": "Día nublado y fresco. Es muy probable que haya chubascos, sobre todo por la mañana y por la tarde. Viento del oeste y suroeste de 15 a 20 km/h, y más fuerte (20 a 30 km/h) desde media mañana. El sol es muy fuerte (índice UV 9): ¡lleva paraguas, chaqueta y también protector solar!",
+      "min": 10,
+      "max": 17,
+      "rainChance": 80,
+      "source": {
+        "name": "Bureau of Meteorology",
+        "url": "https://www.bom.gov.au/location/australia/victoria/central/bvic_pt042-melbourne"
+      }
+    }
+  },
+  {
     "id": "2026-11-14",
     "date": "Sábado, 14 de noviembre de 2026",
     "items": [
