@@ -1,7 +1,7 @@
 {
   "name": "Alon",
   "bot": "Buzz 🤖",
-  "updated": "2026-11-10",
+  "updated": "2026-11-14",
   "levels": [
     {
       "name": "Rookie",
@@ -797,6 +797,55 @@
       "category": "challenge",
       "points": 5,
       "text": "Sentence Detective gr2 ✅ on = preposition"
+    },
+    {
+      "date": "2026-11-14",
+      "emoji": "✖️",
+      "category": "challenge",
+      "points": 10,
+      "text": "Times-tables warm-up tt1 ✅ 4× table"
+    },
+    {
+      "date": "2026-11-14",
+      "emoji": "🏎️",
+      "category": "challenge",
+      "points": 10,
+      "text": "Maths Garage mg1 ✅ 2517 × 8 = 20136"
+    },
+    {
+      "date": "2026-11-14",
+      "emoji": "🏎️",
+      "category": "challenge",
+      "points": 10,
+      "text": "Maths Garage mg2 ✅ 4728 ÷ 6 = 788"
+    },
+    {
+      "date": "2026-11-14",
+      "emoji": "🔤",
+      "category": "challenge",
+      "points": 10,
+      "text": "Hebrew word hb1 ✅ זהב (zahav = gold)"
+    },
+    {
+      "date": "2026-11-14",
+      "emoji": "💬",
+      "category": "challenge",
+      "points": 15,
+      "text": "Hebrew sentence hs1 ✅ יש לי דג (yesh li dag = I have a fish)"
+    },
+    {
+      "date": "2026-11-14",
+      "emoji": "🕵️",
+      "category": "challenge",
+      "points": 5,
+      "text": "Sentence Detective gr1 ✅ and = conjunction"
+    },
+    {
+      "date": "2026-11-14",
+      "emoji": "🕵️",
+      "category": "challenge",
+      "points": 5,
+      "text": "Sentence Detective gr2 ✅ steered = verb"
     }
   ],
   "cashout": {
