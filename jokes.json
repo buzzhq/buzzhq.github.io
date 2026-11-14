@@ -439,6 +439,14 @@
       "emoji": "🚗",
       "setup": "What part of a car is the laziest?",
       "punchline": "The wheels, because they are always tired!"
+    },
+    {
+      "date": "2026-11-15",
+      "slot": "am",
+      "topic": "Space",
+      "emoji": "🌕",
+      "setup": "Why didn't the Moon eat dinner?",
+      "punchline": "Because it was full!"
     }
   ]
 }
