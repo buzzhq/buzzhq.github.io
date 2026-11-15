@@ -1,5 +1,71 @@
 [
   {
+    "id": "2026-11-16",
+    "date": "Lunes, 16 de noviembre de 2026",
+    "items": [
+      {
+        "section": "Noticias de Australia",
+        "title": "Allen, el nuevo extraterrestre de los creadores de Bluey",
+        "paragraphs": [
+          "Ludo Studio, el estudio de Queensland que hace Bluey, tiene su primera película: «Allen». Ya se puede ver en Netflix. Allen es un extraterrestre pequeño y gracioso, con orejas grandes como un conejo y ojos enormes.",
+          "En la película, Allen se hace amigo de Petey, un niño de 10 años. Para crear a Allen usaron marionetas y también efectos por ordenador. El director, Daley Pearson, quería que todos quisieran a Allen desde el primer momento. Allen viene del océano y parece un poco un bebé hipopótamo."
+        ],
+        "source": {
+          "name": "ABC News",
+          "url": "https://www.abc.net.au/news/2026-11-16/bluey-allen-ludo-studios-daley-pearson/107377452"
+        }
+      },
+      {
+        "section": "Noticias de Israel",
+        "title": "Un secreto de los ácaros que atacan a las abejas",
+        "paragraphs": [
+          "La varroa es un ácaro muy pequeño. Vive en las colmenas, come de las abejas de la miel y les pasa virus peligrosos. Es uno de los problemas más grandes para las abejas en todo el mundo.",
+          "Científicas de la Universidad de Haifa estudiaron 223 ácaros durante tres generaciones. Descubrieron que cada ácaro macho es casi una copia exacta (un clon) de su madre. Esto puede explicar por qué la varroa cambia rápido y resiste los productos que la gente usa contra ella."
+        ],
+        "source": {
+          "name": "Universidad de Haifa",
+          "url": "https://www.haifa.ac.il/2026/11/15/%d7%96%d7%9b%d7%a8%d7%99-%d7%94%d7%98%d7%a4%d7%99%d7%9c-%d7%a9%d7%9e%d7%90%d7%99%d7%99%d7%9d-%d7%a2%d7%9c-%d7%93%d7%91%d7%95%d7%a8%d7%99-%d7%94%d7%93%d7%91%d7%a9-%d7%94%d7%9d-%d7%a9%d7%99%d7%91%d7%95/"
+        }
+      },
+      {
+        "section": "Noticias del mundo",
+        "title": "Un roedor gigante de hace 34 millones de años",
+        "paragraphs": [
+          "En una mina del sur de Tailandia, unos científicos encontraron dientes fósiles de un roedor muy grande. Los roedores son animales como los ratones y las ratas. Este animal vivió hace unos 34 millones de años.",
+          "Pesaba unos 30 kilos, el doble que otros roedores de su época. Su nombre es Yakamys: «yak» significa «gigante» en tailandés y «mys» significa «ratón» en griego. Hoy, el roedor más grande del mundo es el capibara."
+        ],
+        "source": {
+          "name": "Phys.org",
+          "url": "https://phys.org/news/2026-11-giant-prehistoric-rodent-fossils-southern.html"
+        }
+      },
+      {
+        "section": "Tecnología e IA",
+        "title": "Un robot «babosa» para explorar otros planetas",
+        "paragraphs": [
+          "Ingenieros de una universidad de Estados Unidos crearon un robot que cambia de forma. Se llama TeCoBot, mide unos 60 centímetros y pesa unos 600 gramos. Se puede doblar como la trompa de un elefante y hacerse la mitad de corto.",
+          "El robot avanza como una oruga, rueda de lado y sube paredes. Tiene pinzas en los dos extremos, y varios robots pueden unirse para formar otras figuras. Algún día podría explorar cráteres de la Luna o cuevas de Marte."
+        ],
+        "source": {
+          "name": "SpaceWireDaily",
+          "url": "https://spacewiredaily.com/article/2026-11-14-shape-shifting-robotic-slugs-could-one-d/"
+        }
+      }
+    ],
+    "weather": {
+      "day": "Lunes, 16 de noviembre",
+      "place": "Bentleigh East",
+      "summary": "Día nublado y fresco. Casi seguro que no va a llover. Viento del sur de 15 a 25 km/h, más suave por la noche. El sol es muy fuerte (índice UV 9): ¡lleva una chaqueta y también protector solar!",
+      "min": 9,
+      "max": 17,
+      "rainChance": 10,
+      "source": {
+        "name": "Bureau of Meteorology",
+        "url": "https://www.bom.gov.au/location/australia/victoria/central/bvic_pt042-melbourne"
+      }
+    }
+  },
+  {
     "id": "2026-11-15",
     "date": "Domingo, 15 de noviembre de 2026",
     "items": [
