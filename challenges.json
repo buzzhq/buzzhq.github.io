@@ -3406,6 +3406,96 @@
       "title": "Read aloud",
       "text": "On Saturday afternoon, Franklin drove the red GT to the aquarium with Dad. A shiny gold fish swam up to the glass and blew bubbles at him. While Dad read about the sharks, Franklin counted eight fish swimming in a row. Then they went to the park court to practise. His first shots bounced off the rim. Because of this, he bent his knees and used backspin. Eventually, he swished five in a row and Dad gave him a gold-medal high five! They drove home at the speed limit, ready for dinner.",
       "points": 10
+    },
+    {
+      "date": "2026-11-15",
+      "id": "tt1",
+      "type": "timestables",
+      "title": "Times-tables warm-up",
+      "tables": [
+        3,
+        4
+      ],
+      "n": 8,
+      "prompt": "Quick times-tables warm-up with pictures: tap the answer, then send Buzz your finish code!",
+      "key": "0120b769e0f2b819",
+      "points": 10
+    },
+    {
+      "date": "2026-11-15",
+      "id": "mg1",
+      "type": "stepgame",
+      "title": "Maths Garage: long multiplication",
+      "mode": "mult",
+      "a": 3164,
+      "b": 7,
+      "sum": "3164 × 7",
+      "prompt": "Solve it step by step in Buzz's Maths Garage, then send Buzz your finish code!",
+      "key": "7f2d5868993f7d34",
+      "points": 10
+    },
+    {
+      "date": "2026-11-15",
+      "id": "mg2",
+      "type": "stepgame",
+      "title": "Maths Garage: long division",
+      "mode": "div",
+      "a": 5236,
+      "b": 4,
+      "sum": "5236 ÷ 4",
+      "prompt": "Solve it step by step in Buzz's Maths Garage, then send Buzz your finish code!",
+      "key": "f9de664f5f4ee896",
+      "points": 10
+    },
+    {
+      "date": "2026-11-15",
+      "id": "hs1",
+      "type": "hebsentence",
+      "title": "Hebrew sentence rally",
+      "sentence": "הגמל אוהב חול",
+      "prompt": "Read this Hebrew sentence word by word, letter by letter (right to left!), then work out what it means.",
+      "key": "45394556b6cd0130",
+      "points": 15
+    },
+    {
+      "date": "2026-11-15",
+      "id": "gr1",
+      "type": "grammar",
+      "title": "Sentence Detective",
+      "qid": "g56",
+      "level": 2,
+      "prompt": "What job is the highlighted word doing? Solve it in Buzz's Sentence Detective!",
+      "key": "1f7cb4c9ac406274",
+      "points": 5
+    },
+    {
+      "date": "2026-11-15",
+      "id": "gr2",
+      "type": "grammar",
+      "title": "Sentence Detective",
+      "qid": "g21",
+      "level": 2,
+      "prompt": "What job is the highlighted word doing? Solve it in Buzz's Sentence Detective!",
+      "key": "6ed9370d5a4539dd",
+      "points": 5
+    },
+    {
+      "date": "2026-11-15",
+      "id": "hb1",
+      "type": "hebword",
+      "title": "Hebrew word rally",
+      "word": "אבא",
+      "prompt": "Sound out this Hebrew word letter by letter (right to left!), then find out what it means.",
+      "key": "e90fde8b29764645",
+      "points": 10
+    },
+    {
+      "date": "2026-11-15",
+      "id": "dc5",
+      "type": "reading",
+      "title": "Read aloud",
+      "text": "On Sunday afternoon, Franklin drove the red GT to the zoo with Dad. First, they visited the camels resting in the warm sand. As soon as the keeper brought lunch, a big brown bear ran over to grab some honey. The bear was so happy that it rolled on its back! Franklin wanted to practise his shots before dinner. Therefore, they drove home at the speed limit and played on the driveway court.",
+      "points": 10
     }
   ],
   "notes": [

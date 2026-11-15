@@ -447,6 +447,14 @@
       "emoji": "🌕",
       "setup": "Why didn't the Moon eat dinner?",
       "punchline": "Because it was full!"
+    },
+    {
+      "date": "2026-11-15",
+      "slot": "pm",
+      "topic": "Animals",
+      "emoji": "🐫",
+      "setup": "Why are camels so good at hide and seek?",
+      "punchline": "Because they wear CAMEL-flage!"
     }
   ]
 }
