@@ -1,5 +1,71 @@
 [
   {
+    "id": "2026-11-17",
+    "date": "Martes, 17 de noviembre de 2026",
+    "items": [
+      {
+        "section": "Noticias de Victoria",
+        "title": "Mañana empieza el voto anticipado en Victoria",
+        "paragraphs": [
+          "El 28 de noviembre hay elecciones en Victoria. Ese día, millones de personas van a votar para elegir al nuevo gobierno del estado. En Victoria, votar es obligatorio para los ciudadanos australianos de 18 años o más.",
+          "Pero no hace falta esperar: desde mañana, miércoles 18 de noviembre, la gente puede votar antes, en más de 200 centros de votación. Están abiertos de 9 a 18 horas, hasta el 27 de noviembre (menos el domingo 22). Se espera un número récord de votos anticipados."
+        ],
+        "source": {
+          "name": "ABC News",
+          "url": "https://www.abc.net.au/news/2026-11-11/victorian-election-early-voting-postal-voting-november-28/107242694"
+        }
+      },
+      {
+        "section": "Noticias de Israel",
+        "title": "Dos gorilas hacen una «escalera viviente»",
+        "paragraphs": [
+          "En el Safari de Ramat Gan viven dos hermanas gorilas: Amelia y Lisha. Querían comer las hojas de un árbol, pero las ramas estaban muy altas y no podían subir por el tronco.",
+          "Entonces trabajaron en equipo: Lisha se quedó quieta sobre una roca y Amelia se subió a su espalda. Así llegó a unos 4,5 metros de altura. Nadie les enseñó a hacerlo. Científicos de la Universidad de Tel Aviv estudiaron los vídeos y dicen que los gorilas son muy inteligentes."
+        ],
+        "source": {
+          "name": "Israel Hayom",
+          "url": "https://www.israelhayom.com/2026/11/16/gorillas-living-ladder-ramat-gan-safari/"
+        }
+      },
+      {
+        "section": "Noticias del mundo",
+        "title": "Un niño de 6 años encuentra un fósil muy raro",
+        "paragraphs": [
+          "Leo tiene 6 años y vive en Estados Unidos. En un parque de Nebraska, levantó una piedra grande para buscar fósiles. Debajo vio un dibujo extraño, como una espina de pescado.",
+          "Los expertos dicen que es un conulárido, un animal del mar parecido a una medusa, que vivió hace entre 200 y 500 millones de años. Hace más de 55 años que nadie encontraba uno en Nebraska. ¡Le dijeron que es más raro que un hueso de mamut!"
+        ],
+        "source": {
+          "name": "Futura-Sciences",
+          "url": "https://www.futura-sciences.com/en/a-6-year-old-in-nebraska-flipped-a-rock-at-a-state-park-and-found-a-fossil-no-one-had-recorded-in-the-state-in-more-than-55-years_902827/"
+        }
+      },
+      {
+        "section": "Tecnología e IA",
+        "title": "Cámaras con IA para proteger a las ballenas",
+        "paragraphs": [
+          "A veces los barcos grandes chocan con ballenas. Para evitarlo, unos científicos crearon «WhaleSpotter». Es un sistema con cámaras térmicas (que ven el calor) e inteligencia artificial.",
+          "La IA puede ver ballenas a unos 5 kilómetros y avisa a la tripulación en pocos segundos. Así el barco puede cambiar de dirección o ir más despacio. Ahora Matson, una empresa de barcos de carga, va a usarlo en sus barcos que van a Hawái y Alaska."
+        ],
+        "source": {
+          "name": "World Ports Organization",
+          "url": "https://www.worldports.org/matson-adopts-whalespotter-whale-detection-system/"
+        }
+      }
+    ],
+    "weather": {
+      "day": "Martes, 17 de noviembre",
+      "place": "Bentleigh East",
+      "summary": "Día parcialmente nublado y agradable. Casi seguro que no va a llover. Poco viento; por la tarde, viento del sur de 15 a 20 km/h. El sol es muy fuerte (índice UV 9): ¡no olvides el protector solar y el sombrero!",
+      "min": 8,
+      "max": 19,
+      "rainChance": 10,
+      "source": {
+        "name": "Bureau of Meteorology",
+        "url": "https://www.bom.gov.au/location/australia/victoria/central/bvic_pt042-melbourne"
+      }
+    }
+  },
+  {
     "id": "2026-11-16",
     "date": "Lunes, 16 de noviembre de 2026",
     "items": [
