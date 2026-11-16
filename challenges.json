@@ -3496,6 +3496,96 @@
       "title": "Read aloud",
       "text": "On Sunday afternoon, Franklin drove the red GT to the zoo with Dad. First, they visited the camels resting in the warm sand. As soon as the keeper brought lunch, a big brown bear ran over to grab some honey. The bear was so happy that it rolled on its back! Franklin wanted to practise his shots before dinner. Therefore, they drove home at the speed limit and played on the driveway court.",
       "points": 10
+    },
+    {
+      "date": "2026-11-16",
+      "id": "tt1",
+      "type": "timestables",
+      "title": "Times-tables warm-up",
+      "tables": [
+        3,
+        4
+      ],
+      "n": 8,
+      "prompt": "Quick times-tables warm-up with pictures: tap the answer, then send Buzz your finish code!",
+      "key": "fb4388ae782b7a1a",
+      "points": 10
+    },
+    {
+      "date": "2026-11-16",
+      "id": "mg1",
+      "type": "stepgame",
+      "title": "Maths Garage: long multiplication",
+      "mode": "mult",
+      "a": 4106,
+      "b": 7,
+      "sum": "4106 × 7",
+      "prompt": "Solve it step by step in Buzz's Maths Garage, then send Buzz your finish code!",
+      "key": "ef24f72690800ada",
+      "points": 10
+    },
+    {
+      "date": "2026-11-16",
+      "id": "mg2",
+      "type": "stepgame",
+      "title": "Maths Garage: long division",
+      "mode": "div",
+      "a": 6424,
+      "b": 8,
+      "sum": "6424 ÷ 8",
+      "prompt": "Solve it step by step in Buzz's Maths Garage, then send Buzz your finish code!",
+      "key": "954f73079a1a11da",
+      "points": 10
+    },
+    {
+      "date": "2026-11-16",
+      "id": "hb1",
+      "type": "hebword",
+      "title": "Hebrew word rally",
+      "word": "נחש",
+      "prompt": "Sound out this Hebrew word letter by letter (right to left!), then find out what it means.",
+      "key": "130dc7a5c68da200",
+      "points": 10
+    },
+    {
+      "date": "2026-11-16",
+      "id": "hs1",
+      "type": "hebsentence",
+      "title": "Hebrew sentence rally",
+      "sentence": "הנחש גדול מאוד",
+      "prompt": "Read this Hebrew sentence word by word, letter by letter (right to left!), then work out what it means.",
+      "key": "d5770d2b729c52d5",
+      "points": 15
+    },
+    {
+      "date": "2026-11-16",
+      "id": "gr1",
+      "type": "grammar",
+      "title": "Sentence Detective",
+      "qid": "g31",
+      "level": 2,
+      "prompt": "What job is the highlighted word doing? Solve it in Buzz's Sentence Detective!",
+      "key": "884be84db24afc00",
+      "points": 5
+    },
+    {
+      "date": "2026-11-16",
+      "id": "gr2",
+      "type": "grammar",
+      "title": "Sentence Detective",
+      "qid": "g16",
+      "level": 2,
+      "prompt": "What job is the highlighted word doing? Solve it in Buzz's Sentence Detective!",
+      "key": "ee675c7f53476b27",
+      "points": 5
+    },
+    {
+      "date": "2026-11-16",
+      "id": "dc5",
+      "type": "reading",
+      "title": "Read aloud",
+      "text": "On Monday after school, Franklin drove the red GT to the reptile park with Dad. A long green snake was curled up on a warm rock. At first, Franklin thought it was fast asleep. Suddenly, it lifted its head and flicked its tongue at him! The keeper smiled and said that is how snakes smell the air. After that, they drove to the park court and Franklin swished six free throws in a row. Then they drove home at the speed limit.",
+      "points": 10
     }
   ],
   "notes": [
