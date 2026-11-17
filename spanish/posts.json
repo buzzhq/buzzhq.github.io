@@ -1,5 +1,71 @@
 [
   {
+    "id": "2026-11-18",
+    "date": "Miércoles, 18 de noviembre de 2026",
+    "items": [
+      {
+        "section": "Noticias de Australia",
+        "title": "Ken Wyatt será el primer gobernador aborigen de Australia Occidental",
+        "paragraphs": [
+          "Ken Wyatt, de 74 años, va a ser el nuevo gobernador de Australia Occidental. Es la primera vez que una persona aborigen tiene este puesto en ese estado. Wyatt también fue el primer indígena elegido para la Cámara de Representantes de Australia.",
+          "Wyatt dice que es «un privilegio enorme». Quiere ayudar mucho a los niños y a los jóvenes, y también a las zonas rurales del estado. Va a empezar su trabajo a principios del año que viene."
+        ],
+        "source": {
+          "name": "ABC News",
+          "url": "https://www.abc.net.au/news/2026-11-16/ken-wyatt-named-as-wa-s-first-indigenous-governor/107391360"
+        }
+      },
+      {
+        "section": "Noticias de Israel",
+        "title": "Tres niños encuentran una moneda de hace 1.900 años",
+        "paragraphs": [
+          "Tres alumnos de cuarto curso, de 10 años, estaban de excursión en Sataf, en las montañas cerca de Jerusalén. Mientras jugaban, encontraron una moneda muy antigua en el suelo. Los expertos creen que es de la época del emperador romano Adriano, hace unos 1.900 años.",
+          "Al principio, uno de los niños quería quedarse con el tesoro. Pero el guía les explicó que los objetos antiguos no son recuerdos para llevar a casa: hay que dárselos a los arqueólogos para estudiarlos. Al final, los niños entregaron la moneda."
+        ],
+        "source": {
+          "name": "The Jerusalem Post",
+          "url": "https://www.jpost.com/archaeology/article-915150"
+        }
+      },
+      {
+        "section": "Noticias del mundo",
+        "title": "Dos nuevas especies de monos aulladores en la Amazonia",
+        "paragraphs": [
+          "Unos científicos descubrieron dos especies nuevas de monos aulladores en la selva del Amazonas. Son monos de pelo rojizo que hacen un ruido muy fuerte. ¡Desde 1941 nadie había descubierto una especie nueva de mono aullador!",
+          "Para saberlo, los científicos estudiaron el ADN de los monos. Los grandes ríos de la Amazonia separaron a estos monos durante millones de años. Una de las nuevas especies puede estar en peligro, porque la gente corta los árboles de su bosque."
+        ],
+        "source": {
+          "name": "O Globo",
+          "url": "https://oglobo.globo.com/brasil/noticia/2026/11/17/cientistas-identificam-duas-novas-especies-de-macacos-uivadores-na-amazonia-apos-85-anos.ghtml"
+        }
+      },
+      {
+        "section": "Tecnología e IA",
+        "title": "La NASA busca ideas de estudiantes para una base en la Luna",
+        "paragraphs": [
+          "La NASA quiere construir una base cerca del polo sur de la Luna, donde los astronautas van a vivir y trabajar. Ahora organiza un concurso con premios de un millón de dólares para equipos de estudiantes de Estados Unidos.",
+          "Los equipos tienen que pensar cómo hacer energía, construir casas, dar aire a los astronautas, moverse por la Luna y comunicarse con la Tierra. «No hace falta esperar a terminar los estudios para ayudar», dice el jefe de la NASA."
+        ],
+        "source": {
+          "name": "SpaceWireDaily",
+          "url": "https://spacewiredaily.com/article/2026-11-17-nasa-is-offering-1-million-for-bold-idea/"
+        }
+      }
+    ],
+    "weather": {
+      "day": "Miércoles, 18 de noviembre",
+      "place": "Bentleigh East",
+      "summary": "Día parcialmente nublado. Puede haber niebla temprano por la mañana en algunos barrios del noreste. Casi seguro que no va a llover. Poco viento; al final de la tarde, viento del sur de 15 a 20 km/h. El sol es muy fuerte (índice UV 9): ¡usa protector solar y sombrero!",
+      "min": 10,
+      "max": 22,
+      "rainChance": 5,
+      "source": {
+        "name": "Bureau of Meteorology",
+        "url": "https://www.bom.gov.au/location/australia/victoria/central/bvic_pt042-melbourne"
+      }
+    }
+  },
+  {
     "id": "2026-11-17",
     "date": "Martes, 17 de noviembre de 2026",
     "items": [
