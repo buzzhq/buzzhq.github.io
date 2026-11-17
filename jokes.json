@@ -463,6 +463,14 @@
       "emoji": "🐍",
       "setup": "What kind of snake is good at maths?",
       "punchline": "An ADDER! ➕🐍"
+    },
+    {
+      "date": "2026-11-17",
+      "slot": "pm",
+      "topic": "Cars",
+      "emoji": "👻",
+      "setup": "What do you call a race car that's a ghost?",
+      "punchline": "A BOO-gatti! 👻🏎️ (like a Bugatti!)"
     }
   ]
 }

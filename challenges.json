@@ -3586,6 +3586,96 @@
       "title": "Read aloud",
       "text": "On Monday after school, Franklin drove the red GT to the reptile park with Dad. A long green snake was curled up on a warm rock. At first, Franklin thought it was fast asleep. Suddenly, it lifted its head and flicked its tongue at him! The keeper smiled and said that is how snakes smell the air. After that, they drove to the park court and Franklin swished six free throws in a row. Then they drove home at the speed limit.",
       "points": 10
+    },
+    {
+      "date": "2026-11-17",
+      "id": "tt1",
+      "type": "timestables",
+      "title": "Times-tables warm-up",
+      "tables": [
+        3,
+        4
+      ],
+      "n": 8,
+      "prompt": "Quick times-tables warm-up with pictures: tap the answer, then send Buzz your finish code!",
+      "key": "c22848172db0efa7",
+      "points": 10
+    },
+    {
+      "date": "2026-11-17",
+      "id": "mg1",
+      "type": "stepgame",
+      "title": "Maths Garage: long multiplication",
+      "mode": "mult",
+      "a": 5208,
+      "b": 6,
+      "sum": "5208 × 6",
+      "prompt": "Solve it step by step in Buzz's Maths Garage, then send Buzz your finish code!",
+      "key": "1c01150a743f83ee",
+      "points": 10
+    },
+    {
+      "date": "2026-11-17",
+      "id": "mg2",
+      "type": "stepgame",
+      "title": "Maths Garage: long division",
+      "mode": "div",
+      "a": 7236,
+      "b": 9,
+      "sum": "7236 ÷ 9",
+      "prompt": "Solve it step by step in Buzz's Maths Garage, then send Buzz your finish code!",
+      "key": "75048dd145e60d8e",
+      "points": 10
+    },
+    {
+      "date": "2026-11-17",
+      "id": "hb1",
+      "type": "hebword",
+      "title": "Hebrew word rally",
+      "word": "דגל",
+      "prompt": "Sound out this Hebrew word letter by letter (right to left!), then find out what it means.",
+      "key": "08432049803ca4b4",
+      "points": 10
+    },
+    {
+      "date": "2026-11-17",
+      "id": "hs1",
+      "type": "hebsentence",
+      "title": "Hebrew sentence rally",
+      "sentence": "זה הדגל שלי",
+      "prompt": "Read this Hebrew sentence word by word, letter by letter (right to left!), then work out what it means.",
+      "key": "c524db241ba53912",
+      "points": 15
+    },
+    {
+      "date": "2026-11-17",
+      "id": "gr1",
+      "type": "grammar",
+      "title": "Sentence Detective",
+      "qid": "g10",
+      "level": 2,
+      "prompt": "What job is the highlighted word doing? Solve it in Buzz's Sentence Detective!",
+      "key": "0064e21d9ad0abfe",
+      "points": 5
+    },
+    {
+      "date": "2026-11-17",
+      "id": "gr2",
+      "type": "grammar",
+      "title": "Sentence Detective",
+      "qid": "g28",
+      "level": 2,
+      "prompt": "What job is the highlighted word doing? Solve it in Buzz's Sentence Detective!",
+      "key": "95cc7d58b752e485",
+      "points": 5
+    },
+    {
+      "date": "2026-11-17",
+      "id": "dc5",
+      "type": "reading",
+      "title": "Read aloud",
+      "text": "On Tuesday after school, Franklin drove the red GT to the racetrack with Dad. While the cars warmed up, he watched the pit crew practise. Four new tyres went on in just a few seconds! Franklin cheered because they were even faster than his free throws. In the end, the race marshal let him wave the chequered flag. Then they drove home at the speed limit.",
+      "points": 10
     }
   ],
   "notes": [
