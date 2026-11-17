@@ -1,7 +1,7 @@
 {
   "name": "Alon",
   "bot": "Buzz 🤖",
-  "updated": "2026-11-14",
+  "updated": "2026-11-17",
   "levels": [
     {
       "name": "Rookie",
@@ -846,6 +846,62 @@
       "category": "challenge",
       "points": 5,
       "text": "Sentence Detective gr2 ✅ steered = verb"
+    },
+    {
+      "date": "2026-11-17",
+      "emoji": "📚",
+      "category": "school",
+      "points": 10,
+      "text": "Uploaded homework: 3 handwritten pages"
+    },
+    {
+      "date": "2026-11-17",
+      "emoji": "✖️",
+      "category": "challenge",
+      "points": 10,
+      "text": "Times-tables warm-up tt1 ✅ 3× + 4× tables"
+    },
+    {
+      "date": "2026-11-17",
+      "emoji": "🏎️",
+      "category": "challenge",
+      "points": 10,
+      "text": "Maths Garage mg1 ✅ 5208 × 6 = 31248"
+    },
+    {
+      "date": "2026-11-17",
+      "emoji": "🏎️",
+      "category": "challenge",
+      "points": 10,
+      "text": "Maths Garage mg2 ✅ 7236 ÷ 9 = 804"
+    },
+    {
+      "date": "2026-11-17",
+      "emoji": "🔤",
+      "category": "challenge",
+      "points": 10,
+      "text": "Hebrew word hb1 ✅ דגל (degel = flag)"
+    },
+    {
+      "date": "2026-11-17",
+      "emoji": "💬",
+      "category": "challenge",
+      "points": 15,
+      "text": "Hebrew sentence hs1 ✅ זה הדגל שלי (ze ha-degel sheli = This is my flag)"
+    },
+    {
+      "date": "2026-11-17",
+      "emoji": "🕵️",
+      "category": "challenge",
+      "points": 5,
+      "text": "Sentence Detective gr1 ✅ zoomed = verb"
+    },
+    {
+      "date": "2026-11-17",
+      "emoji": "🕵️",
+      "category": "challenge",
+      "points": 5,
+      "text": "Sentence Detective gr2 ✅ quickly = adverb"
     }
   ],
   "cashout": {
