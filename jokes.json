@@ -471,6 +471,14 @@
       "emoji": "👻",
       "setup": "What do you call a race car that's a ghost?",
       "punchline": "A BOO-gatti! 👻🏎️ (like a Bugatti!)"
+    },
+    {
+      "date": "2026-11-18",
+      "slot": "pm",
+      "topic": "Maths",
+      "emoji": "🔢",
+      "setup": "Why was 6 afraid of 7?",
+      "punchline": "Because 7 8 9! (seven ATE nine!)"
     }
   ]
 }

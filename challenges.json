@@ -3676,6 +3676,95 @@
       "title": "Read aloud",
       "text": "On Tuesday after school, Franklin drove the red GT to the racetrack with Dad. While the cars warmed up, he watched the pit crew practise. Four new tyres went on in just a few seconds! Franklin cheered because they were even faster than his free throws. In the end, the race marshal let him wave the chequered flag. Then they drove home at the speed limit.",
       "points": 10
+    },
+    {
+      "date": "2026-11-18",
+      "id": "tt1",
+      "type": "timestables",
+      "title": "Times-tables warm-up",
+      "tables": [
+        6
+      ],
+      "n": 8,
+      "prompt": "Quick times-tables warm-up with pictures: tap the answer, then send Buzz your finish code!",
+      "key": "d8ad3c5be3e228de",
+      "points": 10
+    },
+    {
+      "date": "2026-11-18",
+      "id": "mg1",
+      "type": "stepgame",
+      "title": "Maths Garage: long multiplication",
+      "mode": "mult",
+      "a": 4273,
+      "b": 6,
+      "sum": "4273 × 6",
+      "prompt": "Solve it step by step in Buzz's Maths Garage, then send Buzz your finish code!",
+      "key": "661ba7c1b1a07bd0",
+      "points": 10
+    },
+    {
+      "date": "2026-11-18",
+      "id": "mg2",
+      "type": "stepgame",
+      "title": "Maths Garage: long division",
+      "mode": "div",
+      "a": 5418,
+      "b": 7,
+      "sum": "5418 ÷ 7",
+      "prompt": "Solve it step by step in Buzz's Maths Garage, then send Buzz your finish code!",
+      "key": "db8817a0c0fde0b0",
+      "points": 10
+    },
+    {
+      "date": "2026-11-18",
+      "id": "hb1",
+      "type": "hebword",
+      "title": "Hebrew word rally",
+      "word": "שש",
+      "prompt": "Sound out this Hebrew word letter by letter (right to left!), then find out what it means.",
+      "key": "41afedc06773c476",
+      "points": 10
+    },
+    {
+      "date": "2026-11-18",
+      "id": "hs1",
+      "type": "hebsentence",
+      "title": "Hebrew sentence rally",
+      "sentence": "החול חם בשמש",
+      "prompt": "Read this Hebrew sentence word by word, letter by letter (right to left!), then work out what it means.",
+      "key": "4954be58b6f2a824",
+      "points": 15
+    },
+    {
+      "date": "2026-11-18",
+      "id": "gr1",
+      "type": "grammar",
+      "title": "Sentence Detective",
+      "qid": "g07",
+      "level": 2,
+      "prompt": "What job is the highlighted word doing? Solve it in Buzz's Sentence Detective!",
+      "key": "c87681d633e5b710",
+      "points": 5
+    },
+    {
+      "date": "2026-11-18",
+      "id": "gr2",
+      "type": "grammar",
+      "title": "Sentence Detective",
+      "qid": "g16",
+      "level": 2,
+      "prompt": "What job is the highlighted word doing? Solve it in Buzz's Sentence Detective!",
+      "key": "953b053ad902fb3b",
+      "points": 5
+    },
+    {
+      "date": "2026-11-18",
+      "id": "dc5",
+      "type": "reading",
+      "title": "Read aloud",
+      "text": "On Wednesday after school, Franklin drove the red GT to the beach with Dad. First, they found a sandy basketball court next to the surf club. The sand was so hot in the sun that Franklin hopped around like a kangaroo! However, he still scored six baskets in a row. Dad cheered for every single one. Finally, they cooled their feet in the waves and drove home at the speed limit.",
+      "points": 10
     }
   ],
   "notes": [
