@@ -1,5 +1,71 @@
 [
   {
+    "id": "2026-11-19",
+    "date": "Jueves, 19 de noviembre de 2026",
+    "items": [
+      {
+        "section": "Noticias de Victoria",
+        "title": "Una nueva esperanza para una rana en peligro",
+        "paragraphs": [
+          "La rana corroboree del sur es una pequeña rana australiana, negra y amarilla. Está en grave peligro por una enfermedad que causa un hongo. Hoy casi solo vive en programas de cría, por ejemplo con Zoos Victoria.",
+          "Científicos de la Universidad de Melbourne estudiaron el ADN de estas ranas. Descubrieron que algunas ranas resisten mejor la enfermedad y que pueden pasar esa fuerza a sus hijos. Así, en el futuro, los zoos pueden criar ranas más fuertes para volver a la naturaleza."
+        ],
+        "source": {
+          "name": "University of Melbourne",
+          "url": "https://www.unimelb.edu.au/newsroom/news/2026/november/genomic-breakthrough-offers-new-hope-for-southern-corroboree-frog"
+        }
+      },
+      {
+        "section": "Noticias de Israel",
+        "title": "Un falso pícnic para robar tesoros antiguos",
+        "paragraphs": [
+          "Cerca de Mevo Beitar, en las colinas de Judea, hay un sitio arqueológico con un pozo de agua muy antiguo. Seis personas bajaron nueve metros dentro del pozo para buscar objetos antiguos. Arriba, otras personas hacían un fuego para parecer un simple pícnic.",
+          "Los inspectores de la Autoridad de Antigüedades de Israel los atraparon. Encontraron cientos de trozos de cerámica y parte de una vasija con forma de animal, de hace más de mil años. Los expertos dicen que robar así destruye la historia para siempre."
+        ],
+        "source": {
+          "name": "The Jewish Edition (TPS)",
+          "url": "https://thejewishedition.com/news/israel/2026/11/18/israeli-inspectors-catch-six-suspected-antiquities-thieves-in-ancient-cistern/"
+        }
+      },
+      {
+        "section": "Noticias del mundo",
+        "title": "Una guardería para bebés tiburón",
+        "paragraphs": [
+          "En Raja Ampat, unas islas de Indonesia, casi no quedan tiburones leopardo. Por eso, acuarios de todo el mundo envían huevos de tiburón a una guardería especial. Allí, unas «niñeras de tiburones» cuidan a los bebés, les dan comida y los miden cada día.",
+          "Cuando crecen, los tiburones pasan a un corral en el mar para practicar la vida salvaje. Después, van al océano. Es la primera vez en el mundo que alguien intenta devolver a la naturaleza una especie de tiburón en peligro. ¡Y no tengas miedo: los tiburones leopardo son muy tranquilos!"
+        ],
+        "source": {
+          "name": "BBC",
+          "url": "https://www.bbc.com/articles/c6zxvlkrek8zo"
+        }
+      },
+      {
+        "section": "Tecnología e IA",
+        "title": "Un robot serpiente para salvar personas",
+        "paragraphs": [
+          "Cinco estudiantes de una escuela en Noida, en la India, construyeron un robot con forma de serpiente. Se llama Vasuki. Su cuerpo flexible puede entrar por agujeros pequeños, como una serpiente de verdad.",
+          "El robot quiere ayudar después de terremotos, cuando hay edificios caídos. Tiene una cámara con luz, una cámara de calor para encontrar personas atrapadas y sensores de gases peligrosos. Así, los rescatistas pueden saber dónde buscar y trabajar con más seguridad."
+        ],
+        "source": {
+          "name": "ThePrint",
+          "url": "https://theprint.in/feature/noida-students-develop-snake-robot-rescue-survivors/3102324/"
+        }
+      }
+    ],
+    "weather": {
+      "day": "Jueves, 19 de noviembre",
+      "place": "Bentleigh East",
+      "summary": "Día parcialmente nublado y caluroso. Puede haber niebla temprano por la mañana. Por la noche, es posible que llueva un poco. Poco viento; al final de la tarde, viento del sur o sureste de 15 a 20 km/h. El sol es muy fuerte (índice UV 9): ¡usa protector solar y sombrero!",
+      "min": 13,
+      "max": 29,
+      "rainChance": 40,
+      "source": {
+        "name": "Bureau of Meteorology",
+        "url": "https://www.bom.gov.au/location/australia/victoria/central/bvic_pt042-melbourne"
+      }
+    }
+  },
+  {
     "id": "2026-11-18",
     "date": "Miércoles, 18 de noviembre de 2026",
     "items": [
