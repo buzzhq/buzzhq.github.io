@@ -3765,6 +3765,95 @@
       "title": "Read aloud",
       "text": "On Wednesday after school, Franklin drove the red GT to the beach with Dad. First, they found a sandy basketball court next to the surf club. The sand was so hot in the sun that Franklin hopped around like a kangaroo! However, he still scored six baskets in a row. Dad cheered for every single one. Finally, they cooled their feet in the waves and drove home at the speed limit.",
       "points": 10
+    },
+    {
+      "date": "2026-11-19",
+      "id": "tt1",
+      "type": "timestables",
+      "title": "Times-tables warm-up",
+      "tables": [
+        6
+      ],
+      "n": 8,
+      "prompt": "Quick times-tables warm-up with pictures: tap the answer, then send Buzz your finish code!",
+      "key": "3f9b3b91b91d0b0e",
+      "points": 10
+    },
+    {
+      "date": "2026-11-19",
+      "id": "mg1",
+      "type": "stepgame",
+      "title": "Maths Garage: long multiplication",
+      "mode": "mult",
+      "a": 3617,
+      "b": 6,
+      "sum": "3617 × 6",
+      "prompt": "Solve it step by step in Buzz's Maths Garage, then send Buzz your finish code!",
+      "key": "d5226cbc8ab4ed2a",
+      "points": 10
+    },
+    {
+      "date": "2026-11-19",
+      "id": "mg2",
+      "type": "stepgame",
+      "title": "Maths Garage: long division",
+      "mode": "div",
+      "a": 4914,
+      "b": 7,
+      "sum": "4914 ÷ 7",
+      "prompt": "Solve it step by step in Buzz's Maths Garage, then send Buzz your finish code!",
+      "key": "1c95aaabe8d8c244",
+      "points": 10
+    },
+    {
+      "date": "2026-11-19",
+      "id": "hb1",
+      "type": "hebword",
+      "title": "Hebrew word rally",
+      "word": "סוס",
+      "prompt": "Sound out this Hebrew word letter by letter (right to left!), then find out what it means.",
+      "key": "3f6223569005637e",
+      "points": 10
+    },
+    {
+      "date": "2026-11-19",
+      "id": "hs1",
+      "type": "hebsentence",
+      "title": "Hebrew sentence rally",
+      "sentence": "יש לי סוס",
+      "prompt": "Read this Hebrew sentence word by word, letter by letter (right to left!), then work out what it means.",
+      "key": "743708e0ffe1ee12",
+      "points": 15
+    },
+    {
+      "date": "2026-11-19",
+      "id": "gr1",
+      "type": "grammar",
+      "title": "Sentence Detective",
+      "qid": "g21",
+      "level": 2,
+      "prompt": "What job is the highlighted word doing? Solve it in Buzz's Sentence Detective!",
+      "key": "262ff61df49184ad",
+      "points": 5
+    },
+    {
+      "date": "2026-11-19",
+      "id": "gr2",
+      "type": "grammar",
+      "title": "Sentence Detective",
+      "qid": "g34",
+      "level": 2,
+      "prompt": "What job is the highlighted word doing? Solve it in Buzz's Sentence Detective!",
+      "key": "ec9a19607c6b68ea",
+      "points": 5
+    },
+    {
+      "date": "2026-11-19",
+      "id": "dc5",
+      "type": "reading",
+      "title": "Read aloud",
+      "text": "On Thursday after school, Franklin drove the red GT out to a farm in the country with Dad. As soon as they parked, a big brown horse trotted over to say hello. Franklin gave it an apple and it munched it in two bites! Meanwhile, Dad found an old basketball hoop on the side of the barn. They took turns shooting hoops while the horse watched from the fence. Eventually, the sun went down and they drove home at the speed limit.",
+      "points": 10
     }
   ],
   "notes": [

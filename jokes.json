@@ -479,6 +479,14 @@
       "emoji": "🔢",
       "setup": "Why was 6 afraid of 7?",
       "punchline": "Because 7 8 9! (seven ATE nine!)"
+    },
+    {
+      "date": "2026-11-19",
+      "slot": "pm",
+      "topic": "Animals",
+      "emoji": "🐴",
+      "setup": "Why did the pony get sent to his room?",
+      "punchline": "He wouldn't stop horsing around!"
     }
   ]
 }
