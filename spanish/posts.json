@@ -1,5 +1,71 @@
 [
   {
+    "id": "2026-11-20",
+    "date": "Viernes, 20 de noviembre de 2026",
+    "items": [
+      {
+        "section": "Noticias de Australia",
+        "title": "Una chica australiana gana la Copa del Mundo de críquet",
+        "paragraphs": [
+          "Adilene Phillips es una estudiante de 11.º año en una escuela de Australia Occidental. Este mes viajó a Sudáfrica con el equipo de Australia. ¡Y ganaron la Copa del Mundo de críquet indoor (bajo techo) para menores de 18 años!",
+          "Antes, Adilene ganó el campeonato nacional en Melbourne con su estado. Durante muchos años su escuela no tuvo un campo de críquet, así que ella practicaba en los pasillos. En el torneo también recibió un premio a la mejor compañera de equipo, porque ayudó a las demás y siguió jugando con una lesión."
+        ],
+        "source": {
+          "name": "SCEA (Northshore Christian Grammar School)",
+          "url": "https://www.scea.wa.edu.au/2026/11/19/northshores-adilene-wins-cricket-world-cup-for-australia/"
+        }
+      },
+      {
+        "section": "Noticias de Israel",
+        "title": "Una estrella que gira 260 veces por segundo",
+        "paragraphs": [
+          "Un púlsar es una estrella muerta, muy pequeña y muy pesada, que gira muy rápido. Envía pulsos de energía, como un faro en el espacio. Científicos del Instituto Weizmann, en Israel, encontraron un púlsar nuevo que gira más de 260 veces cada segundo.",
+          "Antes, otros científicos buscaron esta estrella con computadoras durante el equivalente a 600 años de trabajo, y no la encontraron. Con un nuevo método inteligente de los científicos israelíes, ¡la encontraron en solo 100 minutos! Ahora usan el método para buscar más púlsares."
+        ],
+        "source": {
+          "name": "Israel National News",
+          "url": "https://www.israelnationalnews.com/news/436638"
+        }
+      },
+      {
+        "section": "Noticias del mundo",
+        "title": "Serpientes de colores vuelven a la naturaleza",
+        "paragraphs": [
+          "La culebra rayada de San Francisco es una serpiente muy bonita, con rayas rojas, negras y azules. Vive en California, en Estados Unidos. Quedan solo unos pocos miles, porque su hogar está desapareciendo.",
+          "El zoo de San Francisco crió 62 serpientes jóvenes y las soltó en la naturaleza. Es la primera vez que pasa con esta especie. Este año nacieron otras 130 serpientes en el zoo, y van a salir libres en 2027."
+        ],
+        "source": {
+          "name": "Nautilus",
+          "url": "https://nautil.us/for-the-first-time-this-dazzling-san-francisco-snake-is-being-released-into-the-wild-1286828"
+        }
+      },
+      {
+        "section": "Tecnología e IA",
+        "title": "La Voyager 1 está a un «día de luz» de la Tierra",
+        "paragraphs": [
+          "La sonda espacial Voyager 1 salió de la Tierra en 1977, hace casi 49 años. El 18 de noviembre llegó a un lugar histórico: está tan lejos que su señal de radio, que viaja a la velocidad de la luz, tarda un día entero en llegar a la Tierra. ¡Son unos 25.900 millones de kilómetros!",
+          "Es el objeto hecho por personas que está más lejos de nosotros. Ahora la sonda tiene un pequeño problema y no envía datos científicos, pero todavía manda una señal. Los ingenieros de la NASA trabajan para entender qué pasa."
+        ],
+        "source": {
+          "name": "NASA",
+          "url": "https://www.nasa.gov/news-release/nasas-voyager-1-makes-history-reaching-one-light-day-from-earth/"
+        }
+      }
+    ],
+    "weather": {
+      "day": "Viernes, 20 de noviembre",
+      "place": "Bentleigh East",
+      "summary": "Día templado y parcialmente nublado, con lluvia casi segura, sobre todo por la tarde y por la noche. Es probable una tormenta, quizás fuerte, con viento, granizo y mucha lluvia (entre 5 y 25 mm). Viento del norte de 15 a 25 km/h. El sol es muy fuerte (índice UV 10) cuando no hay nubes: ¡usa protector solar, pero lleva también un paraguas!",
+      "min": 18,
+      "max": 25,
+      "rainChance": 95,
+      "source": {
+        "name": "Bureau of Meteorology",
+        "url": "https://www.bom.gov.au/location/australia/victoria/central/bvic_pt042-melbourne"
+      }
+    }
+  },
+  {
     "id": "2026-11-19",
     "date": "Jueves, 19 de noviembre de 2026",
     "items": [
