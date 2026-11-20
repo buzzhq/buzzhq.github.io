@@ -1,5 +1,71 @@
 [
   {
+    "id": "2026-11-21",
+    "date": "Sábado, 21 de noviembre de 2026",
+    "items": [
+      {
+        "section": "Noticias de Victoria",
+        "title": "Una nueva casa en el bosque para un pequeño pósum",
+        "paragraphs": [
+          "El pósum de Leadbeater es un animal muy pequeño que vive en los bosques de Victoria. Hay muy pocos en la naturaleza. Algunas personas los llaman \"hadas del bosque\".",
+          "Ahora nueve de estos pósums viven en Haining Farm, en Don Valley, al este de Melbourne. Es una reserva de 42 hectáreas con una valla de 3,6 kilómetros para protegerlos de otros animales peligrosos. También tienen cajas para dormir y lugares con comida."
+        ],
+        "source": {
+          "name": "Upper Yarra Star Mail",
+          "url": "https://upperyarra.mailcommunity.com.au/news/2026-11-20/how-partnership-and-perseverance-saved-the-lowland-leadbeaters-possum-from-extinction/"
+        }
+      },
+      {
+        "section": "Noticias de Israel",
+        "title": "Medir la presión de la sangre sin apretar el brazo",
+        "paragraphs": [
+          "Normalmente, el médico mide la presión de la sangre con una banda que aprieta el brazo. Científicos del Technion, en Israel, crearon un sensor muy pequeño que no necesita esa banda.",
+          "El sensor envía luz a la piel y escucha las ondas de sonido que vienen de la arteria. Lo probaron con personas sanas y los resultados fueron buenos. Pero todavía es un experimento: necesitan más pruebas antes de usarlo en los hospitales."
+        ],
+        "source": {
+          "name": "Hayadan",
+          "url": "https://hayadan.com/cuffless-blood-pressure-sensor-technion"
+        }
+      },
+      {
+        "section": "Noticias del mundo",
+        "title": "Nacen cuatro guepardos en la India",
+        "paragraphs": [
+          "Hace muchos años, los guepardos desaparecieron de la India. Ahora el país trae guepardos de África para ayudarlos a vivir allí otra vez.",
+          "Una gueparda de dos años y medio, que vino de Botsuana, tuvo cuatro cachorros sanos en el Parque Nacional de Kuno. Es la primera hembra de Botsuana que tiene bebés en la India. ¡Ahora hay 62 guepardos en el país!"
+        ],
+        "source": {
+          "name": "India Today",
+          "url": "https://www.indiatoday.in/science/story/project-cheetah-project-second-wild-birth-kuno-national-park-botswana-3042949-2026-11-20"
+        }
+      },
+      {
+        "section": "Tecnología e IA",
+        "title": "Google presenta Gemini 4 Neon",
+        "paragraphs": [
+          "Google tiene una nueva inteligencia artificial llamada Gemini 4 Neon. Es parte de una familia de modelos con nombres de elementos químicos: Hidrógeno, Neón y Carbono.",
+          "Según Google, Neon es casi tan inteligente como Carbono, el modelo más potente, pero es más rápido y cuesta menos. Puede leer fotos, documentos y tablas, y escribir resúmenes claros."
+        ],
+        "source": {
+          "name": "9to5Google",
+          "url": "https://9to5google.com/2026/11/18/gemini-4-neon-announcement/"
+        }
+      }
+    ],
+    "weather": {
+      "day": "Sábado",
+      "place": "Bentleigh East",
+      "summary": "Parcialmente nublado. Puede llover un poco por la mañana y a primera hora de la tarde. Por la noche, viento suave. ¡El sol es muy fuerte: usa crema solar!",
+      "min": 17,
+      "max": 25,
+      "rainChance": 50,
+      "source": {
+        "name": "Bureau of Meteorology",
+        "url": "https://www.bom.gov.au/location/australia/victoria/central/bvic_pt042-melbourne"
+      }
+    }
+  },
+  {
     "id": "2026-11-20",
     "date": "Viernes, 20 de noviembre de 2026",
     "items": [
