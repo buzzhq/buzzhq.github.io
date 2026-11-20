@@ -3854,6 +3854,95 @@
       "title": "Read aloud",
       "text": "On Thursday after school, Franklin drove the red GT out to a farm in the country with Dad. As soon as they parked, a big brown horse trotted over to say hello. Franklin gave it an apple and it munched it in two bites! Meanwhile, Dad found an old basketball hoop on the side of the barn. They took turns shooting hoops while the horse watched from the fence. Eventually, the sun went down and they drove home at the speed limit.",
       "points": 10
+    },
+    {
+      "date": "2026-11-20",
+      "id": "tt1",
+      "type": "timestables",
+      "title": "Times-tables warm-up",
+      "tables": [
+        6
+      ],
+      "n": 8,
+      "prompt": "Quick times-tables warm-up with pictures: tap the answer, then send Buzz your finish code!",
+      "key": "e94e0a50178eda8e",
+      "points": 10
+    },
+    {
+      "date": "2026-11-20",
+      "id": "mg1",
+      "type": "stepgame",
+      "title": "Maths Garage: long multiplication",
+      "mode": "mult",
+      "a": 2847,
+      "b": 7,
+      "sum": "2847 × 7",
+      "prompt": "Solve it step by step in Buzz's Maths Garage, then send Buzz your finish code!",
+      "key": "2594558a3d1d11de",
+      "points": 10
+    },
+    {
+      "date": "2026-11-20",
+      "id": "mg2",
+      "type": "stepgame",
+      "title": "Maths Garage: long division",
+      "mode": "div",
+      "a": 3960,
+      "b": 8,
+      "sum": "3960 ÷ 8",
+      "prompt": "Solve it step by step in Buzz's Maths Garage, then send Buzz your finish code!",
+      "key": "dc43a400b36a8315",
+      "points": 10
+    },
+    {
+      "date": "2026-11-20",
+      "id": "hb1",
+      "type": "hebword",
+      "title": "Hebrew word rally",
+      "word": "דבש",
+      "prompt": "Sound out this Hebrew word letter by letter (right to left!), then find out what it means.",
+      "key": "598d3843e3e37d88",
+      "points": 10
+    },
+    {
+      "date": "2026-11-20",
+      "id": "hs1",
+      "type": "hebsentence",
+      "title": "Hebrew sentence rally",
+      "sentence": "לדב יש דבש",
+      "prompt": "Read this Hebrew sentence word by word, letter by letter (right to left!), then work out what it means.",
+      "key": "127d9513e084dba3",
+      "points": 15
+    },
+    {
+      "date": "2026-11-20",
+      "id": "gr1",
+      "type": "grammar",
+      "title": "Sentence Detective",
+      "qid": "g36",
+      "level": 2,
+      "prompt": "What job is the highlighted word doing? Solve it in Buzz's Sentence Detective!",
+      "key": "2c6532a0bd22d9f2",
+      "points": 5
+    },
+    {
+      "date": "2026-11-20",
+      "id": "gr2",
+      "type": "grammar",
+      "title": "Sentence Detective",
+      "qid": "g24",
+      "level": 2,
+      "prompt": "What job is the highlighted word doing? Solve it in Buzz's Sentence Detective!",
+      "key": "a533987012280dc1",
+      "points": 5
+    },
+    {
+      "date": "2026-11-20",
+      "id": "dc5",
+      "type": "reading",
+      "title": "Read aloud",
+      "text": "On Friday after school, Franklin drove the red GT to the wildlife park with Dad. Before they visited the bears, they watched the bees buzzing in and out of their hive. Suddenly, a big brown bear stood up tall on its back legs! The keeper gave it a sticky piece of honeycomb and it licked it clean. After that, Franklin shot some hoops on the park's court and they drove home at the speed limit.",
+      "points": 10
     }
   ],
   "notes": [

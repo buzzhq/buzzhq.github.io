@@ -487,6 +487,14 @@
       "emoji": "🐴",
       "setup": "Why did the pony get sent to his room?",
       "punchline": "He wouldn't stop horsing around!"
+    },
+    {
+      "date": "2026-11-20",
+      "slot": "pm",
+      "topic": "Animals",
+      "emoji": "🐝",
+      "setup": "How do bees get to school?",
+      "punchline": "On the school buzz!"
     }
   ]
 }
