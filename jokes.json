@@ -503,6 +503,14 @@
       "emoji": "🐻‍❄️",
       "setup": "What do polar bears eat for lunch?",
       "punchline": "Ice-burgers!"
+    },
+    {
+      "date": "2026-11-21",
+      "slot": "pm",
+      "topic": "Animals",
+      "emoji": "🐔",
+      "setup": "Why did the chicken join the band?",
+      "punchline": "Because it had the drumsticks!"
     }
   ]
 }

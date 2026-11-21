@@ -3943,6 +3943,95 @@
       "title": "Read aloud",
       "text": "On Friday after school, Franklin drove the red GT to the wildlife park with Dad. Before they visited the bears, they watched the bees buzzing in and out of their hive. Suddenly, a big brown bear stood up tall on its back legs! The keeper gave it a sticky piece of honeycomb and it licked it clean. After that, Franklin shot some hoops on the park's court and they drove home at the speed limit.",
       "points": 10
+    },
+    {
+      "date": "2026-11-21",
+      "id": "tt1",
+      "type": "timestables",
+      "title": "Times-tables warm-up",
+      "tables": [
+        6
+      ],
+      "n": 8,
+      "prompt": "Quick times-tables warm-up with pictures: tap the answer, then send Buzz your finish code!",
+      "key": "daf92636c4be0915",
+      "points": 10
+    },
+    {
+      "date": "2026-11-21",
+      "id": "mg1",
+      "type": "stepgame",
+      "title": "Maths Garage: long multiplication",
+      "mode": "mult",
+      "a": 3528,
+      "b": 6,
+      "sum": "3528 × 6",
+      "prompt": "Solve it step by step in Buzz's Maths Garage, then send Buzz your finish code!",
+      "key": "42e3d35b583db794",
+      "points": 10
+    },
+    {
+      "date": "2026-11-21",
+      "id": "mg2",
+      "type": "stepgame",
+      "title": "Maths Garage: long division",
+      "mode": "div",
+      "a": 4836,
+      "b": 6,
+      "sum": "4836 ÷ 6",
+      "prompt": "Solve it step by step in Buzz's Maths Garage, then send Buzz your finish code!",
+      "key": "9c4a1f0890d88f8b",
+      "points": 10
+    },
+    {
+      "date": "2026-11-21",
+      "id": "hb1",
+      "type": "hebword",
+      "title": "Hebrew word rally",
+      "word": "לב",
+      "prompt": "Sound out this Hebrew word letter by letter (right to left!), then find out what it means.",
+      "key": "fd1c27894326589c",
+      "points": 10
+    },
+    {
+      "date": "2026-11-21",
+      "id": "hs1",
+      "type": "hebsentence",
+      "title": "Hebrew sentence rally",
+      "sentence": "יש לי לב גדול",
+      "prompt": "Read this Hebrew sentence word by word, letter by letter (right to left!), then work out what it means.",
+      "key": "455d9b5ee9c7391d",
+      "points": 15
+    },
+    {
+      "date": "2026-11-21",
+      "id": "gr1",
+      "type": "grammar",
+      "title": "Sentence Detective",
+      "qid": "g24",
+      "level": 2,
+      "prompt": "What job is the highlighted word doing? Solve it in Buzz's Sentence Detective!",
+      "key": "7f01804de6451831",
+      "points": 5
+    },
+    {
+      "date": "2026-11-21",
+      "id": "gr2",
+      "type": "grammar",
+      "title": "Sentence Detective",
+      "qid": "g02",
+      "level": 2,
+      "prompt": "What job is the highlighted word doing? Solve it in Buzz's Sentence Detective!",
+      "key": "1be59ad97edb3964",
+      "points": 5
+    },
+    {
+      "date": "2026-11-21",
+      "id": "dc5",
+      "type": "reading",
+      "title": "Read aloud",
+      "text": "On Saturday afternoon, Franklin drove the red GT to the park court with Dad. While he was warming up, a little girl's ball rolled under a bench. Franklin got down on his knees and fished it out for her. Because she was still learning, he showed her how to bend her knees and use backspin. Her very first shot went SWISH! So they high-fived, and Franklin drove home at the speed limit with a big smile.",
+      "points": 10
     }
   ],
   "notes": [
