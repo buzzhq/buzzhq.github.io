@@ -511,6 +511,14 @@
       "emoji": "🐔",
       "setup": "Why did the chicken join the band?",
       "punchline": "Because it had the drumsticks!"
+    },
+    {
+      "date": "2026-11-22",
+      "slot": "am",
+      "topic": "Space",
+      "emoji": "🪐",
+      "setup": "What kind of music do planets love?",
+      "punchline": "Neptunes!"
     }
   ]
 }
