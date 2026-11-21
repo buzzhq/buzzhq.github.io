@@ -1,5 +1,71 @@
 [
   {
+    "id": "2026-11-22",
+    "date": "Domingo, 22 de noviembre de 2026",
+    "items": [
+      {
+        "section": "Noticias de Australia",
+        "title": "La gran búsqueda de bichos en los jardines",
+        "paragraphs": [
+          "Esta semana fue la segunda \"Bugs in my Backyard Week\" (Semana de los bichos en mi jardín). Personas de toda Australia sacan fotos de insectos y arañas y las suben a una aplicación llamada iNaturalist. ¡Ya hay casi 30.000 fotos!",
+          "Estas fotos ayudan a los científicos. Por ejemplo, el año pasado una foto mostró una hormiga muy rara, la \"hormiga dinosaurio\", en Australia del Sur. Los científicos la buscaron casi 50 años en otro lugar: ¡en Australia Occidental!"
+        ],
+        "source": {
+          "name": "ABC News",
+          "url": "https://www.abc.net.au/news/science/2026-11-21/bug-hunt-week-discoveries-2026/107402342"
+        }
+      },
+      {
+        "section": "Noticias de Israel",
+        "title": "Un tornillo de Arquímedes del tamaño de una molécula",
+        "paragraphs": [
+          "Hace más de 2.000 años, Arquímedes inventó un tornillo gigante que sube agua cuando gira. Científicos del Instituto Weizmann, en Rehovot, hicieron una versión diminuta: ¡una sola molécula con forma de espiral!",
+          "Pusieron la molécula entre dos piezas de oro, en un lugar muy, muy frío. Con electricidad, la molécula gira. Y cuando gira sin parar, la electricidad pasa hasta cien veces mejor. Publicaron el descubrimiento en la revista Nature."
+        ],
+        "source": {
+          "name": "The Jerusalem Post",
+          "url": "https://www.jpost.com/science/article-915463"
+        }
+      },
+      {
+        "section": "Noticias del mundo",
+        "title": "Mosquitos que ayudan contra el dengue en Brasil",
+        "paragraphs": [
+          "El dengue es una enfermedad que pasa de persona a persona con las picaduras de mosquitos. En la ciudad de Belo Horizonte, en Brasil, los científicos soltaron mosquitos especiales que llevan una bacteria llamada Wolbachia. Con esta bacteria, los mosquitos casi no pueden pasar el dengue.",
+          "Estudiaron a más de 5.700 niños de escuela durante cuatro años. En los barrios con estos mosquitos, hubo casi un 70% menos de infecciones. Los científicos todavía tienen que publicar el estudio completo."
+        ],
+        "source": {
+          "name": "AP News",
+          "url": "https://apnews.com/article/dengue-mosquitoes-brazil-wolbachia-f76cedcdcdf10c8834ab828d3e12ab13"
+        }
+      },
+      {
+        "section": "Tecnología e IA",
+        "title": "Genie 4: mundos de videojuego creados por la IA",
+        "paragraphs": [
+          "Google tiene una nueva inteligencia artificial llamada Genie 4. Escribes una idea o subes una foto, y Genie 4 crea un mundo en movimiento, con imágenes y sonidos, como un videojuego.",
+          "Puedes caminar por el mundo con el teclado y cambiar cosas mientras juegas: el tiempo, la luz o los objetos. Desde el 19 de noviembre, los programadores pueden usar Genie 4 para crear sus propias aplicaciones."
+        ],
+        "source": {
+          "name": "Google Blog",
+          "url": "https://blog.google/innovation-and-ai/technology/developers-tools/genie-4-in-gemini-api/"
+        }
+      }
+    ],
+    "weather": {
+      "day": "Domingo",
+      "place": "Bentleigh East",
+      "summary": "Parcialmente nublado y caluroso. Es muy probable que llueva, sobre todo por la tarde y por la noche, y puede haber tormenta. Por la mañana, viento fuerte del norte. ¡El sol es extremadamente fuerte: usa crema solar y sombrero!",
+      "min": 15,
+      "max": 29,
+      "rainChance": 90,
+      "source": {
+        "name": "Bureau of Meteorology",
+        "url": "https://www.bom.gov.au/location/australia/victoria/central/bvic_pt042-melbourne"
+      }
+    }
+  },
+  {
     "id": "2026-11-21",
     "date": "Sábado, 21 de noviembre de 2026",
     "items": [
