@@ -1,5 +1,71 @@
 [
   {
+    "id": "2026-11-23",
+    "date": "Lunes, 23 de noviembre de 2026",
+    "items": [
+      {
+        "section": "Noticias de Victoria",
+        "title": "Encuentran a un campista perdido gracias a su fogata",
+        "paragraphs": [
+          "Un hombre de 55 años fue de campamento al Parque Nacional de los Grampians, pero no le dijo a nadie. Su coche se quedó atascado en un camino difícil. Después de cinco días, dejó una nota en el coche y caminó para buscar ayuda.",
+          "Unos conductores encontraron el coche y llamaron a la policía. El sábado, a las 11:30 de la noche, un helicóptero vio su fogata. El hombre tenía hambre, pero estaba bien. La policía dice: «Siempre di a tu familia adónde vas y no dejes tu coche»."
+        ],
+        "source": {
+          "name": "ABC News",
+          "url": "https://www.abc.net.au/news/2026-11-22/camper-found-alive-by-police-helicopter-in-the-grampians/107414312"
+        }
+      },
+      {
+        "section": "Noticias de Israel",
+        "title": "Huellas de niños de hace 15.000 años",
+        "paragraphs": [
+          "Científicos de la Universidad Hebrea de Jerusalén estudiaron 154 figuras pequeñas de barro. Las hicieron los natufienses, un pueblo antiguo que vivió en Israel hace unos 15.000 años. Son las figuras de barro más antiguas de esta parte del mundo.",
+          "Con un microscopio, los científicos vieron huellas de dedos en el barro. ¡Algunas son de niños de menos de 10 años! En una figura hay dos huellas juntas: una de una mujer y otra de un niño. Parece que los adultos enseñaban a los niños a hacer arte."
+        ],
+        "source": {
+          "name": "The Jerusalem Post",
+          "url": "https://www.jpost.com/archaeology/article-915678"
+        }
+      },
+      {
+        "section": "Noticias del mundo",
+        "title": "Una araña que brilla en azul en Angola",
+        "paragraphs": [
+          "En Angola, en África, hay una meseta llamada Lisima. Casi nadie la había explorado. Un equipo de 16 científicos fue allí y encontró docenas de especies nuevas: libélulas, saltamontes, mariposas y polillas.",
+          "La más llamativa es una araña cangrejo roja. Con luz ultravioleta, ¡brilla en color azul! Esta meseta es muy importante, porque de allí sale agua limpia para cuatro grandes ríos de África."
+        ],
+        "source": {
+          "name": "İLKHA",
+          "url": "https://www.ilkha.com/english/science-technology/vibrant-blue-glowing-crab-spider-among-dozens-of-new-species-discovered-in-angola-539971"
+        }
+      },
+      {
+        "section": "Tecnología e IA",
+        "title": "Un dron blando que choca y sigue volando",
+        "paragraphs": [
+          "Casi todos los drones se rompen si chocan contra una pared. Investigadores de la universidad ETH de Zúrich, en Suiza, crearon FlexiQuad, un dron con forma de anillo flexible.",
+          "Cuando choca, el anillo se dobla, absorbe el golpe y después vuelve a su forma. Puede volar hasta a 80 km/h, aguantar choques a unos 25 km/h, pasar por espacios estrechos y llevar cosas más pesadas que él mismo."
+        ],
+        "source": {
+          "name": "New Atlas",
+          "url": "https://newatlas.com/drones/flexible-drone-survives-head-on-collisions/"
+        }
+      }
+    ],
+    "weather": {
+      "day": "Lunes",
+      "place": "Bentleigh East",
+      "summary": "Se va a nublar. Puede haber chubascos, sobre todo por la tarde y al anochecer. Viento del oeste y noroeste de 25 a 35 km/h, que por la tarde cambia al suroeste. El sol es muy fuerte: ¡usa crema solar!",
+      "min": 15,
+      "max": 23,
+      "rainChance": 40,
+      "source": {
+        "name": "Bureau of Meteorology",
+        "url": "https://www.bom.gov.au/location/australia/victoria/central/bvic_pt042-melbourne"
+      }
+    }
+  },
+  {
     "id": "2026-11-22",
     "date": "Domingo, 22 de noviembre de 2026",
     "items": [
