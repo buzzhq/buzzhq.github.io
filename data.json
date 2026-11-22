@@ -902,6 +902,55 @@
       "category": "challenge",
       "points": 5,
       "text": "Sentence Detective gr2 ✅ quickly = adverb"
+    },
+    {
+      "date": "2026-11-22",
+      "emoji": "✖️",
+      "category": "challenge",
+      "points": 10,
+      "text": "Times-tables warm-up tt1 ✅ 6× table"
+    },
+    {
+      "date": "2026-11-22",
+      "emoji": "🏎️",
+      "category": "challenge",
+      "points": 10,
+      "text": "Maths Garage mg1 ✅ 4316 × 7 = 30212"
+    },
+    {
+      "date": "2026-11-22",
+      "emoji": "🏎️",
+      "category": "challenge",
+      "points": 10,
+      "text": "Maths Garage mg2 ✅ 5376 ÷ 8 = 672"
+    },
+    {
+      "date": "2026-11-22",
+      "emoji": "🔤",
+      "category": "challenge",
+      "points": 10,
+      "text": "Hebrew word hb1 ✅ גל (gal = wave)"
+    },
+    {
+      "date": "2026-11-22",
+      "emoji": "💬",
+      "category": "challenge",
+      "points": 15,
+      "text": "Hebrew sentence hs1 ✅ זה גל גדול (ze gal gadol = This is a big wave)"
+    },
+    {
+      "date": "2026-11-22",
+      "emoji": "🕵️",
+      "category": "challenge",
+      "points": 5,
+      "text": "Sentence Detective gr1 ✅ red = adjective"
+    },
+    {
+      "date": "2026-11-22",
+      "emoji": "🕵️",
+      "category": "challenge",
+      "points": 5,
+      "text": "Sentence Detective gr2 ✅ happily = adverb"
     }
   ],
   "cashout": {
