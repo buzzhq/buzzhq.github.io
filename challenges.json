@@ -4032,6 +4032,95 @@
       "title": "Read aloud",
       "text": "On Saturday afternoon, Franklin drove the red GT to the park court with Dad. While he was warming up, a little girl's ball rolled under a bench. Franklin got down on his knees and fished it out for her. Because she was still learning, he showed her how to bend her knees and use backspin. Her very first shot went SWISH! So they high-fived, and Franklin drove home at the speed limit with a big smile.",
       "points": 10
+    },
+    {
+      "date": "2026-11-22",
+      "id": "tt1",
+      "type": "timestables",
+      "title": "Times-tables warm-up",
+      "tables": [
+        6
+      ],
+      "n": 8,
+      "prompt": "Quick times-tables warm-up with pictures: tap the answer, then send Buzz your finish code!",
+      "key": "7d69861a910b41c8",
+      "points": 10
+    },
+    {
+      "date": "2026-11-22",
+      "id": "mg1",
+      "type": "stepgame",
+      "title": "Maths Garage: long multiplication",
+      "mode": "mult",
+      "a": 4316,
+      "b": 7,
+      "sum": "4316 × 7",
+      "prompt": "Solve it step by step in Buzz's Maths Garage, then send Buzz your finish code!",
+      "key": "a45ad72b88480b59",
+      "points": 10
+    },
+    {
+      "date": "2026-11-22",
+      "id": "mg2",
+      "type": "stepgame",
+      "title": "Maths Garage: long division",
+      "mode": "div",
+      "a": 5376,
+      "b": 8,
+      "sum": "5376 ÷ 8",
+      "prompt": "Solve it step by step in Buzz's Maths Garage, then send Buzz your finish code!",
+      "key": "2de832631919bc7a",
+      "points": 10
+    },
+    {
+      "date": "2026-11-22",
+      "id": "hb1",
+      "type": "hebword",
+      "title": "Hebrew word rally",
+      "word": "גל",
+      "prompt": "Sound out this Hebrew word letter by letter (right to left!), then find out what it means.",
+      "key": "177a6fc30e88e605",
+      "points": 10
+    },
+    {
+      "date": "2026-11-22",
+      "id": "hs1",
+      "type": "hebsentence",
+      "title": "Hebrew sentence rally",
+      "sentence": "זה גל גדול",
+      "prompt": "Read this Hebrew sentence word by word, letter by letter (right to left!), then work out what it means.",
+      "key": "34b7aaeba3f4ad3d",
+      "points": 15
+    },
+    {
+      "date": "2026-11-22",
+      "id": "gr1",
+      "type": "grammar",
+      "title": "Sentence Detective",
+      "qid": "g19",
+      "level": 2,
+      "prompt": "What job is the highlighted word doing? Solve it in Buzz's Sentence Detective!",
+      "key": "741228e3cf1144e8",
+      "points": 5
+    },
+    {
+      "date": "2026-11-22",
+      "id": "gr2",
+      "type": "grammar",
+      "title": "Sentence Detective",
+      "qid": "g36",
+      "level": 2,
+      "prompt": "What job is the highlighted word doing? Solve it in Buzz's Sentence Detective!",
+      "key": "54975dd61f793a00",
+      "points": 5
+    },
+    {
+      "date": "2026-11-22",
+      "id": "dc5",
+      "type": "reading",
+      "title": "Read aloud",
+      "text": "On Sunday afternoon, Franklin drove the red GT to the beach with Dad. As soon as they arrived, a really big wave crashed onto the sand. Unfortunately, it soaked his towel and his basketball rolled into the water! Luckily, a friendly surfer caught the ball and paddled it back to him. Franklin said thanks, and they drove home at the speed limit.",
+      "points": 10
     }
   ],
   "notes": [

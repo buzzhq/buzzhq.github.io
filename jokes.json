@@ -519,6 +519,14 @@
       "emoji": "🪐",
       "setup": "What kind of music do planets love?",
       "punchline": "Neptunes!"
+    },
+    {
+      "date": "2026-11-22",
+      "slot": "pm",
+      "topic": "Animals",
+      "emoji": "🦀",
+      "setup": "Why didn't the crab share his snack?",
+      "punchline": "Because he was shellfish!"
     }
   ]
 }
