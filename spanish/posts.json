@@ -1,5 +1,71 @@
 [
   {
+    "id": "2026-11-24",
+    "date": "Martes, 24 de noviembre de 2026",
+    "items": [
+      {
+        "section": "Noticias de Australia",
+        "title": "Una radio reúne más de 500.000 dólares para niños enfermos",
+        "paragraphs": [
+          "El viernes 20 de noviembre, las radios 2GB de Sydney y 4BC de Brisbane hicieron un programa especial de todo el día, llamado «Starlight Radiothon». Querían reunir dinero para niños muy enfermos.",
+          "Casi 1.200 personas y empresas ayudaron. ¡Algunos niños dieron el dinero de su paga! En total reunieron más de 500.000 dólares. Con ese dinero, más de 12.200 niños en hospitales de Sydney y Brisbane van a tener alegría y diversión esta Navidad."
+        ],
+        "source": {
+          "name": "Radio Today",
+          "url": "https://radiotoday.com.au/2gb-4bc-starlight-radiothon-raises-500000-for-sick-kids-this-christmas/"
+        }
+      },
+      {
+        "section": "Noticias de Israel",
+        "title": "Una estrella que gira 260 veces por segundo",
+        "paragraphs": [
+          "Los púlsares son estrellas que giran muy, muy rápido y mandan señales regulares, como un faro en el espacio. Son muy difíciles de encontrar. Antes, un ordenador trabajó el equivalente a 600 años para buscar uno de ellos, y no lo encontró.",
+          "Ahora, científicos del Instituto Weizmann, en Israel, crearon un nuevo método. Con él encontraron ese púlsar en solo 100 minutos. Se llama PSR J1622-7204 y gira más de 260 veces por segundo. Ya usan el método para buscar más púlsares."
+        ],
+        "source": {
+          "name": "Weizmann Australia",
+          "url": "https://weizmann.org.au/2026/11/from-a-complex-problem-to-a-dizzying-discovery-a-new-method-for-finding-cosmic-lighthouses/"
+        }
+      },
+      {
+        "section": "Noticias del mundo",
+        "title": "El viaje récord de un colibrí",
+        "paragraphs": [
+          "El colibrí rufo es uno de los pájaros más pequeños del mundo: pesa solo unos gramos. Científicos de Estados Unidos crearon un localizador solar casi tan ligero como un grano de arroz y lo pusieron en la espalda de 11 colibríes.",
+          "Así descubrieron el viaje más largo de un colibrí: 6.526 kilómetros, desde la costa de Alabama hasta Alaska, en 38 días. Los científicos quieren proteger a estos pájaros, porque cada vez hay menos."
+        ],
+        "source": {
+          "name": "Science",
+          "url": "https://www.science.org/content/article/tiny-tracking-device-documents-record-breaking-hummingbird-journey"
+        }
+      },
+      {
+        "section": "Tecnología e IA",
+        "title": "Amazon compra tecnología de una empresa israelí de IA",
+        "paragraphs": [
+          "Decart es una empresa israelí de inteligencia artificial. Hace programas que ayudan a la IA a funcionar más rápido y gastar menos en los chips de los ordenadores.",
+          "Según Bloomberg, Amazon va a pagar 7.500 millones de dólares por esa tecnología, y el equipo de Decart va a trabajar para Amazon. Amazon quiere vender sus propios chips, llamados Trainium, para competir con la empresa Nvidia."
+        ],
+        "source": {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/11/23/amazon-snaps-up-decarts-ai-optimization-tech-for-7-5b-as-it-prepares-to-sell-trainium-chips/"
+        }
+      }
+    ],
+    "weather": {
+      "day": "Martes, 24 de noviembre",
+      "place": "Bentleigh East",
+      "summary": "Parcialmente nublado. Viento del suroeste de 15 a 20 km/h. Casi seguro que no va a llover. El sol es muy fuerte hoy: ¡usa protector solar!",
+      "min": 11,
+      "max": 19,
+      "rainChance": 5,
+      "source": {
+        "name": "Bureau of Meteorology",
+        "url": "https://www.bom.gov.au/location/australia/victoria/central/bvic_pt042-melbourne"
+      }
+    }
+  },
+  {
     "id": "2026-11-23",
     "date": "Lunes, 23 de noviembre de 2026",
     "items": [
