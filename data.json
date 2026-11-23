@@ -951,6 +951,55 @@
       "category": "challenge",
       "points": 5,
       "text": "Sentence Detective gr2 ✅ happily = adverb"
+    },
+    {
+      "date": "2026-11-23",
+      "emoji": "✖️",
+      "category": "challenge",
+      "points": 10,
+      "text": "Times-tables warm-up tt1 ✅ 7× table"
+    },
+    {
+      "date": "2026-11-23",
+      "emoji": "🏎️",
+      "category": "challenge",
+      "points": 10,
+      "text": "Maths Garage mg1 ✅ 2853 × 8 = 22824"
+    },
+    {
+      "date": "2026-11-23",
+      "emoji": "🏎️",
+      "category": "challenge",
+      "points": 10,
+      "text": "Maths Garage mg2 ✅ 6345 ÷ 5 = 1269"
+    },
+    {
+      "date": "2026-11-23",
+      "emoji": "🔤",
+      "category": "challenge",
+      "points": 10,
+      "text": "Hebrew word hb1 ✅ דג (dag = fish)"
+    },
+    {
+      "date": "2026-11-23",
+      "emoji": "💬",
+      "category": "challenge",
+      "points": 15,
+      "text": "Hebrew sentence hs1 ✅ זה דג גדול (ze dag gadol = This is a big fish)"
+    },
+    {
+      "date": "2026-11-23",
+      "emoji": "🕵️",
+      "category": "challenge",
+      "points": 5,
+      "text": "Sentence Detective gr1 ✅ ball = noun"
+    },
+    {
+      "date": "2026-11-23",
+      "emoji": "🕵️",
+      "category": "challenge",
+      "points": 5,
+      "text": "Sentence Detective gr2 ✅ happily = adverb"
     }
   ],
   "cashout": {
