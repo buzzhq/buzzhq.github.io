@@ -4121,6 +4121,95 @@
       "title": "Read aloud",
       "text": "On Sunday afternoon, Franklin drove the red GT to the beach with Dad. As soon as they arrived, a really big wave crashed onto the sand. Unfortunately, it soaked his towel and his basketball rolled into the water! Luckily, a friendly surfer caught the ball and paddled it back to him. Franklin said thanks, and they drove home at the speed limit.",
       "points": 10
+    },
+    {
+      "date": "2026-11-23",
+      "id": "tt1",
+      "type": "timestables",
+      "title": "Times-tables warm-up",
+      "tables": [
+        7
+      ],
+      "n": 8,
+      "prompt": "Quick times-tables warm-up with pictures: tap the answer, then send Buzz your finish code!",
+      "key": "8c108e85347fee48",
+      "points": 10
+    },
+    {
+      "date": "2026-11-23",
+      "id": "mg1",
+      "type": "stepgame",
+      "title": "Maths Garage: long multiplication",
+      "mode": "mult",
+      "a": 2853,
+      "b": 8,
+      "sum": "2853 × 8",
+      "prompt": "Solve it step by step in Buzz's Maths Garage, then send Buzz your finish code!",
+      "key": "c0e30778e310980c",
+      "points": 10
+    },
+    {
+      "date": "2026-11-23",
+      "id": "mg2",
+      "type": "stepgame",
+      "title": "Maths Garage: long division",
+      "mode": "div",
+      "a": 6345,
+      "b": 5,
+      "sum": "6345 ÷ 5",
+      "prompt": "Solve it step by step in Buzz's Maths Garage, then send Buzz your finish code!",
+      "key": "74f1f6828191c725",
+      "points": 10
+    },
+    {
+      "date": "2026-11-23",
+      "id": "hb1",
+      "type": "hebword",
+      "title": "Hebrew word rally",
+      "word": "דג",
+      "prompt": "Sound out this Hebrew word letter by letter (right to left!), then find out what it means.",
+      "key": "86b2113c42eef36d",
+      "points": 10
+    },
+    {
+      "date": "2026-11-23",
+      "id": "hs1",
+      "type": "hebsentence",
+      "title": "Hebrew sentence rally",
+      "sentence": "זה דג גדול",
+      "prompt": "Read this Hebrew sentence word by word, letter by letter (right to left!), then work out what it means.",
+      "key": "cf2f3e43a9bd8a66",
+      "points": 15
+    },
+    {
+      "date": "2026-11-23",
+      "id": "gr1",
+      "type": "grammar",
+      "title": "Sentence Detective",
+      "qid": "g02",
+      "level": 2,
+      "prompt": "What job is the highlighted word doing? Solve it in Buzz's Sentence Detective!",
+      "key": "80021127f0aa86cb",
+      "points": 5
+    },
+    {
+      "date": "2026-11-23",
+      "id": "gr2",
+      "type": "grammar",
+      "title": "Sentence Detective",
+      "qid": "g36",
+      "level": 2,
+      "prompt": "What job is the highlighted word doing? Solve it in Buzz's Sentence Detective!",
+      "key": "5f4316d2fceb796d",
+      "points": 5
+    },
+    {
+      "date": "2026-11-23",
+      "id": "dc5",
+      "type": "reading",
+      "title": "Read aloud",
+      "text": "On Monday afternoon, Franklin drove the red GT to the pier with Dad to go fishing. At first, nothing happened, and Franklin started to get bored. After a while, his line gave a big tug! He reeled in slowly, and it was a huge silver fish. In the end, they let it swim back home, and drove home at the speed limit.",
+      "points": 10
     }
   ],
   "notes": [
