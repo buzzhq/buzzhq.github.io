@@ -1,5 +1,71 @@
 [
   {
+    "id": "2026-11-25",
+    "date": "Miércoles, 25 de noviembre de 2026",
+    "items": [
+      {
+        "section": "Noticias de Victoria",
+        "title": "Tres bebés elefante llegan al zoo de Werribee",
+        "paragraphs": [
+          "El año que viene van a nacer tres elefantes asiáticos en el Werribee Open Range Zoo, cerca de Melbourne. Un embarazo de elefante es muy largo: ¡dura 22 meses!",
+          "Por primera vez, científicos de la Universidad La Trobe estudiaron las hormonas de las madres para saber si los bebés son niños o niñas. Creen que Mali va a tener un niño, y que Dokkoon y Num Oi van a tener niñas."
+        ],
+        "source": {
+          "name": "Kids News",
+          "url": "https://www.kidsnews.com.au/animals/baby-elephant-boom-coming-soon-after-zoos-jumbo-gender-reveal/news-story/7e3856c94b7566dc6b54cae30dd5dacf"
+        }
+      },
+      {
+        "section": "Noticias de Israel",
+        "title": "Vuelven los vuelos de Flydubai a Tel Aviv",
+        "paragraphs": [
+          "Flydubai es una aerolínea de Dubái, en los Emiratos Árabes Unidos. El 30 de septiembre dejó de volar a Tel Aviv después de un incidente grave en uno de sus aviones.",
+          "El lunes, la ministra de Transporte de Israel, Miri Regev, aprobó la vuelta de los vuelos. Todavía falta el permiso de seguridad, pero el ministerio cree que los aviones van a volver en una o dos semanas."
+        ],
+        "source": {
+          "name": "Al Jazeera",
+          "url": "https://www.aljazeera.com/news/2026/11/24/israeli-minister-approves-return-of-flydubai-flights"
+        }
+      },
+      {
+        "section": "Noticias del mundo",
+        "title": "Los kiwis vuelven a las colinas de Wellington",
+        "paragraphs": [
+          "El kiwi es un pájaro de Nueva Zelanda que no puede volar. Por primera vez en más de 150 años, hay kiwis salvajes en las colinas de Wellington, la capital del país.",
+          "Un proyecto maorí llamado Capital Kiwi puso más de 5.300 trampas para los armiños, unos animales que se comen a los pollitos. Desde 2022 llevaron más de 250 kiwis a la zona, y ahora ya hay más de 300."
+        ],
+        "source": {
+          "name": "Mongabay",
+          "url": "https://news.mongabay.com/short-article/2026/11/kiwi-return-to-wellington-hills-after-150-years-in-maori-led-conservation-milestone/"
+        }
+      },
+      {
+        "section": "Tecnología e IA",
+        "title": "La IA de Google puede usar más de tus aplicaciones",
+        "paragraphs": [
+          "Google anunció que el «Modo IA» de su buscador se puede conectar con Google Drive, Google Wallet y la aplicación Gemini. Así puede dar respuestas más personales, usando tus documentos y tus datos.",
+          "Conectar estas aplicaciones es opcional, y se puede apagar en cualquier momento. Con Wallet, la IA solo puede leer la información: no puede mover ni gastar dinero."
+        ],
+        "source": {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/11/23/google-searchs-ai-mode-can-now-tap-into-drive-and-wallet-for-more-personalized-responses/"
+        }
+      }
+    ],
+    "weather": {
+      "day": "Miércoles, 25 de noviembre",
+      "place": "Bentleigh East",
+      "summary": "Soleado. Puede haber niebla temprano en algunos barrios. Viento suave del norte por la mañana, y del sur por la noche. Casi seguro que no va a llover. El sol es muy fuerte hoy: ¡usa protector solar!",
+      "min": 9,
+      "max": 27,
+      "rainChance": 5,
+      "source": {
+        "name": "Bureau of Meteorology",
+        "url": "https://www.bom.gov.au/location/australia/victoria/central/bvic_pt042-melbourne"
+      }
+    }
+  },
+  {
     "id": "2026-11-24",
     "date": "Martes, 24 de noviembre de 2026",
     "items": [
