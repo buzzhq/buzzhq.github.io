@@ -4210,6 +4210,96 @@
       "title": "Read aloud",
       "text": "On Monday afternoon, Franklin drove the red GT to the pier with Dad to go fishing. At first, nothing happened, and Franklin started to get bored. After a while, his line gave a big tug! He reeled in slowly, and it was a huge silver fish. In the end, they let it swim back home, and drove home at the speed limit.",
       "points": 10
+    },
+    {
+      "date": "2026-11-24",
+      "id": "tt1",
+      "type": "timestables",
+      "title": "Times-tables warm-up",
+      "tables": [
+        6,
+        7
+      ],
+      "n": 8,
+      "prompt": "Quick times-tables warm-up with pictures: tap the answer, then send Buzz your finish code!",
+      "key": "5fcc98650d6067fc",
+      "points": 10
+    },
+    {
+      "date": "2026-11-24",
+      "id": "mg1",
+      "type": "stepgame",
+      "title": "Maths Garage: long multiplication",
+      "mode": "mult",
+      "a": 3746,
+      "b": 7,
+      "sum": "3746 × 7",
+      "prompt": "Solve it step by step in Buzz's Maths Garage, then send Buzz your finish code!",
+      "key": "b3fbca8064b56eff",
+      "points": 10
+    },
+    {
+      "date": "2026-11-24",
+      "id": "mg2",
+      "type": "stepgame",
+      "title": "Maths Garage: long division",
+      "mode": "div",
+      "a": 7128,
+      "b": 6,
+      "sum": "7128 ÷ 6",
+      "prompt": "Solve it step by step in Buzz's Maths Garage, then send Buzz your finish code!",
+      "key": "03a57f8ad80597b8",
+      "points": 10
+    },
+    {
+      "date": "2026-11-24",
+      "id": "hb1",
+      "type": "hebword",
+      "title": "Hebrew word rally",
+      "word": "מגדל",
+      "prompt": "Sound out this Hebrew word letter by letter (right to left!), then find out what it means.",
+      "key": "081dd769a88773f8",
+      "points": 10
+    },
+    {
+      "date": "2026-11-24",
+      "id": "hs1",
+      "type": "hebsentence",
+      "title": "Hebrew sentence rally",
+      "sentence": "זה מגדל גדול",
+      "prompt": "Read this Hebrew sentence word by word, letter by letter (right to left!), then work out what it means.",
+      "key": "27603bd787f6f8a9",
+      "points": 15
+    },
+    {
+      "date": "2026-11-24",
+      "id": "gr1",
+      "type": "grammar",
+      "title": "Sentence Detective",
+      "qid": "g07",
+      "level": 2,
+      "prompt": "What job is the highlighted word doing? Solve it in Buzz's Sentence Detective!",
+      "key": "3d1520e7c1ec5e11",
+      "points": 5
+    },
+    {
+      "date": "2026-11-24",
+      "id": "gr2",
+      "type": "grammar",
+      "title": "Sentence Detective",
+      "qid": "g12",
+      "level": 2,
+      "prompt": "What job is the highlighted word doing? Solve it in Buzz's Sentence Detective!",
+      "key": "9b818d2719cf2895",
+      "points": 5
+    },
+    {
+      "date": "2026-11-24",
+      "id": "dc5",
+      "type": "reading",
+      "title": "Read aloud",
+      "text": "On Tuesday after school, Franklin drove the red GT into the city with Dad. First, they rode a super-fast lift to the top of a tall tower. Although his tummy felt funny, Franklin looked out the window and saw tiny cars far below. Finally, they drove home at the speed limit, and he built an even taller tower in Roblox.",
+      "points": 10
     }
   ],
   "notes": [

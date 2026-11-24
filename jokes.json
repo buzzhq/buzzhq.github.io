@@ -535,6 +535,14 @@
       "emoji": "🐟",
       "setup": "Where do fish keep their money?",
       "punchline": "In the riverbank!"
+    },
+    {
+      "date": "2026-11-24",
+      "slot": "pm",
+      "topic": "Gaming",
+      "emoji": "💻",
+      "setup": "Why was the computer cold?",
+      "punchline": "It left its Windows open!"
     }
   ]
 }
