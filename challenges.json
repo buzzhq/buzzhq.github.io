@@ -4300,6 +4300,96 @@
       "title": "Read aloud",
       "text": "On Tuesday after school, Franklin drove the red GT into the city with Dad. First, they rode a super-fast lift to the top of a tall tower. Although his tummy felt funny, Franklin looked out the window and saw tiny cars far below. Finally, they drove home at the speed limit, and he built an even taller tower in Roblox.",
       "points": 10
+    },
+    {
+      "date": "2026-11-25",
+      "id": "tt1",
+      "type": "timestables",
+      "title": "Times-tables warm-up",
+      "tables": [
+        6,
+        7
+      ],
+      "n": 8,
+      "prompt": "Quick times-tables warm-up with pictures: tap the answer, then send Buzz your finish code!",
+      "key": "ace2c1015502384f",
+      "points": 10
+    },
+    {
+      "date": "2026-11-25",
+      "id": "mg1",
+      "type": "stepgame",
+      "title": "Maths Garage: long multiplication",
+      "mode": "mult",
+      "a": 5084,
+      "b": 6,
+      "sum": "5084 × 6",
+      "prompt": "Solve it step by step in Buzz's Maths Garage, then send Buzz your finish code!",
+      "key": "89a13abb3d79af48",
+      "points": 10
+    },
+    {
+      "date": "2026-11-25",
+      "id": "mg2",
+      "type": "stepgame",
+      "title": "Maths Garage: long division",
+      "mode": "div",
+      "a": 4232,
+      "b": 8,
+      "sum": "4232 ÷ 8",
+      "prompt": "Solve it step by step in Buzz's Maths Garage, then send Buzz your finish code!",
+      "key": "0f9a47445435b7b1",
+      "points": 10
+    },
+    {
+      "date": "2026-11-25",
+      "id": "hb1",
+      "type": "hebword",
+      "title": "Hebrew word rally",
+      "word": "שמש",
+      "prompt": "Sound out this Hebrew word letter by letter (right to left!), then find out what it means.",
+      "key": "c7ac12275593efe2",
+      "points": 10
+    },
+    {
+      "date": "2026-11-25",
+      "id": "gr1",
+      "type": "grammar",
+      "title": "Sentence Detective",
+      "qid": "g32",
+      "level": 2,
+      "prompt": "What job is the highlighted word doing? Solve it in Buzz's Sentence Detective!",
+      "key": "f84c8b476a99b0be",
+      "points": 5
+    },
+    {
+      "date": "2026-11-25",
+      "id": "gr2",
+      "type": "grammar",
+      "title": "Sentence Detective",
+      "qid": "g19",
+      "level": 2,
+      "prompt": "What job is the highlighted word doing? Solve it in Buzz's Sentence Detective!",
+      "key": "89df2c62ad6c4d29",
+      "points": 5
+    },
+    {
+      "date": "2026-11-25",
+      "id": "hs1",
+      "type": "hebsentence",
+      "title": "Hebrew sentence rally",
+      "sentence": "השמש חמה מאוד",
+      "prompt": "Read this Hebrew sentence word by word, letter by letter (right to left!), then work out what it means.",
+      "key": "aee2cd3c691a1bbb",
+      "points": 15
+    },
+    {
+      "date": "2026-11-25",
+      "id": "dc5",
+      "type": "reading",
+      "title": "Read aloud",
+      "text": "On Wednesday after school, Franklin drove the red GT to the park with Dad. Because the sun was so hot, they shot hoops under a big shady tree. Meanwhile, the red GT sat in the sunshine and got really warm. Afterwards, they had icy drinks and drove home at the speed limit.",
+      "points": 10
     }
   ],
   "notes": [

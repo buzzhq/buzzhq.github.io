@@ -543,6 +543,14 @@
       "emoji": "💻",
       "setup": "Why was the computer cold?",
       "punchline": "It left its Windows open!"
+    },
+    {
+      "date": "2026-11-25",
+      "slot": "pm",
+      "topic": "Funny",
+      "emoji": "👻",
+      "setup": "Why are ghosts bad at lying?",
+      "punchline": "You can see right through them!"
     }
   ]
 }
