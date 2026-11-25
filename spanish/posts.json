@@ -1,5 +1,71 @@
 [
   {
+    "id": "2026-11-26",
+    "date": "Jueves, 26 de noviembre de 2026",
+    "items": [
+      {
+        "section": "Noticias de Australia",
+        "title": "Un nuevo acuerdo con las Islas Salomón",
+        "paragraphs": [
+          "Las Islas Salomón son un país pequeño en el océano Pacífico, cerca de Australia. El miércoles, el primer ministro Anthony Albanese y el primer ministro de las Islas Salomón, Matthew Wale, firmaron un acuerdo en Canberra. Los dos dicen que es un acuerdo «histórico».",
+          "Con el acuerdo, Australia va a ayudar a la policía de las Islas Salomón. Además, personas de las Islas Salomón van a poder trabajar en Australia cuidando a niños y a personas mayores. Las Islas Salomón prometen no tener nunca una base militar extranjera."
+        ],
+        "source": {
+          "name": "ABC News",
+          "url": "https://www.abc.net.au/news/2026-11-25/australia-signs-pact-with-solomon-islands-in-blow-to-china/107424550"
+        }
+      },
+      {
+        "section": "Noticias de Israel",
+        "title": "El secreto de las hojas del nopal",
+        "paragraphs": [
+          "El nopal es un cactus del desierto. Científicos de la Universidad Ben-Gurión y del Instituto Volcani descubrieron algo nuevo: cuando llueve, las partes nuevas del cactus tienen hojas muy pequeñas, de un centímetro. Después de unas seis semanas, las hojas se caen.",
+          "El cactus grande respira de noche, pero estas hojitas trabajan de día, con el sol. Así ayudan al cactus a crecer rápido mientras hay agua. Sin las hojitas, las partes nuevas crecen mucho menos."
+        ],
+        "source": {
+          "name": "Universidad Ben-Gurión del Néguev",
+          "url": "https://www.bgu.ac.il/en/news-and-articles/prickly-pear-leaves-accelerate-desert-growth/"
+        }
+      },
+      {
+        "section": "Noticias del mundo",
+        "title": "El primer astronauta de Pakistán viaja al espacio",
+        "paragraphs": [
+          "El miércoles, la nave china Shenzhou-24 despegó desde el desierto de Gobi con tres astronautas. Uno de ellos es Muhammad Zeeshan Ali, el primer astronauta de Pakistán y el primer extranjero en viajar a la estación espacial china Tiangong.",
+          "Ali era piloto de aviones de combate. En el espacio va a estudiar cómo afectan la radiación y la gravedad muy débil a las semillas. Dice que lleva «las esperanzas de 250 millones de pakistaníes»."
+        ],
+        "source": {
+          "name": "BBC News",
+          "url": "https://www.bbc.com/news/articles/c6x2e0j3kx28o"
+        }
+      },
+      {
+        "section": "Tecnología e IA",
+        "title": "Buscan planetas lejanos con ayuda de la IA",
+        "paragraphs": [
+          "Dos astrónomos aficionados usaron herramientas de inteligencia artificial de OpenAI para buscar planetas fuera de nuestro sistema solar. Revisaron datos públicos de telescopios de la NASA y buscaron pequeñas bajadas en la luz de las estrellas.",
+          "Uno de ellos, Ethan Byrd, revisó datos de unos 19 millones de estrellas y encontró 49 posibles planetas. Pero todavía no son planetas confirmados: ahora astrónomos profesionales tienen que estudiarlos con más cuidado."
+        ],
+        "source": {
+          "name": "OpenAI",
+          "url": "https://openai.com/index/searching-for-distant-planets-with-astra/"
+        }
+      }
+    ],
+    "weather": {
+      "day": "Jueves, 26 de noviembre",
+      "place": "Bentleigh East",
+      "summary": "Parcialmente nublado y caluroso. Puede caer un poco de lluvia por la tarde, pero no es muy probable. Viento del norte por la mañana, y del sureste por la tarde. El sol es muy fuerte hoy: ¡usa protector solar!",
+      "min": 15,
+      "max": 29,
+      "rainChance": 20,
+      "source": {
+        "name": "Bureau of Meteorology",
+        "url": "https://www.bom.gov.au/location/australia/victoria/central/bvic_pt042-melbourne"
+      }
+    }
+  },
+  {
     "id": "2026-11-25",
     "date": "Miércoles, 25 de noviembre de 2026",
     "items": [
