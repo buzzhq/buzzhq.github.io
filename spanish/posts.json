@@ -1,5 +1,71 @@
 [
   {
+    "id": "2026-11-27",
+    "date": "Viernes, 27 de noviembre de 2026",
+    "items": [
+      {
+        "section": "Noticias de Victoria",
+        "title": "Un verano con más riesgo de incendios",
+        "paragraphs": [
+          "El jueves, los jefes de bomberos y de emergencias de Victoria presentaron su pronóstico para el verano. Dicen que hay más riesgo de incendios forestales y de incendios de pasto en el norte, el oeste y el este de Gippsland, desde enero hasta el principio del otoño.",
+          "La razón: en primavera creció mucha hierba y el verano va a ser muy caluroso. Octubre fue el octubre más cálido desde que hay registros. Los servicios de emergencia piden a las familias prepararse ahora, por ejemplo con un plan para saber qué hacer si hay un incendio."
+        ],
+        "source": {
+          "name": "ABC News",
+          "url": "https://www.abc.net.au/news/2026-11-26/summer-bushfire-season-victoria-outlook/107429694"
+        }
+      },
+      {
+        "section": "Noticias de Israel",
+        "title": "La supernova más débil jamás vista",
+        "paragraphs": [
+          "Una supernova es la gran explosión de una estrella. Científicos del Instituto Weizmann, en Israel, estudiaron la supernova más débil que nadie ha observado. Un telescopio en el desierto de Atacama, en Chile, la vio hace dos años, a 30 millones de años luz.",
+          "Lo raro es que esta supernova débil se apagó muy despacio, y normalmente las débiles se apagan rápido. Los científicos creen que la explosión vino de dos estrellas pequeñas que estaban juntas. El estudio se publicó el jueves en la revista Nature Astronomy."
+        ],
+        "source": {
+          "name": "Instituto Weizmann de Ciencias",
+          "url": "https://www.weizmann.ac.il/pages/news/astrophysics/slow-burn-the-faintest-supernova-ever-observed-refused-to-fade"
+        }
+      },
+      {
+        "section": "Noticias del mundo",
+        "title": "Vuelve a abrir el castillo de Shuri en Japón",
+        "paragraphs": [
+          "El castillo de Shuri está en Okinawa, una isla del sur de Japón. Hace siete años, un incendio destruyó su sala principal. Ahora la sala está reconstruida y abrió otra vez al público el lunes.",
+          "Unas 500 personas fueron a una ceremonia para celebrarlo. Estudiantes de secundaria bailaron una danza antigua del Reino de Ryukyu, el antiguo reino de Okinawa. Los trabajos para reconstruir otros edificios del castillo van a continuar."
+        ],
+        "source": {
+          "name": "NHK World-Japan",
+          "url": "https://www3.nhk.or.jp/nhkworld/news/20261123de80196/"
+        }
+      },
+      {
+        "section": "Tecnología e IA",
+        "title": "Un millón de satélites para la IA",
+        "paragraphs": [
+          "En Estados Unidos, la FCC, la agencia que controla los satélites, aprobó un plan de SpaceX llamado «Starmind». La idea es poner hasta un millón de satélites en el espacio. Cada satélite va a ser como un pequeño ordenador que trabaja para la inteligencia artificial.",
+          "En el espacio hay mucha energía del sol para los ordenadores. Pero algunos científicos tienen dudas: no saben cómo los satélites van a enfriar sus chips, y les preocupa la basura espacial y que los satélites molesten a los astrónomos. SpaceX tiene que empezar antes de 2033."
+        ],
+        "source": {
+          "name": "CNBC",
+          "url": "https://www.cnbc.com/2026/11/25/spacex-fcc-satellite-approval.html"
+        }
+      }
+    ],
+    "weather": {
+      "day": "Viernes, 27 de noviembre",
+      "place": "Bentleigh East",
+      "summary": "Nublado y con lluvia casi segura. Puede haber tormentas fuertes, con mucha lluvia y posibles inundaciones repentinas. Viento del noreste. Lleva paraguas y ten cuidado en la calle.",
+      "min": 18,
+      "max": 25,
+      "rainChance": 95,
+      "source": {
+        "name": "Bureau of Meteorology",
+        "url": "https://www.bom.gov.au/location/australia/victoria/central/bvic_pt042-melbourne"
+      }
+    }
+  },
+  {
     "id": "2026-11-26",
     "date": "Jueves, 26 de noviembre de 2026",
     "items": [
