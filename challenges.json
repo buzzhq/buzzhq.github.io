@@ -4390,6 +4390,96 @@
       "title": "Read aloud",
       "text": "On Wednesday after school, Franklin drove the red GT to the park with Dad. Because the sun was so hot, they shot hoops under a big shady tree. Meanwhile, the red GT sat in the sunshine and got really warm. Afterwards, they had icy drinks and drove home at the speed limit.",
       "points": 10
+    },
+    {
+      "date": "2026-11-26",
+      "id": "tt1",
+      "type": "timestables",
+      "title": "Times-tables warm-up",
+      "tables": [
+        6,
+        7
+      ],
+      "n": 8,
+      "prompt": "Quick times-tables warm-up with pictures: tap the answer, then send Buzz your finish code!",
+      "key": "f5f036061733366d",
+      "points": 10
+    },
+    {
+      "date": "2026-11-26",
+      "id": "mg1",
+      "type": "stepgame",
+      "title": "Maths Garage: long multiplication",
+      "mode": "mult",
+      "a": 4627,
+      "b": 8,
+      "sum": "4627 × 8",
+      "prompt": "Solve it step by step in Buzz's Maths Garage, then send Buzz your finish code!",
+      "key": "d56a45b173648c43",
+      "points": 10
+    },
+    {
+      "date": "2026-11-26",
+      "id": "mg2",
+      "type": "stepgame",
+      "title": "Maths Garage: long division",
+      "mode": "div",
+      "a": 5832,
+      "b": 9,
+      "sum": "5832 ÷ 9",
+      "prompt": "Solve it step by step in Buzz's Maths Garage, then send Buzz your finish code!",
+      "key": "d9a8f5d18fe4f94a",
+      "points": 10
+    },
+    {
+      "date": "2026-11-26",
+      "id": "hb1",
+      "type": "hebword",
+      "title": "Hebrew word rally",
+      "word": "גשם",
+      "prompt": "Sound out this Hebrew word letter by letter (right to left!), then find out what it means.",
+      "key": "109cac34600073f6",
+      "points": 10
+    },
+    {
+      "date": "2026-11-26",
+      "id": "hs1",
+      "type": "hebsentence",
+      "title": "Hebrew sentence rally",
+      "sentence": "אבא אוהב שלג",
+      "prompt": "Read this Hebrew sentence word by word, letter by letter (right to left!), then work out what it means.",
+      "key": "43231a497746fca9",
+      "points": 15
+    },
+    {
+      "date": "2026-11-26",
+      "id": "gr1",
+      "type": "grammar",
+      "title": "Sentence Detective",
+      "qid": "g48",
+      "level": 2,
+      "prompt": "What job is the highlighted word doing? Solve it in Buzz's Sentence Detective!",
+      "key": "9b56c511357cb146",
+      "points": 5
+    },
+    {
+      "date": "2026-11-26",
+      "id": "gr2",
+      "type": "grammar",
+      "title": "Sentence Detective",
+      "qid": "g54",
+      "level": 2,
+      "prompt": "What job is the highlighted word doing? Solve it in Buzz's Sentence Detective!",
+      "key": "fd2a39ff6047853c",
+      "points": 5
+    },
+    {
+      "date": "2026-11-26",
+      "id": "dc5",
+      "type": "reading",
+      "title": "Read aloud",
+      "text": "On Thursday after school, dark clouds rolled over the basketball court. Soon, big drops of rain splashed on Franklin's head. Instead of going home, he and Dad sat in the red GT and watched the wipers swish. Once the rain stopped, Franklin jumped over a giant puddle and scored three shots in a row!",
+      "points": 10
     }
   ],
   "notes": [

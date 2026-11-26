@@ -551,6 +551,14 @@
       "emoji": "👻",
       "setup": "Why are ghosts bad at lying?",
       "punchline": "You can see right through them!"
+    },
+    {
+      "date": "2026-11-26",
+      "slot": "pm",
+      "topic": "Weather",
+      "emoji": "🌧️",
+      "setup": "What do clouds do when they get rich?",
+      "punchline": "They make it rain!"
     }
   ]
 }
