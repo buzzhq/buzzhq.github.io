@@ -567,6 +567,14 @@
       "emoji": "🐪",
       "setup": "What do you call a camel with no humps?",
       "punchline": "Humphrey! (Hump-free!)"
+    },
+    {
+      "date": "2026-11-28",
+      "slot": "am",
+      "topic": "Animals",
+      "emoji": "🐨",
+      "setup": "What's a koala's favourite drink?",
+      "punchline": "Coca-Koala!"
     }
   ]
 }
