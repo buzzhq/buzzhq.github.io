@@ -4480,6 +4480,96 @@
       "title": "Read aloud",
       "text": "On Thursday after school, dark clouds rolled over the basketball court. Soon, big drops of rain splashed on Franklin's head. Instead of going home, he and Dad sat in the red GT and watched the wipers swish. Once the rain stopped, Franklin jumped over a giant puddle and scored three shots in a row!",
       "points": 10
+    },
+    {
+      "date": "2026-11-27",
+      "id": "tt1",
+      "type": "timestables",
+      "title": "Times-tables warm-up",
+      "tables": [
+        6,
+        7
+      ],
+      "n": 8,
+      "prompt": "Quick times-tables warm-up with pictures: tap the answer, then send Buzz your finish code!",
+      "key": "020a9f38ba905aaa",
+      "points": 10
+    },
+    {
+      "date": "2026-11-27",
+      "id": "mg1",
+      "type": "stepgame",
+      "title": "Maths Garage: long multiplication",
+      "mode": "mult",
+      "a": 6283,
+      "b": 7,
+      "sum": "6283 × 7",
+      "prompt": "Solve it step by step in Buzz's Maths Garage, then send Buzz your finish code!",
+      "key": "34eccbb0f99936ef",
+      "points": 10
+    },
+    {
+      "date": "2026-11-27",
+      "id": "mg2",
+      "type": "stepgame",
+      "title": "Maths Garage: long division",
+      "mode": "div",
+      "a": 3924,
+      "b": 4,
+      "sum": "3924 ÷ 4",
+      "prompt": "Solve it step by step in Buzz's Maths Garage, then send Buzz your finish code!",
+      "key": "06eb890a4a1d693e",
+      "points": 10
+    },
+    {
+      "date": "2026-11-27",
+      "id": "hb1",
+      "type": "hebword",
+      "title": "Hebrew word rally",
+      "word": "גמל",
+      "prompt": "Sound out this Hebrew word letter by letter (right to left!), then find out what it means.",
+      "key": "41944b152519006e",
+      "points": 10
+    },
+    {
+      "date": "2026-11-27",
+      "id": "hs1",
+      "type": "hebsentence",
+      "title": "Hebrew sentence rally",
+      "sentence": "יש נחש בחול",
+      "prompt": "Read this Hebrew sentence word by word, letter by letter (right to left!), then work out what it means.",
+      "key": "b0a65c287fab00d2",
+      "points": 15
+    },
+    {
+      "date": "2026-11-27",
+      "id": "gr1",
+      "type": "grammar",
+      "title": "Sentence Detective",
+      "qid": "g20",
+      "level": 2,
+      "prompt": "What job is the highlighted word doing? Solve it in Buzz's Sentence Detective!",
+      "key": "8956cdf84a848f40",
+      "points": 5
+    },
+    {
+      "date": "2026-11-27",
+      "id": "gr2",
+      "type": "grammar",
+      "title": "Sentence Detective",
+      "qid": "g17",
+      "level": 2,
+      "prompt": "What job is the highlighted word doing? Solve it in Buzz's Sentence Detective!",
+      "key": "3f99267093da60ea",
+      "points": 5
+    },
+    {
+      "date": "2026-11-27",
+      "id": "dc5",
+      "type": "reading",
+      "title": "Read aloud",
+      "text": "On Friday after school, Franklin built a desert race track in Minecraft with Dad. However, a sneaky camel kept wandering onto the track! Suddenly, Franklin had an idea and made the camel the official race mascot. So every lap, his red GT zoomed past the camel and beeped hello!",
+      "points": 10
     }
   ],
   "notes": [

@@ -559,6 +559,14 @@
       "emoji": "🌧️",
       "setup": "What do clouds do when they get rich?",
       "punchline": "They make it rain!"
+    },
+    {
+      "date": "2026-11-27",
+      "slot": "pm",
+      "topic": "Animals",
+      "emoji": "🐪",
+      "setup": "What do you call a camel with no humps?",
+      "punchline": "Humphrey! (Hump-free!)"
     }
   ]
 }
