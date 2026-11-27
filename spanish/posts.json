@@ -52,11 +52,12 @@
         }
       },
       {
-        "section": "Parashá de la semana",
-        "title": "Vayishlaj: Jacob y Esaú hacen las paces",
+        "section": "פרשת השבוע",
+        "title": "וישלח: יעקב ועשו עושים שלום",
+        "lang": "he",
         "paragraphs": [
-          "Esta Shabat se lee la parashá Vayishlaj. Hace veinte años, Jacob engañó a su hermano Esaú y le quitó la bendición de su padre. Ahora Jacob vuelve a casa con su familia y sus rebaños. Se entera de que Esaú viene a su encuentro con 400 hombres y tiene miedo, así que le envía regalos: cabras, ovejas y camellos.",
-          "Esa noche, solo junto al río Jaboc, un desconocido lucha con Jacob hasta el amanecer. Nadie gana, pero el desconocido le lastima la cadera. Jacob no lo suelta hasta recibir una bendición. El desconocido le da un nombre nuevo: Israel, que significa «el que lucha y no suelta». Por la mañana Jacob camina cojeando hacia Esaú y se inclina. Esaú corre hacia él, lo abraza y los dos lloran. Los hermanos hacen las paces y después cada uno sigue su camino."
+          "השבת קוראים את פרשת וישלח. לפני עשרים שנה יעקב רימה את אחיו עשו ולקח ממנו את הברכה של אבא. עכשיו יעקב חוזר הביתה עם המשפחה ועם כל העדרים. הוא שומע שעשו בא לקראתו עם 400 אנשים, והוא מפחד. לכן הוא שולח לעשו מתנות: עיזים, כבשים וגמלים.",
+          "בלילה יעקב נשאר לבד ליד הנהר יבוק. איש זר נאבק איתו עד הבוקר. אף אחד לא מנצח, אבל האיש פוגע לו בירך. יעקב לא עוזב אותו. הוא מבקש ברכה, ומקבל שם חדש: ישראל. השם הזה אומר ״מי שנאבק ולא מוותר״. בבוקר יעקב הולך צולע לקראת עשו ומתכופף לפניו. עשו רץ אליו, מחבק אותו, ושניהם בוכים. האחים עושים שלום, ואחר כך כל אחד הולך בדרכו."
         ],
         "source": {
           "name": "Parsha Stories",

@@ -6,6 +6,9 @@
 <meta name="robots" content="noindex, nofollow">
 <meta name="theme-color" content="#f4efe3">
 <title>El Diario de Noam — Lecturas diarias</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Hebrew:wght@400;700&family=Noto+Serif+Hebrew:wght@400;700;800&display=swap" rel="stylesheet">
 <style>
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
@@ -28,6 +31,11 @@ article.parasha .kicker{color:#5a3a1c}
 article h2{font:800 1.5rem/1.2 Georgia,"Times New Roman",serif;margin:.3rem 0 .7rem}
 article p{margin:0 0 1rem}
 article p:first-of-type::first-letter{float:left;font:800 3.1rem/.85 Georgia,serif;padding:.3rem .4rem 0 0}
+article[lang="he"]{direction:rtl;text-align:right;font-family:"Noto Serif Hebrew","Noto Sans Hebrew","David","Arial Hebrew","Times New Roman",serif}
+article[lang="he"] h2{font-family:"Noto Serif Hebrew","Noto Sans Hebrew","David","Arial Hebrew","Times New Roman",serif}
+article[lang="he"] .kicker{letter-spacing:0;text-transform:none;font-family:"Noto Sans Hebrew","Noto Serif Hebrew","Arial Hebrew","David",sans-serif}
+article[lang="he"] p:first-of-type::first-letter{float:none;font:inherit;padding:0}
+article[lang="he"] .src{direction:ltr;text-align:right;unicode-bidi:isolate}
 
 .wx{border:3px double #1a1a1a;padding:1rem 1.1rem;margin:1.6rem 0 0;background:#fbf8f0}
 .wx h2{font:800 1.3rem/1.2 Georgia,serif;margin:.2rem 0 .6rem}
@@ -62,10 +70,15 @@ summary small{display:block;font:600 .75rem/1.4 system-ui,sans-serif;text-transf
 <script>
 const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const norm = e => e.items ? e : { ...e, items: [{ title: e.title, paragraphs: e.paragraphs, source: e.source }] };
-const item = (it, e) => `<article${/parash[aá]/i.test(it.section||"") ? ' class="parasha"' : ""}><div class="kicker">${esc(it.section || e.topic || "")}</div><h2>${esc(it.title)}</h2>`
-  + (it.paragraphs||[]).map(t => `<p>${esc(t)}</p>`).join("")
-  + (it.source ? `<p class="src">Fuente: <a href="${esc(it.source.url)}" target="_blank" rel="noopener">${esc(it.source.name)}</a></p>` : "")
-  + `</article>`;
+const item = (it, e) => {
+  const he = it.lang === "he";
+  const parasha = he || /parash[aá]|פרשת/.test(it.section || "");
+  const attrs = [parasha ? 'class="parasha"' : "", he ? 'lang="he" dir="rtl"' : ""].filter(Boolean).join(" ");
+  return `<article${attrs ? " " + attrs : ""}><div class="kicker">${esc(it.section || e.topic || "")}</div><h2>${esc(it.title)}</h2>`
+    + (it.paragraphs||[]).map(t => `<p>${esc(t)}</p>`).join("")
+    + (it.source ? `<p class="src"${he ? ' dir="ltr" lang="es"' : ""}>Fuente: <a href="${esc(it.source.url)}" target="_blank" rel="noopener">${esc(it.source.name)}</a></p>` : "")
+    + `</article>`;
+};
 const wx = w => !w ? "" : `<aside class="wx"><div class="kicker">El tiempo</div><h2>${esc(w.heading || (w.place ? "El tiempo hoy en " + w.place : "El tiempo en Melbourne mañana"))}</h2><div class="date">${esc(w.day)}</div>`
   + `<div class="t"><span>Mín. ${esc(w.min)}°C</span><span>Máx. ${esc(w.max)}°C</span><span>Lluvia: ${esc(w.rainChance)}%</span></div>`
   + `<p>${esc(w.summary)}</p>` + (w.source ? `<p class="src">Fuente: <a href="${esc(w.source.url)}" target="_blank" rel="noopener">${esc(w.source.name)}</a></p>` : "") + `</aside>`;
