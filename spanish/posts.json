@@ -1,5 +1,71 @@
 [
   {
+    "id": "2026-11-28",
+    "date": "Sábado, 28 de noviembre de 2026",
+    "items": [
+      {
+        "section": "Noticias de Australia",
+        "title": "North Melbourne gana tres veces seguidas",
+        "paragraphs": [
+          "El viernes por la noche fue la gran final de la AFLW, la liga de fútbol australiano de mujeres. North Melbourne, los Kangaroos, ganó a Melbourne, los Demons, por 44 puntos a 18 en Ikon Park, delante de 12.659 personas.",
+          "Es la primera vez en la historia de la AFLW que un equipo gana tres campeonatos seguidos. La capitana Jasmine Garner fue la mejor jugadora del partido. Tess Craven marcó un gol a los 17 segundos: ¡el gol más rápido de la historia de la liga!"
+        ],
+        "source": {
+          "name": "AAP",
+          "url": "https://aapnews.aap.com.au/news/kangaroos-hold-off-demons-to-seal-aflw-three-peat"
+        }
+      },
+      {
+        "section": "Noticias de Israel",
+        "title": "Vuelve el sésamo a Galilea",
+        "paragraphs": [
+          "En Israel se come mucho sésamo, por ejemplo en el tahini, el hummus y la halva. Pero casi todo el sésamo viene de otros países. Hace miles de años, el sésamo era un cultivo muy importante en la región, después del trigo.",
+          "Científicos de la Universidad Hebrea crearon nuevas variedades de sésamo. En octubre, en el kibutz Shamir, en la Alta Galilea, los agricultores recogieron una cosecha cuatro veces más grande de lo normal. Quieren producir el 15 % del sésamo que come Israel."
+        ],
+        "source": {
+          "name": "The Times of Israel",
+          "url": "https://www.timesofisrael.com/back-to-the-grind-israeli-scientists-revive-ancient-sesame-crop-in-the-galilee/"
+        }
+      },
+      {
+        "section": "Noticias del mundo",
+        "title": "Nueva Zelanda necesita un partido pequeño",
+        "paragraphs": [
+          "El viernes salieron los resultados oficiales de las elecciones en Nueva Zelanda. El gobierno del primer ministro Christopher Luxon tiene 65 de los 130 asientos del parlamento. Para tener mayoría necesita 66, ¡solo le falta uno!",
+          "Por eso necesita la ayuda del Partido Oportunidad, un partido nuevo de centro que ganó siete asientos. Su líder, Qiulae Wong, dice que va a hablar primero con el partido de Luxon. Las negociaciones pueden durar hasta el próximo año."
+        ],
+        "source": {
+          "name": "Reuters",
+          "url": "https://www.reuters.com/3fec1b0a85a0/world/asia-pacific/new-zealands-ruling-coalition-falls-just-short-majority-final-election-count-2026-11-27/"
+        }
+      },
+      {
+        "section": "Tecnología e IA",
+        "title": "Un huerto para el espacio",
+        "paragraphs": [
+          "Los astronautas van a necesitar comida para viajes largos a la Luna y a Marte. Por eso la NASA va a enviar a la Estación Espacial Internacional una nueva máquina para cultivar plantas. Viaja en una nave de carga de la empresa Northrop Grumman.",
+          "Los científicos quieren saber cómo dar agua a las plantas cuando no hay gravedad. Lo que aprendan también puede ayudar en la Tierra, por ejemplo en las granjas verticales, donde las plantas crecen dentro de edificios."
+        ],
+        "source": {
+          "name": "NASA Science",
+          "url": "https://science.nasa.gov/science-research/biological-physical-sciences/nasas-ng-25-mission-to-launch-pioneering-space-crops-research/"
+        }
+      }
+    ],
+    "weather": {
+      "day": "Sábado, 28 de noviembre",
+      "place": "Bentleigh East",
+      "summary": "Nublado y con lluvia casi segura. Por la mañana puede haber tormentas fuertes con mucha lluvia. Por la tarde la lluvia es menos probable. Viento del norte, después del oeste y suroeste. Lleva paraguas.",
+      "min": 18,
+      "max": 24,
+      "rainChance": 95,
+      "source": {
+        "name": "Bureau of Meteorology",
+        "url": "https://www.bom.gov.au/location/australia/victoria/central/bvic_pt042-melbourne"
+      }
+    }
+  },
+  {
     "id": "2026-11-27",
     "date": "Viernes, 27 de noviembre de 2026",
     "items": [
