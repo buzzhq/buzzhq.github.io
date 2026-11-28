@@ -575,6 +575,14 @@
       "emoji": "🐨",
       "setup": "What's a koala's favourite drink?",
       "punchline": "Coca-Koala!"
+    },
+    {
+      "date": "2026-11-28",
+      "slot": "pm",
+      "topic": "Food",
+      "emoji": "🧀",
+      "setup": "What do you call cheese that isn't yours?",
+      "punchline": "Nacho cheese! (Not-yo cheese!)"
     }
   ]
 }

@@ -4570,6 +4570,96 @@
       "title": "Read aloud",
       "text": "On Friday after school, Franklin built a desert race track in Roblox with Dad. However, a sneaky camel kept wandering onto the track! Suddenly, Franklin had an idea and made the camel the official race mascot. So every lap, his red GT zoomed past the camel and beeped hello!",
       "points": 10
+    },
+    {
+      "date": "2026-11-28",
+      "id": "tt1",
+      "type": "timestables",
+      "title": "Times-tables warm-up",
+      "tables": [
+        6,
+        7
+      ],
+      "n": 8,
+      "prompt": "Quick times-tables warm-up with pictures: tap the answer, then send Buzz your finish code!",
+      "key": "5f753fd92520be1d",
+      "points": 10
+    },
+    {
+      "date": "2026-11-28",
+      "id": "mg1",
+      "type": "stepgame",
+      "title": "Maths Garage: long multiplication",
+      "mode": "mult",
+      "a": 5248,
+      "b": 9,
+      "sum": "5248 × 9",
+      "prompt": "Solve it step by step in Buzz's Maths Garage, then send Buzz your finish code!",
+      "key": "006949323b8a6403",
+      "points": 10
+    },
+    {
+      "date": "2026-11-28",
+      "id": "mg2",
+      "type": "stepgame",
+      "title": "Maths Garage: long division",
+      "mode": "div",
+      "a": 6735,
+      "b": 5,
+      "sum": "6735 ÷ 5",
+      "prompt": "Solve it step by step in Buzz's Maths Garage, then send Buzz your finish code!",
+      "key": "51c151a19cc08b64",
+      "points": 10
+    },
+    {
+      "date": "2026-11-28",
+      "id": "hb1",
+      "type": "hebword",
+      "title": "Hebrew word rally",
+      "word": "מלח",
+      "prompt": "Sound out this Hebrew word letter by letter (right to left!), then find out what it means.",
+      "key": "c51153cdb5801797",
+      "points": 10
+    },
+    {
+      "date": "2026-11-28",
+      "id": "hs1",
+      "type": "hebsentence",
+      "title": "Hebrew sentence rally",
+      "sentence": "אבא אוהב חלב",
+      "prompt": "Read this Hebrew sentence word by word, letter by letter (right to left!), then work out what it means.",
+      "key": "34919cace596c579",
+      "points": 15
+    },
+    {
+      "date": "2026-11-28",
+      "id": "gr1",
+      "type": "grammar",
+      "title": "Sentence Detective",
+      "qid": "g09",
+      "level": 2,
+      "prompt": "What job is the highlighted word doing? Solve it in Buzz's Sentence Detective!",
+      "key": "29d8b250a470b9f4",
+      "points": 5
+    },
+    {
+      "date": "2026-11-28",
+      "id": "gr2",
+      "type": "grammar",
+      "title": "Sentence Detective",
+      "qid": "g29",
+      "level": 2,
+      "prompt": "What job is the highlighted word doing? Solve it in Buzz's Sentence Detective!",
+      "key": "593bb4319df59970",
+      "points": 5
+    },
+    {
+      "date": "2026-11-28",
+      "id": "dc5",
+      "type": "reading",
+      "title": "Read aloud",
+      "text": "On Saturday night, Franklin and Dad made a giant pizza at home. Before it went in the oven, Franklin sprinkled cheese all over the top. While it was cooking, they shot hoops in the backyard. Afterwards, they ate every slice, and Franklin said it tasted even better than winning a race!",
+      "points": 10
     }
   ],
   "notes": [
